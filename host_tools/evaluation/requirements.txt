@@ -1,0 +1,6 @@
+pyelftools
+capstone
+angr
+pathlib
+bitarray
+pyserial

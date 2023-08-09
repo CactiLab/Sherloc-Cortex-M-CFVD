@@ -1,0 +1,13 @@
+TITLE: Versatile Express Images Configuration File
+
+[IMAGES]
+TOTALIMAGES: 3                     ;Number of Images (Max: 32)
+
+IMAGE0ADDRESS: 0x30000100          ;Please select the required executable program
+IMAGE0FILE: \SOFTWARE\bs.bin ; - branch table
+
+IMAGE1ADDRESS: 0x10000000          ;
+IMAGE1FILE: \SOFTWARE\s.axf ; - sherloc
+
+IMAGE2ADDRESS: 0x00200000           ;
+IMAGE2FILE: \SOFTWARE\ns.axf ; - protected system

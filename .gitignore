@@ -1,0 +1,73 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+host_tools/evaluation/beebs.log
+host_tools/evaluation/beebs_ibt.log
+host_tools/evaluation/beebs_ibt_730s.log
+host_tools/evaluation/beebs_metadata.log
+host_tools/evaluation/beebs_Oz.log
+host_tools/evaluation/blinky.log
+host_tools/evaluation/eval_result_beebs_o3.csv
+host_tools/evaluation/eval_result_beebs_witout_tag.csv
+host_tools/evaluation/eval_run_730s.py
+host_tools/evaluation/freertos.log
+host_tools/evaluation/ins_percentage.log
+host_tools/evaluation/log
+host_tools/evaluation/result.log
+host_tools/evaluation/run_730s.ipynb
+host_tools/evaluation/s_test.dump
+Example/out/*
+*.minta
+host_tools/evaluation/__pycache__/*
+*.dbgconf
+**/Objects/**
+**/Listings/**
