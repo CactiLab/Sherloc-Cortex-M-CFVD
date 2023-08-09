@@ -180,11 +180,9 @@ These scripts are designed to manage project building, conduct static analysis, 
      - Copy the Sherloc runtime compiled before to the MPS2+ board, put it to the `SOFTWARE` folder, and rename it to `s.axf`.
   3. Software reset the board.
   4. Check the evaluation output.
-
      - You can use `putty` to connect to the serial port. The baud rate is 115200.
      - Or you can write a Python script to read the serial port.
      - The output will be like this:
-
        ```log
        Monitor Mode Debug Enabled!
        branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
