@@ -41,6 +41,9 @@ This repository is organized into three main folders:
 This folder contains the Sherloc implementation and is organized into the following sub-folders:
 
 - _src_: source code for Sherloc.
+  - _inc_: header files for Sherloc.
+  - _src_: source files for Sherloc.
+     - To see the full implementation of Sherloc, please check the code located at MACRO `FULL_IRQ`.
 - _inc_: header files for Sherloc.
 - _lib_: evaluation functions.
 - _freertos_: FreeRTOS kernel code.
