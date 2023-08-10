@@ -1,12 +1,12 @@
 # SHERLOC: Secure and Holistic Control-Flow Violation Detection on Embedded Systems
 
 Sherloc is a secure and holistic control flow violation detection mechanism for microcontroller-based embedded systems.
-This repository contains the source code, example applications, and evaluation tools required to understand, use, and evaluate Sherloc.
-We tested our implementation on an ARM **V2M-MPS2+** Evaluation Board.
+This repository contains the source code, examples, and evaluation tools required to run and evaluate Sherloc.
+We tested our implementation on an ARM V2M-MPS2+ Evaluation Board.
 
 The results of this project were published in the paper entitled "[SHERLOC: Secure and Holistic Control-Flow Violation Detection on Embedded Systems](https://cactilab.github.io/assets/pdf/sherloc2023.pdf)" in the ACM Conference on Computer and Communications Security (CCS) 2023. If you want to cite our paper in your work, please use the following BibTeX entry.
 ```
-@inproceedings{tan2023ccs,
+@inproceedings{tan2023sherloc,
  title = {SHERLOC: Secure and Holistic Control-Flow Violation Detection on Embedded Systems},
  author = {Tan, Xi and Zhao, Ziming},
  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
@@ -17,7 +17,7 @@ The results of this project were published in the paper entitled "[SHERLOC: Secu
 
 ## Repository Structure
 
-This repository is organized into three main folders:
+This repository is organized into three main directories:
 
 1. _Sherloc_runtime_: Sherloc implementation.
 2. _Example_: various example applications to demonstrate Sherloc's functionality.
@@ -27,7 +27,7 @@ This repository is organized into three main folders:
 
 - Environment prerequisites
   - Hardware: [MPS2+ board](https://developer.arm.com/Tools%20and%20Software/MPS2%20Plus%20FPGA%20Prototyping%20Board)
-  - System: Windows. We have tested on Windows 11, Windows 10 may also work.
+  - System: Windows. We have tested on Windows 11. Windows 10 may also work.
   - Software: licensed Keil [uVision5](https://www.keil.com/demo/eval/arm.htm), python3, Jupyter notebook
     - Required Python libraries: please refer to `host_tools/evaluation/requirements.txt`
 - Knowledge prerequisites
@@ -36,7 +36,7 @@ This repository is organized into three main folders:
   - Serial port communication and logic analyzer.
   - Cortex-M33 architecture.
 
-### 1. Sherloc_runtime
+### The Sherloc_runtime Directory
 
 This folder contains the Sherloc implementation and is organized into the following sub-folders:
 
@@ -49,7 +49,7 @@ This folder contains the Sherloc implementation and is organized into the follow
 - _freertos_: FreeRTOS kernel code.
 - _evaluation_: BEEBS source code for evaluation purposes.
 
-### 2. Example
+### The Example Directory
 
 This folder contains the following example applications:
 
@@ -77,7 +77,7 @@ This folder contains the following example applications:
   - **[Recommend]** To generate evaluation results from the beginning, please check **Step 2: Automatically run those examples.**
   - If you want to run those examples manually, please check **Step 2: Manually run those examples.**
 
-### 3. host_tool
+### The host_tool Directory
 
 This directory includes an `evaluation` folder, encompassing various Python scripts crucial to the project's operations.
 These scripts are designed to manage project building, conduct static analysis, execute runs, perform evaluations, and analyze the results obtained from these evaluations.
