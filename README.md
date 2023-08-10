@@ -4,8 +4,15 @@ Sherloc is a secure and holistic control flow violation detection mechanism for 
 This repository contains the source code, example applications, and evaluation tools required to understand, use, and evaluate Sherloc.
 We tested our implementation on an ARM **V2M-MPS2+** Evaluation Board.
 
-<!-- For the details of Sherloc, check our paper. To cite Sherloc, you can use the following BibTeX entry: -->
-
+The results of this project were published in the paper entitled "[SHERLOC: Secure and Holistic Control-Flow Violation Detection on Embedded Systems](https://cactilab.github.io/assets/pdf/sherloc2023.pdf)" in the ACM Conference on Computer and Communications Security (CCS) 2023. If you want to cite our paper in your work, please use the following BibTeX entry.
+```
+@inproceedings{tan2023ccs,
+ title = {SHERLOC: Secure and Holistic Control-Flow Violation Detection on Embedded Systems},
+ author = {Tan, Xi and Zhao, Ziming},
+ booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+ year = {2023},
+}
+```
 ---
 
 ## Repository Structure
@@ -56,8 +63,8 @@ This folder contains the following example applications:
       - _proj_: build files for protected systems
       - _build_tmp_: build logs for protected systems
       - _elf_ns_: binaries for protected systems
-      - _metadata_: _\*\_bin_ contains the IBT, IRQ entry, or task entry for RTOS.
-        You can also check the content in _\*\_h_ and _\*\_dump_ files.
+      - _metadata_: _/*/_bin_ contains the IBT, IRQ entry, or task entry for RTOS.
+        You can also check the content in _/*/_h_ and _/*/_dump_ files.
       - _eval_log_: evaluation results for protected systems.
         Inside this folder, it contains:
         - _eval.log_: evaluation logs, which tell you the running progress
@@ -78,7 +85,7 @@ These scripts are designed to manage project building, conduct static analysis, 
   - _elf_s_: re-compiled Sherloc runtime binaries.
   - _rtos_: task entry list for FreeRTOS.
     - **ATTENTION 2**: if you create a new task in FreeRTOS, please add the task name to this file.
-    - [TODO]: Provide the script to automatically get the task entry from the FreeRTOS binary code.
+    <!-- - [TODO]: Provide the script to automatically get the task entry from the FreeRTOS binary code. -->
   - _uvprojx_: Keil xml configuration files for BEEBS.
 
 - Auto scripts
@@ -100,30 +107,30 @@ These scripts are designed to manage project building, conduct static analysis, 
 ### Step 1: Environment setup
 
 - Configure the board loading files.
-  - Refer to 'using the Cortex-M33 IoT Kit Image on MPS2+': [link](https://www.keil.com/appnotes/files/apnt_300.pdf).
+  - Refer to [using the Cortex-M33 IoT Kit Image on MPS2+](https://www.keil.com/appnotes/files/apnt_300.pdf).
   - Find the file system of this board, usually the drive name is `V2M_MPS2`.
   - Assign the `E` letter to the `V2M_MPS2` drive.
-  - Open `\MB\HBI0263C\AN505`, copy `Sherloc_runtime\images.txt` to this folder.
+  - Open `/MB/HBI0263C/AN505`, copy `Sherloc_runtime/images.txt` to this folder.
 - Clone the repository to your local machine.
 - (Optional) If you want to **automatically** run scripts to build, run, evaluate, and evaluate results analysis, we use two USB2TTL adaptors to simulate button pressing: one for hardware rest, one for software reset.
-  To make this work, you need the logic analyzer clipper * 2, jumper wire male *2, and jumper wire female \*2.
+  To make this work, you need the logic analyzer clipper * 2, jumper wire male *2, and jumper wire female /*2.
   The connection wires are shown below:
   ![setup](./pics/setup.jpg)
 
 ### Step 2: Automatically run those examples
 
 - Those auto scripts do not need the Keil IDE.
-- We have compiled protected systems located at `Example\out\eval\[Oz/O3]` folder.
-- We have compiled the Sherloc runtime located at `host_tools\evaluation\elf_s`.
-- Check the `device manager` of the Windows system to figure out the hardware and software reset serial ports. We have scripts to help you find the serial and software ports for hardware reset. Please refer to `host_tools\evaluation\run.ipynb` for more details.
+- We have compiled protected systems located at `Example/out/eval/[Oz/O3]` folder.
+- We have compiled the Sherloc runtime located at `host_tools/evaluation/elf_s`.
+- Check the `device manager` of the Windows system to figure out the hardware and software reset serial ports. We have scripts to help you find the serial and software ports for hardware reset. Please refer to `host_tools/evaluation/run.ipynb` for more details.
 
 #### Step 2.1: Run auto scripts to build, run, evaluate, and evaluate results analysis
 
 - Backup or delete old evaluation results, which is located at `Example/out` folder.
-- `cd` to the `host_tools\evaluation` directory.
-- Run `python eval_run.py`. For more details, please check the implementation of `host_tools\evaluation\eval_run.py`.
+- `cd` to the `host_tools/evaluation` directory.
+- Run `python eval_run.py`. For more details, please check the implementation of `host_tools/evaluation/eval_run.py`.
   - **ATTENTION 3**: Sometimes, the board's file systems may be unstable. If you find the board cannot be detected, please re-plug the board and run the script again.
-    `out\eval\[O3/Oz]\eval.log` and `out\eval\[O3/Oz]\record.log` will show the running progress.
+    `out/eval/[O3/Oz]/eval.log` and `out/eval/[O3/Oz]/record.log` will show the running progress.
   - **ATTENTION 4**: All `prepare*` functions inside the `eval_run.py` will replace the metadata (especially the IBT) generated before. If you want to keep the metadata, please comment on those functions.
   - **ATTENTION 5**: As the example `vulfoo` and `task_vulfoo` demonstrate Sherloc's detection efficiency, the protected system will never call nsc to switch state to print out evaluation results.
     The log will look stuck without output.
@@ -150,7 +157,7 @@ These scripts are designed to manage project building, conduct static analysis, 
 
 #### Step 2.2: Check the evaluation results
 
-- After all the evaluations are finished, run `python result.py` to get the performance overhead. For more details, please check the implementation of `host_tools\evaluation\result.py`.
+- After all the evaluations are finished, run `python result.py` to get the performance overhead. For more details, please check the implementation of `host_tools/evaluation/result.py`.
 
 ### Step 2: Manually run those examples
 
@@ -161,11 +168,11 @@ These scripts are designed to manage project building, conduct static analysis, 
   - The Sherloc runtime is located in the folder `*_S` folder, using the same Sherloc runtime source code for all examples. Refer to `Sherloc_runtime/[inc/src]` folder.
     - Compile and run the example application according to its specific instructions controlled by `MACROS`. Please check [Sherloc_runtime/README.md](./Sherloc_runtime/README.md) for more details.
 - Instructions to Build and Run:
-  - The Keil multi-project workspace \*.uvmpw contains projects for both the secure project, and non secure project.
-  - Set the _\_s project as Active - Right click on "Project: _\_s" and select "Set as Active Project".
-  - Build the \*\_s project using "Project --> Build" or by pressing F7.
-  - Set the _\_ns project as Active - Right click on "Project: _\_ns" and select "Set as Active Project".
-  - Build the \*\_ns project using "Project --> Build" or by pressing "F7".
+  - The Keil multi-project workspace `*.uvmpw` contains projects for both the secure project, and non secure project.
+  - Set the `_s` project as Active - Right click on "Project: `_s`" and select "Set as Active Project".
+  - Build the `*_s` project using "Project --> Build" or by pressing F7.
+  - Set the `_ns` project as Active - Right click on "Project: `_ns`" and select "Set as Active Project".
+  - Build the `*_ns` project using "Project --> Build" or by pressing "F7".
   - Start Debug Session using "Debug -> Start/Stop Debug Session" or by pressing "Ctrl+F5".
 - All compiled binaries are in the `out` folder. Then:
 

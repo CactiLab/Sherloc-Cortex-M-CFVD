@@ -29,7 +29,7 @@ NonSecure Application:
 - Initialize Buttons.
 - Timer0 is used in interrupt mode
 - LEDs are blinking with speed depending on Timer0 interrupt period
-- colour GLCD display shows:
+- color GLCD display shows:
   - init message
   - Button status
   - LED status
