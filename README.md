@@ -2,7 +2,7 @@
 
 Sherloc is a secure and holistic control flow violation detection mechanism for microcontroller-based embedded systems.
 This repository contains the source code, examples, and evaluation tools required to run and evaluate Sherloc.
-We tested our implementation on an ARM V2M-MPS2+ Evaluation Board.
+We implemented Sherloc for the ARMv8-M architecture and evaluated it with the Cortex-M33 microcontroller on the ARM V2M-MPS2+ Evaluation Board.
 
 The results of this project were published in the paper entitled "[SHERLOC: Secure and Holistic Control-Flow Violation Detection on Embedded Systems](https://cactilab.github.io/assets/pdf/sherloc2023.pdf)" in the ACM Conference on Computer and Communications Security (CCS) 2023. If you want to cite our paper in your work, please use the following BibTeX entry.
 ```
