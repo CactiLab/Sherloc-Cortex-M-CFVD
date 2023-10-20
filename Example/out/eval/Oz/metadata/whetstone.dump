@@ -1,0 +1,3288 @@
+
+../../Example/out/eval/Oz/elf_ns/whetstone.axf:     file format elf32-littlearm
+
+
+Disassembly of section ER_ROM:
+
+00200000 <__Vectors>:
+  200000:	00 00 40 28 15 05 20 00 c5 04 20 00 c7 04 20 00     ..@(.. ... ... .
+  200010:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+	...
+  20002c:	c5 04 20 00 c5 04 20 00 00 00 00 00 c5 04 20 00     .. ... ....... .
+  20003c:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  20004c:	c5 04 20 00 c5 04 20 00 c5 04 20 00 00 00 00 00     .. ... ... .....
+	...
+  200064:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+	...
+  2000c0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2000d0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2000e0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2000f0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200100:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200110:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200120:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200130:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200140:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200150:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200160:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200170:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200180:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200190:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2001a0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2001b0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2001c0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2001d0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2001e0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  2001f0:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200200:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200210:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+  200220:	c5 04 20 00 c5 04 20 00 c5 04 20 00 c5 04 20 00     .. ... ... ... .
+	...
+
+00200400 <__main>:
+  200400:	f000 f802 	bl	200408 <__scatterload_rt2>
+  200404:	f000 f82e 	bl	200464 <__rt_entry>
+
+00200408 <__scatterload_rt2>:
+  200408:	a00a      	add	r0, pc, #40	; (adr r0, 200434 <__scatterload_null+0x1e>)
+  20040a:	e890 0c00 	ldmia.w	r0, {sl, fp}
+  20040e:	4482      	add	sl, r0
+  200410:	4483      	add	fp, r0
+  200412:	f1aa 0701 	sub.w	r7, sl, #1
+
+00200416 <__scatterload_null>:
+  200416:	45da      	cmp	sl, fp
+  200418:	d101      	bne.n	20041e <__scatterload_null+0x8>
+  20041a:	f000 f823 	bl	200464 <__rt_entry>
+  20041e:	f2af 0e09 	subw	lr, pc, #9
+  200422:	e8ba 000f 	ldmia.w	sl!, {r0, r1, r2, r3}
+  200426:	f013 0f01 	tst.w	r3, #1
+  20042a:	bf18      	it	ne
+  20042c:	1afb      	subne	r3, r7, r3
+  20042e:	f043 0301 	orr.w	r3, r3, #1
+  200432:	4718      	bx	r3
+  200434:	000028bc 	.word	0x000028bc
+  200438:	000028cc 	.word	0x000028cc
+
+0020043c <__scatterload_zeroinit>:
+  20043c:	2300      	movs	r3, #0
+  20043e:	2400      	movs	r4, #0
+  200440:	2500      	movs	r5, #0
+  200442:	2600      	movs	r6, #0
+  200444:	3a10      	subs	r2, #16
+  200446:	bf28      	it	cs
+  200448:	c178      	stmiacs	r1!, {r3, r4, r5, r6}
+  20044a:	d8fb      	bhi.n	200444 <__scatterload_zeroinit+0x8>
+  20044c:	0752      	lsls	r2, r2, #29
+  20044e:	bf28      	it	cs
+  200450:	c130      	stmiacs	r1!, {r4, r5}
+  200452:	bf48      	it	mi
+  200454:	600b      	strmi	r3, [r1, #0]
+  200456:	4770      	bx	lr
+
+00200458 <__rt_lib_init>:
+  200458:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+
+0020045a <__rt_lib_init_fp_1>:
+  20045a:	f002 fb0f 	bl	202a7c <_fp_init>
+
+0020045e <__rt_lib_init_alloca_1>:
+  20045e:	bd1f      	pop	{r0, r1, r2, r3, r4, pc}
+
+00200460 <__rt_lib_shutdown>:
+  200460:	b510      	push	{r4, lr}
+
+00200462 <__rt_lib_shutdown_cpp_1>:
+  200462:	bd10      	pop	{r4, pc}
+
+00200464 <__rt_entry>:
+  200464:	f8df d00c 	ldr.w	sp, [pc, #12]	; 200474 <__lit__00000000>
+
+00200468 <__rt_entry_li>:
+  200468:	f7ff fff6 	bl	200458 <__rt_lib_init>
+
+0020046c <__rt_entry_main>:
+  20046c:	f000 f870 	bl	200550 <main>
+  200470:	f000 f818 	bl	2004a4 <exit>
+
+00200474 <__lit__00000000>:
+  200474:	0000 2840                                   ..@(
+
+00200478 <__rt_exit>:
+  200478:	b403      	push	{r0, r1}
+
+0020047a <__rt_exit_ls>:
+  20047a:	f7ff fff1 	bl	200460 <__rt_lib_shutdown>
+
+0020047e <__rt_exit_exit>:
+  20047e:	bc03      	pop	{r0, r1}
+  200480:	f000 f81a 	bl	2004b8 <_sys_exit>
+
+00200484 <__read_errno>:
+  200484:	b510      	push	{r4, lr}
+  200486:	f000 f809 	bl	20049c <__aeabi_errno_addr>
+  20048a:	6800      	ldr	r0, [r0, #0]
+  20048c:	bd10      	pop	{r4, pc}
+
+0020048e <__set_errno>:
+  20048e:	b510      	push	{r4, lr}
+  200490:	4604      	mov	r4, r0
+  200492:	f000 f803 	bl	20049c <__aeabi_errno_addr>
+  200496:	6004      	str	r4, [r0, #0]
+  200498:	bd10      	pop	{r4, pc}
+	...
+
+0020049c <__aeabi_errno_addr>:
+  20049c:	4800      	ldr	r0, [pc, #0]	; (2004a0 <__aeabi_errno_addr+0x4>)
+  20049e:	4770      	bx	lr
+  2004a0:	28200000 	.word	0x28200000
+
+002004a4 <exit>:
+  2004a4:	b510      	push	{r4, lr}
+  2004a6:	4604      	mov	r4, r0
+  2004a8:	f3af 8000 	nop.w
+  2004ac:	4620      	mov	r0, r4
+  2004ae:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  2004b2:	f7ff bfe1 	b.w	200478 <__rt_exit>
+
+002004b6 <__use_no_semihosting_swi>:
+  2004b6:	4770      	bx	lr
+
+002004b8 <_sys_exit>:
+  2004b8:	4901      	ldr	r1, [pc, #4]	; (2004c0 <_sys_exit+0x8>)
+  2004ba:	2018      	movs	r0, #24
+  2004bc:	beab      	bkpt	0x00ab
+  2004be:	e7fe      	b.n	2004be <_sys_exit+0x6>
+  2004c0:	00020026 	.word	0x00020026
+
+002004c4 <Default_Handler>:
+  2004c4:	e7fe      	b.n	2004c4 <Default_Handler>
+
+002004c6 <HardFault_Handler>:
+  2004c6:	e7fe      	b.n	2004c6 <HardFault_Handler>
+
+002004c8 <OUTLINED_FUNCTION_0>:
+  2004c8:	4682      	mov	sl, r0
+  2004ca:	468b      	mov	fp, r1
+  2004cc:	ec41 0b18 	vmov	d8, r0, r1
+  2004d0:	4648      	mov	r0, r9
+  2004d2:	4641      	mov	r1, r8
+  2004d4:	4652      	mov	r2, sl
+  2004d6:	465b      	mov	r3, fp
+  2004d8:	f001 bcf6 	b.w	201ec8 <_dadd>
+
+002004dc <OUTLINED_FUNCTION_1>:
+  2004dc:	ec58 9b19 	vmov	r9, r8, d9
+  2004e0:	9008      	str	r0, [sp, #32]
+  2004e2:	ec51 0b18 	vmov	r0, r1, d8
+  2004e6:	4643      	mov	r3, r8
+  2004e8:	464a      	mov	r2, r9
+  2004ea:	f001 bced 	b.w	201ec8 <_dadd>
+
+002004ee <OUTLINED_FUNCTION_2>:
+  2004ee:	4602      	mov	r2, r0
+  2004f0:	460b      	mov	r3, r1
+  2004f2:	4638      	mov	r0, r7
+  2004f4:	4631      	mov	r1, r6
+  2004f6:	f001 bce7 	b.w	201ec8 <_dadd>
+
+002004fa <OUTLINED_FUNCTION_3>:
+  2004fa:	4602      	mov	r2, r0
+  2004fc:	460b      	mov	r3, r1
+  2004fe:	4648      	mov	r0, r9
+  200500:	4641      	mov	r1, r8
+  200502:	f001 bce1 	b.w	201ec8 <_dadd>
+
+00200506 <OUTLINED_FUNCTION_4>:
+  200506:	ec56 7b1b 	vmov	r7, r6, d11
+  20050a:	4633      	mov	r3, r6
+  20050c:	463a      	mov	r2, r7
+  20050e:	f002 b9c7 	b.w	2028a0 <_dsub>
+	...
+
+00200514 <Reset_Handler>:
+  200514:	4809      	ldr	r0, [pc, #36]	; (20053c <__arm_cp.1_0>)
+  200516:	f380 8809 	msr	PSP, r0
+  20051a:	490b      	ldr	r1, [pc, #44]	; (200548 <__arm_cp.1_3>)
+  20051c:	4808      	ldr	r0, [pc, #32]	; (200540 <__arm_cp.1_1>)
+  20051e:	f380 880a 	msr	MSPLIM, r0
+  200522:	f380 880b 	msr	PSPLIM, r0
+  200526:	4807      	ldr	r0, [pc, #28]	; (200544 <__arm_cp.1_2>)
+  200528:	6001      	str	r1, [r0, #0]
+  20052a:	f8d0 1080 	ldr.w	r1, [r0, #128]	; 0x80
+  20052e:	f441 0170 	orr.w	r1, r1, #15728640	; 0xf00000
+  200532:	f8c0 1080 	str.w	r1, [r0, #128]	; 0x80
+  200536:	f7ff ff63 	bl	200400 <__main>
+  20053a:	bf00      	nop
+
+0020053c <__arm_cp.1_0>:
+  20053c:	28400000 	.word	0x28400000
+
+00200540 <__arm_cp.1_1>:
+  200540:	283ffc00 	.word	0x283ffc00
+
+00200544 <__arm_cp.1_2>:
+  200544:	e000ed08 	.word	0xe000ed08
+
+00200548 <__arm_cp.1_3>:
+  200548:	00200000 	.word	0x00200000
+  20054c:	00000000 	.word	0x00000000
+
+00200550 <main>:
+  200550:	b08a      	sub	sp, #40	; 0x28
+  200552:	2000      	movs	r0, #0
+  200554:	2500      	movs	r5, #0
+  200556:	9009      	str	r0, [sp, #36]	; 0x24
+  200558:	f44f 3080 	mov.w	r0, #65536	; 0x10000
+  20055c:	f000 fa3a 	bl	2009d4 <__arm_cp.0_12+0x4>
+  200560:	ed9f ebed 	vldr	d14, [pc, #948]	; 200918 <main+0x3c8>
+  200564:	ed9f cbee 	vldr	d12, [pc, #952]	; 200920 <main+0x3d0>
+  200568:	2000      	movs	r0, #0
+  20056a:	2805      	cmp	r0, #5
+  20056c:	f000 8216 	beq.w	20099c <__arm_cp.0_24+0x54>
+  200570:	9000      	str	r0, [sp, #0]
+  200572:	2100      	movs	r1, #0
+  200574:	48ec      	ldr	r0, [pc, #944]	; (200928 <main+0x3d8>)
+  200576:	6001      	str	r1, [r0, #0]
+  200578:	f5b1 7f80 	cmp.w	r1, #256	; 0x100
+  20057c:	f000 8207 	beq.w	20098e <__arm_cp.0_24+0x46>
+  200580:	9101      	str	r1, [sp, #4]
+  200582:	49ea      	ldr	r1, [pc, #936]	; (20092c <__arm_cp.0_19>)
+  200584:	ed9f 9bea 	vldr	d9, [pc, #936]	; 200930 <__arm_cp.0_19+0x4>
+  200588:	ed9f 8beb 	vldr	d8, [pc, #940]	; 200938 <__arm_cp.0_19+0xc>
+  20058c:	9809      	ldr	r0, [sp, #36]	; 0x24
+  20058e:	f8df 0434 	ldr.w	r0, [pc, #1076]	; 2009c4 <__arm_cp.0_1>
+  200592:	eeb0 ba49 	vmov.f32	s22, s18
+  200596:	eeb0 aa49 	vmov.f32	s20, s18
+  20059a:	eef0 ba69 	vmov.f32	s23, s19
+  20059e:	eef0 aa69 	vmov.f32	s21, s19
+  2005a2:	6101      	str	r1, [r0, #16]
+  2005a4:	49e6      	ldr	r1, [pc, #920]	; (200940 <__arm_cp.0_22>)
+  2005a6:	6141      	str	r1, [r0, #20]
+  2005a8:	49e6      	ldr	r1, [pc, #920]	; (200944 <__arm_cp.0_23>)
+  2005aa:	6181      	str	r1, [r0, #24]
+  2005ac:	49e6      	ldr	r1, [pc, #920]	; (200948 <__arm_cp.0_24>)
+  2005ae:	e9c0 1507 	strd	r1, r5, [r0, #28]
+  2005b2:	f04f 4180 	mov.w	r1, #1073741824	; 0x40000000
+  2005b6:	6241      	str	r1, [r0, #36]	; 0x24
+  2005b8:	200c      	movs	r0, #12
+  2005ba:	2800      	cmp	r0, #0
+  2005bc:	d05a      	beq.n	200674 <main+0x124>
+  2005be:	f7ff ff8d 	bl	2004dc <OUTLINED_FUNCTION_1>
+  2005c2:	ec54 5b1a 	vmov	r5, r4, d10
+  2005c6:	4623      	mov	r3, r4
+  2005c8:	9403      	str	r4, [sp, #12]
+  2005ca:	462a      	mov	r2, r5
+  2005cc:	9502      	str	r5, [sp, #8]
+  2005ce:	f001 fc7b 	bl	201ec8 <_dadd>
+  2005d2:	f7ff ff98 	bl	200506 <OUTLINED_FUNCTION_4>
+  2005d6:	ec53 2b1c 	vmov	r2, r3, d12
+  2005da:	e9cd 2304 	strd	r2, r3, [sp, #16]
+  2005de:	f001 ff53 	bl	202488 <_dmul>
+  2005e2:	f7ff ff71 	bl	2004c8 <OUTLINED_FUNCTION_0>
+  2005e6:	462a      	mov	r2, r5
+  2005e8:	4623      	mov	r3, r4
+  2005ea:	f002 f959 	bl	2028a0 <_dsub>
+  2005ee:	4602      	mov	r2, r0
+  2005f0:	460b      	mov	r3, r1
+  2005f2:	4638      	mov	r0, r7
+  2005f4:	4631      	mov	r1, r6
+  2005f6:	9706      	str	r7, [sp, #24]
+  2005f8:	9607      	str	r6, [sp, #28]
+  2005fa:	f001 fc65 	bl	201ec8 <_dadd>
+  2005fe:	9d04      	ldr	r5, [sp, #16]
+  200600:	9c05      	ldr	r4, [sp, #20]
+  200602:	462a      	mov	r2, r5
+  200604:	4623      	mov	r3, r4
+  200606:	f001 ff3f 	bl	202488 <_dmul>
+  20060a:	4680      	mov	r8, r0
+  20060c:	4689      	mov	r9, r1
+  20060e:	ec41 0b19 	vmov	d9, r0, r1
+  200612:	4650      	mov	r0, sl
+  200614:	4659      	mov	r1, fp
+  200616:	4642      	mov	r2, r8
+  200618:	464b      	mov	r3, r9
+  20061a:	f002 f941 	bl	2028a0 <_dsub>
+  20061e:	4602      	mov	r2, r0
+  200620:	460b      	mov	r3, r1
+  200622:	e9dd 0102 	ldrd	r0, r1, [sp, #8]
+  200626:	f001 fc4f 	bl	201ec8 <_dadd>
+  20062a:	f7ff ff60 	bl	2004ee <OUTLINED_FUNCTION_2>
+  20062e:	462a      	mov	r2, r5
+  200630:	4623      	mov	r3, r4
+  200632:	462f      	mov	r7, r5
+  200634:	4626      	mov	r6, r4
+  200636:	f001 ff27 	bl	202488 <_dmul>
+  20063a:	4604      	mov	r4, r0
+  20063c:	460d      	mov	r5, r1
+  20063e:	4640      	mov	r0, r8
+  200640:	4649      	mov	r1, r9
+  200642:	4652      	mov	r2, sl
+  200644:	465b      	mov	r3, fp
+  200646:	f002 f92b 	bl	2028a0 <_dsub>
+  20064a:	4622      	mov	r2, r4
+  20064c:	462b      	mov	r3, r5
+  20064e:	ec45 4b1a 	vmov	d10, r4, r5
+  200652:	f001 fc39 	bl	201ec8 <_dadd>
+  200656:	4602      	mov	r2, r0
+  200658:	460b      	mov	r3, r1
+  20065a:	e9dd 0106 	ldrd	r0, r1, [sp, #24]
+  20065e:	f001 fc33 	bl	201ec8 <_dadd>
+  200662:	463a      	mov	r2, r7
+  200664:	4633      	mov	r3, r6
+  200666:	f001 ff0f 	bl	202488 <_dmul>
+  20066a:	ec41 0b1b 	vmov	d11, r0, r1
+  20066e:	9808      	ldr	r0, [sp, #32]
+  200670:	3801      	subs	r0, #1
+  200672:	e7a2      	b.n	2005ba <main+0x6a>
+  200674:	2001      	movs	r0, #1
+  200676:	280f      	cmp	r0, #15
+  200678:	d057      	beq.n	20072a <main+0x1da>
+  20067a:	9003      	str	r0, [sp, #12]
+  20067c:	2006      	movs	r0, #6
+  20067e:	f7ff ff2d 	bl	2004dc <OUTLINED_FUNCTION_1>
+  200682:	ec53 2b1a 	vmov	r2, r3, d10
+  200686:	e9cd 2306 	strd	r2, r3, [sp, #24]
+  20068a:	f001 fc1d 	bl	201ec8 <_dadd>
+  20068e:	f7ff ff3a 	bl	200506 <OUTLINED_FUNCTION_4>
+  200692:	ec55 4b1c 	vmov	r4, r5, d12
+  200696:	462b      	mov	r3, r5
+  200698:	9505      	str	r5, [sp, #20]
+  20069a:	4622      	mov	r2, r4
+  20069c:	9404      	str	r4, [sp, #16]
+  20069e:	f001 fef3 	bl	202488 <_dmul>
+  2006a2:	f7ff ff11 	bl	2004c8 <OUTLINED_FUNCTION_0>
+  2006a6:	f8dd 9018 	ldr.w	r9, [sp, #24]
+  2006aa:	f8dd 801c 	ldr.w	r8, [sp, #28]
+  2006ae:	464a      	mov	r2, r9
+  2006b0:	4643      	mov	r3, r8
+  2006b2:	f002 f8f5 	bl	2028a0 <_dsub>
+  2006b6:	f7ff ff1a 	bl	2004ee <OUTLINED_FUNCTION_2>
+  2006ba:	4622      	mov	r2, r4
+  2006bc:	462b      	mov	r3, r5
+  2006be:	f001 fee3 	bl	202488 <_dmul>
+  2006c2:	4604      	mov	r4, r0
+  2006c4:	460d      	mov	r5, r1
+  2006c6:	ec41 0b19 	vmov	d9, r0, r1
+  2006ca:	4650      	mov	r0, sl
+  2006cc:	4659      	mov	r1, fp
+  2006ce:	4622      	mov	r2, r4
+  2006d0:	462b      	mov	r3, r5
+  2006d2:	f002 f8e5 	bl	2028a0 <_dsub>
+  2006d6:	f7ff ff10 	bl	2004fa <OUTLINED_FUNCTION_3>
+  2006da:	4602      	mov	r2, r0
+  2006dc:	460b      	mov	r3, r1
+  2006de:	4638      	mov	r0, r7
+  2006e0:	4631      	mov	r1, r6
+  2006e2:	46b9      	mov	r9, r7
+  2006e4:	46b0      	mov	r8, r6
+  2006e6:	f001 fbef 	bl	201ec8 <_dadd>
+  2006ea:	e9dd 2304 	ldrd	r2, r3, [sp, #16]
+  2006ee:	f001 fecb 	bl	202488 <_dmul>
+  2006f2:	4606      	mov	r6, r0
+  2006f4:	460f      	mov	r7, r1
+  2006f6:	4620      	mov	r0, r4
+  2006f8:	4629      	mov	r1, r5
+  2006fa:	4652      	mov	r2, sl
+  2006fc:	465b      	mov	r3, fp
+  2006fe:	f002 f8cf 	bl	2028a0 <_dsub>
+  200702:	4632      	mov	r2, r6
+  200704:	463b      	mov	r3, r7
+  200706:	ec47 6b1a 	vmov	d10, r6, r7
+  20070a:	f001 fbdd 	bl	201ec8 <_dadd>
+  20070e:	f7ff fef4 	bl	2004fa <OUTLINED_FUNCTION_3>
+  200712:	ec53 2b1e 	vmov	r2, r3, d14
+  200716:	f001 feb7 	bl	202488 <_dmul>
+  20071a:	ec41 0b1b 	vmov	d11, r0, r1
+  20071e:	9808      	ldr	r0, [sp, #32]
+  200720:	3801      	subs	r0, #1
+  200722:	d1ac      	bne.n	20067e <main+0x12e>
+  200724:	9803      	ldr	r0, [sp, #12]
+  200726:	3001      	adds	r0, #1
+  200728:	e7a5      	b.n	200676 <main+0x126>
+  20072a:	48a6      	ldr	r0, [pc, #664]	; (2009c4 <__arm_cp.0_1>)
+  20072c:	eeb0 8a4e 	vmov.f32	s16, s28
+  200730:	eeb0 9a4e 	vmov.f32	s18, s28
+  200734:	eef0 8a6e 	vmov.f32	s17, s29
+  200738:	eef0 9a6e 	vmov.f32	s19, s29
+  20073c:	ed80 bb12 	vstr	d11, [r0, #72]	; 0x48
+  200740:	2020      	movs	r0, #32
+  200742:	2800      	cmp	r0, #0
+  200744:	f000 80bb 	beq.w	2008be <main+0x36e>
+  200748:	9008      	str	r0, [sp, #32]
+  20074a:	489e      	ldr	r0, [pc, #632]	; (2009c4 <__arm_cp.0_1>)
+  20074c:	eeb0 0a48 	vmov.f32	s0, s16
+  200750:	eef0 0a68 	vmov.f32	s1, s17
+  200754:	ed90 ab04 	vldr	d10, [r0, #16]
+  200758:	ed90 bb08 	vldr	d11, [r0, #32]
+  20075c:	f000 febc 	bl	2014d8 <__hardfp_sin>
+  200760:	ec51 0b1b 	vmov	r0, r1, d11
+  200764:	ec53 2b10 	vmov	r2, r3, d0
+  200768:	f001 fe8e 	bl	202488 <_dmul>
+  20076c:	eeb0 0a48 	vmov.f32	s0, s16
+  200770:	4e95      	ldr	r6, [pc, #596]	; (2009c8 <__arm_cp.0_10>)
+  200772:	4604      	mov	r4, r0
+  200774:	460d      	mov	r5, r1
+  200776:	eef0 0a68 	vmov.f32	s1, s17
+  20077a:	47b0      	blx	r6
+  20077c:	ec53 2b10 	vmov	r2, r3, d0
+  200780:	4620      	mov	r0, r4
+  200782:	4629      	mov	r1, r5
+  200784:	46b2      	mov	sl, r6
+  200786:	f001 fe7f 	bl	202488 <_dmul>
+  20078a:	ec58 5b19 	vmov	r5, r8, d9
+  20078e:	ec57 6b18 	vmov	r6, r7, d8
+  200792:	4604      	mov	r4, r0
+  200794:	4689      	mov	r9, r1
+  200796:	4639      	mov	r1, r7
+  200798:	4643      	mov	r3, r8
+  20079a:	4630      	mov	r0, r6
+  20079c:	462a      	mov	r2, r5
+  20079e:	f001 fb93 	bl	201ec8 <_dadd>
+  2007a2:	ec41 0b10 	vmov	d0, r0, r1
+  2007a6:	47d0      	blx	sl
+  2007a8:	eeb0 8a40 	vmov.f32	s16, s0
+  2007ac:	4630      	mov	r0, r6
+  2007ae:	4639      	mov	r1, r7
+  2007b0:	462a      	mov	r2, r5
+  2007b2:	4643      	mov	r3, r8
+  2007b4:	eef0 8a60 	vmov.f32	s17, s1
+  2007b8:	f002 f872 	bl	2028a0 <_dsub>
+  2007bc:	ec41 0b10 	vmov	d0, r0, r1
+  2007c0:	47d0      	blx	sl
+  2007c2:	ec51 0b18 	vmov	r0, r1, d8
+  2007c6:	ec53 2b10 	vmov	r2, r3, d0
+  2007ca:	f001 fb7d 	bl	201ec8 <_dadd>
+  2007ce:	ed9f 0b74 	vldr	d0, [pc, #464]	; 2009a0 <__arm_cp.0_24+0x58>
+  2007d2:	ec5a bb10 	vmov	fp, sl, d0
+  2007d6:	4653      	mov	r3, sl
+  2007d8:	465a      	mov	r2, fp
+  2007da:	f001 fb75 	bl	201ec8 <_dadd>
+  2007de:	4602      	mov	r2, r0
+  2007e0:	460b      	mov	r3, r1
+  2007e2:	4620      	mov	r0, r4
+  2007e4:	4649      	mov	r1, r9
+  2007e6:	f001 fc23 	bl	202030 <_ddiv>
+  2007ea:	ec41 0b10 	vmov	d0, r0, r1
+  2007ee:	f000 f913 	bl	200a18 <__hardfp_atan>
+  2007f2:	ec53 2b10 	vmov	r2, r3, d0
+  2007f6:	ec51 0b1a 	vmov	r0, r1, d10
+  2007fa:	f001 fe45 	bl	202488 <_dmul>
+  2007fe:	4606      	mov	r6, r0
+  200800:	460f      	mov	r7, r1
+  200802:	ec41 0b18 	vmov	d8, r0, r1
+  200806:	4628      	mov	r0, r5
+  200808:	4641      	mov	r1, r8
+  20080a:	4632      	mov	r2, r6
+  20080c:	463b      	mov	r3, r7
+  20080e:	f001 fb5b 	bl	201ec8 <_dadd>
+  200812:	ec41 0b1b 	vmov	d11, r0, r1
+  200816:	486b      	ldr	r0, [pc, #428]	; (2009c4 <__arm_cp.0_1>)
+  200818:	eeb0 0a49 	vmov.f32	s0, s18
+  20081c:	eef0 0a69 	vmov.f32	s1, s19
+  200820:	ed90 fb04 	vldr	d15, [r0, #16]
+  200824:	ed90 db08 	vldr	d13, [r0, #32]
+  200828:	f000 fe56 	bl	2014d8 <__hardfp_sin>
+  20082c:	eeb0 aa40 	vmov.f32	s20, s0
+  200830:	eeb0 0a49 	vmov.f32	s0, s18
+  200834:	4c64      	ldr	r4, [pc, #400]	; (2009c8 <__arm_cp.0_10>)
+  200836:	eef0 aa60 	vmov.f32	s21, s1
+  20083a:	eef0 0a69 	vmov.f32	s1, s19
+  20083e:	47a0      	blx	r4
+  200840:	eeb0 9a40 	vmov.f32	s18, s0
+  200844:	eeb0 0a4b 	vmov.f32	s0, s22
+  200848:	eef0 9a60 	vmov.f32	s19, s1
+  20084c:	eef0 0a6b 	vmov.f32	s1, s23
+  200850:	47a0      	blx	r4
+  200852:	eeb0 ba40 	vmov.f32	s22, s0
+  200856:	4630      	mov	r0, r6
+  200858:	4639      	mov	r1, r7
+  20085a:	462a      	mov	r2, r5
+  20085c:	4643      	mov	r3, r8
+  20085e:	eef0 ba60 	vmov.f32	s23, s1
+  200862:	f002 f81d 	bl	2028a0 <_dsub>
+  200866:	ec41 0b10 	vmov	d0, r0, r1
+  20086a:	47a0      	blx	r4
+  20086c:	ec51 0b1b 	vmov	r0, r1, d11
+  200870:	ec53 2b10 	vmov	r2, r3, d0
+  200874:	f001 fb28 	bl	201ec8 <_dadd>
+  200878:	465a      	mov	r2, fp
+  20087a:	4653      	mov	r3, sl
+  20087c:	f001 fb24 	bl	201ec8 <_dadd>
+  200880:	4604      	mov	r4, r0
+  200882:	460d      	mov	r5, r1
+  200884:	ec51 0b1d 	vmov	r0, r1, d13
+  200888:	ec53 2b1a 	vmov	r2, r3, d10
+  20088c:	f001 fdfc 	bl	202488 <_dmul>
+  200890:	ec53 2b19 	vmov	r2, r3, d9
+  200894:	f001 fdf8 	bl	202488 <_dmul>
+  200898:	4622      	mov	r2, r4
+  20089a:	462b      	mov	r3, r5
+  20089c:	f001 fbc8 	bl	202030 <_ddiv>
+  2008a0:	ec41 0b10 	vmov	d0, r0, r1
+  2008a4:	f000 f8b8 	bl	200a18 <__hardfp_atan>
+  2008a8:	ec53 2b10 	vmov	r2, r3, d0
+  2008ac:	ec51 0b1f 	vmov	r0, r1, d15
+  2008b0:	f001 fdea 	bl	202488 <_dmul>
+  2008b4:	ec41 0b19 	vmov	d9, r0, r1
+  2008b8:	9808      	ldr	r0, [sp, #32]
+  2008ba:	3801      	subs	r0, #1
+  2008bc:	e741      	b.n	200742 <main+0x1f2>
+  2008be:	4941      	ldr	r1, [pc, #260]	; (2009c4 <__arm_cp.0_1>)
+  2008c0:	2000      	movs	r0, #0
+  2008c2:	4a42      	ldr	r2, [pc, #264]	; (2009cc <__arm_cp.0_11>)
+  2008c4:	ed9f 2b3a 	vldr	d2, [pc, #232]	; 2009b0 <__arm_cp.0_24+0x68>
+  2008c8:	ed9f 0b37 	vldr	d0, [pc, #220]	; 2009a8 <__arm_cp.0_24+0x60>
+  2008cc:	2500      	movs	r5, #0
+  2008ce:	e9c1 200d 	strd	r2, r0, [r1, #52]	; 0x34
+  2008d2:	6308      	str	r0, [r1, #48]	; 0x30
+  2008d4:	6408      	str	r0, [r1, #64]	; 0x40
+  2008d6:	483e      	ldr	r0, [pc, #248]	; (2009d0 <__arm_cp.0_12>)
+  2008d8:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
+  2008dc:	6448      	str	r0, [r1, #68]	; 0x44
+  2008de:	2001      	movs	r0, #1
+  2008e0:	63ca      	str	r2, [r1, #60]	; 0x3c
+  2008e2:	7008      	strb	r0, [r1, #0]
+  2008e4:	f44f 701a 	mov.w	r0, #616	; 0x268
+  2008e8:	b380      	cbz	r0, 20094c <__arm_cp.0_24+0x4>
+  2008ea:	4936      	ldr	r1, [pc, #216]	; (2009c4 <__arm_cp.0_1>)
+  2008ec:	eeb0 1a42 	vmov.f32	s2, s4
+  2008f0:	3801      	subs	r0, #1
+  2008f2:	eef0 1a62 	vmov.f32	s3, s5
+  2008f6:	ed81 2b0e 	vstr	d2, [r1, #56]	; 0x38
+  2008fa:	eeb0 2a40 	vmov.f32	s4, s0
+  2008fe:	ed81 0b0c 	vstr	d0, [r1, #48]	; 0x30
+  200902:	ed81 0b10 	vstr	d0, [r1, #64]	; 0x40
+  200906:	eeb0 0a41 	vmov.f32	s0, s2
+  20090a:	eef0 2a60 	vmov.f32	s5, s1
+  20090e:	eef0 0a61 	vmov.f32	s1, s3
+  200912:	e7e9      	b.n	2008e8 <main+0x398>
+  200914:	bf00      	nop
+  200916:	bf00      	nop
+  200918:	00000000 	.word	0x00000000
+  20091c:	3fe00000 	.word	0x3fe00000
+  200920:	2474538f 	.word	0x2474538f
+  200924:	3fdfff97 	.word	0x3fdfff97
+  200928:	e0001004 	.word	0xe0001004
+
+0020092c <__arm_cp.0_19>:
+  20092c:	2474538f 	.word	0x2474538f
+  200930:	00000000 	.word	0x00000000
+  200934:	bff00000 	.word	0xbff00000
+  200938:	00000000 	.word	0x00000000
+  20093c:	3ff00000 	.word	0x3ff00000
+
+00200940 <__arm_cp.0_22>:
+  200940:	3fdfff97 	.word	0x3fdfff97
+
+00200944 <__arm_cp.0_23>:
+  200944:	49ba5e35 	.word	0x49ba5e35
+
+00200948 <__arm_cp.0_24>:
+  200948:	3fe0020c 	.word	0x3fe0020c
+  20094c:	481d      	ldr	r0, [pc, #116]	; (2009c4 <__arm_cp.0_1>)
+  20094e:	2102      	movs	r1, #2
+  200950:	ed9f 0b19 	vldr	d0, [pc, #100]	; 2009b8 <__arm_cp.0_24+0x70>
+  200954:	245d      	movs	r4, #93	; 0x5d
+  200956:	6041      	str	r1, [r0, #4]
+  200958:	2103      	movs	r1, #3
+  20095a:	6081      	str	r1, [r0, #8]
+  20095c:	b194      	cbz	r4, 200984 <__arm_cp.0_24+0x3c>
+  20095e:	f000 fbd7 	bl	201110 <__hardfp_log>
+  200962:	4a18      	ldr	r2, [pc, #96]	; (2009c4 <__arm_cp.0_1>)
+  200964:	ec51 0b10 	vmov	r0, r1, d0
+  200968:	ed92 0b06 	vldr	d0, [r2, #24]
+  20096c:	ec53 2b10 	vmov	r2, r3, d0
+  200970:	f001 fb5e 	bl	202030 <_ddiv>
+  200974:	ec41 0b10 	vmov	d0, r0, r1
+  200978:	f000 fa1e 	bl	200db8 <__hardfp_exp>
+  20097c:	f000 fe10 	bl	2015a0 <__hardfp_sqrt>
+  200980:	3c01      	subs	r4, #1
+  200982:	e7eb      	b.n	20095c <__arm_cp.0_24+0x14>
+  200984:	9509      	str	r5, [sp, #36]	; 0x24
+  200986:	9809      	ldr	r0, [sp, #36]	; 0x24
+  200988:	9901      	ldr	r1, [sp, #4]
+  20098a:	3101      	adds	r1, #1
+  20098c:	e5f4      	b.n	200578 <main+0x28>
+  20098e:	480c      	ldr	r0, [pc, #48]	; (2009c0 <__arm_cp.0_24+0x78>)
+  200990:	6800      	ldr	r0, [r0, #0]
+  200992:	f000 f824 	bl	2009de <__arm_cp.0_12+0xe>
+  200996:	9800      	ldr	r0, [sp, #0]
+  200998:	3001      	adds	r0, #1
+  20099a:	e5e6      	b.n	20056a <main+0x1a>
+  20099c:	e7fe      	b.n	20099c <__arm_cp.0_24+0x54>
+  20099e:	bf00      	nop
+  2009a0:	00000000 	.word	0x00000000
+  2009a4:	bff00000 	.word	0xbff00000
+  2009a8:	00000000 	.word	0x00000000
+  2009ac:	40000000 	.word	0x40000000
+  2009b0:	00000000 	.word	0x00000000
+  2009b4:	40080000 	.word	0x40080000
+  2009b8:	00000000 	.word	0x00000000
+  2009bc:	3fe80000 	.word	0x3fe80000
+  2009c0:	e0001004 	.word	0xe0001004
+
+002009c4 <__arm_cp.0_1>:
+  2009c4:	28200060 	.word	0x28200060
+
+002009c8 <__arm_cp.0_10>:
+  2009c8:	00200cf1 	.word	0x00200cf1
+
+002009cc <__arm_cp.0_11>:
+  2009cc:	3ff00000 	.word	0x3ff00000
+
+002009d0 <__arm_cp.0_12>:
+  2009d0:	40080000 	.word	0x40080000
+  2009d4:	f64f 6c11 	movw	ip, #65041	; 0xfe11
+  2009d8:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  2009dc:	4760      	bx	ip
+  2009de:	f64f 6c19 	movw	ip, #65049	; 0xfe19
+  2009e2:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  2009e6:	4760      	bx	ip
+
+002009e8 <__ARM_fpclassify>:
+  2009e8:	b403      	push	{r0, r1}
+  2009ea:	9801      	ldr	r0, [sp, #4]
+  2009ec:	0041      	lsls	r1, r0, #1
+  2009ee:	9800      	ldr	r0, [sp, #0]
+  2009f0:	ea50 20c1 	orrs.w	r0, r0, r1, lsl #11
+  2009f4:	bf18      	it	ne
+  2009f6:	2004      	movne	r0, #4
+  2009f8:	0d4a      	lsrs	r2, r1, #21
+  2009fa:	bf18      	it	ne
+  2009fc:	f040 0001 	orrne.w	r0, r0, #1
+  200a00:	f240 72ff 	movw	r2, #2047	; 0x7ff
+  200a04:	ebb2 5f51 	cmp.w	r2, r1, lsr #21
+  200a08:	bf08      	it	eq
+  200a0a:	f040 0002 	orreq.w	r0, r0, #2
+  200a0e:	2801      	cmp	r0, #1
+  200a10:	bf08      	it	eq
+  200a12:	2005      	moveq	r0, #5
+  200a14:	b002      	add	sp, #8
+  200a16:	4770      	bx	lr
+
+00200a18 <__hardfp_atan>:
+  200a18:	b570      	push	{r4, r5, r6, lr}
+  200a1a:	489b      	ldr	r0, [pc, #620]	; (200c88 <__hardfp_atan+0x270>)
+  200a1c:	ed2d 0b02 	vpush	{d0}
+  200a20:	ed2d 8b06 	vpush	{d8-d10}
+  200a24:	9d07      	ldr	r5, [sp, #28]
+  200a26:	f025 4400 	bic.w	r4, r5, #2147483648	; 0x80000000
+  200a2a:	42a0      	cmp	r0, r4
+  200a2c:	dc18      	bgt.n	200a60 <__hardfp_atan+0x48>
+  200a2e:	4897      	ldr	r0, [pc, #604]	; (200c8c <__hardfp_atan+0x274>)
+  200a30:	4284      	cmp	r4, r0
+  200a32:	dc02      	bgt.n	200a3a <__hardfp_atan+0x22>
+  200a34:	d10a      	bne.n	200a4c <__hardfp_atan+0x34>
+  200a36:	9806      	ldr	r0, [sp, #24]
+  200a38:	b140      	cbz	r0, 200a4c <__hardfp_atan+0x34>
+  200a3a:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200a3e:	ecbd 8b06 	vpop	{d8-d10}
+  200a42:	b002      	add	sp, #8
+  200a44:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  200a48:	f001 b9ea 	b.w	201e20 <__mathlib_dbl_infnan>
+  200a4c:	2d00      	cmp	r5, #0
+  200a4e:	bfcc      	ite	gt
+  200a50:	ed9f 0b8f 	vldrgt	d0, [pc, #572]	; 200c90 <__hardfp_atan+0x278>
+  200a54:	ed9f 0b90 	vldrle	d0, [pc, #576]	; 200c98 <__hardfp_atan+0x280>
+  200a58:	ecbd 8b06 	vpop	{d8-d10}
+  200a5c:	b002      	add	sp, #8
+  200a5e:	bd70      	pop	{r4, r5, r6, pc}
+  200a60:	488f      	ldr	r0, [pc, #572]	; (200ca0 <__hardfp_atan+0x288>)
+  200a62:	42a0      	cmp	r0, r4
+  200a64:	dd15      	ble.n	200a92 <__hardfp_atan+0x7a>
+  200a66:	488f      	ldr	r0, [pc, #572]	; (200ca4 <__hardfp_atan+0x28c>)
+  200a68:	42a0      	cmp	r0, r4
+  200a6a:	bfd8      	it	le
+  200a6c:	f04f 34ff 	movle.w	r4, #4294967295
+  200a70:	dd58      	ble.n	200b24 <__hardfp_atan+0x10c>
+  200a72:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200a76:	ec51 0b10 	vmov	r0, r1, d0
+  200a7a:	f7ff ffb5 	bl	2009e8 <__ARM_fpclassify>
+  200a7e:	2804      	cmp	r0, #4
+  200a80:	bf08      	it	eq
+  200a82:	f001 f9f9 	bleq	201e78 <__mathlib_dbl_underflow>
+  200a86:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200a8a:	ecbd 8b06 	vpop	{d8-d10}
+  200a8e:	b002      	add	sp, #8
+  200a90:	bd70      	pop	{r4, r5, r6, pc}
+  200a92:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200a96:	ec51 0b10 	vmov	r0, r1, d0
+  200a9a:	f001 f9fd 	bl	201e98 <fabs>
+  200a9e:	e9cd 0106 	strd	r0, r1, [sp, #24]
+  200aa2:	4881      	ldr	r0, [pc, #516]	; (200ca8 <__hardfp_atan+0x290>)
+  200aa4:	ed9f 8b82 	vldr	d8, [pc, #520]	; 200cb0 <__hardfp_atan+0x298>
+  200aa8:	42a0      	cmp	r0, r4
+  200aaa:	dd3c      	ble.n	200b26 <__hardfp_atan+0x10e>
+  200aac:	4882      	ldr	r0, [pc, #520]	; (200cb8 <__hardfp_atan+0x2a0>)
+  200aae:	42a0      	cmp	r0, r4
+  200ab0:	dd1f      	ble.n	200af2 <__hardfp_atan+0xda>
+  200ab2:	2400      	movs	r4, #0
+  200ab4:	ed9f ab82 	vldr	d10, [pc, #520]	; 200cc0 <__hardfp_atan+0x2a8>
+  200ab8:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200abc:	ec53 2b1a 	vmov	r2, r3, d10
+  200ac0:	ec51 0b10 	vmov	r0, r1, d0
+  200ac4:	f001 fa00 	bl	201ec8 <_dadd>
+  200ac8:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200acc:	ec41 0b19 	vmov	d9, r0, r1
+  200ad0:	ec53 2b1a 	vmov	r2, r3, d10
+  200ad4:	ec51 0b10 	vmov	r0, r1, d0
+  200ad8:	f001 fcd6 	bl	202488 <_dmul>
+  200adc:	ec53 2b18 	vmov	r2, r3, d8
+  200ae0:	f001 fede 	bl	2028a0 <_dsub>
+  200ae4:	ec53 2b19 	vmov	r2, r3, d9
+  200ae8:	f001 faa2 	bl	202030 <_ddiv>
+  200aec:	e9cd 0106 	strd	r0, r1, [sp, #24]
+  200af0:	e049      	b.n	200b86 <__hardfp_atan+0x16e>
+  200af2:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200af6:	2401      	movs	r4, #1
+  200af8:	ec53 2b18 	vmov	r2, r3, d8
+  200afc:	ec51 0b10 	vmov	r0, r1, d0
+  200b00:	f001 f9e2 	bl	201ec8 <_dadd>
+  200b04:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200b08:	ec41 0b19 	vmov	d9, r0, r1
+  200b0c:	ec53 2b18 	vmov	r2, r3, d8
+  200b10:	ec51 0b10 	vmov	r0, r1, d0
+  200b14:	f001 fec4 	bl	2028a0 <_dsub>
+  200b18:	ec53 2b19 	vmov	r2, r3, d9
+  200b1c:	f001 fa88 	bl	202030 <_ddiv>
+  200b20:	e9cd 0106 	strd	r0, r1, [sp, #24]
+  200b24:	e02f      	b.n	200b86 <__hardfp_atan+0x16e>
+  200b26:	4868      	ldr	r0, [pc, #416]	; (200cc8 <__hardfp_atan+0x2b0>)
+  200b28:	42a0      	cmp	r0, r4
+  200b2a:	dd1f      	ble.n	200b6c <__hardfp_atan+0x154>
+  200b2c:	2402      	movs	r4, #2
+  200b2e:	ed9f 9b68 	vldr	d9, [pc, #416]	; 200cd0 <__hardfp_atan+0x2b8>
+  200b32:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200b36:	ec53 2b19 	vmov	r2, r3, d9
+  200b3a:	ec51 0b10 	vmov	r0, r1, d0
+  200b3e:	f001 fca3 	bl	202488 <_dmul>
+  200b42:	ec53 2b18 	vmov	r2, r3, d8
+  200b46:	f001 f9bf 	bl	201ec8 <_dadd>
+  200b4a:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200b4e:	ec41 0b18 	vmov	d8, r0, r1
+  200b52:	ec53 2b19 	vmov	r2, r3, d9
+  200b56:	ec51 0b10 	vmov	r0, r1, d0
+  200b5a:	f001 fea1 	bl	2028a0 <_dsub>
+  200b5e:	ec53 2b18 	vmov	r2, r3, d8
+  200b62:	f001 fa65 	bl	202030 <_ddiv>
+  200b66:	e9cd 0106 	strd	r0, r1, [sp, #24]
+  200b6a:	e00c      	b.n	200b86 <__hardfp_atan+0x16e>
+  200b6c:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200b70:	2403      	movs	r4, #3
+  200b72:	ec53 2b10 	vmov	r2, r3, d0
+  200b76:	ed9f 0b58 	vldr	d0, [pc, #352]	; 200cd8 <__hardfp_atan+0x2c0>
+  200b7a:	ec51 0b10 	vmov	r0, r1, d0
+  200b7e:	f001 fa57 	bl	202030 <_ddiv>
+  200b82:	e9cd 0106 	strd	r0, r1, [sp, #24]
+  200b86:	ed9d 0b06 	vldr	d0, [sp, #24]
+  200b8a:	ec53 2b10 	vmov	r2, r3, d0
+  200b8e:	ec51 0b10 	vmov	r0, r1, d0
+  200b92:	f001 fc79 	bl	202488 <_dmul>
+  200b96:	ec41 0b18 	vmov	d8, r0, r1
+  200b9a:	ec53 2b18 	vmov	r2, r3, d8
+  200b9e:	f001 fc73 	bl	202488 <_dmul>
+  200ba2:	ec41 0b19 	vmov	d9, r0, r1
+  200ba6:	484e      	ldr	r0, [pc, #312]	; (200ce0 <__hardfp_atan+0x2c8>)
+  200ba8:	2106      	movs	r1, #6
+  200baa:	eeb0 0a49 	vmov.f32	s0, s18
+  200bae:	eef0 0a69 	vmov.f32	s1, s19
+  200bb2:	4478      	add	r0, pc
+  200bb4:	f001 f808 	bl	201bc8 <__kernel_poly>
+  200bb8:	ec53 2b18 	vmov	r2, r3, d8
+  200bbc:	ec51 0b10 	vmov	r0, r1, d0
+  200bc0:	f001 fc62 	bl	202488 <_dmul>
+  200bc4:	ec41 0b18 	vmov	d8, r0, r1
+  200bc8:	4846      	ldr	r0, [pc, #280]	; (200ce4 <__hardfp_atan+0x2cc>)
+  200bca:	eeb0 0a49 	vmov.f32	s0, s18
+  200bce:	eef0 0a69 	vmov.f32	s1, s19
+  200bd2:	2105      	movs	r1, #5
+  200bd4:	4478      	add	r0, pc
+  200bd6:	f000 fff7 	bl	201bc8 <__kernel_poly>
+  200bda:	ec53 2b19 	vmov	r2, r3, d9
+  200bde:	ec51 0b10 	vmov	r0, r1, d0
+  200be2:	f001 fc51 	bl	202488 <_dmul>
+  200be6:	ec41 0b10 	vmov	d0, r0, r1
+  200bea:	ec51 0b18 	vmov	r0, r1, d8
+  200bee:	ec53 2b10 	vmov	r2, r3, d0
+  200bf2:	2c00      	cmp	r4, #0
+  200bf4:	da0e      	bge.n	200c14 <__hardfp_atan+0x1fc>
+  200bf6:	f001 f967 	bl	201ec8 <_dadd>
+  200bfa:	ed9d 1b06 	vldr	d1, [sp, #24]
+  200bfe:	ec53 2b11 	vmov	r2, r3, d1
+  200c02:	f001 fc41 	bl	202488 <_dmul>
+  200c06:	ed9d 1b06 	vldr	d1, [sp, #24]
+  200c0a:	ec53 2b11 	vmov	r2, r3, d1
+  200c0e:	f001 fd6f 	bl	2026f0 <_drsb>
+  200c12:	e035      	b.n	200c80 <__hardfp_atan+0x268>
+  200c14:	f001 f958 	bl	201ec8 <_dadd>
+  200c18:	ed9d 1b06 	vldr	d1, [sp, #24]
+  200c1c:	ec53 2b11 	vmov	r2, r3, d1
+  200c20:	f001 fc32 	bl	202488 <_dmul>
+  200c24:	ec41 0b10 	vmov	d0, r0, r1
+  200c28:	482f      	ldr	r0, [pc, #188]	; (200ce8 <__hardfp_atan+0x2d0>)
+  200c2a:	4478      	add	r0, pc
+  200c2c:	eb00 00c4 	add.w	r0, r0, r4, lsl #3
+  200c30:	ed90 1b00 	vldr	d1, [r0]
+  200c34:	ec51 0b10 	vmov	r0, r1, d0
+  200c38:	ec53 2b11 	vmov	r2, r3, d1
+  200c3c:	f001 fe30 	bl	2028a0 <_dsub>
+  200c40:	ed9d 1b06 	vldr	d1, [sp, #24]
+  200c44:	ec53 2b11 	vmov	r2, r3, d1
+  200c48:	f001 fe2a 	bl	2028a0 <_dsub>
+  200c4c:	ec41 0b10 	vmov	d0, r0, r1
+  200c50:	4826      	ldr	r0, [pc, #152]	; (200cec <__hardfp_atan+0x2d4>)
+  200c52:	4478      	add	r0, pc
+  200c54:	eb00 00c4 	add.w	r0, r0, r4, lsl #3
+  200c58:	ed90 1b00 	vldr	d1, [r0]
+  200c5c:	ec51 0b10 	vmov	r0, r1, d0
+  200c60:	ec53 2b11 	vmov	r2, r3, d1
+  200c64:	f001 fd44 	bl	2026f0 <_drsb>
+  200c68:	ec41 0b10 	vmov	d0, r0, r1
+  200c6c:	2d00      	cmp	r5, #0
+  200c6e:	bfa2      	ittt	ge
+  200c70:	ecbd 8b06 	vpopge	{d8-d10}
+  200c74:	b002      	addge	sp, #8
+  200c76:	bd70      	popge	{r4, r5, r6, pc}
+  200c78:	ec51 0b10 	vmov	r0, r1, d0
+  200c7c:	f001 f918 	bl	201eb0 <_dneg>
+  200c80:	ec41 0b10 	vmov	d0, r0, r1
+  200c84:	e701      	b.n	200a8a <__hardfp_atan+0x72>
+  200c86:	0000      	.short	0x0000
+  200c88:	44100000 	.word	0x44100000
+  200c8c:	7ff00000 	.word	0x7ff00000
+  200c90:	54442d18 	.word	0x54442d18
+  200c94:	3ff921fb 	.word	0x3ff921fb
+  200c98:	54442d18 	.word	0x54442d18
+  200c9c:	bff921fb 	.word	0xbff921fb
+  200ca0:	3fdc0000 	.word	0x3fdc0000
+  200ca4:	3e200000 	.word	0x3e200000
+  200ca8:	3ff30000 	.word	0x3ff30000
+	...
+  200cb4:	3ff00000 	.word	0x3ff00000
+  200cb8:	3fe60000 	.word	0x3fe60000
+	...
+  200cc4:	40000000 	.word	0x40000000
+  200cc8:	40038000 	.word	0x40038000
+	...
+  200cd4:	3ff80000 	.word	0x3ff80000
+  200cd8:	00000000 	.word	0x00000000
+  200cdc:	bff00000 	.word	0xbff00000
+  200ce0:	00001f4a 	.word	0x00001f4a
+  200ce4:	00001f00 	.word	0x00001f00
+  200ce8:	00001e8a 	.word	0x00001e8a
+  200cec:	00001e42 	.word	0x00001e42
+
+00200cf0 <__hardfp_cos>:
+  200cf0:	b510      	push	{r4, lr}
+  200cf2:	492f      	ldr	r1, [pc, #188]	; (200db0 <__hardfp_cos+0xc0>)
+  200cf4:	ed9f 1b2c 	vldr	d1, [pc, #176]	; 200da8 <__hardfp_cos+0xb8>
+  200cf8:	ed2d 0b02 	vpush	{d0}
+  200cfc:	b084      	sub	sp, #16
+  200cfe:	9805      	ldr	r0, [sp, #20]
+  200d00:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
+  200d04:	4288      	cmp	r0, r1
+  200d06:	bfd8      	it	le
+  200d08:	ed9d 0b04 	vldrle	d0, [sp, #16]
+  200d0c:	dd2d      	ble.n	200d6a <__hardfp_cos+0x7a>
+  200d0e:	4929      	ldr	r1, [pc, #164]	; (200db4 <__hardfp_cos+0xc4>)
+  200d10:	4288      	cmp	r0, r1
+  200d12:	d109      	bne.n	200d28 <__hardfp_cos+0x38>
+  200d14:	9804      	ldr	r0, [sp, #16]
+  200d16:	b940      	cbnz	r0, 200d2a <__hardfp_cos+0x3a>
+  200d18:	f04f 0001 	mov.w	r0, #1
+  200d1c:	f7ff fbb7 	bl	20048e <__set_errno>
+  200d20:	f001 f88a 	bl	201e38 <__mathlib_dbl_invalid>
+  200d24:	b006      	add	sp, #24
+  200d26:	bd10      	pop	{r4, pc}
+  200d28:	db05      	blt.n	200d36 <__hardfp_cos+0x46>
+  200d2a:	ed9d 0b04 	vldr	d0, [sp, #16]
+  200d2e:	f001 f877 	bl	201e20 <__mathlib_dbl_infnan>
+  200d32:	b006      	add	sp, #24
+  200d34:	bd10      	pop	{r4, pc}
+  200d36:	4668      	mov	r0, sp
+  200d38:	ed9d 0b04 	vldr	d0, [sp, #16]
+  200d3c:	f000 fc70 	bl	201620 <__ieee754_rem_pio2>
+  200d40:	f010 0003 	ands.w	r0, r0, #3
+  200d44:	bf04      	itt	eq
+  200d46:	ed9d 1b02 	vldreq	d1, [sp, #8]
+  200d4a:	ed9d 0b00 	vldreq	d0, [sp]
+  200d4e:	d00c      	beq.n	200d6a <__hardfp_cos+0x7a>
+  200d50:	2801      	cmp	r0, #1
+  200d52:	d00e      	beq.n	200d72 <__hardfp_cos+0x82>
+  200d54:	ed9d 1b02 	vldr	d1, [sp, #8]
+  200d58:	ed9d 0b00 	vldr	d0, [sp]
+  200d5c:	2802      	cmp	r0, #2
+  200d5e:	d017      	beq.n	200d90 <__hardfp_cos+0xa0>
+  200d60:	2001      	movs	r0, #1
+  200d62:	f000 ffad 	bl	201cc0 <__kernel_sin>
+  200d66:	b006      	add	sp, #24
+  200d68:	bd10      	pop	{r4, pc}
+  200d6a:	f000 fe75 	bl	201a58 <__kernel_cos>
+  200d6e:	b006      	add	sp, #24
+  200d70:	bd10      	pop	{r4, pc}
+  200d72:	ed9d 1b02 	vldr	d1, [sp, #8]
+  200d76:	ed9d 0b00 	vldr	d0, [sp]
+  200d7a:	2001      	movs	r0, #1
+  200d7c:	f000 ffa0 	bl	201cc0 <__kernel_sin>
+  200d80:	ec51 0b10 	vmov	r0, r1, d0
+  200d84:	f001 f894 	bl	201eb0 <_dneg>
+  200d88:	b006      	add	sp, #24
+  200d8a:	ec41 0b10 	vmov	d0, r0, r1
+  200d8e:	bd10      	pop	{r4, pc}
+  200d90:	f000 fe62 	bl	201a58 <__kernel_cos>
+  200d94:	ec51 0b10 	vmov	r0, r1, d0
+  200d98:	f001 f88a 	bl	201eb0 <_dneg>
+  200d9c:	b006      	add	sp, #24
+  200d9e:	ec41 0b10 	vmov	d0, r0, r1
+  200da2:	bd10      	pop	{r4, pc}
+	...
+  200db0:	3fe921fb 	.word	0x3fe921fb
+  200db4:	7ff00000 	.word	0x7ff00000
+
+00200db8 <__hardfp_exp>:
+  200db8:	b570      	push	{r4, r5, r6, lr}
+  200dba:	ed2d 0b02 	vpush	{d0}
+  200dbe:	ed2d 8b0a 	vpush	{d8-d12}
+  200dc2:	b082      	sub	sp, #8
+  200dc4:	980d      	ldr	r0, [sp, #52]	; 0x34
+  200dc6:	0fc4      	lsrs	r4, r0, #31
+  200dc8:	f020 4500 	bic.w	r5, r0, #2147483648	; 0x80000000
+  200dcc:	48ae      	ldr	r0, [pc, #696]	; (201088 <__hardfp_exp+0x2d0>)
+  200dce:	4285      	cmp	r5, r0
+  200dd0:	d348      	bcc.n	200e64 <__hardfp_exp+0xac>
+  200dd2:	48ae      	ldr	r0, [pc, #696]	; (20108c <__hardfp_exp+0x2d4>)
+  200dd4:	4285      	cmp	r5, r0
+  200dd6:	d319      	bcc.n	200e0c <__hardfp_exp+0x54>
+  200dd8:	990c      	ldr	r1, [sp, #48]	; 0x30
+  200dda:	f3c5 0013 	ubfx	r0, r5, #0, #20
+  200dde:	4308      	orrs	r0, r1
+  200de0:	d009      	beq.n	200df6 <__hardfp_exp+0x3e>
+  200de2:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200de6:	b002      	add	sp, #8
+  200de8:	ecbd 8b0a 	vpop	{d8-d12}
+  200dec:	b002      	add	sp, #8
+  200dee:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  200df2:	f001 b815 	b.w	201e20 <__mathlib_dbl_infnan>
+  200df6:	2c00      	cmp	r4, #0
+  200df8:	bf14      	ite	ne
+  200dfa:	ed9f 0ba5 	vldrne	d0, [pc, #660]	; 201090 <__hardfp_exp+0x2d8>
+  200dfe:	ed9d 0b0c 	vldreq	d0, [sp, #48]	; 0x30
+  200e02:	b002      	add	sp, #8
+  200e04:	ecbd 8b0a 	vpop	{d8-d12}
+  200e08:	b002      	add	sp, #8
+  200e0a:	bd70      	pop	{r4, r5, r6, pc}
+  200e0c:	ed9f 0ba2 	vldr	d0, [pc, #648]	; 201098 <__hardfp_exp+0x2e0>
+  200e10:	ec53 2b10 	vmov	r2, r3, d0
+  200e14:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200e18:	ec51 0b10 	vmov	r0, r1, d0
+  200e1c:	f001 fc32 	bl	202684 <_drcmple>
+  200e20:	d20a      	bcs.n	200e38 <__hardfp_exp+0x80>
+  200e22:	2002      	movs	r0, #2
+  200e24:	f7ff fb33 	bl	20048e <__set_errno>
+  200e28:	b002      	add	sp, #8
+  200e2a:	ecbd 8b0a 	vpop	{d8-d12}
+  200e2e:	b002      	add	sp, #8
+  200e30:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  200e34:	f001 b810 	b.w	201e58 <__mathlib_dbl_overflow>
+  200e38:	ed9f 0b99 	vldr	d0, [pc, #612]	; 2010a0 <__hardfp_exp+0x2e8>
+  200e3c:	ec53 2b10 	vmov	r2, r3, d0
+  200e40:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200e44:	ec51 0b10 	vmov	r0, r1, d0
+  200e48:	f001 fae2 	bl	202410 <_dcmple>
+  200e4c:	d20a      	bcs.n	200e64 <__hardfp_exp+0xac>
+  200e4e:	2002      	movs	r0, #2
+  200e50:	f7ff fb1d 	bl	20048e <__set_errno>
+  200e54:	b002      	add	sp, #8
+  200e56:	ecbd 8b0a 	vpop	{d8-d12}
+  200e5a:	b002      	add	sp, #8
+  200e5c:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  200e60:	f001 b80a 	b.w	201e78 <__mathlib_dbl_underflow>
+  200e64:	4890      	ldr	r0, [pc, #576]	; (2010a8 <__hardfp_exp+0x2f0>)
+  200e66:	ed9f bb92 	vldr	d11, [pc, #584]	; 2010b0 <__hardfp_exp+0x2f8>
+  200e6a:	42a8      	cmp	r0, r5
+  200e6c:	d25c      	bcs.n	200f28 <__hardfp_exp+0x170>
+  200e6e:	4892      	ldr	r0, [pc, #584]	; (2010b8 <__hardfp_exp+0x300>)
+  200e70:	4285      	cmp	r5, r0
+  200e72:	d219      	bcs.n	200ea8 <__hardfp_exp+0xf0>
+  200e74:	4891      	ldr	r0, [pc, #580]	; (2010bc <__hardfp_exp+0x304>)
+  200e76:	4478      	add	r0, pc
+  200e78:	eb00 00c4 	add.w	r0, r0, r4, lsl #3
+  200e7c:	ed90 0b00 	vldr	d0, [r0]
+  200e80:	ec53 2b10 	vmov	r2, r3, d0
+  200e84:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200e88:	ec51 0b10 	vmov	r0, r1, d0
+  200e8c:	f001 fd08 	bl	2028a0 <_dsub>
+  200e90:	ec41 0b1a 	vmov	d10, r0, r1
+  200e94:	488a      	ldr	r0, [pc, #552]	; (2010c0 <__hardfp_exp+0x308>)
+  200e96:	4478      	add	r0, pc
+  200e98:	eb00 00c4 	add.w	r0, r0, r4, lsl #3
+  200e9c:	ed90 9b00 	vldr	d9, [r0]
+  200ea0:	f1c4 0001 	rsb	r0, r4, #1
+  200ea4:	1b04      	subs	r4, r0, r4
+  200ea6:	e036      	b.n	200f16 <__hardfp_exp+0x15e>
+  200ea8:	ed9f 0b87 	vldr	d0, [pc, #540]	; 2010c8 <__hardfp_exp+0x310>
+  200eac:	ec53 2b10 	vmov	r2, r3, d0
+  200eb0:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200eb4:	ec51 0b10 	vmov	r0, r1, d0
+  200eb8:	f001 fae6 	bl	202488 <_dmul>
+  200ebc:	ec41 0b10 	vmov	d0, r0, r1
+  200ec0:	4883      	ldr	r0, [pc, #524]	; (2010d0 <__hardfp_exp+0x318>)
+  200ec2:	4478      	add	r0, pc
+  200ec4:	eb00 00c4 	add.w	r0, r0, r4, lsl #3
+  200ec8:	ed90 1b00 	vldr	d1, [r0]
+  200ecc:	ec51 0b10 	vmov	r0, r1, d0
+  200ed0:	ec53 2b11 	vmov	r2, r3, d1
+  200ed4:	f000 fff8 	bl	201ec8 <_dadd>
+  200ed8:	f001 fa40 	bl	20235c <_dfix>
+  200edc:	4604      	mov	r4, r0
+  200ede:	f001 fa6c 	bl	2023ba <_dflt>
+  200ee2:	ec41 0b18 	vmov	d8, r0, r1
+  200ee6:	ed9f 0b7c 	vldr	d0, [pc, #496]	; 2010d8 <__hardfp_exp+0x320>
+  200eea:	ec53 2b10 	vmov	r2, r3, d0
+  200eee:	f001 facb 	bl	202488 <_dmul>
+  200ef2:	ed9d 1b0c 	vldr	d1, [sp, #48]	; 0x30
+  200ef6:	ec53 2b11 	vmov	r2, r3, d1
+  200efa:	f001 fbf9 	bl	2026f0 <_drsb>
+  200efe:	ec41 0b1a 	vmov	d10, r0, r1
+  200f02:	ed9f 0b77 	vldr	d0, [pc, #476]	; 2010e0 <__hardfp_exp+0x328>
+  200f06:	ec51 0b18 	vmov	r0, r1, d8
+  200f0a:	ec53 2b10 	vmov	r2, r3, d0
+  200f0e:	f001 fabb 	bl	202488 <_dmul>
+  200f12:	ec41 0b19 	vmov	d9, r0, r1
+  200f16:	ec51 0b1a 	vmov	r0, r1, d10
+  200f1a:	ec53 2b19 	vmov	r2, r3, d9
+  200f1e:	f001 fcbf 	bl	2028a0 <_dsub>
+  200f22:	e9cd 010c 	strd	r0, r1, [sp, #48]	; 0x30
+  200f26:	e01b      	b.n	200f60 <__hardfp_exp+0x1a8>
+  200f28:	486f      	ldr	r0, [pc, #444]	; (2010e8 <__hardfp_exp+0x330>)
+  200f2a:	4285      	cmp	r5, r0
+  200f2c:	d217      	bcs.n	200f5e <__hardfp_exp+0x1a6>
+  200f2e:	ed9f 0b70 	vldr	d0, [pc, #448]	; 2010f0 <__hardfp_exp+0x338>
+  200f32:	ec53 2b10 	vmov	r2, r3, d0
+  200f36:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200f3a:	ec51 0b10 	vmov	r0, r1, d0
+  200f3e:	f000 ffc3 	bl	201ec8 <_dadd>
+  200f42:	ec53 2b1b 	vmov	r2, r3, d11
+  200f46:	f001 fb9d 	bl	202684 <_drcmple>
+  200f4a:	d208      	bcs.n	200f5e <__hardfp_exp+0x1a6>
+  200f4c:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200f50:	ec53 2b1b 	vmov	r2, r3, d11
+  200f54:	ec51 0b10 	vmov	r0, r1, d0
+  200f58:	f000 ffb6 	bl	201ec8 <_dadd>
+  200f5c:	e06e      	b.n	20103c <__hardfp_exp+0x284>
+  200f5e:	2400      	movs	r4, #0
+  200f60:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200f64:	ec53 2b10 	vmov	r2, r3, d0
+  200f68:	ec51 0b10 	vmov	r0, r1, d0
+  200f6c:	f001 fa8c 	bl	202488 <_dmul>
+  200f70:	ec41 0b18 	vmov	d8, r0, r1
+  200f74:	4860      	ldr	r0, [pc, #384]	; (2010f8 <__hardfp_exp+0x340>)
+  200f76:	2105      	movs	r1, #5
+  200f78:	eeb0 0a48 	vmov.f32	s0, s16
+  200f7c:	eef0 0a68 	vmov.f32	s1, s17
+  200f80:	4478      	add	r0, pc
+  200f82:	f000 fe21 	bl	201bc8 <__kernel_poly>
+  200f86:	ec53 2b18 	vmov	r2, r3, d8
+  200f8a:	ec51 0b10 	vmov	r0, r1, d0
+  200f8e:	f001 fa7b 	bl	202488 <_dmul>
+  200f92:	ed9d 1b0c 	vldr	d1, [sp, #48]	; 0x30
+  200f96:	ec53 2b11 	vmov	r2, r3, d1
+  200f9a:	f001 fba9 	bl	2026f0 <_drsb>
+  200f9e:	ec41 0b18 	vmov	d8, r0, r1
+  200fa2:	ed9f 0b57 	vldr	d0, [pc, #348]	; 201100 <__hardfp_exp+0x348>
+  200fa6:	b35c      	cbz	r4, 201000 <__hardfp_exp+0x248>
+  200fa8:	ec53 2b18 	vmov	r2, r3, d8
+  200fac:	ec51 0b10 	vmov	r0, r1, d0
+  200fb0:	f001 fc76 	bl	2028a0 <_dsub>
+  200fb4:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  200fb8:	ec41 0b1c 	vmov	d12, r0, r1
+  200fbc:	ec53 2b18 	vmov	r2, r3, d8
+  200fc0:	ec51 0b10 	vmov	r0, r1, d0
+  200fc4:	f001 fa60 	bl	202488 <_dmul>
+  200fc8:	ec53 2b1c 	vmov	r2, r3, d12
+  200fcc:	f001 f830 	bl	202030 <_ddiv>
+  200fd0:	ec53 2b19 	vmov	r2, r3, d9
+  200fd4:	f001 fb8c 	bl	2026f0 <_drsb>
+  200fd8:	ec53 2b1a 	vmov	r2, r3, d10
+  200fdc:	f001 fc60 	bl	2028a0 <_dsub>
+  200fe0:	ec53 2b1b 	vmov	r2, r3, d11
+  200fe4:	f001 fb84 	bl	2026f0 <_drsb>
+  200fe8:	e9cd 0100 	strd	r0, r1, [sp]
+  200fec:	f46f 707f 	mvn.w	r0, #1020	; 0x3fc
+  200ff0:	4284      	cmp	r4, r0
+  200ff2:	db26      	blt.n	201042 <__hardfp_exp+0x28a>
+  200ff4:	eb01 5004 	add.w	r0, r1, r4, lsl #20
+  200ff8:	9001      	str	r0, [sp, #4]
+  200ffa:	ed9d 0b00 	vldr	d0, [sp]
+  200ffe:	e700      	b.n	200e02 <__hardfp_exp+0x4a>
+  201000:	ec53 2b10 	vmov	r2, r3, d0
+  201004:	ec51 0b18 	vmov	r0, r1, d8
+  201008:	f001 fc4a 	bl	2028a0 <_dsub>
+  20100c:	ed9d 0b0c 	vldr	d0, [sp, #48]	; 0x30
+  201010:	ec41 0b19 	vmov	d9, r0, r1
+  201014:	ec53 2b18 	vmov	r2, r3, d8
+  201018:	ec51 0b10 	vmov	r0, r1, d0
+  20101c:	f001 fa34 	bl	202488 <_dmul>
+  201020:	ec53 2b19 	vmov	r2, r3, d9
+  201024:	f001 f804 	bl	202030 <_ddiv>
+  201028:	ed9d 1b0c 	vldr	d1, [sp, #48]	; 0x30
+  20102c:	ec53 2b11 	vmov	r2, r3, d1
+  201030:	f001 fc36 	bl	2028a0 <_dsub>
+  201034:	ec53 2b1b 	vmov	r2, r3, d11
+  201038:	f001 fb5a 	bl	2026f0 <_drsb>
+  20103c:	ec41 0b10 	vmov	d0, r0, r1
+  201040:	e6df      	b.n	200e02 <__hardfp_exp+0x4a>
+  201042:	4608      	mov	r0, r1
+  201044:	f04f 517a 	mov.w	r1, #1048576000	; 0x3e800000
+  201048:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  20104c:	ed9f 0b2e 	vldr	d0, [pc, #184]	; 201108 <__hardfp_exp+0x350>
+  201050:	4408      	add	r0, r1
+  201052:	ec53 2b10 	vmov	r2, r3, d0
+  201056:	9001      	str	r0, [sp, #4]
+  201058:	ed9d 0b00 	vldr	d0, [sp]
+  20105c:	ec51 0b10 	vmov	r0, r1, d0
+  201060:	f001 fa12 	bl	202488 <_dmul>
+  201064:	460d      	mov	r5, r1
+  201066:	ec45 0b10 	vmov	d0, r0, r5
+  20106a:	4604      	mov	r4, r0
+  20106c:	ec51 0b10 	vmov	r0, r1, d0
+  201070:	f7ff fcba 	bl	2009e8 <__ARM_fpclassify>
+  201074:	2804      	cmp	r0, #4
+  201076:	bf08      	it	eq
+  201078:	f000 fefe 	bleq	201e78 <__mathlib_dbl_underflow>
+  20107c:	ec45 4b10 	vmov	d0, r4, r5
+  201080:	e6bf      	b.n	200e02 <__hardfp_exp+0x4a>
+  201082:	0000      	.short	0x0000
+  201084:	00000000 	.word	0x00000000
+  201088:	40862e42 	.word	0x40862e42
+  20108c:	7ff00000 	.word	0x7ff00000
+	...
+  201098:	fefa39ef 	.word	0xfefa39ef
+  20109c:	40862e42 	.word	0x40862e42
+  2010a0:	d52d3051 	.word	0xd52d3051
+  2010a4:	c0874910 	.word	0xc0874910
+  2010a8:	3fd62e42 	.word	0x3fd62e42
+	...
+  2010b4:	3ff00000 	.word	0x3ff00000
+  2010b8:	3ff0a2b2 	.word	0x3ff0a2b2
+  2010bc:	00001cc6 	.word	0x00001cc6
+  2010c0:	00001cb6 	.word	0x00001cb6
+  2010c4:	00000000 	.word	0x00000000
+  2010c8:	652b82fe 	.word	0x652b82fe
+  2010cc:	3ff71547 	.word	0x3ff71547
+  2010d0:	00001c6a 	.word	0x00001c6a
+  2010d4:	00000000 	.word	0x00000000
+  2010d8:	fee00000 	.word	0xfee00000
+  2010dc:	3fe62e42 	.word	0x3fe62e42
+  2010e0:	35793c76 	.word	0x35793c76
+  2010e4:	3dea39ef 	.word	0x3dea39ef
+  2010e8:	3e300000 	.word	0x3e300000
+  2010ec:	00000000 	.word	0x00000000
+  2010f0:	8800759c 	.word	0x8800759c
+  2010f4:	7e37e43c 	.word	0x7e37e43c
+  2010f8:	00001bdc 	.word	0x00001bdc
+	...
+  201104:	40000000 	.word	0x40000000
+  201108:	00000000 	.word	0x00000000
+  20110c:	01700000 	.word	0x01700000
+
+00201110 <__hardfp_log>:
+  201110:	b570      	push	{r4, r5, r6, lr}
+  201112:	4bd9      	ldr	r3, [pc, #868]	; (201478 <__hardfp_log+0x368>)
+  201114:	2400      	movs	r4, #0
+  201116:	ed2d 0b02 	vpush	{d0}
+  20111a:	ed2d 8b10 	vpush	{d8-d15}
+  20111e:	e9dd 1010 	ldrd	r1, r0, [sp, #64]	; 0x40
+  201122:	4298      	cmp	r0, r3
+  201124:	da05      	bge.n	201132 <__hardfp_log+0x22>
+  201126:	f020 4200 	bic.w	r2, r0, #2147483648	; 0x80000000
+  20112a:	429a      	cmp	r2, r3
+  20112c:	d801      	bhi.n	201132 <__hardfp_log+0x22>
+  20112e:	d109      	bne.n	201144 <__hardfp_log+0x34>
+  201130:	b141      	cbz	r1, 201144 <__hardfp_log+0x34>
+  201132:	ed9d 0b10 	vldr	d0, [sp, #64]	; 0x40
+  201136:	ecbd 8b10 	vpop	{d8-d15}
+  20113a:	b002      	add	sp, #8
+  20113c:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  201140:	f000 be6e 	b.w	201e20 <__mathlib_dbl_infnan>
+  201144:	f5b0 1f80 	cmp.w	r0, #1048576	; 0x100000
+  201148:	da26      	bge.n	201198 <__hardfp_log+0x88>
+  20114a:	4311      	orrs	r1, r2
+  20114c:	d00b      	beq.n	201166 <__hardfp_log+0x56>
+  20114e:	2800      	cmp	r0, #0
+  201150:	da13      	bge.n	20117a <__hardfp_log+0x6a>
+  201152:	2001      	movs	r0, #1
+  201154:	f7ff f99b 	bl	20048e <__set_errno>
+  201158:	ecbd 8b10 	vpop	{d8-d15}
+  20115c:	b002      	add	sp, #8
+  20115e:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  201162:	f000 be69 	b.w	201e38 <__mathlib_dbl_invalid>
+  201166:	2002      	movs	r0, #2
+  201168:	f7ff f991 	bl	20048e <__set_errno>
+  20116c:	f000 fe40 	bl	201df0 <__mathlib_dbl_divzero>
+  201170:	ec51 0b10 	vmov	r0, r1, d0
+  201174:	f000 fe9c 	bl	201eb0 <_dneg>
+  201178:	e09e      	b.n	2012b8 <__hardfp_log+0x1a8>
+  20117a:	f06f 0435 	mvn.w	r4, #53	; 0x35
+  20117e:	ed9f 0bc0 	vldr	d0, [pc, #768]	; 201480 <__hardfp_log+0x370>
+  201182:	ec53 2b10 	vmov	r2, r3, d0
+  201186:	ed9d 0b10 	vldr	d0, [sp, #64]	; 0x40
+  20118a:	ec51 0b10 	vmov	r0, r1, d0
+  20118e:	f001 f97b 	bl	202488 <_dmul>
+  201192:	e9cd 0110 	strd	r0, r1, [sp, #64]	; 0x40
+  201196:	4608      	mov	r0, r1
+  201198:	eb04 5120 	add.w	r1, r4, r0, asr #20
+  20119c:	f3c0 0413 	ubfx	r4, r0, #0, #20
+  2011a0:	48b9      	ldr	r0, [pc, #740]	; (201488 <__hardfp_log+0x378>)
+  2011a2:	f2a1 31ff 	subw	r1, r1, #1023	; 0x3ff
+  2011a6:	4420      	add	r0, r4
+  2011a8:	f400 1080 	and.w	r0, r0, #1048576	; 0x100000
+  2011ac:	f080 627f 	eor.w	r2, r0, #267386880	; 0xff00000
+  2011b0:	f082 5240 	eor.w	r2, r2, #805306368	; 0x30000000
+  2011b4:	4322      	orrs	r2, r4
+  2011b6:	eb01 5520 	add.w	r5, r1, r0, asr #20
+  2011ba:	ed9f 0bb5 	vldr	d0, [pc, #724]	; 201490 <__hardfp_log+0x380>
+  2011be:	9211      	str	r2, [sp, #68]	; 0x44
+  2011c0:	ec53 2b10 	vmov	r2, r3, d0
+  2011c4:	ed9d 0b10 	vldr	d0, [sp, #64]	; 0x40
+  2011c8:	ec51 0b10 	vmov	r0, r1, d0
+  2011cc:	f001 fb68 	bl	2028a0 <_dsub>
+  2011d0:	ec41 0b18 	vmov	d8, r0, r1
+  2011d4:	1ca0      	adds	r0, r4, #2
+  2011d6:	f3c0 0013 	ubfx	r0, r0, #0, #20
+  2011da:	ed9f dbaf 	vldr	d13, [pc, #700]	; 201498 <__hardfp_log+0x388>
+  2011de:	ed9f ebb0 	vldr	d14, [pc, #704]	; 2014a0 <__hardfp_log+0x390>
+  2011e2:	4eb1      	ldr	r6, [pc, #708]	; (2014a8 <__hardfp_log+0x398>)
+  2011e4:	447e      	add	r6, pc
+  2011e6:	2803      	cmp	r0, #3
+  2011e8:	d26c      	bcs.n	2012c4 <__hardfp_log+0x1b4>
+  2011ea:	ed96 0b00 	vldr	d0, [r6]
+  2011ee:	ec51 0b18 	vmov	r0, r1, d8
+  2011f2:	ec53 2b10 	vmov	r2, r3, d0
+  2011f6:	f001 f875 	bl	2022e4 <_dcmpeq>
+  2011fa:	d11d      	bne.n	201238 <__hardfp_log+0x128>
+  2011fc:	2d00      	cmp	r5, #0
+  2011fe:	bf01      	itttt	eq
+  201200:	ed96 0b00 	vldreq	d0, [r6]
+  201204:	ecbd 8b10 	vpopeq	{d8-d15}
+  201208:	b002      	addeq	sp, #8
+  20120a:	bd70      	popeq	{r4, r5, r6, pc}
+  20120c:	4628      	mov	r0, r5
+  20120e:	f001 f8d4 	bl	2023ba <_dflt>
+  201212:	ec41 0b18 	vmov	d8, r0, r1
+  201216:	ec53 2b1d 	vmov	r2, r3, d13
+  20121a:	f001 f935 	bl	202488 <_dmul>
+  20121e:	ec41 0b19 	vmov	d9, r0, r1
+  201222:	ec53 2b1e 	vmov	r2, r3, d14
+  201226:	ec51 0b18 	vmov	r0, r1, d8
+  20122a:	f001 f92d 	bl	202488 <_dmul>
+  20122e:	ec53 2b19 	vmov	r2, r3, d9
+  201232:	f000 fe49 	bl	201ec8 <_dadd>
+  201236:	e03f      	b.n	2012b8 <__hardfp_log+0x1a8>
+  201238:	ed9f 0b9d 	vldr	d0, [pc, #628]	; 2014b0 <__hardfp_log+0x3a0>
+  20123c:	ec51 0b18 	vmov	r0, r1, d8
+  201240:	ec53 2b10 	vmov	r2, r3, d0
+  201244:	f001 f920 	bl	202488 <_dmul>
+  201248:	ed9f 1b9b 	vldr	d1, [pc, #620]	; 2014b8 <__hardfp_log+0x3a8>
+  20124c:	ec53 2b11 	vmov	r2, r3, d1
+  201250:	f001 fa4e 	bl	2026f0 <_drsb>
+  201254:	ec41 0b19 	vmov	d9, r0, r1
+  201258:	ec53 2b18 	vmov	r2, r3, d8
+  20125c:	ec51 0b18 	vmov	r0, r1, d8
+  201260:	f001 f912 	bl	202488 <_dmul>
+  201264:	ec53 2b19 	vmov	r2, r3, d9
+  201268:	f001 f90e 	bl	202488 <_dmul>
+  20126c:	ec41 0b19 	vmov	d9, r0, r1
+  201270:	2d00      	cmp	r5, #0
+  201272:	bf04      	itt	eq
+  201274:	ec53 2b19 	vmoveq	r2, r3, d9
+  201278:	ec51 0b18 	vmoveq	r0, r1, d8
+  20127c:	d01a      	beq.n	2012b4 <__hardfp_log+0x1a4>
+  20127e:	4628      	mov	r0, r5
+  201280:	f001 f89b 	bl	2023ba <_dflt>
+  201284:	ec41 0b1a 	vmov	d10, r0, r1
+  201288:	ec53 2b1d 	vmov	r2, r3, d13
+  20128c:	f001 f8fc 	bl	202488 <_dmul>
+  201290:	ec53 2b19 	vmov	r2, r3, d9
+  201294:	f001 fa2c 	bl	2026f0 <_drsb>
+  201298:	ec53 2b18 	vmov	r2, r3, d8
+  20129c:	f001 fb00 	bl	2028a0 <_dsub>
+  2012a0:	ec41 0b18 	vmov	d8, r0, r1
+  2012a4:	ec53 2b1e 	vmov	r2, r3, d14
+  2012a8:	ec51 0b1a 	vmov	r0, r1, d10
+  2012ac:	f001 f8ec 	bl	202488 <_dmul>
+  2012b0:	ec53 2b18 	vmov	r2, r3, d8
+  2012b4:	f001 faf4 	bl	2028a0 <_dsub>
+  2012b8:	ecbd 8b10 	vpop	{d8-d15}
+  2012bc:	b002      	add	sp, #8
+  2012be:	ec41 0b10 	vmov	d0, r0, r1
+  2012c2:	bd70      	pop	{r4, r5, r6, pc}
+  2012c4:	ed9f 0b7e 	vldr	d0, [pc, #504]	; 2014c0 <__hardfp_log+0x3b0>
+  2012c8:	ec51 0b18 	vmov	r0, r1, d8
+  2012cc:	ec53 2b10 	vmov	r2, r3, d0
+  2012d0:	f000 fdfa 	bl	201ec8 <_dadd>
+  2012d4:	ec41 0b10 	vmov	d0, r0, r1
+  2012d8:	ec51 0b18 	vmov	r0, r1, d8
+  2012dc:	ec53 2b10 	vmov	r2, r3, d0
+  2012e0:	f000 fea6 	bl	202030 <_ddiv>
+  2012e4:	ec41 0b19 	vmov	d9, r0, r1
+  2012e8:	4628      	mov	r0, r5
+  2012ea:	f001 f866 	bl	2023ba <_dflt>
+  2012ee:	ec41 0b1b 	vmov	d11, r0, r1
+  2012f2:	ec53 2b19 	vmov	r2, r3, d9
+  2012f6:	ec51 0b19 	vmov	r0, r1, d9
+  2012fa:	f001 f8c5 	bl	202488 <_dmul>
+  2012fe:	ec41 0b1a 	vmov	d10, r0, r1
+  201302:	4871      	ldr	r0, [pc, #452]	; (2014c8 <__hardfp_log+0x3b8>)
+  201304:	ec53 2b1a 	vmov	r2, r3, d10
+  201308:	1826      	adds	r6, r4, r0
+  20130a:	ec51 0b1a 	vmov	r0, r1, d10
+  20130e:	f001 f8bb 	bl	202488 <_dmul>
+  201312:	ec41 0b1f 	vmov	d15, r0, r1
+  201316:	486d      	ldr	r0, [pc, #436]	; (2014cc <__hardfp_log+0x3bc>)
+  201318:	f1c4 0451 	rsb	r4, r4, #81	; 0x51
+  20131c:	f504 24d7 	add.w	r4, r4, #440320	; 0x6b800
+  201320:	eeb0 0a4f 	vmov.f32	s0, s30
+  201324:	eef0 0a6f 	vmov.f32	s1, s31
+  201328:	2103      	movs	r1, #3
+  20132a:	4478      	add	r0, pc
+  20132c:	f000 fc4c 	bl	201bc8 <__kernel_poly>
+  201330:	ec53 2b1f 	vmov	r2, r3, d15
+  201334:	ec51 0b10 	vmov	r0, r1, d0
+  201338:	f001 f8a6 	bl	202488 <_dmul>
+  20133c:	ec41 0b1c 	vmov	d12, r0, r1
+  201340:	4863      	ldr	r0, [pc, #396]	; (2014d0 <__hardfp_log+0x3c0>)
+  201342:	eeb0 0a4f 	vmov.f32	s0, s30
+  201346:	eef0 0a6f 	vmov.f32	s1, s31
+  20134a:	2104      	movs	r1, #4
+  20134c:	4478      	add	r0, pc
+  20134e:	f000 fc3b 	bl	201bc8 <__kernel_poly>
+  201352:	ec53 2b1a 	vmov	r2, r3, d10
+  201356:	ec51 0b10 	vmov	r0, r1, d0
+  20135a:	f001 f895 	bl	202488 <_dmul>
+  20135e:	4334      	orrs	r4, r6
+  201360:	ec53 2b1c 	vmov	r2, r3, d12
+  201364:	f000 fdb0 	bl	201ec8 <_dadd>
+  201368:	ec41 0b1c 	vmov	d12, r0, r1
+  20136c:	2c00      	cmp	r4, #0
+  20136e:	dd4c      	ble.n	20140a <__hardfp_log+0x2fa>
+  201370:	ed9f 0b51 	vldr	d0, [pc, #324]	; 2014b8 <__hardfp_log+0x3a8>
+  201374:	ec51 0b18 	vmov	r0, r1, d8
+  201378:	ec53 2b10 	vmov	r2, r3, d0
+  20137c:	f001 f884 	bl	202488 <_dmul>
+  201380:	ec53 2b18 	vmov	r2, r3, d8
+  201384:	f001 f880 	bl	202488 <_dmul>
+  201388:	ec41 0b1a 	vmov	d10, r0, r1
+  20138c:	b355      	cbz	r5, 2013e4 <__hardfp_log+0x2d4>
+  20138e:	ec53 2b1d 	vmov	r2, r3, d13
+  201392:	ec51 0b1b 	vmov	r0, r1, d11
+  201396:	f001 f877 	bl	202488 <_dmul>
+  20139a:	ec41 0b1d 	vmov	d13, r0, r1
+  20139e:	ec53 2b1c 	vmov	r2, r3, d12
+  2013a2:	ec51 0b1a 	vmov	r0, r1, d10
+  2013a6:	f000 fd8f 	bl	201ec8 <_dadd>
+  2013aa:	ec53 2b19 	vmov	r2, r3, d9
+  2013ae:	f001 f86b 	bl	202488 <_dmul>
+  2013b2:	ec53 2b1d 	vmov	r2, r3, d13
+  2013b6:	f000 fd87 	bl	201ec8 <_dadd>
+  2013ba:	ec53 2b1a 	vmov	r2, r3, d10
+  2013be:	f001 f997 	bl	2026f0 <_drsb>
+  2013c2:	ec53 2b18 	vmov	r2, r3, d8
+  2013c6:	f001 fa6b 	bl	2028a0 <_dsub>
+  2013ca:	ec41 0b18 	vmov	d8, r0, r1
+  2013ce:	ec53 2b1e 	vmov	r2, r3, d14
+  2013d2:	ec51 0b1b 	vmov	r0, r1, d11
+  2013d6:	f001 f857 	bl	202488 <_dmul>
+  2013da:	ec53 2b18 	vmov	r2, r3, d8
+  2013de:	f001 fa5f 	bl	2028a0 <_dsub>
+  2013e2:	e769      	b.n	2012b8 <__hardfp_log+0x1a8>
+  2013e4:	ec53 2b1c 	vmov	r2, r3, d12
+  2013e8:	ec51 0b1a 	vmov	r0, r1, d10
+  2013ec:	f000 fd6c 	bl	201ec8 <_dadd>
+  2013f0:	ec53 2b19 	vmov	r2, r3, d9
+  2013f4:	f001 f848 	bl	202488 <_dmul>
+  2013f8:	ec53 2b1a 	vmov	r2, r3, d10
+  2013fc:	f001 f978 	bl	2026f0 <_drsb>
+  201400:	ec53 2b18 	vmov	r2, r3, d8
+  201404:	f001 f974 	bl	2026f0 <_drsb>
+  201408:	e756      	b.n	2012b8 <__hardfp_log+0x1a8>
+  20140a:	b335      	cbz	r5, 20145a <__hardfp_log+0x34a>
+  20140c:	ec53 2b1d 	vmov	r2, r3, d13
+  201410:	ec51 0b1b 	vmov	r0, r1, d11
+  201414:	f001 f838 	bl	202488 <_dmul>
+  201418:	ec41 0b1a 	vmov	d10, r0, r1
+  20141c:	ec53 2b1c 	vmov	r2, r3, d12
+  201420:	ec51 0b18 	vmov	r0, r1, d8
+  201424:	f001 fa3c 	bl	2028a0 <_dsub>
+  201428:	ec53 2b19 	vmov	r2, r3, d9
+  20142c:	f001 f82c 	bl	202488 <_dmul>
+  201430:	ec53 2b1a 	vmov	r2, r3, d10
+  201434:	f001 fa34 	bl	2028a0 <_dsub>
+  201438:	ec53 2b18 	vmov	r2, r3, d8
+  20143c:	f001 fa30 	bl	2028a0 <_dsub>
+  201440:	ec41 0b18 	vmov	d8, r0, r1
+  201444:	ec53 2b1e 	vmov	r2, r3, d14
+  201448:	ec51 0b1b 	vmov	r0, r1, d11
+  20144c:	f001 f81c 	bl	202488 <_dmul>
+  201450:	ec53 2b18 	vmov	r2, r3, d8
+  201454:	f001 fa24 	bl	2028a0 <_dsub>
+  201458:	e72e      	b.n	2012b8 <__hardfp_log+0x1a8>
+  20145a:	ec53 2b1c 	vmov	r2, r3, d12
+  20145e:	ec51 0b18 	vmov	r0, r1, d8
+  201462:	f001 fa1d 	bl	2028a0 <_dsub>
+  201466:	ec53 2b19 	vmov	r2, r3, d9
+  20146a:	f001 f80d 	bl	202488 <_dmul>
+  20146e:	ec53 2b18 	vmov	r2, r3, d8
+  201472:	f001 f93d 	bl	2026f0 <_drsb>
+  201476:	e71f      	b.n	2012b8 <__hardfp_log+0x1a8>
+  201478:	7ff00000 	.word	0x7ff00000
+	...
+  201484:	43500000 	.word	0x43500000
+  201488:	00095f64 	.word	0x00095f64
+	...
+  201494:	3ff00000 	.word	0x3ff00000
+  201498:	35793c76 	.word	0x35793c76
+  20149c:	3dea39ef 	.word	0x3dea39ef
+  2014a0:	fee00000 	.word	0xfee00000
+  2014a4:	3fe62e42 	.word	0x3fe62e42
+  2014a8:	00001a08 	.word	0x00001a08
+  2014ac:	00000000 	.word	0x00000000
+  2014b0:	55555555 	.word	0x55555555
+  2014b4:	3fd55555 	.word	0x3fd55555
+  2014b8:	00000000 	.word	0x00000000
+  2014bc:	3fe00000 	.word	0x3fe00000
+  2014c0:	00000000 	.word	0x00000000
+  2014c4:	40000000 	.word	0x40000000
+  2014c8:	fff9eb86 	.word	0xfff9eb86
+  2014cc:	0000185a 	.word	0x0000185a
+  2014d0:	00001850 	.word	0x00001850
+  2014d4:	00000000 	.word	0x00000000
+
+002014d8 <__hardfp_sin>:
+  2014d8:	b510      	push	{r4, lr}
+  2014da:	492f      	ldr	r1, [pc, #188]	; (201598 <__hardfp_sin+0xc0>)
+  2014dc:	ed9f 1b2c 	vldr	d1, [pc, #176]	; 201590 <__hardfp_sin+0xb8>
+  2014e0:	ed2d 0b02 	vpush	{d0}
+  2014e4:	b084      	sub	sp, #16
+  2014e6:	9805      	ldr	r0, [sp, #20]
+  2014e8:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
+  2014ec:	4288      	cmp	r0, r1
+  2014ee:	bfdc      	itt	le
+  2014f0:	2000      	movle	r0, #0
+  2014f2:	ed9d 0b04 	vldrle	d0, [sp, #16]
+  2014f6:	dd32      	ble.n	20155e <__hardfp_sin+0x86>
+  2014f8:	4928      	ldr	r1, [pc, #160]	; (20159c <__hardfp_sin+0xc4>)
+  2014fa:	4288      	cmp	r0, r1
+  2014fc:	d109      	bne.n	201512 <__hardfp_sin+0x3a>
+  2014fe:	9804      	ldr	r0, [sp, #16]
+  201500:	b940      	cbnz	r0, 201514 <__hardfp_sin+0x3c>
+  201502:	f04f 0001 	mov.w	r0, #1
+  201506:	f7fe ffc2 	bl	20048e <__set_errno>
+  20150a:	f000 fc95 	bl	201e38 <__mathlib_dbl_invalid>
+  20150e:	b006      	add	sp, #24
+  201510:	bd10      	pop	{r4, pc}
+  201512:	db05      	blt.n	201520 <__hardfp_sin+0x48>
+  201514:	ed9d 0b04 	vldr	d0, [sp, #16]
+  201518:	f000 fc82 	bl	201e20 <__mathlib_dbl_infnan>
+  20151c:	b006      	add	sp, #24
+  20151e:	bd10      	pop	{r4, pc}
+  201520:	4668      	mov	r0, sp
+  201522:	ed9d 0b04 	vldr	d0, [sp, #16]
+  201526:	f000 f87b 	bl	201620 <__ieee754_rem_pio2>
+  20152a:	f010 0003 	ands.w	r0, r0, #3
+  20152e:	d011      	beq.n	201554 <__hardfp_sin+0x7c>
+  201530:	2801      	cmp	r0, #1
+  201532:	d018      	beq.n	201566 <__hardfp_sin+0x8e>
+  201534:	ed9d 1b02 	vldr	d1, [sp, #8]
+  201538:	ed9d 0b00 	vldr	d0, [sp]
+  20153c:	2802      	cmp	r0, #2
+  20153e:	d01a      	beq.n	201576 <__hardfp_sin+0x9e>
+  201540:	f000 fa8a 	bl	201a58 <__kernel_cos>
+  201544:	ec51 0b10 	vmov	r0, r1, d0
+  201548:	f000 fcb2 	bl	201eb0 <_dneg>
+  20154c:	b006      	add	sp, #24
+  20154e:	ec41 0b10 	vmov	d0, r0, r1
+  201552:	bd10      	pop	{r4, pc}
+  201554:	ed9d 1b02 	vldr	d1, [sp, #8]
+  201558:	ed9d 0b00 	vldr	d0, [sp]
+  20155c:	2001      	movs	r0, #1
+  20155e:	f000 fbaf 	bl	201cc0 <__kernel_sin>
+  201562:	b006      	add	sp, #24
+  201564:	bd10      	pop	{r4, pc}
+  201566:	ed9d 1b02 	vldr	d1, [sp, #8]
+  20156a:	ed9d 0b00 	vldr	d0, [sp]
+  20156e:	f000 fa73 	bl	201a58 <__kernel_cos>
+  201572:	b006      	add	sp, #24
+  201574:	bd10      	pop	{r4, pc}
+  201576:	2001      	movs	r0, #1
+  201578:	f000 fba2 	bl	201cc0 <__kernel_sin>
+  20157c:	ec51 0b10 	vmov	r0, r1, d0
+  201580:	f000 fc96 	bl	201eb0 <_dneg>
+  201584:	b006      	add	sp, #24
+  201586:	ec41 0b10 	vmov	d0, r0, r1
+  20158a:	bd10      	pop	{r4, pc}
+	...
+  201598:	3fe921fb 	.word	0x3fe921fb
+  20159c:	7ff00000 	.word	0x7ff00000
+
+002015a0 <__hardfp_sqrt>:
+  2015a0:	b500      	push	{lr}
+  2015a2:	ed2d 8b04 	vpush	{d8-d9}
+  2015a6:	eeb0 9a40 	vmov.f32	s18, s0
+  2015aa:	eef0 9a60 	vmov.f32	s19, s1
+  2015ae:	b083      	sub	sp, #12
+  2015b0:	ec51 0b19 	vmov	r0, r1, d9
+  2015b4:	f001 f8a8 	bl	202708 <_dsqrt>
+  2015b8:	ec41 0b18 	vmov	d8, r0, r1
+  2015bc:	ee18 0a10 	vmov	r0, s16
+  2015c0:	ee18 1a90 	vmov	r1, s17
+  2015c4:	ed8d 8b00 	vstr	d8, [sp]
+  2015c8:	2800      	cmp	r0, #0
+  2015ca:	bf18      	it	ne
+  2015cc:	2001      	movne	r0, #1
+  2015ce:	4308      	orrs	r0, r1
+  2015d0:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
+  2015d4:	f1c0 607f 	rsb	r0, r0, #267386880	; 0xff00000
+  2015d8:	f100 40e0 	add.w	r0, r0, #1879048192	; 0x70000000
+  2015dc:	0fc0      	lsrs	r0, r0, #31
+  2015de:	d014      	beq.n	20160a <__hardfp_sqrt+0x6a>
+  2015e0:	ee19 1a10 	vmov	r1, s18
+  2015e4:	ee19 0a90 	vmov	r0, s19
+  2015e8:	ed8d 9b00 	vstr	d9, [sp]
+  2015ec:	2900      	cmp	r1, #0
+  2015ee:	bf18      	it	ne
+  2015f0:	2101      	movne	r1, #1
+  2015f2:	4308      	orrs	r0, r1
+  2015f4:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
+  2015f8:	f1c0 607f 	rsb	r0, r0, #267386880	; 0xff00000
+  2015fc:	f100 40e0 	add.w	r0, r0, #1879048192	; 0x70000000
+  201600:	0fc0      	lsrs	r0, r0, #31
+  201602:	bf04      	itt	eq
+  201604:	2001      	moveq	r0, #1
+  201606:	f7fe ff42 	bleq	20048e <__set_errno>
+  20160a:	eeb0 0a48 	vmov.f32	s0, s16
+  20160e:	b003      	add	sp, #12
+  201610:	eef0 0a68 	vmov.f32	s1, s17
+  201614:	ecbd 8b04 	vpop	{d8-d9}
+  201618:	bd00      	pop	{pc}
+  20161a:	0000      	movs	r0, r0
+  20161c:	0000      	movs	r0, r0
+	...
+
+00201620 <__ieee754_rem_pio2>:
+  201620:	e92d 4ff1 	stmdb	sp!, {r0, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  201624:	4604      	mov	r4, r0
+  201626:	ed2d 0b02 	vpush	{d0}
+  20162a:	ed2d 8b08 	vpush	{d8-d11}
+  20162e:	b08a      	sub	sp, #40	; 0x28
+  201630:	ed9f 0be7 	vldr	d0, [pc, #924]	; 2019d0 <__ieee754_rem_pio2+0x3b0>
+  201634:	ed80 0b02 	vstr	d0, [r0, #8]
+  201638:	9e13      	ldr	r6, [sp, #76]	; 0x4c
+  20163a:	48e7      	ldr	r0, [pc, #924]	; (2019d8 <__ieee754_rem_pio2+0x3b8>)
+  20163c:	f026 4500 	bic.w	r5, r6, #2147483648	; 0x80000000
+  201640:	4285      	cmp	r5, r0
+  201642:	dc0a      	bgt.n	20165a <__ieee754_rem_pio2+0x3a>
+  201644:	ed9d 0b12 	vldr	d0, [sp, #72]	; 0x48
+  201648:	2000      	movs	r0, #0
+  20164a:	ed84 0b00 	vstr	d0, [r4]
+  20164e:	b00a      	add	sp, #40	; 0x28
+  201650:	ecbd 8b08 	vpop	{d8-d11}
+  201654:	b003      	add	sp, #12
+  201656:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+  20165a:	48e0      	ldr	r0, [pc, #896]	; (2019dc <__ieee754_rem_pio2+0x3bc>)
+  20165c:	ed9f abe0 	vldr	d10, [pc, #896]	; 2019e0 <__ieee754_rem_pio2+0x3c0>
+  201660:	ed9f bbe1 	vldr	d11, [pc, #900]	; 2019e8 <__ieee754_rem_pio2+0x3c8>
+  201664:	42a8      	cmp	r0, r5
+  201666:	dd47      	ble.n	2016f8 <__ieee754_rem_pio2+0xd8>
+  201668:	4fe1      	ldr	r7, [pc, #900]	; (2019f0 <__ieee754_rem_pio2+0x3d0>)
+  20166a:	ed9f 9be3 	vldr	d9, [pc, #908]	; 2019f8 <__ieee754_rem_pio2+0x3d8>
+  20166e:	ed9f 8be4 	vldr	d8, [pc, #912]	; 201a00 <__ieee754_rem_pio2+0x3e0>
+  201672:	ed9d 0b12 	vldr	d0, [sp, #72]	; 0x48
+  201676:	ec53 2b1a 	vmov	r2, r3, d10
+  20167a:	ec51 0b10 	vmov	r0, r1, d0
+  20167e:	2e00      	cmp	r6, #0
+  201680:	dd1c      	ble.n	2016bc <__ieee754_rem_pio2+0x9c>
+  201682:	f001 f90d 	bl	2028a0 <_dsub>
+  201686:	ec41 0b10 	vmov	d0, r0, r1
+  20168a:	42bd      	cmp	r5, r7
+  20168c:	d008      	beq.n	2016a0 <__ieee754_rem_pio2+0x80>
+  20168e:	ec53 2b1b 	vmov	r2, r3, d11
+  201692:	ec51 0b10 	vmov	r0, r1, d0
+  201696:	f001 f903 	bl	2028a0 <_dsub>
+  20169a:	e9c4 0100 	strd	r0, r1, [r4]
+  20169e:	e00b      	b.n	2016b8 <__ieee754_rem_pio2+0x98>
+  2016a0:	ec53 2b19 	vmov	r2, r3, d9
+  2016a4:	ec51 0b10 	vmov	r0, r1, d0
+  2016a8:	f001 f8fa 	bl	2028a0 <_dsub>
+  2016ac:	ec53 2b18 	vmov	r2, r3, d8
+  2016b0:	f001 f8f6 	bl	2028a0 <_dsub>
+  2016b4:	e9c4 0100 	strd	r0, r1, [r4]
+  2016b8:	2001      	movs	r0, #1
+  2016ba:	e7c8      	b.n	20164e <__ieee754_rem_pio2+0x2e>
+  2016bc:	f000 fc04 	bl	201ec8 <_dadd>
+  2016c0:	ec41 0b10 	vmov	d0, r0, r1
+  2016c4:	42bd      	cmp	r5, r7
+  2016c6:	d008      	beq.n	2016da <__ieee754_rem_pio2+0xba>
+  2016c8:	ec53 2b1b 	vmov	r2, r3, d11
+  2016cc:	ec51 0b10 	vmov	r0, r1, d0
+  2016d0:	f000 fbfa 	bl	201ec8 <_dadd>
+  2016d4:	e9c4 0100 	strd	r0, r1, [r4]
+  2016d8:	e00b      	b.n	2016f2 <__ieee754_rem_pio2+0xd2>
+  2016da:	ec53 2b19 	vmov	r2, r3, d9
+  2016de:	ec51 0b10 	vmov	r0, r1, d0
+  2016e2:	f000 fbf1 	bl	201ec8 <_dadd>
+  2016e6:	ec53 2b18 	vmov	r2, r3, d8
+  2016ea:	f000 fbed 	bl	201ec8 <_dadd>
+  2016ee:	e9c4 0100 	strd	r0, r1, [r4]
+  2016f2:	f04f 30ff 	mov.w	r0, #4294967295
+  2016f6:	e7aa      	b.n	20164e <__ieee754_rem_pio2+0x2e>
+  2016f8:	48c3      	ldr	r0, [pc, #780]	; (201a08 <__ieee754_rem_pio2+0x3e8>)
+  2016fa:	42a8      	cmp	r0, r5
+  2016fc:	db79      	blt.n	2017f2 <__ieee754_rem_pio2+0x1d2>
+  2016fe:	ed9d 0b12 	vldr	d0, [sp, #72]	; 0x48
+  201702:	ec51 0b10 	vmov	r0, r1, d0
+  201706:	f000 fbc7 	bl	201e98 <fabs>
+  20170a:	ec41 0b18 	vmov	d8, r0, r1
+  20170e:	ed9f 0bc0 	vldr	d0, [pc, #768]	; 201a10 <__ieee754_rem_pio2+0x3f0>
+  201712:	ec53 2b10 	vmov	r2, r3, d0
+  201716:	f000 feb7 	bl	202488 <_dmul>
+  20171a:	ed9f 1bbf 	vldr	d1, [pc, #764]	; 201a18 <__ieee754_rem_pio2+0x3f8>
+  20171e:	ec53 2b11 	vmov	r2, r3, d1
+  201722:	f000 fbd1 	bl	201ec8 <_dadd>
+  201726:	f000 fe19 	bl	20235c <_dfix>
+  20172a:	4607      	mov	r7, r0
+  20172c:	f000 fe45 	bl	2023ba <_dflt>
+  201730:	ec41 0b19 	vmov	d9, r0, r1
+  201734:	ec53 2b1a 	vmov	r2, r3, d10
+  201738:	f000 fea6 	bl	202488 <_dmul>
+  20173c:	ec53 2b18 	vmov	r2, r3, d8
+  201740:	f000 ffd6 	bl	2026f0 <_drsb>
+  201744:	ec41 0b18 	vmov	d8, r0, r1
+  201748:	ec53 2b1b 	vmov	r2, r3, d11
+  20174c:	ec51 0b19 	vmov	r0, r1, d9
+  201750:	f000 fe9a 	bl	202488 <_dmul>
+  201754:	f8df a2c8 	ldr.w	sl, [pc, #712]	; 201a20 <__ieee754_rem_pio2+0x400>
+  201758:	ec41 0b10 	vmov	d0, r0, r1
+  20175c:	ea4f 5815 	mov.w	r8, r5, lsr #20
+  201760:	2501      	movs	r5, #1
+  201762:	44fa      	add	sl, pc
+  201764:	ec53 2b10 	vmov	r2, r3, d0
+  201768:	ec51 0b18 	vmov	r0, r1, d8
+  20176c:	f001 f898 	bl	2028a0 <_dsub>
+  201770:	2d03      	cmp	r5, #3
+  201772:	e9c4 0100 	strd	r0, r1, [r4]
+  201776:	d03d      	beq.n	2017f4 <__ieee754_rem_pio2+0x1d4>
+  201778:	f3c1 500a 	ubfx	r0, r1, #20, #11
+  20177c:	eb05 1145 	add.w	r1, r5, r5, lsl #5
+  201780:	eba8 0000 	sub.w	r0, r8, r0
+  201784:	3911      	subs	r1, #17
+  201786:	4281      	cmp	r1, r0
+  201788:	da34      	bge.n	2017f4 <__ieee754_rem_pio2+0x1d4>
+  20178a:	eb0a 1b05 	add.w	fp, sl, r5, lsl #4
+  20178e:	eeb0 aa48 	vmov.f32	s20, s16
+  201792:	ed9b 0b00 	vldr	d0, [fp]
+  201796:	eef0 aa68 	vmov.f32	s21, s17
+  20179a:	ec53 2b10 	vmov	r2, r3, d0
+  20179e:	ec51 0b19 	vmov	r0, r1, d9
+  2017a2:	f000 fe71 	bl	202488 <_dmul>
+  2017a6:	ec41 0b1b 	vmov	d11, r0, r1
+  2017aa:	ec51 0b1a 	vmov	r0, r1, d10
+  2017ae:	ec53 2b1b 	vmov	r2, r3, d11
+  2017b2:	f001 f875 	bl	2028a0 <_dsub>
+  2017b6:	ec41 0b18 	vmov	d8, r0, r1
+  2017ba:	ec51 0b1a 	vmov	r0, r1, d10
+  2017be:	ec53 2b18 	vmov	r2, r3, d8
+  2017c2:	f001 f86d 	bl	2028a0 <_dsub>
+  2017c6:	ec53 2b1b 	vmov	r2, r3, d11
+  2017ca:	f001 f869 	bl	2028a0 <_dsub>
+  2017ce:	ed9b 0b02 	vldr	d0, [fp, #8]
+  2017d2:	ec41 0b1a 	vmov	d10, r0, r1
+  2017d6:	ec53 2b10 	vmov	r2, r3, d0
+  2017da:	ec51 0b19 	vmov	r0, r1, d9
+  2017de:	f000 fe53 	bl	202488 <_dmul>
+  2017e2:	ec53 2b1a 	vmov	r2, r3, d10
+  2017e6:	f001 f85b 	bl	2028a0 <_dsub>
+  2017ea:	ec41 0b10 	vmov	d0, r0, r1
+  2017ee:	1c6d      	adds	r5, r5, #1
+  2017f0:	e7b8      	b.n	201764 <__ieee754_rem_pio2+0x144>
+  2017f2:	e00e      	b.n	201812 <__ieee754_rem_pio2+0x1f2>
+  2017f4:	2e00      	cmp	r6, #0
+  2017f6:	bfa8      	it	ge
+  2017f8:	4638      	movge	r0, r7
+  2017fa:	f6bf af28 	bge.w	20164e <__ieee754_rem_pio2+0x2e>
+  2017fe:	ed94 0b00 	vldr	d0, [r4]
+  201802:	ec51 0b10 	vmov	r0, r1, d0
+  201806:	f000 fb53 	bl	201eb0 <_dneg>
+  20180a:	e9c4 0100 	strd	r0, r1, [r4]
+  20180e:	4278      	negs	r0, r7
+  201810:	e71d      	b.n	20164e <__ieee754_rem_pio2+0x2e>
+  201812:	f3c6 0013 	ubfx	r0, r6, #0, #20
+  201816:	f440 1e80 	orr.w	lr, r0, #1048576	; 0x100000
+  20181a:	f3c6 500a 	ubfx	r0, r6, #20, #11
+  20181e:	f2a0 30f5 	subw	r0, r0, #1013	; 0x3f5
+  201822:	1147      	asrs	r7, r0, #5
+  201824:	f000 051f 	and.w	r5, r0, #31
+  201828:	f1c5 0020 	rsb	r0, r5, #32
+  20182c:	f8dd b048 	ldr.w	fp, [sp, #72]	; 0x48
+  201830:	9008      	str	r0, [sp, #32]
+  201832:	2000      	movs	r0, #0
+  201834:	9006      	str	r0, [sp, #24]
+  201836:	9007      	str	r0, [sp, #28]
+  201838:	2005      	movs	r0, #5
+  20183a:	46ec      	mov	ip, sp
+  20183c:	4979      	ldr	r1, [pc, #484]	; (201a24 <__ieee754_rem_pio2+0x404>)
+  20183e:	2d00      	cmp	r5, #0
+  201840:	eb07 0200 	add.w	r2, r7, r0
+  201844:	4479      	add	r1, pc
+  201846:	bf08      	it	eq
+  201848:	f851 1022 	ldreq.w	r1, [r1, r2, lsl #2]
+  20184c:	d009      	beq.n	201862 <__ieee754_rem_pio2+0x242>
+  20184e:	f851 3022 	ldr.w	r3, [r1, r2, lsl #2]
+  201852:	eb01 0182 	add.w	r1, r1, r2, lsl #2
+  201856:	40ab      	lsls	r3, r5
+  201858:	684a      	ldr	r2, [r1, #4]
+  20185a:	9908      	ldr	r1, [sp, #32]
+  20185c:	fa22 f101 	lsr.w	r1, r2, r1
+  201860:	4319      	orrs	r1, r3
+  201862:	fba1 260e 	umull	r2, r6, r1, lr
+  201866:	fba1 130b 	umull	r1, r3, r1, fp
+  20186a:	441a      	add	r2, r3
+  20186c:	429a      	cmp	r2, r3
+  20186e:	bf34      	ite	cc
+  201870:	2301      	movcc	r3, #1
+  201872:	2300      	movcs	r3, #0
+  201874:	eb03 0806 	add.w	r8, r3, r6
+  201878:	eb0c 0380 	add.w	r3, ip, r0, lsl #2
+  20187c:	e9d3 a601 	ldrd	sl, r6, [r3, #4]
+  201880:	440e      	add	r6, r1
+  201882:	428e      	cmp	r6, r1
+  201884:	bf34      	ite	cc
+  201886:	2101      	movcc	r1, #1
+  201888:	2100      	movcs	r1, #0
+  20188a:	4492      	add	sl, r2
+  20188c:	448a      	add	sl, r1
+  20188e:	b111      	cbz	r1, 201896 <__ieee754_rem_pio2+0x276>
+  201890:	4592      	cmp	sl, r2
+  201892:	d902      	bls.n	20189a <__ieee754_rem_pio2+0x27a>
+  201894:	e003      	b.n	20189e <__ieee754_rem_pio2+0x27e>
+  201896:	4592      	cmp	sl, r2
+  201898:	d201      	bcs.n	20189e <__ieee754_rem_pio2+0x27e>
+  20189a:	2101      	movs	r1, #1
+  20189c:	e000      	b.n	2018a0 <__ieee754_rem_pio2+0x280>
+  20189e:	2100      	movs	r1, #0
+  2018a0:	e9c3 a601 	strd	sl, r6, [r3, #4]
+  2018a4:	4441      	add	r1, r8
+  2018a6:	f84c 1020 	str.w	r1, [ip, r0, lsl #2]
+  2018aa:	1e01      	subs	r1, r0, #0
+  2018ac:	f1a0 0001 	sub.w	r0, r0, #1
+  2018b0:	dcc4      	bgt.n	20183c <__ieee754_rem_pio2+0x21c>
+  2018b2:	9802      	ldr	r0, [sp, #8]
+  2018b4:	f100 5000 	add.w	r0, r0, #536870912	; 0x20000000
+  2018b8:	0f85      	lsrs	r5, r0, #30
+  2018ba:	9802      	ldr	r0, [sp, #8]
+  2018bc:	e9dd 6703 	ldrd	r6, r7, [sp, #12]
+  2018c0:	0080      	lsls	r0, r0, #2
+  2018c2:	f8dd 8014 	ldr.w	r8, [sp, #20]
+  2018c6:	f000 fd78 	bl	2023ba <_dflt>
+  2018ca:	ec41 0b1a 	vmov	d10, r0, r1
+  2018ce:	4630      	mov	r0, r6
+  2018d0:	f000 fd8a 	bl	2023e8 <_dfltu>
+  2018d4:	ed9f 1b54 	vldr	d1, [pc, #336]	; 201a28 <__ieee754_rem_pio2+0x408>
+  2018d8:	ec53 2b11 	vmov	r2, r3, d1
+  2018dc:	f000 fdd4 	bl	202488 <_dmul>
+  2018e0:	ec41 0b1b 	vmov	d11, r0, r1
+  2018e4:	4638      	mov	r0, r7
+  2018e6:	f000 fd7f 	bl	2023e8 <_dfltu>
+  2018ea:	ed9f 1b51 	vldr	d1, [pc, #324]	; 201a30 <__ieee754_rem_pio2+0x410>
+  2018ee:	ec53 2b11 	vmov	r2, r3, d1
+  2018f2:	f000 fdc9 	bl	202488 <_dmul>
+  2018f6:	ec41 0b18 	vmov	d8, r0, r1
+  2018fa:	4640      	mov	r0, r8
+  2018fc:	f000 fd74 	bl	2023e8 <_dfltu>
+  201900:	ed9f 1b4d 	vldr	d1, [pc, #308]	; 201a38 <__ieee754_rem_pio2+0x418>
+  201904:	ec53 2b11 	vmov	r2, r3, d1
+  201908:	f000 fdbe 	bl	202488 <_dmul>
+  20190c:	ec41 0b19 	vmov	d9, r0, r1
+  201910:	ec51 0b18 	vmov	r0, r1, d8
+  201914:	ec53 2b19 	vmov	r2, r3, d9
+  201918:	f000 fad6 	bl	201ec8 <_dadd>
+  20191c:	ec53 2b1b 	vmov	r2, r3, d11
+  201920:	f000 fad2 	bl	201ec8 <_dadd>
+  201924:	ec53 2b1a 	vmov	r2, r3, d10
+  201928:	f000 face 	bl	201ec8 <_dadd>
+  20192c:	e9cd 0108 	strd	r0, r1, [sp, #32]
+  201930:	2000      	movs	r0, #0
+  201932:	9008      	str	r0, [sp, #32]
+  201934:	ed9d 0b08 	vldr	d0, [sp, #32]
+  201938:	ec53 2b1a 	vmov	r2, r3, d10
+  20193c:	ec51 0b10 	vmov	r0, r1, d0
+  201940:	f000 ffae 	bl	2028a0 <_dsub>
+  201944:	ec53 2b1b 	vmov	r2, r3, d11
+  201948:	f000 ffaa 	bl	2028a0 <_dsub>
+  20194c:	ec53 2b18 	vmov	r2, r3, d8
+  201950:	f000 ffa6 	bl	2028a0 <_dsub>
+  201954:	ec53 2b19 	vmov	r2, r3, d9
+  201958:	f000 feca 	bl	2026f0 <_drsb>
+  20195c:	ed9f 1b38 	vldr	d1, [pc, #224]	; 201a40 <__ieee754_rem_pio2+0x420>
+  201960:	ec53 2b11 	vmov	r2, r3, d1
+  201964:	f000 fd90 	bl	202488 <_dmul>
+  201968:	ed9f 0b37 	vldr	d0, [pc, #220]	; 201a48 <__ieee754_rem_pio2+0x428>
+  20196c:	ec41 0b18 	vmov	d8, r0, r1
+  201970:	ec53 2b10 	vmov	r2, r3, d0
+  201974:	ed9d 0b08 	vldr	d0, [sp, #32]
+  201978:	ec51 0b10 	vmov	r0, r1, d0
+  20197c:	f000 fd84 	bl	202488 <_dmul>
+  201980:	ec53 2b18 	vmov	r2, r3, d8
+  201984:	f000 faa0 	bl	201ec8 <_dadd>
+  201988:	ed9f 0b31 	vldr	d0, [pc, #196]	; 201a50 <__ieee754_rem_pio2+0x430>
+  20198c:	ec41 0b18 	vmov	d8, r0, r1
+  201990:	ec53 2b10 	vmov	r2, r3, d0
+  201994:	ed9d 0b08 	vldr	d0, [sp, #32]
+  201998:	ec51 0b10 	vmov	r0, r1, d0
+  20199c:	f000 fd74 	bl	202488 <_dmul>
+  2019a0:	ec53 2b18 	vmov	r2, r3, d8
+  2019a4:	f000 fa90 	bl	201ec8 <_dadd>
+  2019a8:	ec41 0b10 	vmov	d0, r0, r1
+  2019ac:	9813      	ldr	r0, [sp, #76]	; 0x4c
+  2019ae:	f010 4f00 	tst.w	r0, #2147483648	; 0x80000000
+  2019b2:	d006      	beq.n	2019c2 <__ieee754_rem_pio2+0x3a2>
+  2019b4:	426d      	negs	r5, r5
+  2019b6:	ec51 0b10 	vmov	r0, r1, d0
+  2019ba:	f000 fa79 	bl	201eb0 <_dneg>
+  2019be:	ec41 0b10 	vmov	d0, r0, r1
+  2019c2:	4628      	mov	r0, r5
+  2019c4:	ed84 0b00 	vstr	d0, [r4]
+  2019c8:	e641      	b.n	20164e <__ieee754_rem_pio2+0x2e>
+	...
+  2019d6:	0000      	.short	0x0000
+  2019d8:	3fe921fb 	.word	0x3fe921fb
+  2019dc:	4002d97c 	.word	0x4002d97c
+  2019e0:	54400000 	.word	0x54400000
+  2019e4:	3ff921fb 	.word	0x3ff921fb
+  2019e8:	1a626331 	.word	0x1a626331
+  2019ec:	3dd0b461 	.word	0x3dd0b461
+  2019f0:	3ff921fb 	.word	0x3ff921fb
+  2019f4:	00000000 	.word	0x00000000
+  2019f8:	1a600000 	.word	0x1a600000
+  2019fc:	3dd0b461 	.word	0x3dd0b461
+  201a00:	2e037073 	.word	0x2e037073
+  201a04:	3ba3198a 	.word	0x3ba3198a
+  201a08:	413921fb 	.word	0x413921fb
+  201a0c:	00000000 	.word	0x00000000
+  201a10:	6dc9c883 	.word	0x6dc9c883
+  201a14:	3fe45f30 	.word	0x3fe45f30
+  201a18:	00000000 	.word	0x00000000
+  201a1c:	3fe00000 	.word	0x3fe00000
+  201a20:	00001492 	.word	0x00001492
+  201a24:	000013e0 	.word	0x000013e0
+  201a28:	00000000 	.word	0x00000000
+  201a2c:	3e100000 	.word	0x3e100000
+  201a30:	00000000 	.word	0x00000000
+  201a34:	3c100000 	.word	0x3c100000
+  201a38:	00000000 	.word	0x00000000
+  201a3c:	3a100000 	.word	0x3a100000
+  201a40:	54442d18 	.word	0x54442d18
+  201a44:	3df921fb 	.word	0x3df921fb
+  201a48:	11a62633 	.word	0x11a62633
+  201a4c:	3c110b46 	.word	0x3c110b46
+  201a50:	54000000 	.word	0x54000000
+  201a54:	3df921fb 	.word	0x3df921fb
+
+00201a58 <__kernel_cos>:
+  201a58:	b510      	push	{r4, lr}
+  201a5a:	ed2d 0b04 	vpush	{d0-d1}
+  201a5e:	ed2d 8b08 	vpush	{d8-d11}
+  201a62:	b082      	sub	sp, #8
+  201a64:	eeb0 9a41 	vmov.f32	s18, s2
+  201a68:	eef0 9a61 	vmov.f32	s19, s3
+  201a6c:	980b      	ldr	r0, [sp, #44]	; 0x2c
+  201a6e:	f020 4400 	bic.w	r4, r0, #2147483648	; 0x80000000
+  201a72:	ed9f ab4b 	vldr	d10, [pc, #300]	; 201ba0 <__kernel_cos+0x148>
+  201a76:	f1b4 5f79 	cmp.w	r4, #1044381696	; 0x3e400000
+  201a7a:	da11      	bge.n	201aa0 <__kernel_cos+0x48>
+  201a7c:	ed9d 0b0a 	vldr	d0, [sp, #40]	; 0x28
+  201a80:	ec51 0b10 	vmov	r0, r1, d0
+  201a84:	f000 fc6a 	bl	20235c <_dfix>
+  201a88:	2800      	cmp	r0, #0
+  201a8a:	bf01      	itttt	eq
+  201a8c:	eeb0 0a4a 	vmoveq.f32	s0, s20
+  201a90:	eef0 0a6a 	vmoveq.f32	s1, s21
+  201a94:	b002      	addeq	sp, #8
+  201a96:	ecbd 8b08 	vpopeq	{d8-d11}
+  201a9a:	bf04      	itt	eq
+  201a9c:	b004      	addeq	sp, #16
+  201a9e:	bd10      	popeq	{r4, pc}
+  201aa0:	ed9d 0b0a 	vldr	d0, [sp, #40]	; 0x28
+  201aa4:	ec53 2b10 	vmov	r2, r3, d0
+  201aa8:	ec51 0b10 	vmov	r0, r1, d0
+  201aac:	f000 fcec 	bl	202488 <_dmul>
+  201ab0:	ec41 0b18 	vmov	d8, r0, r1
+  201ab4:	483c      	ldr	r0, [pc, #240]	; (201ba8 <__kernel_cos+0x150>)
+  201ab6:	2106      	movs	r1, #6
+  201ab8:	eeb0 0a48 	vmov.f32	s0, s16
+  201abc:	eef0 0a68 	vmov.f32	s1, s17
+  201ac0:	4478      	add	r0, pc
+  201ac2:	f000 f881 	bl	201bc8 <__kernel_poly>
+  201ac6:	ec53 2b18 	vmov	r2, r3, d8
+  201aca:	ec51 0b10 	vmov	r0, r1, d0
+  201ace:	f000 fcdb 	bl	202488 <_dmul>
+  201ad2:	ed9d 0b0a 	vldr	d0, [sp, #40]	; 0x28
+  201ad6:	ec41 0b1b 	vmov	d11, r0, r1
+  201ada:	ec53 2b19 	vmov	r2, r3, d9
+  201ade:	ec51 0b10 	vmov	r0, r1, d0
+  201ae2:	f000 fcd1 	bl	202488 <_dmul>
+  201ae6:	ec41 0b19 	vmov	d9, r0, r1
+  201aea:	ec53 2b1b 	vmov	r2, r3, d11
+  201aee:	ec51 0b18 	vmov	r0, r1, d8
+  201af2:	f000 fcc9 	bl	202488 <_dmul>
+  201af6:	ec53 2b19 	vmov	r2, r3, d9
+  201afa:	f000 fed1 	bl	2028a0 <_dsub>
+  201afe:	ed9f 0b2c 	vldr	d0, [pc, #176]	; 201bb0 <__kernel_cos+0x158>
+  201b02:	ec41 0b19 	vmov	d9, r0, r1
+  201b06:	ec53 2b10 	vmov	r2, r3, d0
+  201b0a:	ec51 0b18 	vmov	r0, r1, d8
+  201b0e:	f000 fcbb 	bl	202488 <_dmul>
+  201b12:	ec41 0b10 	vmov	d0, r0, r1
+  201b16:	4828      	ldr	r0, [pc, #160]	; (201bb8 <__kernel_cos+0x160>)
+  201b18:	4284      	cmp	r4, r0
+  201b1a:	da10      	bge.n	201b3e <__kernel_cos+0xe6>
+  201b1c:	ec53 2b19 	vmov	r2, r3, d9
+  201b20:	ec51 0b10 	vmov	r0, r1, d0
+  201b24:	f000 febc 	bl	2028a0 <_dsub>
+  201b28:	ec53 2b1a 	vmov	r2, r3, d10
+  201b2c:	f000 fde0 	bl	2026f0 <_drsb>
+  201b30:	ec41 0b10 	vmov	d0, r0, r1
+  201b34:	b002      	add	sp, #8
+  201b36:	ecbd 8b08 	vpop	{d8-d11}
+  201b3a:	b004      	add	sp, #16
+  201b3c:	bd10      	pop	{r4, pc}
+  201b3e:	481f      	ldr	r0, [pc, #124]	; (201bbc <__kernel_cos+0x164>)
+  201b40:	42a0      	cmp	r0, r4
+  201b42:	bfbc      	itt	lt
+  201b44:	ed9f 1b1e 	vldrlt	d1, [pc, #120]	; 201bc0 <__kernel_cos+0x168>
+  201b48:	ed8d 1b00 	vstrlt	d1, [sp]
+  201b4c:	db06      	blt.n	201b5c <__kernel_cos+0x104>
+  201b4e:	f5a4 1000 	sub.w	r0, r4, #2097152	; 0x200000
+  201b52:	9001      	str	r0, [sp, #4]
+  201b54:	2000      	movs	r0, #0
+  201b56:	9000      	str	r0, [sp, #0]
+  201b58:	ed9d 1b00 	vldr	d1, [sp]
+  201b5c:	ec51 0b10 	vmov	r0, r1, d0
+  201b60:	ec53 2b11 	vmov	r2, r3, d1
+  201b64:	f000 fe9c 	bl	2028a0 <_dsub>
+  201b68:	ed9d 0b00 	vldr	d0, [sp]
+  201b6c:	ec41 0b18 	vmov	d8, r0, r1
+  201b70:	ec53 2b10 	vmov	r2, r3, d0
+  201b74:	ec51 0b1a 	vmov	r0, r1, d10
+  201b78:	f000 fe92 	bl	2028a0 <_dsub>
+  201b7c:	ec41 0b1a 	vmov	d10, r0, r1
+  201b80:	ec53 2b19 	vmov	r2, r3, d9
+  201b84:	ec51 0b18 	vmov	r0, r1, d8
+  201b88:	f000 fe8a 	bl	2028a0 <_dsub>
+  201b8c:	ec53 2b1a 	vmov	r2, r3, d10
+  201b90:	f000 fdae 	bl	2026f0 <_drsb>
+  201b94:	ec41 0b10 	vmov	d0, r0, r1
+  201b98:	e7cc      	b.n	201b34 <__kernel_cos+0xdc>
+	...
+  201ba6:	3ff0      	.short	0x3ff0
+  201ba8:	000010fc 	.word	0x000010fc
+	...
+  201bb4:	3fe00000 	.word	0x3fe00000
+  201bb8:	3fd33333 	.word	0x3fd33333
+  201bbc:	3fe90000 	.word	0x3fe90000
+  201bc0:	00000000 	.word	0x00000000
+  201bc4:	3fd20000 	.word	0x3fd20000
+
+00201bc8 <__kernel_poly>:
+  201bc8:	b570      	push	{r4, r5, r6, lr}
+  201bca:	4604      	mov	r4, r0
+  201bcc:	ed2d 8b02 	vpush	{d8}
+  201bd0:	1e4d      	subs	r5, r1, #1
+  201bd2:	eb00 00c5 	add.w	r0, r0, r5, lsl #3
+  201bd6:	eeb0 8a40 	vmov.f32	s16, s0
+  201bda:	eef0 8a60 	vmov.f32	s17, s1
+  201bde:	ed90 0b00 	vldr	d0, [r0]
+  201be2:	f035 0006 	bics.w	r0, r5, #6
+  201be6:	d017      	beq.n	201c18 <__kernel_poly+0x50>
+  201be8:	ec53 2b18 	vmov	r2, r3, d8
+  201bec:	ec51 0b10 	vmov	r0, r1, d0
+  201bf0:	f000 fc4a 	bl	202488 <_dmul>
+  201bf4:	ec41 0b10 	vmov	d0, r0, r1
+  201bf8:	1e6d      	subs	r5, r5, #1
+  201bfa:	eb04 00c5 	add.w	r0, r4, r5, lsl #3
+  201bfe:	ed90 1b00 	vldr	d1, [r0]
+  201c02:	ec51 0b10 	vmov	r0, r1, d0
+  201c06:	ec53 2b11 	vmov	r2, r3, d1
+  201c0a:	f000 f95d 	bl	201ec8 <_dadd>
+  201c0e:	ec41 0b10 	vmov	d0, r0, r1
+  201c12:	f035 0006 	bics.w	r0, r5, #6
+  201c16:	d1e7      	bne.n	201be8 <__kernel_poly+0x20>
+  201c18:	2d02      	cmp	r5, #2
+  201c1a:	d036      	beq.n	201c8a <__kernel_poly+0xc2>
+  201c1c:	2d04      	cmp	r5, #4
+  201c1e:	d01c      	beq.n	201c5a <__kernel_poly+0x92>
+  201c20:	2d06      	cmp	r5, #6
+  201c22:	bf1c      	itt	ne
+  201c24:	ecbd 8b02 	vpopne	{d8}
+  201c28:	bd70      	popne	{r4, r5, r6, pc}
+  201c2a:	ec53 2b18 	vmov	r2, r3, d8
+  201c2e:	ec51 0b10 	vmov	r0, r1, d0
+  201c32:	f000 fc29 	bl	202488 <_dmul>
+  201c36:	ed94 1b0a 	vldr	d1, [r4, #40]	; 0x28
+  201c3a:	ec53 2b11 	vmov	r2, r3, d1
+  201c3e:	f000 f943 	bl	201ec8 <_dadd>
+  201c42:	ec53 2b18 	vmov	r2, r3, d8
+  201c46:	f000 fc1f 	bl	202488 <_dmul>
+  201c4a:	ed94 1b08 	vldr	d1, [r4, #32]
+  201c4e:	ec53 2b11 	vmov	r2, r3, d1
+  201c52:	f000 f939 	bl	201ec8 <_dadd>
+  201c56:	ec41 0b10 	vmov	d0, r0, r1
+  201c5a:	ec53 2b18 	vmov	r2, r3, d8
+  201c5e:	ec51 0b10 	vmov	r0, r1, d0
+  201c62:	f000 fc11 	bl	202488 <_dmul>
+  201c66:	ed94 1b06 	vldr	d1, [r4, #24]
+  201c6a:	ec53 2b11 	vmov	r2, r3, d1
+  201c6e:	f000 f92b 	bl	201ec8 <_dadd>
+  201c72:	ec53 2b18 	vmov	r2, r3, d8
+  201c76:	f000 fc07 	bl	202488 <_dmul>
+  201c7a:	ed94 0b04 	vldr	d0, [r4, #16]
+  201c7e:	ec53 2b10 	vmov	r2, r3, d0
+  201c82:	f000 f921 	bl	201ec8 <_dadd>
+  201c86:	ec41 0b10 	vmov	d0, r0, r1
+  201c8a:	ec53 2b18 	vmov	r2, r3, d8
+  201c8e:	ec51 0b10 	vmov	r0, r1, d0
+  201c92:	f000 fbf9 	bl	202488 <_dmul>
+  201c96:	ed94 1b02 	vldr	d1, [r4, #8]
+  201c9a:	ec53 2b11 	vmov	r2, r3, d1
+  201c9e:	f000 f913 	bl	201ec8 <_dadd>
+  201ca2:	ec53 2b18 	vmov	r2, r3, d8
+  201ca6:	f000 fbef 	bl	202488 <_dmul>
+  201caa:	ed94 1b00 	vldr	d1, [r4]
+  201cae:	ec53 2b11 	vmov	r2, r3, d1
+  201cb2:	f000 f909 	bl	201ec8 <_dadd>
+  201cb6:	ecbd 8b02 	vpop	{d8}
+  201cba:	ec41 0b10 	vmov	d0, r0, r1
+  201cbe:	bd70      	pop	{r4, r5, r6, pc}
+
+00201cc0 <__kernel_sin>:
+  201cc0:	b531      	push	{r0, r4, r5, lr}
+  201cc2:	4604      	mov	r4, r0
+  201cc4:	ed2d 0b04 	vpush	{d0-d1}
+  201cc8:	ed2d 8b0a 	vpush	{d8-d12}
+  201ccc:	eeb0 ba41 	vmov.f32	s22, s2
+  201cd0:	eef0 ba61 	vmov.f32	s23, s3
+  201cd4:	980b      	ldr	r0, [sp, #44]	; 0x2c
+  201cd6:	ed9d 0b0a 	vldr	d0, [sp, #40]	; 0x28
+  201cda:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
+  201cde:	f1b0 5f79 	cmp.w	r0, #1044381696	; 0x3e400000
+  201ce2:	da0d      	bge.n	201d00 <__kernel_sin+0x40>
+  201ce4:	ec51 0b10 	vmov	r0, r1, d0
+  201ce8:	f7fe fe7e 	bl	2009e8 <__ARM_fpclassify>
+  201cec:	2804      	cmp	r0, #4
+  201cee:	bf08      	it	eq
+  201cf0:	f000 f8c2 	bleq	201e78 <__mathlib_dbl_underflow>
+  201cf4:	ed9d 0b0a 	vldr	d0, [sp, #40]	; 0x28
+  201cf8:	ecbd 8b0a 	vpop	{d8-d12}
+  201cfc:	b005      	add	sp, #20
+  201cfe:	bd30      	pop	{r4, r5, pc}
+  201d00:	ec53 2b10 	vmov	r2, r3, d0
+  201d04:	ec51 0b10 	vmov	r0, r1, d0
+  201d08:	f000 fbbe 	bl	202488 <_dmul>
+  201d0c:	ec41 0b18 	vmov	d8, r0, r1
+  201d10:	ed9d 0b0a 	vldr	d0, [sp, #40]	; 0x28
+  201d14:	ec53 2b18 	vmov	r2, r3, d8
+  201d18:	ec51 0b10 	vmov	r0, r1, d0
+  201d1c:	f000 fbb4 	bl	202488 <_dmul>
+  201d20:	ec41 0b19 	vmov	d9, r0, r1
+  201d24:	482c      	ldr	r0, [pc, #176]	; (201dd8 <__kernel_sin+0x118>)
+  201d26:	eeb0 0a48 	vmov.f32	s0, s16
+  201d2a:	eef0 0a68 	vmov.f32	s1, s17
+  201d2e:	2105      	movs	r1, #5
+  201d30:	4478      	add	r0, pc
+  201d32:	f7ff ff49 	bl	201bc8 <__kernel_poly>
+  201d36:	ed9f cb2a 	vldr	d12, [pc, #168]	; 201de0 <__kernel_sin+0x120>
+  201d3a:	eeb0 aa40 	vmov.f32	s20, s0
+  201d3e:	eef0 aa60 	vmov.f32	s21, s1
+  201d42:	b39c      	cbz	r4, 201dac <__kernel_sin+0xec>
+  201d44:	ec53 2b1c 	vmov	r2, r3, d12
+  201d48:	ec51 0b19 	vmov	r0, r1, d9
+  201d4c:	f000 fb9c 	bl	202488 <_dmul>
+  201d50:	ec41 0b1c 	vmov	d12, r0, r1
+  201d54:	ec53 2b1a 	vmov	r2, r3, d10
+  201d58:	ec51 0b19 	vmov	r0, r1, d9
+  201d5c:	f000 fb94 	bl	202488 <_dmul>
+  201d60:	ed9f 0b21 	vldr	d0, [pc, #132]	; 201de8 <__kernel_sin+0x128>
+  201d64:	ec41 0b19 	vmov	d9, r0, r1
+  201d68:	ec53 2b10 	vmov	r2, r3, d0
+  201d6c:	ec51 0b1b 	vmov	r0, r1, d11
+  201d70:	f000 fb8a 	bl	202488 <_dmul>
+  201d74:	ec53 2b19 	vmov	r2, r3, d9
+  201d78:	f000 fd92 	bl	2028a0 <_dsub>
+  201d7c:	ec53 2b18 	vmov	r2, r3, d8
+  201d80:	f000 fb82 	bl	202488 <_dmul>
+  201d84:	ec53 2b1b 	vmov	r2, r3, d11
+  201d88:	f000 fd8a 	bl	2028a0 <_dsub>
+  201d8c:	ec53 2b1c 	vmov	r2, r3, d12
+  201d90:	f000 fd86 	bl	2028a0 <_dsub>
+  201d94:	ed9d 1b0a 	vldr	d1, [sp, #40]	; 0x28
+  201d98:	ec53 2b11 	vmov	r2, r3, d1
+  201d9c:	f000 fca8 	bl	2026f0 <_drsb>
+  201da0:	ecbd 8b0a 	vpop	{d8-d12}
+  201da4:	b005      	add	sp, #20
+  201da6:	ec41 0b10 	vmov	d0, r0, r1
+  201daa:	bd30      	pop	{r4, r5, pc}
+  201dac:	e7ff      	b.n	201dae <__kernel_sin+0xee>
+  201dae:	ec53 2b1a 	vmov	r2, r3, d10
+  201db2:	ec51 0b18 	vmov	r0, r1, d8
+  201db6:	f000 fb67 	bl	202488 <_dmul>
+  201dba:	ec53 2b1c 	vmov	r2, r3, d12
+  201dbe:	f000 f883 	bl	201ec8 <_dadd>
+  201dc2:	ec53 2b19 	vmov	r2, r3, d9
+  201dc6:	f000 fb5f 	bl	202488 <_dmul>
+  201dca:	ed9d 1b0a 	vldr	d1, [sp, #40]	; 0x28
+  201dce:	ec53 2b11 	vmov	r2, r3, d1
+  201dd2:	f000 f879 	bl	201ec8 <_dadd>
+  201dd6:	e7e3      	b.n	201da0 <__kernel_sin+0xe0>
+  201dd8:	00000f94 	.word	0x00000f94
+  201ddc:	00000000 	.word	0x00000000
+  201de0:	55555549 	.word	0x55555549
+  201de4:	bfc55555 	.word	0xbfc55555
+  201de8:	00000000 	.word	0x00000000
+  201dec:	3fe00000 	.word	0x3fe00000
+
+00201df0 <__mathlib_dbl_divzero>:
+  201df0:	ed9f 0b07 	vldr	d0, [pc, #28]	; 201e10 <__mathlib_dbl_divzero+0x20>
+  201df4:	b510      	push	{r4, lr}
+  201df6:	ec53 2b10 	vmov	r2, r3, d0
+  201dfa:	ed9f 0b07 	vldr	d0, [pc, #28]	; 201e18 <__mathlib_dbl_divzero+0x28>
+  201dfe:	ec51 0b10 	vmov	r0, r1, d0
+  201e02:	f000 f915 	bl	202030 <_ddiv>
+  201e06:	ec41 0b10 	vmov	d0, r0, r1
+  201e0a:	bd10      	pop	{r4, pc}
+	...
+  201e1c:	3ff00000 	.word	0x3ff00000
+
+00201e20 <__mathlib_dbl_infnan>:
+  201e20:	b510      	push	{r4, lr}
+  201e22:	ec53 2b10 	vmov	r2, r3, d0
+  201e26:	ec51 0b10 	vmov	r0, r1, d0
+  201e2a:	f000 f84d 	bl	201ec8 <_dadd>
+  201e2e:	ec41 0b10 	vmov	d0, r0, r1
+  201e32:	bd10      	pop	{r4, pc}
+  201e34:	0000      	movs	r0, r0
+	...
+
+00201e38 <__mathlib_dbl_invalid>:
+  201e38:	ed9f 0b05 	vldr	d0, [pc, #20]	; 201e50 <__mathlib_dbl_invalid+0x18>
+  201e3c:	b510      	push	{r4, lr}
+  201e3e:	ec53 2b10 	vmov	r2, r3, d0
+  201e42:	ec51 0b10 	vmov	r0, r1, d0
+  201e46:	f000 f8f3 	bl	202030 <_ddiv>
+  201e4a:	ec41 0b10 	vmov	d0, r0, r1
+  201e4e:	bd10      	pop	{r4, pc}
+	...
+
+00201e58 <__mathlib_dbl_overflow>:
+  201e58:	ed9f 0b05 	vldr	d0, [pc, #20]	; 201e70 <__mathlib_dbl_overflow+0x18>
+  201e5c:	b510      	push	{r4, lr}
+  201e5e:	ec53 2b10 	vmov	r2, r3, d0
+  201e62:	ec51 0b10 	vmov	r0, r1, d0
+  201e66:	f000 fb0f 	bl	202488 <_dmul>
+  201e6a:	ec41 0b10 	vmov	d0, r0, r1
+  201e6e:	bd10      	pop	{r4, pc}
+  201e70:	00000000 	.word	0x00000000
+  201e74:	70000000 	.word	0x70000000
+
+00201e78 <__mathlib_dbl_underflow>:
+  201e78:	ed9f 0b05 	vldr	d0, [pc, #20]	; 201e90 <__mathlib_dbl_underflow+0x18>
+  201e7c:	b510      	push	{r4, lr}
+  201e7e:	ec53 2b10 	vmov	r2, r3, d0
+  201e82:	ec51 0b10 	vmov	r0, r1, d0
+  201e86:	f000 faff 	bl	202488 <_dmul>
+  201e8a:	ec41 0b10 	vmov	d0, r0, r1
+  201e8e:	bd10      	pop	{r4, pc}
+  201e90:	00000000 	.word	0x00000000
+  201e94:	10000000 	.word	0x10000000
+
+00201e98 <fabs>:
+  201e98:	b082      	sub	sp, #8
+  201e9a:	e9cd 0100 	strd	r0, r1, [sp]
+  201e9e:	f021 4000 	bic.w	r0, r1, #2147483648	; 0x80000000
+  201ea2:	9001      	str	r0, [sp, #4]
+  201ea4:	ed9d 0b00 	vldr	d0, [sp]
+  201ea8:	b002      	add	sp, #8
+  201eaa:	ec51 0b10 	vmov	r0, r1, d0
+  201eae:	4770      	bx	lr
+
+00201eb0 <_dneg>:
+  201eb0:	f081 4100 	eor.w	r1, r1, #2147483648	; 0x80000000
+  201eb4:	4770      	bx	lr
+
+00201eb6 <_fneg>:
+  201eb6:	f080 4000 	eor.w	r0, r0, #2147483648	; 0x80000000
+  201eba:	4770      	bx	lr
+
+00201ebc <_dabs>:
+  201ebc:	f021 4100 	bic.w	r1, r1, #2147483648	; 0x80000000
+  201ec0:	4770      	bx	lr
+
+00201ec2 <_fabs>:
+  201ec2:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
+  201ec6:	4770      	bx	lr
+
+00201ec8 <_dadd>:
+  201ec8:	b510      	push	{r4, lr}
+  201eca:	ea91 0f03 	teq	r1, r3
+  201ece:	bf48      	it	mi
+  201ed0:	f083 4300 	eormi.w	r3, r3, #2147483648	; 0x80000000
+  201ed4:	f100 84ec 	bmi.w	2028b0 <_dsub1>
+
+00201ed8 <_dadd1>:
+  201ed8:	1a84      	subs	r4, r0, r2
+  201eda:	eb71 0c03 	sbcs.w	ip, r1, r3
+  201ede:	d205      	bcs.n	201eec <_dadd1+0x14>
+  201ee0:	1912      	adds	r2, r2, r4
+  201ee2:	eb43 030c 	adc.w	r3, r3, ip
+  201ee6:	1b00      	subs	r0, r0, r4
+  201ee8:	eb61 010c 	sbc.w	r1, r1, ip
+  201eec:	ea4f 5411 	mov.w	r4, r1, lsr #20
+  201ef0:	eba4 5c13 	sub.w	ip, r4, r3, lsr #20
+  201ef4:	f8df e11c 	ldr.w	lr, [pc, #284]	; 202014 <_dadd1+0x13c>
+  201ef8:	ea1e 0f43 	tst.w	lr, r3, lsl #1
+  201efc:	bf18      	it	ne
+  201efe:	ea9e 5f44 	teqne	lr, r4, lsl #21
+  201f02:	f000 8074 	beq.w	201fee <_dadd1+0x116>
+  201f06:	ea21 5104 	bic.w	r1, r1, r4, lsl #20
+  201f0a:	ea23 030e 	bic.w	r3, r3, lr
+  201f0e:	f443 1380 	orr.w	r3, r3, #1048576	; 0x100000
+  201f12:	f1dc 0e20 	rsbs	lr, ip, #32
+  201f16:	d332      	bcc.n	201f7e <_dadd1+0xa6>
+  201f18:	fa22 fe0c 	lsr.w	lr, r2, ip
+  201f1c:	eb10 000e 	adds.w	r0, r0, lr
+  201f20:	fa23 fe0c 	lsr.w	lr, r3, ip
+  201f24:	eb41 010e 	adc.w	r1, r1, lr
+  201f28:	f1cc 0e20 	rsb	lr, ip, #32
+  201f2c:	fa03 fe0e 	lsl.w	lr, r3, lr
+  201f30:	eb10 000e 	adds.w	r0, r0, lr
+  201f34:	f1cc 0e20 	rsb	lr, ip, #32
+  201f38:	f151 0100 	adcs.w	r1, r1, #0
+  201f3c:	f5b1 1f80 	cmp.w	r1, #1048576	; 0x100000
+  201f40:	d232      	bcs.n	201fa8 <_dadd1+0xd0>
+  201f42:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  201f46:	fa12 f20e 	lsls.w	r2, r2, lr
+  201f4a:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  201f4e:	bf58      	it	pl
+  201f50:	4770      	bxpl	lr
+  201f52:	1c40      	adds	r0, r0, #1
+  201f54:	bf38      	it	cc
+  201f56:	ea5f 0242 	movscc.w	r2, r2, lsl #1
+  201f5a:	bf18      	it	ne
+  201f5c:	4770      	bxne	lr
+  201f5e:	2800      	cmp	r0, #0
+  201f60:	bf14      	ite	ne
+  201f62:	f020 0001 	bicne.w	r0, r0, #1
+  201f66:	f141 0100 	adceq.w	r1, r1, #0
+  201f6a:	ea4f 0341 	mov.w	r3, r1, lsl #1
+  201f6e:	f513 1f00 	cmn.w	r3, #2097152	; 0x200000
+  201f72:	bf38      	it	cc
+  201f74:	4770      	bxcc	lr
+  201f76:	f1a1 41c0 	sub.w	r1, r1, #1610612736	; 0x60000000
+  201f7a:	f000 bb7d 	b.w	202678 <__fpl_dretinf>
+  201f7e:	2a01      	cmp	r2, #1
+  201f80:	eb43 0203 	adc.w	r2, r3, r3
+  201f84:	f1ac 0c20 	sub.w	ip, ip, #32
+  201f88:	f1dc 0e1f 	rsbs	lr, ip, #31
+  201f8c:	bf32      	itee	cc
+  201f8e:	f04f 0e00 	movcc.w	lr, #0
+  201f92:	fa23 f30c 	lsrcs.w	r3, r3, ip
+  201f96:	eb10 0003 	addscs.w	r0, r0, r3
+  201f9a:	eb41 5104 	adc.w	r1, r1, r4, lsl #20
+  201f9e:	ebb4 5f11 	cmp.w	r4, r1, lsr #20
+  201fa2:	d0d0      	beq.n	201f46 <_dadd1+0x6e>
+  201fa4:	eba1 5104 	sub.w	r1, r1, r4, lsl #20
+  201fa8:	f501 1180 	add.w	r1, r1, #1048576	; 0x100000
+  201fac:	0849      	lsrs	r1, r1, #1
+  201fae:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  201fb2:	ea5f 0030 	movs.w	r0, r0, rrx
+  201fb6:	d30e      	bcc.n	201fd6 <_dadd1+0xfe>
+  201fb8:	f150 0000 	adcs.w	r0, r0, #0
+  201fbc:	bf38      	it	cc
+  201fbe:	fa12 fe0e 	lslscc.w	lr, r2, lr
+  201fc2:	d108      	bne.n	201fd6 <_dadd1+0xfe>
+  201fc4:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  201fc8:	e7c9      	b.n	201f5e <_dadd1+0x86>
+  201fca:	1c40      	adds	r0, r0, #1
+  201fcc:	bf38      	it	cc
+  201fce:	ea5f 0242 	movscc.w	r2, r2, lsl #1
+  201fd2:	d1ca      	bne.n	201f6a <_dadd1+0x92>
+  201fd4:	e7c3      	b.n	201f5e <_dadd1+0x86>
+  201fd6:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  201fda:	ea4f 0341 	mov.w	r3, r1, lsl #1
+  201fde:	f513 1f00 	cmn.w	r3, #2097152	; 0x200000
+  201fe2:	bf38      	it	cc
+  201fe4:	4770      	bxcc	lr
+  201fe6:	f1a1 41c0 	sub.w	r1, r1, #1610612736	; 0x60000000
+  201fea:	f000 bb45 	b.w	202678 <__fpl_dretinf>
+  201fee:	ea9e 5f44 	teq	lr, r4, lsl #21
+  201ff2:	d008      	beq.n	202006 <_dadd1+0x12e>
+  201ff4:	ea11 0f5e 	tst.w	r1, lr, lsr #1
+  201ff8:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  201ffc:	bf04      	itt	eq
+  201ffe:	f001 4100 	andeq.w	r1, r1, #2147483648	; 0x80000000
+  202002:	2000      	moveq	r0, #0
+  202004:	4770      	bx	lr
+  202006:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  20200a:	b570      	push	{r4, r5, r6, lr}
+  20200c:	f000 fae6 	bl	2025dc <__fpl_dnaninf>
+  202010:	3ebefb64 	.word	0x3ebefb64
+  202014:	ffe00000 	.word	0xffe00000
+
+00202018 <__fpl_dcmp_Inf>:
+  202018:	1049      	asrs	r1, r1, #1
+  20201a:	bf58      	it	pl
+  20201c:	f1c1 4140 	rsbpl	r1, r1, #3221225472	; 0xc0000000
+  202020:	105b      	asrs	r3, r3, #1
+  202022:	bf58      	it	pl
+  202024:	f1c3 4340 	rsbpl	r3, r3, #3221225472	; 0xc0000000
+  202028:	428b      	cmp	r3, r1
+  20202a:	f3ef 8000 	mrs	r0, CPSR
+  20202e:	4770      	bx	lr
+
+00202030 <_ddiv>:
+  202030:	e92d 41c0 	stmdb	sp!, {r6, r7, r8, lr}
+  202034:	b430      	push	{r4, r5}
+
+00202036 <ddiv_entry>:
+  202036:	f8df c2a4 	ldr.w	ip, [pc, #676]	; 2022dc <ddiv_entry+0x2a6>
+  20203a:	ea3c 1411 	bics.w	r4, ip, r1, lsr #4
+  20203e:	bf18      	it	ne
+  202040:	ea3c 1413 	bicsne.w	r4, ip, r3, lsr #4
+  202044:	f000 80ed 	beq.w	202222 <ddiv_entry+0x1ec>
+  202048:	ea1c 1411 	ands.w	r4, ip, r1, lsr #4
+  20204c:	ea81 0503 	eor.w	r5, r1, r3
+  202050:	ea44 74d5 	orr.w	r4, r4, r5, lsr #31
+  202054:	bf18      	it	ne
+  202056:	ea1c 1513 	andsne.w	r5, ip, r3, lsr #4
+  20205a:	f000 80c8 	beq.w	2021ee <ddiv_entry+0x1b8>
+  20205e:	eba4 0405 	sub.w	r4, r4, r5
+  202062:	f104 747f 	add.w	r4, r4, #66846720	; 0x3fc0000
+  202066:	f504 3400 	add.w	r4, r4, #131072	; 0x20000
+  20206a:	f04f 4500 	mov.w	r5, #2147483648	; 0x80000000
+  20206e:	ea45 21c1 	orr.w	r1, r5, r1, lsl #11
+  202072:	ea45 23c3 	orr.w	r3, r5, r3, lsl #11
+  202076:	ea41 5150 	orr.w	r1, r1, r0, lsr #21
+  20207a:	ea43 5352 	orr.w	r3, r3, r2, lsr #21
+  20207e:	ea4f 20c0 	mov.w	r0, r0, lsl #11
+  202082:	ea4f 22c2 	mov.w	r2, r2, lsl #11
+  202086:	4299      	cmp	r1, r3
+  202088:	bf08      	it	eq
+  20208a:	4290      	cmpeq	r0, r2
+  20208c:	f000 809d 	beq.w	2021ca <ddiv_entry+0x194>
+  202090:	ea4f 6513 	mov.w	r5, r3, lsr #24
+  202094:	f20f 1644 	addw	r6, pc, #324	; 0x144
+  202098:	5d76      	ldrb	r6, [r6, r5]
+  20209a:	ea4f 4513 	mov.w	r5, r3, lsr #16
+  20209e:	fb06 f705 	mul.w	r7, r6, r5
+  2020a2:	f1c7 7780 	rsb	r7, r7, #16777216	; 0x1000000
+  2020a6:	fb06 f707 	mul.w	r7, r6, r7
+  2020aa:	ea4f 37d7 	mov.w	r7, r7, lsr #15
+  2020ae:	fba7 6803 	umull	r6, r8, r7, r3
+  2020b2:	4276      	negs	r6, r6
+  2020b4:	fba7 ce06 	umull	ip, lr, r7, r6
+  2020b8:	f5c8 3880 	rsb	r8, r8, #65536	; 0x10000
+  2020bc:	bf38      	it	cc
+  2020be:	f1a8 0801 	subcc.w	r8, r8, #1
+  2020c2:	fb07 e608 	mla	r6, r7, r8, lr
+  2020c6:	fba6 8c02 	umull	r8, ip, r6, r2
+  2020ca:	f04f 0e00 	mov.w	lr, #0
+  2020ce:	fbe6 ce03 	umlal	ip, lr, r6, r3
+  2020d2:	f1dc 0c00 	rsbs	ip, ip, #0
+  2020d6:	f1ce 4e00 	rsb	lr, lr, #2147483648	; 0x80000000
+  2020da:	bf38      	it	cc
+  2020dc:	f1ae 0e01 	subcc.w	lr, lr, #1
+  2020e0:	fba6 580c 	umull	r5, r8, r6, ip
+  2020e4:	f04f 0700 	mov.w	r7, #0
+  2020e8:	fbe6 870e 	umlal	r8, r7, r6, lr
+  2020ec:	fba1 c608 	umull	ip, r6, r1, r8
+  2020f0:	fba0 ce07 	umull	ip, lr, r0, r7
+  2020f4:	eb16 060e 	adds.w	r6, r6, lr
+  2020f8:	f04f 0500 	mov.w	r5, #0
+  2020fc:	f145 0500 	adc.w	r5, r5, #0
+  202100:	fbe1 6507 	umlal	r6, r5, r1, r7
+  202104:	f115 4ee0 	adds.w	lr, r5, #1879048192	; 0x70000000
+  202108:	bf7e      	ittt	vc
+  20210a:	f5a4 3480 	subvc.w	r4, r4, #65536	; 0x10000
+  20210e:	ea5f 0646 	movsvc.w	r6, r6, lsl #1
+  202112:	416d      	adcvc	r5, r5
+  202114:	f116 0780 	adds.w	r7, r6, #128	; 0x80
+  202118:	f145 0500 	adc.w	r5, r5, #0
+  20211c:	ea4f 2717 	mov.w	r7, r7, lsr #8
+  202120:	ea47 6705 	orr.w	r7, r7, r5, lsl #24
+  202124:	ea4f 2515 	mov.w	r5, r5, lsr #8
+  202128:	ea4f 6606 	mov.w	r6, r6, lsl #24
+  20212c:	f1a6 46de 	sub.w	r6, r6, #1862270976	; 0x6f000000
+  202130:	f1b6 5f80 	cmp.w	r6, #268435456	; 0x10000000
+  202134:	d920      	bls.n	202178 <ddiv_entry+0x142>
+  202136:	4638      	mov	r0, r7
+  202138:	eb05 71c4 	add.w	r1, r5, r4, lsl #31
+  20213c:	f024 0c01 	bic.w	ip, r4, #1
+  202140:	eb01 110c 	add.w	r1, r1, ip, lsl #4
+  202144:	f1bc 6ffe 	cmp.w	ip, #133169152	; 0x7f00000
+  202148:	d802      	bhi.n	202150 <ddiv_entry+0x11a>
+  20214a:	bcf0      	pop	{r4, r5, r6, r7}
+  20214c:	e8bd 8100 	ldmia.w	sp!, {r8, pc}
+  202150:	4224      	tst	r4, r4
+  202152:	bf5c      	itt	pl
+  202154:	f501 1e80 	addpl.w	lr, r1, #1048576	; 0x100000
+  202158:	ea9e 7fc4 	teqpl	lr, r4, lsl #31
+  20215c:	d402      	bmi.n	202164 <ddiv_entry+0x12e>
+  20215e:	bcf0      	pop	{r4, r5, r6, r7}
+  202160:	e8bd 8100 	ldmia.w	sp!, {r8, pc}
+  202164:	4224      	tst	r4, r4
+  202166:	f100 8039 	bmi.w	2021dc <ddiv_entry+0x1a6>
+  20216a:	f1a1 41c0 	sub.w	r1, r1, #1610612736	; 0x60000000
+  20216e:	bcf0      	pop	{r4, r5, r6, r7}
+  202170:	e8bd 4100 	ldmia.w	sp!, {r8, lr}
+  202174:	f000 ba80 	b.w	202678 <__fpl_dretinf>
+  202178:	ea4f 20d0 	mov.w	r0, r0, lsr #11
+  20217c:	ea40 5041 	orr.w	r0, r0, r1, lsl #21
+  202180:	ea4f 21d1 	mov.w	r1, r1, lsr #11
+  202184:	ea4f 22d2 	mov.w	r2, r2, lsr #11
+  202188:	ea42 5243 	orr.w	r2, r2, r3, lsl #21
+  20218c:	ea4f 23d3 	mov.w	r3, r3, lsr #11
+  202190:	fba7 8602 	umull	r8, r6, r7, r2
+  202194:	fb07 6603 	mla	r6, r7, r3, r6
+  202198:	fb05 6602 	mla	r6, r5, r2, r6
+  20219c:	ea1e 0f0e 	tst.w	lr, lr
+  2021a0:	bf58      	it	pl
+  2021a2:	eba6 5600 	subpl.w	r6, r6, r0, lsl #20
+  2021a6:	ebb6 5600 	subs.w	r6, r6, r0, lsl #20
+  2021aa:	ea4f 0e52 	mov.w	lr, r2, lsr #1
+  2021ae:	ea4e 7ec3 	orr.w	lr, lr, r3, lsl #31
+  2021b2:	eb18 0e0e 	adds.w	lr, r8, lr
+  2021b6:	eb56 0e53 	adcs.w	lr, r6, r3, lsr #1
+  2021ba:	d5bc      	bpl.n	202136 <ddiv_entry+0x100>
+  2021bc:	eb18 0802 	adds.w	r8, r8, r2
+  2021c0:	415e      	adcs	r6, r3
+  2021c2:	1c7f      	adds	r7, r7, #1
+  2021c4:	f155 0500 	adcs.w	r5, r5, #0
+  2021c8:	e7b5      	b.n	202136 <ddiv_entry+0x100>
+  2021ca:	f44f 1580 	mov.w	r5, #1048576	; 0x100000
+  2021ce:	f04f 0700 	mov.w	r7, #0
+  2021d2:	f04f 0600 	mov.w	r6, #0
+  2021d6:	f04f 0800 	mov.w	r8, #0
+  2021da:	e7ac      	b.n	202136 <ddiv_entry+0x100>
+  2021dc:	f101 41c0 	add.w	r1, r1, #1610612736	; 0x60000000
+  2021e0:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  2021e4:	f04f 0000 	mov.w	r0, #0
+  2021e8:	bcf0      	pop	{r4, r5, r6, r7}
+  2021ea:	e8bd 8100 	ldmia.w	sp!, {r8, pc}
+  2021ee:	ea0c 1513 	and.w	r5, ip, r3, lsr #4
+  2021f2:	ea11 1f0c 	tst.w	r1, ip, lsl #4
+  2021f6:	d000      	beq.n	2021fa <ddiv_entry+0x1c4>
+  2021f8:	e00c      	b.n	202214 <ddiv_entry+0x1de>
+  2021fa:	ea13 1f0c 	tst.w	r3, ip, lsl #4
+  2021fe:	f000 8026 	beq.w	20224e <ddiv_entry+0x218>
+  202202:	f04f 0000 	mov.w	r0, #0
+  202206:	ea81 0103 	eor.w	r1, r1, r3
+  20220a:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  20220e:	bcf0      	pop	{r4, r5, r6, r7}
+  202210:	e8bd 8100 	ldmia.w	sp!, {r8, pc}
+  202214:	bcf0      	pop	{r4, r5, r6, r7}
+  202216:	e8bd 4100 	ldmia.w	sp!, {r8, lr}
+  20221a:	ea81 0103 	eor.w	r1, r1, r3
+  20221e:	f000 ba2b 	b.w	202678 <__fpl_dretinf>
+  202222:	bcf0      	pop	{r4, r5, r6, r7}
+  202224:	e8bd 4100 	ldmia.w	sp!, {r8, lr}
+  202228:	b570      	push	{r4, r5, r6, lr}
+  20222a:	f000 f9d7 	bl	2025dc <__fpl_dnaninf>
+  20222e:	bf00      	nop
+  202230:	3efc7e09 	.word	0x3efc7e09
+  202234:	f000 b807 	b.w	202246 <ddiv_entry+0x210>
+  202238:	f04f 0000 	mov.w	r0, #0
+  20223c:	ea81 0103 	eor.w	r1, r1, r3
+  202240:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  202244:	4770      	bx	lr
+  202246:	ea81 0103 	eor.w	r1, r1, r3
+  20224a:	f000 ba15 	b.w	202678 <__fpl_dretinf>
+  20224e:	bcf0      	pop	{r4, r5, r6, r7}
+  202250:	e8bd 4100 	ldmia.w	sp!, {r8, lr}
+  202254:	4922      	ldr	r1, [pc, #136]	; (2022e0 <ddiv_entry+0x2aa>)
+  202256:	f04f 0000 	mov.w	r0, #0
+  20225a:	4770      	bx	lr
+  20225c:	f9fbfdff 	.word	0xf9fbfdff
+  202260:	f2f4f5f7 	.word	0xf2f4f5f7
+  202264:	ebedeef0 	.word	0xebedeef0
+  202268:	e4e6e8e9 	.word	0xe4e6e8e9
+  20226c:	dee0e1e3 	.word	0xdee0e1e3
+  202270:	d8dadbdd 	.word	0xd8dadbdd
+  202274:	d3d4d5d7 	.word	0xd3d4d5d7
+  202278:	cdcfd0d1 	.word	0xcdcfd0d1
+  20227c:	c8cacbcc 	.word	0xc8cacbcc
+  202280:	c4c5c6c7 	.word	0xc4c5c6c7
+  202284:	bfc0c1c2 	.word	0xbfc0c1c2
+  202288:	bbbcbdbe 	.word	0xbbbcbdbe
+  20228c:	b7b8b9ba 	.word	0xb7b8b9ba
+  202290:	b3b4b5b6 	.word	0xb3b4b5b6
+  202294:	afb0b1b2 	.word	0xafb0b1b2
+  202298:	abacadae 	.word	0xabacadae
+  20229c:	a8a8a9aa 	.word	0xa8a8a9aa
+  2022a0:	a4a5a6a7 	.word	0xa4a5a6a7
+  2022a4:	a1a2a3a3 	.word	0xa1a2a3a3
+  2022a8:	9e9f9fa0 	.word	0x9e9f9fa0
+  2022ac:	9b9c9c9d 	.word	0x9b9c9c9d
+  2022b0:	9899999a 	.word	0x9899999a
+  2022b4:	95969797 	.word	0x95969797
+  2022b8:	93939495 	.word	0x93939495
+  2022bc:	90919192 	.word	0x90919192
+  2022c0:	8e8e8f8f 	.word	0x8e8e8f8f
+  2022c4:	8b8c8c8d 	.word	0x8b8c8c8d
+  2022c8:	89898a8b 	.word	0x89898a8b
+  2022cc:	87878888 	.word	0x87878888
+  2022d0:	84858586 	.word	0x84858586
+  2022d4:	82838384 	.word	0x82838384
+  2022d8:	80818182 	.word	0x80818182
+  2022dc:	07ff0000 	.word	0x07ff0000
+  2022e0:	7ff80000 	.word	0x7ff80000
+
+002022e4 <_dcmpeq>:
+  2022e4:	ea51 0c03 	orrs.w	ip, r1, r3
+  2022e8:	d417      	bmi.n	20231a <_dcmpeq+0x36>
+  2022ea:	f51c 1f80 	cmn.w	ip, #1048576	; 0x100000
+  2022ee:	bf58      	it	pl
+  2022f0:	f5bc 1f80 	cmppl.w	ip, #1048576	; 0x100000
+  2022f4:	f100 8006 	bmi.w	202304 <_dcmpeq+0x20>
+  2022f8:	4299      	cmp	r1, r3
+  2022fa:	bf18      	it	ne
+  2022fc:	4770      	bxne	lr
+  2022fe:	bf08      	it	eq
+  202300:	4290      	cmpeq	r0, r2
+  202302:	4770      	bx	lr
+  202304:	d707      	bvc.n	202316 <_dcmpeq+0x32>
+  202306:	f511 1f80 	cmn.w	r1, #1048576	; 0x100000
+  20230a:	bf58      	it	pl
+  20230c:	f513 1f80 	cmnpl.w	r3, #1048576	; 0x100000
+  202310:	d419      	bmi.n	202346 <_dcmpeq+0x62>
+  202312:	4299      	cmp	r1, r3
+  202314:	4770      	bx	lr
+  202316:	4289      	cmp	r1, r1
+  202318:	4770      	bx	lr
+  20231a:	f51c 1f80 	cmn.w	ip, #1048576	; 0x100000
+  20231e:	d508      	bpl.n	202332 <_dcmpeq+0x4e>
+  202320:	f5bc 1f80 	cmp.w	ip, #1048576	; 0x100000
+  202324:	d5f7      	bpl.n	202316 <_dcmpeq+0x32>
+  202326:	428b      	cmp	r3, r1
+  202328:	bf18      	it	ne
+  20232a:	4770      	bxne	lr
+  20232c:	bf08      	it	eq
+  20232e:	4282      	cmpeq	r2, r0
+  202330:	4770      	bx	lr
+  202332:	f44f 1c00 	mov.w	ip, #2097152	; 0x200000
+  202336:	eb1c 0f41 	cmn.w	ip, r1, lsl #1
+  20233a:	bf38      	it	cc
+  20233c:	eb1c 0f43 	cmncc.w	ip, r3, lsl #1
+  202340:	d201      	bcs.n	202346 <_dcmpeq+0x62>
+  202342:	428b      	cmp	r3, r1
+  202344:	4770      	bx	lr
+  202346:	b570      	push	{r4, r5, r6, lr}
+  202348:	f000 f948 	bl	2025dc <__fpl_dnaninf>
+  20234c:	00492492 	.word	0x00492492
+  202350:	f04f 5100 	mov.w	r1, #536870912	; 0x20000000
+  202354:	f04f 5380 	mov.w	r3, #268435456	; 0x10000000
+  202358:	f7ff be5e 	b.w	202018 <__fpl_dcmp_Inf>
+
+0020235c <_dfix>:
+  20235c:	ea4f 0341 	mov.w	r3, r1, lsl #1
+  202360:	ea4f 5353 	mov.w	r3, r3, lsr #21
+  202364:	f5a3 6380 	sub.w	r3, r3, #1024	; 0x400
+  202368:	f1d3 031e 	rsbs	r3, r3, #30
+  20236c:	bfc8      	it	gt
+  20236e:	f1d3 0c21 	rsbsgt	ip, r3, #33	; 0x21
+  202372:	dd0c      	ble.n	20238e <_dfix+0x32>
+  202374:	f04f 4200 	mov.w	r2, #2147483648	; 0x80000000
+  202378:	ea42 22c1 	orr.w	r2, r2, r1, lsl #11
+  20237c:	ea42 5250 	orr.w	r2, r2, r0, lsr #21
+  202380:	fa32 fc03 	lsrs.w	ip, r2, r3
+  202384:	ea8c 7ce1 	eor.w	ip, ip, r1, asr #31
+  202388:	ebac 70e1 	sub.w	r0, ip, r1, asr #31
+  20238c:	4770      	bx	lr
+  20238e:	2b10      	cmp	r3, #16
+  202390:	bfc4      	itt	gt
+  202392:	2000      	movgt	r0, #0
+  202394:	4770      	bxgt	lr
+  202396:	f503 7c78 	add.w	ip, r3, #992	; 0x3e0
+  20239a:	f1bc 3fff 	cmp.w	ip, #4294967295
+  20239e:	d004      	beq.n	2023aa <_dfix+0x4e>
+  2023a0:	f06f 4200 	mvn.w	r2, #2147483648	; 0x80000000
+  2023a4:	ea82 0021 	eor.w	r0, r2, r1, asr #32
+  2023a8:	4770      	bx	lr
+  2023aa:	b570      	push	{r4, r5, r6, lr}
+  2023ac:	f000 f916 	bl	2025dc <__fpl_dnaninf>
+  2023b0:	80249249 	.word	0x80249249
+  2023b4:	2000      	movs	r0, #0
+  2023b6:	4770      	bx	lr
+  2023b8:	e7f2      	b.n	2023a0 <_dfix+0x44>
+
+002023ba <_dflt>:
+  2023ba:	f010 4200 	ands.w	r2, r0, #2147483648	; 0x80000000
+  2023be:	bf48      	it	mi
+  2023c0:	4240      	negmi	r0, r0
+  2023c2:	fab0 f380 	clz	r3, r0
+  2023c6:	fa10 f103 	lsls.w	r1, r0, r3
+  2023ca:	d00a      	beq.n	2023e2 <_dflt+0x28>
+  2023cc:	f1c3 031d 	rsb	r3, r3, #29
+  2023d0:	f503 6380 	add.w	r3, r3, #1024	; 0x400
+  2023d4:	eb02 5203 	add.w	r2, r2, r3, lsl #20
+  2023d8:	ea4f 5041 	mov.w	r0, r1, lsl #21
+  2023dc:	eb02 21d1 	add.w	r1, r2, r1, lsr #11
+  2023e0:	4770      	bx	lr
+  2023e2:	f04f 0000 	mov.w	r0, #0
+  2023e6:	4770      	bx	lr
+
+002023e8 <_dfltu>:
+  2023e8:	fab0 f380 	clz	r3, r0
+  2023ec:	fa10 f103 	lsls.w	r1, r0, r3
+  2023f0:	d00a      	beq.n	202408 <_dfltu+0x20>
+  2023f2:	f1c3 031d 	rsb	r3, r3, #29
+  2023f6:	f503 6380 	add.w	r3, r3, #1024	; 0x400
+  2023fa:	ea4f 5203 	mov.w	r2, r3, lsl #20
+  2023fe:	ea4f 5041 	mov.w	r0, r1, lsl #21
+  202402:	eb02 21d1 	add.w	r1, r2, r1, lsr #11
+  202406:	4770      	bx	lr
+  202408:	f04f 0000 	mov.w	r0, #0
+  20240c:	4770      	bx	lr
+	...
+
+00202410 <_dcmple>:
+  202410:	ea51 0c03 	orrs.w	ip, r1, r3
+  202414:	d417      	bmi.n	202446 <_dcmple+0x36>
+  202416:	f51c 1f80 	cmn.w	ip, #1048576	; 0x100000
+  20241a:	bf58      	it	pl
+  20241c:	f5bc 1f80 	cmppl.w	ip, #1048576	; 0x100000
+  202420:	f100 8006 	bmi.w	202430 <_dcmple+0x20>
+  202424:	4299      	cmp	r1, r3
+  202426:	bf18      	it	ne
+  202428:	4770      	bxne	lr
+  20242a:	bf08      	it	eq
+  20242c:	4290      	cmpeq	r0, r2
+  20242e:	4770      	bx	lr
+  202430:	d707      	bvc.n	202442 <_dcmple+0x32>
+  202432:	f511 1f80 	cmn.w	r1, #1048576	; 0x100000
+  202436:	bf58      	it	pl
+  202438:	f513 1f80 	cmnpl.w	r3, #1048576	; 0x100000
+  20243c:	d419      	bmi.n	202472 <__fpl_dcmple_InfNaN>
+  20243e:	4299      	cmp	r1, r3
+  202440:	4770      	bx	lr
+  202442:	4289      	cmp	r1, r1
+  202444:	4770      	bx	lr
+  202446:	f51c 1f80 	cmn.w	ip, #1048576	; 0x100000
+  20244a:	d508      	bpl.n	20245e <_dcmple+0x4e>
+  20244c:	f5bc 1f80 	cmp.w	ip, #1048576	; 0x100000
+  202450:	d5f7      	bpl.n	202442 <_dcmple+0x32>
+  202452:	428b      	cmp	r3, r1
+  202454:	bf18      	it	ne
+  202456:	4770      	bxne	lr
+  202458:	bf08      	it	eq
+  20245a:	4282      	cmpeq	r2, r0
+  20245c:	4770      	bx	lr
+  20245e:	f44f 1c00 	mov.w	ip, #2097152	; 0x200000
+  202462:	eb1c 0f41 	cmn.w	ip, r1, lsl #1
+  202466:	bf38      	it	cc
+  202468:	eb1c 0f43 	cmncc.w	ip, r3, lsl #1
+  20246c:	d201      	bcs.n	202472 <__fpl_dcmple_InfNaN>
+  20246e:	428b      	cmp	r3, r1
+  202470:	4770      	bx	lr
+
+00202472 <__fpl_dcmple_InfNaN>:
+  202472:	b570      	push	{r4, r5, r6, lr}
+  202474:	f000 f8b2 	bl	2025dc <__fpl_dnaninf>
+  202478:	00492492 	.word	0x00492492
+  20247c:	f04f 5100 	mov.w	r1, #536870912	; 0x20000000
+  202480:	f04f 5380 	mov.w	r3, #268435456	; 0x10000000
+  202484:	f7ff bdc8 	b.w	202018 <__fpl_dcmp_Inf>
+
+00202488 <_dmul>:
+  202488:	b570      	push	{r4, r5, r6, lr}
+  20248a:	f8df c148 	ldr.w	ip, [pc, #328]	; 2025d4 <_dmul+0x14c>
+  20248e:	ea1c 1e11 	ands.w	lr, ip, r1, lsr #4
+  202492:	bf1e      	ittt	ne
+  202494:	ea1c 1513 	andsne.w	r5, ip, r3, lsr #4
+  202498:	ea9e 0f0c 	teqne	lr, ip
+  20249c:	ea95 0f0c 	teqne	r5, ip
+  2024a0:	f000 806f 	beq.w	202582 <_dmul+0xfa>
+  2024a4:	ea81 0403 	eor.w	r4, r1, r3
+  2024a8:	ea4e 7ed4 	orr.w	lr, lr, r4, lsr #31
+  2024ac:	44ae      	add	lr, r5
+  2024ae:	ea21 114c 	bic.w	r1, r1, ip, lsl #5
+  2024b2:	ea23 134c 	bic.w	r3, r3, ip, lsl #5
+  2024b6:	f441 1180 	orr.w	r1, r1, #1048576	; 0x100000
+  2024ba:	f443 1380 	orr.w	r3, r3, #1048576	; 0x100000
+  2024be:	f1ae 7e7f 	sub.w	lr, lr, #66846720	; 0x3fc0000
+  2024c2:	fba1 4c02 	umull	r4, ip, r1, r2
+  2024c6:	fba0 6503 	umull	r6, r5, r0, r3
+  2024ca:	1936      	adds	r6, r6, r4
+  2024cc:	eb55 050c 	adcs.w	r5, r5, ip
+  2024d0:	fba1 4c03 	umull	r4, ip, r1, r3
+  2024d4:	f14c 0300 	adc.w	r3, ip, #0
+  2024d8:	fba0 1c02 	umull	r1, ip, r0, r2
+  2024dc:	eb16 060c 	adds.w	r6, r6, ip
+  2024e0:	4165      	adcs	r5, r4
+  2024e2:	f153 0300 	adcs.w	r3, r3, #0
+  2024e6:	4209      	tst	r1, r1
+  2024e8:	bf18      	it	ne
+  2024ea:	f046 0601 	orrne.w	r6, r6, #1
+  2024ee:	f413 7f00 	tst.w	r3, #512	; 0x200
+  2024f2:	d10b      	bne.n	20250c <_dmul+0x84>
+  2024f4:	ea4f 3103 	mov.w	r1, r3, lsl #12
+  2024f8:	ea4f 3005 	mov.w	r0, r5, lsl #12
+  2024fc:	ea41 5115 	orr.w	r1, r1, r5, lsr #20
+  202500:	ea40 5016 	orr.w	r0, r0, r6, lsr #20
+  202504:	0334      	lsls	r4, r6, #12
+  202506:	f06f 0203 	mvn.w	r2, #3
+  20250a:	e00a      	b.n	202522 <_dmul+0x9a>
+  20250c:	ea4f 21c3 	mov.w	r1, r3, lsl #11
+  202510:	ea4f 20c5 	mov.w	r0, r5, lsl #11
+  202514:	ea41 5155 	orr.w	r1, r1, r5, lsr #21
+  202518:	ea40 5056 	orr.w	r0, r0, r6, lsr #21
+  20251c:	02f4      	lsls	r4, r6, #11
+  20251e:	f06f 0202 	mvn.w	r2, #2
+  202522:	eb02 422e 	add.w	r2, r2, lr, asr #16
+  202526:	eb01 5502 	add.w	r5, r1, r2, lsl #20
+  20252a:	ea85 71ce 	eor.w	r1, r5, lr, lsl #31
+  20252e:	d00a      	beq.n	202546 <_dmul+0xbe>
+  202530:	ea5f 0c44 	movs.w	ip, r4, lsl #1
+  202534:	bf18      	it	ne
+  202536:	f024 4400 	bicne.w	r4, r4, #2147483648	; 0x80000000
+  20253a:	f150 0000 	adcs.w	r0, r0, #0
+  20253e:	f141 0100 	adc.w	r1, r1, #0
+  202542:	ea20 70d4 	bic.w	r0, r0, r4, lsr #31
+  202546:	f240 7cfe 	movw	ip, #2046	; 0x7fe
+  20254a:	4562      	cmp	r2, ip
+  20254c:	d200      	bcs.n	202550 <_dmul+0xc8>
+  20254e:	bd70      	pop	{r4, r5, r6, pc}
+  202550:	42a8      	cmp	r0, r5
+  202552:	bf14      	ite	ne
+  202554:	f04f 4480 	movne.w	r4, #1073741824	; 0x40000000
+  202558:	f04f 4440 	moveq.w	r4, #3221225472	; 0xc0000000
+  20255c:	2e00      	cmp	r6, #0
+  20255e:	bf08      	it	eq
+  202560:	2400      	moveq	r4, #0
+  202562:	f1be 6f80 	cmp.w	lr, #67108864	; 0x4000000
+  202566:	bfa8      	it	ge
+  202568:	f1a1 41c0 	subge.w	r1, r1, #1610612736	; 0x60000000
+  20256c:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  202570:	f280 8082 	bge.w	202678 <__fpl_dretinf>
+  202574:	f101 41c0 	add.w	r1, r1, #1610612736	; 0x60000000
+  202578:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  20257c:	f04f 0000 	mov.w	r0, #0
+  202580:	4770      	bx	lr
+  202582:	ea0c 1513 	and.w	r5, ip, r3, lsr #4
+  202586:	ea9e 0f0c 	teq	lr, ip
+  20258a:	bf18      	it	ne
+  20258c:	ea95 0f0c 	teqne	r5, ip
+  202590:	d006      	beq.n	2025a0 <_dmul+0x118>
+  202592:	ea81 0e03 	eor.w	lr, r1, r3
+  202596:	f04f 0000 	mov.w	r0, #0
+  20259a:	f00e 4100 	and.w	r1, lr, #2147483648	; 0x80000000
+  20259e:	bd70      	pop	{r4, r5, r6, pc}
+  2025a0:	f000 f81c 	bl	2025dc <__fpl_dnaninf>
+  2025a4:	3e010089 	.word	0x3e010089
+  2025a8:	f000 b807 	b.w	2025ba <_dmul+0x132>
+  2025ac:	f000 b809 	b.w	2025c2 <_dmul+0x13a>
+  2025b0:	ea4f 0c43 	mov.w	ip, r3, lsl #1
+  2025b4:	ea5f 5c5c 	movs.w	ip, ip, lsr #21
+  2025b8:	d008      	beq.n	2025cc <_dmul+0x144>
+  2025ba:	ea81 0103 	eor.w	r1, r1, r3
+  2025be:	f000 b85b 	b.w	202678 <__fpl_dretinf>
+  2025c2:	ea4f 0c41 	mov.w	ip, r1, lsl #1
+  2025c6:	ea5f 5c5c 	movs.w	ip, ip, lsr #21
+  2025ca:	d1f6      	bne.n	2025ba <_dmul+0x132>
+  2025cc:	4902      	ldr	r1, [pc, #8]	; (2025d8 <_dmul+0x150>)
+  2025ce:	f04f 0000 	mov.w	r0, #0
+  2025d2:	4770      	bx	lr
+  2025d4:	07ff0000 	.word	0x07ff0000
+  2025d8:	7ff80000 	.word	0x7ff80000
+
+002025dc <__fpl_dnaninf>:
+  2025dc:	f10e 0e02 	add.w	lr, lr, #2
+  2025e0:	f02e 0e03 	bic.w	lr, lr, #3
+  2025e4:	f85e 6b04 	ldr.w	r6, [lr], #4
+  2025e8:	4236      	tst	r6, r6
+  2025ea:	d405      	bmi.n	2025f8 <__fpl_dnaninf+0x1c>
+  2025ec:	2a01      	cmp	r2, #1
+  2025ee:	eb43 0503 	adc.w	r5, r3, r3
+  2025f2:	f515 1f00 	cmn.w	r5, #2097152	; 0x200000
+  2025f6:	d812      	bhi.n	20261e <__fpl_dnaninf+0x42>
+  2025f8:	2801      	cmp	r0, #1
+  2025fa:	eb41 0c01 	adc.w	ip, r1, r1
+  2025fe:	f51c 1f00 	cmn.w	ip, #2097152	; 0x200000
+  202602:	d80c      	bhi.n	20261e <__fpl_dnaninf+0x42>
+  202604:	d10e      	bne.n	202624 <__fpl_dnaninf+0x48>
+  202606:	ea4f 7cd1 	mov.w	ip, r1, lsr #31
+  20260a:	eb0c 0c4c 	add.w	ip, ip, ip, lsl #1
+  20260e:	f10c 0c02 	add.w	ip, ip, #2
+  202612:	f515 1f00 	cmn.w	r5, #2097152	; 0x200000
+  202616:	bf08      	it	eq
+  202618:	eb4c 7cd3 	adceq.w	ip, ip, r3, lsr #31
+  20261c:	e004      	b.n	202628 <__fpl_dnaninf+0x4c>
+  20261e:	f04f 0c08 	mov.w	ip, #8
+  202622:	e001      	b.n	202628 <__fpl_dnaninf+0x4c>
+  202624:	ea4f 7cd3 	mov.w	ip, r3, lsr #31
+  202628:	eb0c 054c 	add.w	r5, ip, ip, lsl #1
+  20262c:	fa26 f605 	lsr.w	r6, r6, r5
+  202630:	f006 0607 	and.w	r6, r6, #7
+  202634:	f1b6 0c04 	subs.w	ip, r6, #4
+  202638:	d206      	bcs.n	202648 <__fpl_dnaninf+0x6c>
+  20263a:	eb0e 0c86 	add.w	ip, lr, r6, lsl #2
+  20263e:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  202642:	f04c 0c01 	orr.w	ip, ip, #1
+  202646:	4760      	bx	ip
+  202648:	e8df f00c 	tbb	[pc, ip]
+  20264c:	02020b09 	.word	0x02020b09
+  202650:	f04f 4100 	mov.w	r1, #2147483648	; 0x80000000
+  202654:	f5a1 2100 	sub.w	r1, r1, #524288	; 0x80000
+  202658:	f04f 0000 	mov.w	r0, #0
+  20265c:	bd70      	pop	{r4, r5, r6, pc}
+  20265e:	4619      	mov	r1, r3
+  202660:	4610      	mov	r0, r2
+  202662:	2801      	cmp	r0, #1
+  202664:	eb51 0401 	adcs.w	r4, r1, r1
+  202668:	bf18      	it	ne
+  20266a:	f5d4 1400 	rsbsne	r4, r4, #2097152	; 0x200000
+  20266e:	bf84      	itt	hi
+  202670:	2000      	movhi	r0, #0
+  202672:	f001 4100 	andhi.w	r1, r1, #2147483648	; 0x80000000
+  202676:	bd70      	pop	{r4, r5, r6, pc}
+
+00202678 <__fpl_dretinf>:
+  202678:	0808      	lsrs	r0, r1, #32
+  20267a:	f5a0 1100 	sub.w	r1, r0, #2097152	; 0x200000
+  20267e:	ea4f 0131 	mov.w	r1, r1, rrx
+  202682:	4770      	bx	lr
+
+00202684 <_drcmple>:
+  202684:	ea53 0c01 	orrs.w	ip, r3, r1
+  202688:	d417      	bmi.n	2026ba <_drcmple+0x36>
+  20268a:	f51c 1f80 	cmn.w	ip, #1048576	; 0x100000
+  20268e:	bf58      	it	pl
+  202690:	f5bc 1f80 	cmppl.w	ip, #1048576	; 0x100000
+  202694:	f100 8006 	bmi.w	2026a4 <_drcmple+0x20>
+  202698:	428b      	cmp	r3, r1
+  20269a:	bf18      	it	ne
+  20269c:	4770      	bxne	lr
+  20269e:	bf08      	it	eq
+  2026a0:	4282      	cmpeq	r2, r0
+  2026a2:	4770      	bx	lr
+  2026a4:	d707      	bvc.n	2026b6 <_drcmple+0x32>
+  2026a6:	f513 1f80 	cmn.w	r3, #1048576	; 0x100000
+  2026aa:	bf58      	it	pl
+  2026ac:	f511 1f80 	cmnpl.w	r1, #1048576	; 0x100000
+  2026b0:	d419      	bmi.n	2026e6 <_drcmple+0x62>
+  2026b2:	428b      	cmp	r3, r1
+  2026b4:	4770      	bx	lr
+  2026b6:	429b      	cmp	r3, r3
+  2026b8:	4770      	bx	lr
+  2026ba:	f51c 1f80 	cmn.w	ip, #1048576	; 0x100000
+  2026be:	d508      	bpl.n	2026d2 <_drcmple+0x4e>
+  2026c0:	f5bc 1f80 	cmp.w	ip, #1048576	; 0x100000
+  2026c4:	d5f7      	bpl.n	2026b6 <_drcmple+0x32>
+  2026c6:	4299      	cmp	r1, r3
+  2026c8:	bf18      	it	ne
+  2026ca:	4770      	bxne	lr
+  2026cc:	bf08      	it	eq
+  2026ce:	4290      	cmpeq	r0, r2
+  2026d0:	4770      	bx	lr
+  2026d2:	f44f 1c00 	mov.w	ip, #2097152	; 0x200000
+  2026d6:	eb1c 0f43 	cmn.w	ip, r3, lsl #1
+  2026da:	bf38      	it	cc
+  2026dc:	eb1c 0f41 	cmncc.w	ip, r1, lsl #1
+  2026e0:	d201      	bcs.n	2026e6 <_drcmple+0x62>
+  2026e2:	4299      	cmp	r1, r3
+  2026e4:	4770      	bx	lr
+  2026e6:	b40f      	push	{r0, r1, r2, r3}
+  2026e8:	bc0c      	pop	{r2, r3}
+  2026ea:	bc03      	pop	{r0, r1}
+  2026ec:	f7ff bec1 	b.w	202472 <__fpl_dcmple_InfNaN>
+
+002026f0 <_drsb>:
+  2026f0:	b510      	push	{r4, lr}
+  2026f2:	ea91 0f03 	teq	r1, r3
+  2026f6:	f081 4100 	eor.w	r1, r1, #2147483648	; 0x80000000
+  2026fa:	f53f abed 	bmi.w	201ed8 <_dadd1>
+  2026fe:	f083 4300 	eor.w	r3, r3, #2147483648	; 0x80000000
+  202702:	f000 b8d5 	b.w	2028b0 <_dsub1>
+	...
+
+00202708 <_dsqrt>:
+  202708:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+  20270c:	f501 1c80 	add.w	ip, r1, #1048576	; 0x100000
+  202710:	f5bc 1f00 	cmp.w	ip, #2097152	; 0x200000
+  202714:	f2c0 80a9 	blt.w	20286a <_dsqrt+0x162>
+  202718:	ea4f 5c11 	mov.w	ip, r1, lsr #20
+  20271c:	ea21 510c 	bic.w	r1, r1, ip, lsl #20
+  202720:	f441 1180 	orr.w	r1, r1, #1048576	; 0x100000
+  202724:	f10c 0cfd 	add.w	ip, ip, #253	; 0xfd
+  202728:	ea5f 0c5c 	movs.w	ip, ip, lsr #1
+  20272c:	f50c 7cc0 	add.w	ip, ip, #384	; 0x180
+  202730:	d301      	bcc.n	202736 <_dsqrt+0x2e>
+  202732:	0040      	lsls	r0, r0, #1
+  202734:	4149      	adcs	r1, r1
+  202736:	0289      	lsls	r1, r1, #10
+  202738:	ea41 5190 	orr.w	r1, r1, r0, lsr #22
+  20273c:	0287      	lsls	r7, r0, #10
+  20273e:	a42e      	add	r4, pc, #184	; (adr r4, 2027f8 <_dsqrt+0xf0>)
+  202740:	0e8e      	lsrs	r6, r1, #26
+  202742:	5da4      	ldrb	r4, [r4, r6]
+  202744:	0c0a      	lsrs	r2, r1, #16
+  202746:	fb04 f604 	mul.w	r6, r4, r4
+  20274a:	fb02 f606 	mul.w	r6, r2, r6
+  20274e:	f1c6 4640 	rsb	r6, r6, #3221225472	; 0xc0000000
+  202752:	fba4 6206 	umull	r6, r2, r4, r6
+  202756:	0df6      	lsrs	r6, r6, #23
+  202758:	ea46 2642 	orr.w	r6, r6, r2, lsl #9
+  20275c:	fb06 f406 	mul.w	r4, r6, r6
+  202760:	fba4 2301 	umull	r2, r3, r4, r1
+  202764:	4252      	negs	r2, r2
+  202766:	f1c3 4340 	rsb	r3, r3, #3221225472	; 0xc0000000
+  20276a:	bf38      	it	cc
+  20276c:	1e5b      	subcc	r3, r3, #1
+  20276e:	fba6 4202 	umull	r4, r2, r6, r2
+  202772:	2400      	movs	r4, #0
+  202774:	fbe6 2403 	umlal	r2, r4, r6, r3
+  202778:	0bd2      	lsrs	r2, r2, #15
+  20277a:	ea42 4644 	orr.w	r6, r2, r4, lsl #17
+  20277e:	fba6 2306 	umull	r2, r3, r6, r6
+  202782:	fba1 e202 	umull	lr, r2, r1, r2
+  202786:	fba3 e407 	umull	lr, r4, r3, r7
+  20278a:	fbe3 4261 	umaal	r4, r2, r3, r1
+  20278e:	4264      	negs	r4, r4
+  202790:	f1c2 4e40 	rsb	lr, r2, #3221225472	; 0xc0000000
+  202794:	bf38      	it	cc
+  202796:	f1ae 0e01 	subcc.w	lr, lr, #1
+  20279a:	fba6 2304 	umull	r2, r3, r6, r4
+  20279e:	f04f 0200 	mov.w	r2, #0
+  2027a2:	fbe6 320e 	umlal	r3, r2, r6, lr
+  2027a6:	fba2 4603 	umull	r4, r6, r2, r3
+  2027aa:	0034      	movs	r4, r6
+  2027ac:	fbe2 6462 	umaal	r6, r4, r2, r2
+  2027b0:	fba1 e606 	umull	lr, r6, r1, r6
+  2027b4:	fba4 e807 	umull	lr, r8, r4, r7
+  2027b8:	fbe4 6861 	umaal	r6, r8, r4, r1
+  2027bc:	4276      	negs	r6, r6
+  2027be:	f1c8 5840 	rsb	r8, r8, #805306368	; 0x30000000
+  2027c2:	bf38      	it	cc
+  2027c4:	f1a8 0801 	subcc.w	r8, r8, #1
+  2027c8:	fba2 e406 	umull	lr, r4, r2, r6
+  2027cc:	fba3 e508 	umull	lr, r5, r3, r8
+  2027d0:	fbe2 5468 	umaal	r5, r4, r2, r8
+  2027d4:	fba1 e605 	umull	lr, r6, r1, r5
+  2027d8:	fba7 e804 	umull	lr, r8, r7, r4
+  2027dc:	fbe1 8664 	umaal	r8, r6, r1, r4
+  2027e0:	f118 0520 	adds.w	r5, r8, #32
+  2027e4:	f156 0600 	adcs.w	r6, r6, #0
+  2027e8:	09a8      	lsrs	r0, r5, #6
+  2027ea:	ea40 6086 	orr.w	r0, r0, r6, lsl #26
+  2027ee:	09b1      	lsrs	r1, r6, #6
+  2027f0:	f1a8 081b 	sub.w	r8, r8, #27
+  2027f4:	f008 083f 	and.w	r8, r8, #63	; 0x3f
+  2027f8:	f1b8 0f0a 	cmp.w	r8, #10
+  2027fc:	d91c      	bls.n	202838 <_dsqrt+0x130>
+  2027fe:	eb01 510c 	add.w	r1, r1, ip, lsl #20
+  202802:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+  202806:	bf00      	nop
+  202808:	e8eef5fc 	.word	0xe8eef5fc
+  20280c:	d3d8dde2 	.word	0xd3d8dde2
+  202810:	c3c7cbcf 	.word	0xc3c7cbcf
+  202814:	b6b9bdc0 	.word	0xb6b9bdc0
+  202818:	acaeb1b4 	.word	0xacaeb1b4
+  20281c:	a3a5a7a9 	.word	0xa3a5a7a9
+  202820:	9b9d9fa1 	.word	0x9b9d9fa1
+  202824:	9596989a 	.word	0x9596989a
+  202828:	8f909293 	.word	0x8f909293
+  20282c:	898b8c8d 	.word	0x898b8c8d
+  202830:	85868788 	.word	0x85868788
+  202834:	81828384 	.word	0x81828384
+  202838:	fba0 6800 	umull	r6, r8, r0, r0
+  20283c:	fb00 f201 	mul.w	r2, r0, r1
+  202840:	eb08 0842 	add.w	r8, r8, r2, lsl #1
+  202844:	ebb8 2887 	subs.w	r8, r8, r7, lsl #10
+  202848:	d507      	bpl.n	20285a <_dsqrt+0x152>
+  20284a:	1834      	adds	r4, r6, r0
+  20284c:	eb58 0401 	adcs.w	r4, r8, r1
+  202850:	d5d5      	bpl.n	2027fe <_dsqrt+0xf6>
+  202852:	1c40      	adds	r0, r0, #1
+  202854:	f151 0100 	adcs.w	r1, r1, #0
+  202858:	e7d1      	b.n	2027fe <_dsqrt+0xf6>
+  20285a:	1a34      	subs	r4, r6, r0
+  20285c:	eb78 0401 	sbcs.w	r4, r8, r1
+  202860:	d4cd      	bmi.n	2027fe <_dsqrt+0xf6>
+  202862:	1e40      	subs	r0, r0, #1
+  202864:	f171 0100 	sbcs.w	r1, r1, #0
+  202868:	e7c9      	b.n	2027fe <_dsqrt+0xf6>
+  20286a:	ea5f 0c4c 	movs.w	ip, ip, lsl #1
+  20286e:	ea5f 5c9c 	movs.w	ip, ip, lsr #22
+  202872:	d10d      	bne.n	202890 <_dsqrt+0x188>
+  202874:	d305      	bcc.n	202882 <_dsqrt+0x17a>
+  202876:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  20287a:	f04f 0000 	mov.w	r0, #0
+  20287e:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+  202882:	e8bd 41f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, lr}
+  202886:	b570      	push	{r4, r5, r6, lr}
+  202888:	f7ff fea8 	bl	2025dc <__fpl_dnaninf>
+  20288c:	beffdb6d 	.word	0xbeffdb6d
+  202890:	e8bd 41f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, lr}
+  202894:	4901      	ldr	r1, [pc, #4]	; (20289c <_dsqrt+0x194>)
+  202896:	f04f 0000 	mov.w	r0, #0
+  20289a:	4770      	bx	lr
+  20289c:	7ff80000 	.word	0x7ff80000
+
+002028a0 <_dsub>:
+  2028a0:	b510      	push	{r4, lr}
+  2028a2:	ea91 0f03 	teq	r1, r3
+  2028a6:	bf48      	it	mi
+  2028a8:	f083 4300 	eormi.w	r3, r3, #2147483648	; 0x80000000
+  2028ac:	f53f ab14 	bmi.w	201ed8 <_dadd1>
+
+002028b0 <_dsub1>:
+  2028b0:	1a84      	subs	r4, r0, r2
+  2028b2:	eb71 0c03 	sbcs.w	ip, r1, r3
+  2028b6:	d207      	bcs.n	2028c8 <_dsub1+0x18>
+  2028b8:	f08c 4c00 	eor.w	ip, ip, #2147483648	; 0x80000000
+  2028bc:	1912      	adds	r2, r2, r4
+  2028be:	eb43 030c 	adc.w	r3, r3, ip
+  2028c2:	1b00      	subs	r0, r0, r4
+  2028c4:	eb61 010c 	sbc.w	r1, r1, ip
+  2028c8:	ea4f 5411 	mov.w	r4, r1, lsr #20
+  2028cc:	eba4 5c13 	sub.w	ip, r4, r3, lsr #20
+  2028d0:	f8df e1a4 	ldr.w	lr, [pc, #420]	; 202a78 <_dsub1+0x1c8>
+  2028d4:	ea1e 0f43 	tst.w	lr, r3, lsl #1
+  2028d8:	bf18      	it	ne
+  2028da:	ea9e 5f44 	teqne	lr, r4, lsl #21
+  2028de:	f000 80b4 	beq.w	202a4a <_dsub1+0x19a>
+  2028e2:	ea21 5104 	bic.w	r1, r1, r4, lsl #20
+  2028e6:	ea23 036e 	bic.w	r3, r3, lr, asr #1
+  2028ea:	4252      	negs	r2, r2
+  2028ec:	ebc3 036e 	rsb	r3, r3, lr, asr #1
+  2028f0:	bf38      	it	cc
+  2028f2:	1e5b      	subcc	r3, r3, #1
+  2028f4:	f1dc 0e20 	rsbs	lr, ip, #32
+  2028f8:	d325      	bcc.n	202946 <_dsub1+0x96>
+  2028fa:	fa22 fe0c 	lsr.w	lr, r2, ip
+  2028fe:	eb10 000e 	adds.w	r0, r0, lr
+  202902:	fa43 fe0c 	asr.w	lr, r3, ip
+  202906:	eb41 010e 	adc.w	r1, r1, lr
+  20290a:	f1cc 0e20 	rsb	lr, ip, #32
+  20290e:	fa03 fe0e 	lsl.w	lr, r3, lr
+  202912:	eb10 000e 	adds.w	r0, r0, lr
+  202916:	f1cc 0e20 	rsb	lr, ip, #32
+  20291a:	f151 0100 	adcs.w	r1, r1, #0
+  20291e:	d429      	bmi.n	202974 <_dsub1+0xc4>
+  202920:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  202924:	fa12 f20e 	lsls.w	r2, r2, lr
+  202928:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  20292c:	bf58      	it	pl
+  20292e:	4770      	bxpl	lr
+  202930:	1c40      	adds	r0, r0, #1
+  202932:	bf1c      	itt	ne
+  202934:	f1b2 4f00 	cmpne.w	r2, #2147483648	; 0x80000000
+  202938:	4770      	bxne	lr
+  20293a:	2800      	cmp	r0, #0
+  20293c:	bf0c      	ite	eq
+  20293e:	1c49      	addeq	r1, r1, #1
+  202940:	f020 0001 	bicne.w	r0, r0, #1
+  202944:	4770      	bx	lr
+  202946:	eb12 0e02 	adds.w	lr, r2, r2
+  20294a:	eb43 0203 	adc.w	r2, r3, r3
+  20294e:	bf18      	it	ne
+  202950:	f04f 0e01 	movne.w	lr, #1
+  202954:	ea4e 0242 	orr.w	r2, lr, r2, lsl #1
+  202958:	f1ac 0c20 	sub.w	ip, ip, #32
+  20295c:	f1dc 0e1e 	rsbs	lr, ip, #30
+  202960:	d956      	bls.n	202a10 <_dsub1+0x160>
+  202962:	fa43 fe0c 	asr.w	lr, r3, ip
+  202966:	eb10 000e 	adds.w	r0, r0, lr
+  20296a:	f1cc 0e1e 	rsb	lr, ip, #30
+  20296e:	f151 31ff 	adcs.w	r1, r1, #4294967295
+  202972:	d5d5      	bpl.n	202920 <_dsub1+0x70>
+  202974:	f10e 0e01 	add.w	lr, lr, #1
+  202978:	fa12 fe0e 	lsls.w	lr, r2, lr
+  20297c:	4140      	adcs	r0, r0
+  20297e:	eb41 0101 	adc.w	r1, r1, r1
+  202982:	eb01 5c44 	add.w	ip, r1, r4, lsl #21
+  202986:	ea5f 5c5c 	movs.w	ip, ip, lsr #21
+  20298a:	d910      	bls.n	2029ae <_dsub1+0xfe>
+  20298c:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  202990:	eb10 70de 	adds.w	r0, r0, lr, lsr #31
+  202994:	bf38      	it	cc
+  202996:	f1be 4f00 	cmpcc.w	lr, #2147483648	; 0x80000000
+  20299a:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  20299e:	bf18      	it	ne
+  2029a0:	4770      	bxne	lr
+  2029a2:	2800      	cmp	r0, #0
+  2029a4:	bf0c      	ite	eq
+  2029a6:	1c49      	addeq	r1, r1, #1
+  2029a8:	f020 0001 	bicne.w	r0, r0, #1
+  2029ac:	4770      	bx	lr
+  2029ae:	d234      	bcs.n	202a1a <_dsub1+0x16a>
+  2029b0:	ea4f 2cd4 	mov.w	ip, r4, lsr #11
+  2029b4:	f424 6400 	bic.w	r4, r4, #2048	; 0x800
+  2029b8:	f511 1100 	adds.w	r1, r1, #2097152	; 0x200000
+  2029bc:	d01b      	beq.n	2029f6 <_dsub1+0x146>
+  2029be:	fab1 f281 	clz	r2, r1
+  2029c2:	3a0b      	subs	r2, #11
+  2029c4:	1aa4      	subs	r4, r4, r2
+  2029c6:	1ea4      	subs	r4, r4, #2
+  2029c8:	f1d2 0320 	rsbs	r3, r2, #32
+  2029cc:	4091      	lsls	r1, r2
+  2029ce:	fa30 f303 	lsrs.w	r3, r0, r3
+  2029d2:	4319      	orrs	r1, r3
+  2029d4:	4090      	lsls	r0, r2
+  2029d6:	eb01 71cc 	add.w	r1, r1, ip, lsl #31
+  2029da:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  2029de:	2c00      	cmp	r4, #0
+  2029e0:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  2029e4:	bfa8      	it	ge
+  2029e6:	4770      	bxge	lr
+  2029e8:	f101 41c0 	add.w	r1, r1, #1610612736	; 0x60000000
+  2029ec:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  2029f0:	f04f 0000 	mov.w	r0, #0
+  2029f4:	4770      	bx	lr
+  2029f6:	fab0 f380 	clz	r3, r0
+  2029fa:	fa10 f103 	lsls.w	r1, r0, r3
+  2029fe:	d102      	bne.n	202a06 <_dsub1+0x156>
+  202a00:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  202a04:	4770      	bx	lr
+  202a06:	1ae4      	subs	r4, r4, r3
+  202a08:	3c17      	subs	r4, #23
+  202a0a:	0548      	lsls	r0, r1, #21
+  202a0c:	0ac9      	lsrs	r1, r1, #11
+  202a0e:	e7e2      	b.n	2029d6 <_dsub1+0x126>
+  202a10:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  202a14:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  202a18:	4770      	bx	lr
+  202a1a:	1049      	asrs	r1, r1, #1
+  202a1c:	ea4f 0030 	mov.w	r0, r0, rrx
+  202a20:	eb01 5104 	add.w	r1, r1, r4, lsl #20
+  202a24:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  202a28:	e002      	b.n	202a30 <_dsub1+0x180>
+  202a2a:	f04f 0100 	mov.w	r1, #0
+  202a2e:	4770      	bx	lr
+  202a30:	004a      	lsls	r2, r1, #1
+  202a32:	bf08      	it	eq
+  202a34:	4200      	tsteq	r0, r0
+  202a36:	d0f8      	beq.n	202a2a <_dsub1+0x17a>
+  202a38:	f5b2 1f00 	cmp.w	r2, #2097152	; 0x200000
+  202a3c:	bf28      	it	cs
+  202a3e:	4770      	bxcs	lr
+  202a40:	f001 4100 	and.w	r1, r1, #2147483648	; 0x80000000
+  202a44:	f04f 0000 	mov.w	r0, #0
+  202a48:	4770      	bx	lr
+  202a4a:	ea9e 5f44 	teq	lr, r4, lsl #21
+  202a4e:	d007      	beq.n	202a60 <_dsub1+0x1b0>
+  202a50:	ea11 0f5e 	tst.w	r1, lr, lsr #1
+  202a54:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  202a58:	bf04      	itt	eq
+  202a5a:	2100      	moveq	r1, #0
+  202a5c:	2000      	moveq	r0, #0
+  202a5e:	4770      	bx	lr
+  202a60:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  202a64:	b570      	push	{r4, r5, r6, lr}
+  202a66:	f7ff fdb9 	bl	2025dc <__fpl_dnaninf>
+  202a6a:	bf00      	nop
+  202a6c:	3ef6df40 	.word	0x3ef6df40
+  202a70:	4610      	mov	r0, r2
+  202a72:	f083 4100 	eor.w	r1, r3, #2147483648	; 0x80000000
+  202a76:	4770      	bx	lr
+  202a78:	ffe00000 	.word	0xffe00000
+
+00202a7c <_fp_init>:
+  202a7c:	eef1 0a10 	vmrs	r0, fpscr
+  202a80:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  202a84:	f2c0 31c0 	movt	r1, #960	; 0x3c0
+  202a88:	ea20 0001 	bic.w	r0, r0, r1
+  202a8c:	f040 7040 	orr.w	r0, r0, #50331648	; 0x3000000
+  202a90:	eee1 0a10 	vmsr	fpscr, r0
+
+00202a94 <__fplib_config_fpu_vfp>:
+  202a94:	4770      	bx	lr
+
+00202a96 <__I$use$fp>:
+	...
+
+00202a98 <atanhi>:
+  202a98:	bb4f 0561 ac67 3fdd 2d18 5444 21fb 3fe9     O.a.g..?.-DT.!.?
+  202aa8:	f69b d281 730b 3fef 2d18 5444 21fb 3ff9     .....s.?.-DT.!.?
+
+00202ab8 <atanlo>:
+  202ab8:	65e2 222f 2b7f 3c7a 5c07 3314 a626 3c81     .e/".+z<.\.3&..<
+  202ac8:	cbbd 7af0 0788 3c70 5c07 3314 a626 3c91     ...z..p<.\.3&..<
+
+00202ad8 <aTodd>:
+  202ad8:	ebc4 9998 9999 bfc9 1671 fe23 71c6 bfbc     ........q.#..q..
+  202ae8:	9a6d af74 b0f2 bfb3 fd9a 52de de2d bfad     m.t........R-...
+  202af8:	6c2f 2c6a b444 bfa2                         /lj,D...
+
+00202b00 <aTeven>:
+  202b00:	550d 5555 5555 3fd5 83ff 9200 4924 3fc2     .UUUUU.?....$I.?
+  202b10:	206e c54c 45cd 3fb7 3d51 a0d0 0d66 3fb1     n L..E.?Q=..f..?
+  202b20:	0deb 2476 7b4b 3fa9 da11 e322 ad3a 3f90     ..v$K{.?..".:..?
+
+00202b30 <halF>:
+  202b30:	0000 0000 0000 3fe0 0000 0000 0000 bfe0     .......?........
+
+00202b40 <ln2HI>:
+  202b40:	0000 fee0 2e42 3fe6 0000 fee0 2e42 bfe6     ....B..?....B...
+
+00202b50 <ln2LO>:
+  202b50:	3c76 3579 39ef 3dea 3c76 3579 39ef bdea     v<y5.9.=v<y5.9..
+
+00202b60 <P>:
+  202b60:	553e 5555 5555 3fc5 bd93 16be c16c bf66     >UUUUU.?....l.f.
+  202b70:	de2c af25 566a 3f11 6bf1 c5d2 bd41 bebb     ,.%.jV.?.k..A...
+  202b80:	a4d0 72be 3769 3e66                         ...ri7f>
+
+00202b88 <Lg2>:
+  202b88:	fa04 9997 9999 3fd9 78af 1d8e 71c5 3fcc     .......?.x...q.?
+  202b98:	c69f d078 9a09 3fc3                         ..x....?
+
+00202ba0 <Lg>:
+  202ba0:	5593 5555 5555 3fe5 9359 9422 4924 3fd2     .UUUUU.?Y.".$I.?
+  202bb0:	03de 96cb 4664 3fc7 5244 df3e f112 3fc2     ....dF.?DR>....?
+
+00202bc0 <C>:
+  202bc0:	554c 5555 5555 3fa5 5177 16c1 c16c bf56     LUUUUU.?wQ..l.V.
+  202bd0:	1590 19cb 01a0 3efa 52ad 809c 7e4f be92     .......>.R..O~..
+  202be0:	b1c4 bdb4 ee9e 3e21 38d4 be88 fae9 bda8     ......!>.8......
+
+00202bf0 <__mathlib_zero>:
+	...
+
+00202bf8 <pio2s>:
+  202bf8:	0000 5440 21fb 3ff9 6331 1a62 b461 3dd0     ..@T.!.?1cb.a..=
+  202c08:	0000 1a60 b461 3dd0 7073 2e03 198a 3ba3     ..`.a..=sp.....;
+  202c18:	0000 2e00 198a 3ba3 49c1 2520 839a 397b     .......;.I %..{9
+
+00202c28 <twooverpi>:
+	...
+  202c30:	836e a2f9 1529 4e44 57d1 fc27 ddc0 f534     n...).DN.W'...4.
+  202c40:	9599 db62 9041 3c43 63ab fe51 c561 debb     ..b.A.C<.cQ.a...
+  202c50:	6e3a b724 d2e0 424d 2eea 0649 921c 09d1     :n$...MB..I.....
+  202c60:	eb1c fe1d a73e b129 35f5 e882 4484 2ebb     ....>.)..5...D..
+  202c70:	7026 e99c 7e41 b45f d639 3991 39f4 8353     &p..A~_.9..9.9S.
+  202c80:	5f8b 9c84 283b bdf9 97ff 1ff8 980f de05     ._..;(..........
+  202c90:	118b ef2f 6d1f 5a0a 7ecf 6d36 09b7 27cb     ../..m.Z.~6m...'
+  202ca0:	3f66 4f46 ea2d 9e5f bac7 7527 f17b ebe5     f?FO-._...'u{...
+  202cb0:	39f7 3d07 92ea 8a52 5fb1 6bfb 5d08 1f8d     .9.=..R.._.k.]..
+  202cc0:	3046 5603 0000 0000                         F0.V....
+
+00202cc8 <S>:
+  202cc8:	f8a6 1110 1111 3f81 61d5 19c1 01a0 bf2a     .......?.a....*.
+  202cd8:	fe7d 57b1 1de3 3ec7 9ceb 8a2b e5e6 be5a     }..W...>..+...Z.
+  202ce8:	d57c 5acf d93a 3de5                         |..Z:..=
+
+00202cf0 <Region$$Table$$Base>:
+  202cf0:	00202d00 	.word	0x00202d00
+  202cf4:	28200000 	.word	0x28200000
+  202cf8:	000000b0 	.word	0x000000b0
+  202cfc:	0020043c 	.word	0x0020043c

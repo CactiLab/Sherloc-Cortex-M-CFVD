@@ -1,0 +1,42 @@
+
+#ifndef BT_S_H
+#define BT_S_H
+
+/********************************************
+* used for run-time control flow validation *
+*********************************************/
+
+#include <stdint.h>
+
+#define NUM_BRANCH_PAIRS 1
+#define NUM_HANDLER 3
+#define NUM_TASK 0
+#define NUM_LOOP 4
+
+const uint32_t icall_count = 0; 
+const uint32_t ibranch_count = 1; 
+const uint32_t dbranch_count = 55;
+const uint32_t dcall_count = 26; 
+const uint32_t ret_count = 7; 
+const uint32_t handler_count = 3; 
+const uint32_t PendSV = 0xdeadbeef;
+
+const uint32_t PendSV_Entry = 0xdeadbeef;
+
+/* branch_tab_64: <src, dst> */
+const uint32_t branch_tab_32[] = { 0x432004b };
+
+/* exception_tab: <start_addr, end_addr> */
+const uint32_t IRQ[] = { 0x2004a4, 0x2004a8, 0x2004ac };
+const uint32_t TASK[] = {  };
+const uint32_t LOOP[] = { 0x20049e, 0x2004a4, 0x2004a8, 0x200974 };
+
+const uint32_t icall_list[] = {  };
+const uint32_t ibranch_list[] = {  };
+const uint32_t dcall_list[] = { 0x200400, 0x200404, 0x20041a, 0x20045a, 0x200468, 0x20046c, 0x200470, 0x20047a, 0x200480, 0x2004e4, 0x2008d2, 0x2008dc, 0x2008e2, 0x2008f0, 0x2008fc, 0x200902, 0x200910, 0x20091c, 0x200922, 0x200930, 0x20093c, 0x200942, 0x200950, 0x20095c, 0x200962, 0x200970 };
+const uint32_t ret_list[] = { 0x200456, 0x20045e, 0x200462, 0x200496, 0x200520, 0x2008bc, 0x2009a2 };
+const uint32_t dbranch_list[] = { 0x200418, 0x20044a, 0x200492, 0x20049e, 0x2004a4, 0x2004a8, 0x200512, 0x200528, 0x200536, 0x200566, 0x20057e, 0x20059e, 0x2005a4, 0x2005aa, 0x2005b0, 0x2005b8, 0x2005bc, 0x2005d8, 0x2005da, 0x2005e2, 0x2005f0, 0x200632, 0x200644, 0x200652, 0x200662, 0x200676, 0x20067a, 0x20067e, 0x20068a, 0x2006a0, 0x2006c4, 0x2006cc, 0x2006d2, 0x2006d8, 0x2006e0, 0x2006e4, 0x20070e, 0x200722, 0x200726, 0x200734, 0x20074a, 0x20076e, 0x200774, 0x20077a, 0x200780, 0x200788, 0x20078c, 0x2007a4, 0x2008ac, 0x2008ec, 0x20090c, 0x20092c, 0x20094c, 0x20096c, 0x200974 };
+
+
+#endif // BT_S
+                

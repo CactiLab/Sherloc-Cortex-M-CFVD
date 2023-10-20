@@ -1,0 +1,84 @@
+bubblesort_Oz: 0
+
+bubblesort_O3: 0
+
+crc32_Oz: 0
+
+crc32_O3: 0
+
+dijkstra_Oz: 0
+
+dijkstra_O3: 0
+
+edn_Oz: 0
+
+edn_O3: 0
+
+fasta_Oz: 0
+
+fasta_O3: 0
+
+0x0f7a004b, frac_Oz: 1
+
+0x118e004b, frac_O3: 1
+
+levenshtein_Oz: 0
+
+levenshtein_O3: 0
+
+0x0d22004b, nbody_Oz: 1
+
+0x13e2004b, nbody_O3: 1
+
+0x065a04e0, 0x066e04e0, 0x067e04e0, ndes_Oz: 3
+
+ndes_O3: 0
+
+0x0abc004b, nettle_aes_Oz: 1
+
+nettle_aes_O3: 0
+
+0x082a06c4, 0x082e06c4, 0x083206c4, 0x083806c4, 0x090006c4, 0x090e06c4, 0x091606c4, 0x091e06c4, 0x0ebe0ece, 0x0ebe0f14, 0x0ee00ece, 0x0f040ece, 0x0f720ece, 0x100c15c4, 0x100c17e4, 0x101215c4, 0x101815c4, 0x116806c4, 0x116e06c4, 0x117406c4, 0x12b8133e, 0x12b81358, 0x12b81366, 0x12b81382, picojpeg_Oz: 24
+
+0x1f3412bc, 0x1f3424c4, 0x209612bc, 0x21fa12bc, 0x236e12bc, 0x456447da, 0x4564491c, 0x45644a6c, picojpeg_O3: 8
+
+0x089208a6, 0x089208e4, 0x0892091c, 0x0892095e, 0x089209be, 0x08920a32, 0x08920abe, 0x08920b4a, 0x08920bc2, 0x0f1c1ac4, 0x0f2a1ac4, 0x0f301ac4, 0x0f3a1ac4, 0x10181ac4, 0x10241ac4, 0x10321ac4, 0x104c1ac4, 0x105a1ac4, 0x10661ac4, 0x1a981ac4, 0x1aa21ac4, 0x1aaa1ac4, qrduino_Oz: 22
+
+0x0bbc0bd0, 0x0bbc0c7c, 0x0bbc0d28, 0x0bbc0de4, 0x0bbc0eac, 0x0bbc0f86, 0x0bbc1076, 0x0bbc1166, 0x0bbc124c, qrduino_O3: 9
+
+rijndael_Oz: 0
+
+rijndael_O3: 0
+
+sglib_arraybinsearch_Oz: 0
+
+sglib_arraybinsearch_O3: 0
+
+0x06be06b4, 0x06be06ba, 0x06be06c6, 0x06be06ce, 0x06e606dc, 0x06e606e2, 0x06e606f8, 0x06e6070a, sglib_dllist_Oz: 8
+
+sglib_dllist_O3: 0
+
+0x06600658, 0x0660065c, 0x06600668, 0x06600670, sglib_hashtable_Oz: 4
+
+sglib_hashtable_O3: 0
+
+sglib_listsort_Oz: 0
+
+sglib_listsort_O3: 0
+
+sglib_queue_Oz: 0
+
+sglib_queue_O3: 0
+
+0x07360732, 0x07360788, sglib_rbtree_Oz: 2
+
+0x08980894, 0x089808ca, sglib_rbtree_O3: 2
+
+0x0e62004b, st_Oz: 1
+
+0x2846004b, st_O3: 1
+
+0x077a0cf0, 0x07a60cf0, 0x07c00cf0, 0x083e0cf0, 0x08500cf0, 0x086a0cf0, 0x2646004b, whetstone_Oz: 7
+
+0x2b66004b, whetstone_O3: 1
+

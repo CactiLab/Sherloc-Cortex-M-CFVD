@@ -1,0 +1,5 @@
+EVAL: 45896329, enter_exit: 45804377, sherloc_read: 91952, sherloc_read_garbage: 3337041
+EVAL: 45313979, enter_exit: 45223063, sherloc_read: 90916, sherloc_read_garbage: 3299485
+EVAL: 45249707, enter_exit: 45158903, sherloc_read: 90804, sherloc_read_garbage: 3295310
+EVAL: 45314535, enter_exit: 45223605, sherloc_read: 90930, sherloc_read_garbage: 3299907
+EVAL: 45314337, enter_exit: 45223421, sherloc_read: 90916, sherloc_read_garbage: 3299345

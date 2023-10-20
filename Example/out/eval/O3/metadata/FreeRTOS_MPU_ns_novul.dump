@@ -1,0 +1,3470 @@
+
+../../Example/out/eval/O3/elf_ns/FreeRTOS_MPU_ns_novul.axf:     file format elf32-littlearm
+
+
+Disassembly of section ER_IROM_NS_PRIVILEGED:
+
+00200000 <__Vectors>:
+  200000:	00 00 40 28 79 22 20 00 59 22 20 00 5d 22 20 00     ..@(y" .Y" .]" .
+  200010:	61 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     a" .Y" .Y" .Y" .
+	...
+  20002c:	45 1f 20 00 59 22 20 00 00 00 00 00 8d 1e 20 00     E. .Y" ....... .
+  20003c:	9d 1d 20 00 59 22 20 00 59 22 20 00 59 22 20 00     .. .Y" .Y" .Y" .
+  20004c:	59 22 20 00 59 22 20 00 59 22 20 00 00 00 00 00     Y" .Y" .Y" .....
+	...
+  200064:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+	...
+  2000c0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2000d0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2000e0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2000f0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200100:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200110:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200120:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200130:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200140:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200150:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200160:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200170:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200180:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200190:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2001a0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2001b0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2001c0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2001d0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2001e0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  2001f0:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200200:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200210:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+  200220:	59 22 20 00 59 22 20 00 59 22 20 00 59 22 20 00     Y" .Y" .Y" .Y" .
+	...
+
+00200400 <__main>:
+  200400:	f000 f802 	bl	200408 <__scatterload_rt2>
+  200404:	f001 fe62 	bl	2020cc <__rt_entry>
+
+00200408 <__scatterload_rt2>:
+  200408:	a00a      	add	r0, pc, #40	; (adr r0, 200434 <__scatterload_null+0x1e>)
+  20040a:	e890 0c00 	ldmia.w	r0, {sl, fp}
+  20040e:	4482      	add	sl, r0
+  200410:	4483      	add	fp, r0
+  200412:	f1aa 0701 	sub.w	r7, sl, #1
+
+00200416 <__scatterload_null>:
+  200416:	45da      	cmp	sl, fp
+  200418:	d101      	bne.n	20041e <__scatterload_null+0x8>
+  20041a:	f001 fe57 	bl	2020cc <__rt_entry>
+  20041e:	f2af 0e09 	subw	lr, pc, #9
+  200422:	e8ba 000f 	ldmia.w	sl!, {r0, r1, r2, r3}
+  200426:	f013 0f01 	tst.w	r3, #1
+  20042a:	bf18      	it	ne
+  20042c:	1afb      	subne	r3, r7, r3
+  20042e:	f043 0301 	orr.w	r3, r3, #1
+  200432:	4718      	bx	r3
+  200434:	00001c4c 	.word	0x00001c4c
+  200438:	00001c6c 	.word	0x00001c6c
+
+0020043c <__decompress>:
+  20043c:	440a      	add	r2, r1
+  20043e:	f810 4b01 	ldrb.w	r4, [r0], #1
+  200442:	f014 050f 	ands.w	r5, r4, #15
+  200446:	bf08      	it	eq
+  200448:	f810 5b01 	ldrbeq.w	r5, [r0], #1
+  20044c:	0924      	lsrs	r4, r4, #4
+  20044e:	bf08      	it	eq
+  200450:	f810 4b01 	ldrbeq.w	r4, [r0], #1
+  200454:	1e6d      	subs	r5, r5, #1
+  200456:	d005      	beq.n	200464 <__decompress+0x28>
+  200458:	f810 3b01 	ldrb.w	r3, [r0], #1
+  20045c:	1e6d      	subs	r5, r5, #1
+  20045e:	f801 3b01 	strb.w	r3, [r1], #1
+  200462:	d1f9      	bne.n	200458 <__decompress+0x1c>
+  200464:	1e64      	subs	r4, r4, #1
+  200466:	d003      	beq.n	200470 <__decompress+0x34>
+  200468:	1e64      	subs	r4, r4, #1
+  20046a:	f801 5b01 	strb.w	r5, [r1], #1
+  20046e:	d1fb      	bne.n	200468 <__decompress+0x2c>
+  200470:	4291      	cmp	r1, r2
+  200472:	d3e4      	bcc.n	20043e <__decompress+0x2>
+  200474:	4770      	bx	lr
+	...
+
+00200478 <__scatterload_zeroinit>:
+  200478:	2300      	movs	r3, #0
+  20047a:	2400      	movs	r4, #0
+  20047c:	2500      	movs	r5, #0
+  20047e:	2600      	movs	r6, #0
+  200480:	3a10      	subs	r2, #16
+  200482:	bf28      	it	cs
+  200484:	c178      	stmiacs	r1!, {r3, r4, r5, r6}
+  200486:	d8fb      	bhi.n	200480 <__scatterload_zeroinit+0x8>
+  200488:	0752      	lsls	r2, r2, #29
+  20048a:	bf28      	it	cs
+  20048c:	c130      	stmiacs	r1!, {r4, r5}
+  20048e:	bf48      	it	mi
+  200490:	600b      	strmi	r3, [r1, #0]
+  200492:	4770      	bx	lr
+	...
+
+002004a0 <prvUnlockQueue>:
+  2004a0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  2004a4:	b081      	sub	sp, #4
+  2004a6:	4604      	mov	r4, r0
+  2004a8:	f001 fcdc 	bl	201e64 <ulSetInterruptMask>
+  2004ac:	f244 1660 	movw	r6, #16736	; 0x4160
+  2004b0:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  2004b4:	6830      	ldr	r0, [r6, #0]
+  2004b6:	3001      	adds	r0, #1
+  2004b8:	6030      	str	r0, [r6, #0]
+  2004ba:	f3bf 8f4f 	dsb	sy
+  2004be:	f3bf 8f6f 	isb	sy
+  2004c2:	f994 7045 	ldrsb.w	r7, [r4, #69]	; 0x45
+  2004c6:	2f01      	cmp	r7, #1
+  2004c8:	f2c0 80c5 	blt.w	200656 <prvUnlockQueue+0x1b6>
+  2004cc:	f240 05b4 	movw	r5, #180	; 0xb4
+  2004d0:	f6c2 0520 	movt	r5, #10272	; 0x2820
+  2004d4:	e007      	b.n	2004e6 <prvUnlockQueue+0x46>
+  2004d6:	bf00      	nop
+  2004d8:	2001      	movs	r0, #1
+  2004da:	6028      	str	r0, [r5, #0]
+  2004dc:	b2f8      	uxtb	r0, r7
+  2004de:	3f01      	subs	r7, #1
+  2004e0:	2801      	cmp	r0, #1
+  2004e2:	f240 80b8 	bls.w	200656 <prvUnlockQueue+0x1b6>
+  2004e6:	f8d4 b048 	ldr.w	fp, [r4, #72]	; 0x48
+  2004ea:	f1bb 0f00 	cmp.w	fp, #0
+  2004ee:	d025      	beq.n	20053c <prvUnlockQueue+0x9c>
+  2004f0:	9400      	str	r4, [sp, #0]
+  2004f2:	f8db 1038 	ldr.w	r1, [fp, #56]	; 0x38
+  2004f6:	f8db 003c 	ldr.w	r0, [fp, #60]	; 0x3c
+  2004fa:	4281      	cmp	r1, r0
+  2004fc:	f080 80f7 	bcs.w	2006ee <prvUnlockQueue+0x24e>
+  200500:	f8db 1038 	ldr.w	r1, [fp, #56]	; 0x38
+  200504:	4281      	cmp	r1, r0
+  200506:	d2e9      	bcs.n	2004dc <prvUnlockQueue+0x3c>
+  200508:	f89b a045 	ldrb.w	sl, [fp, #69]	; 0x45
+  20050c:	f8db 8038 	ldr.w	r8, [fp, #56]	; 0x38
+  200510:	f8db 2040 	ldr.w	r2, [fp, #64]	; 0x40
+  200514:	b1ea      	cbz	r2, 200552 <prvUnlockQueue+0xb2>
+  200516:	f8db 0004 	ldr.w	r0, [fp, #4]
+  20051a:	4669      	mov	r1, sp
+  20051c:	f001 fdf6 	bl	20210c <__rt_memcpy>
+  200520:	f8db 1040 	ldr.w	r1, [fp, #64]	; 0x40
+  200524:	e9db 0201 	ldrd	r0, r2, [fp, #4]
+  200528:	4408      	add	r0, r1
+  20052a:	f8cb 0004 	str.w	r0, [fp, #4]
+  20052e:	4290      	cmp	r0, r2
+  200530:	bf24      	itt	cs
+  200532:	f8db 0000 	ldrcs.w	r0, [fp]
+  200536:	f8cb 0004 	strcs.w	r0, [fp, #4]
+  20053a:	e00d      	b.n	200558 <prvUnlockQueue+0xb8>
+  20053c:	6a60      	ldr	r0, [r4, #36]	; 0x24
+  20053e:	2800      	cmp	r0, #0
+  200540:	f000 8089 	beq.w	200656 <prvUnlockQueue+0x1b6>
+  200544:	6b20      	ldr	r0, [r4, #48]	; 0x30
+  200546:	68c0      	ldr	r0, [r0, #12]
+  200548:	f000 fd28 	bl	200f9c <xTaskRemoveFromEventList>
+  20054c:	2800      	cmp	r0, #0
+  20054e:	d1c3      	bne.n	2004d8 <prvUnlockQueue+0x38>
+  200550:	e7c4      	b.n	2004dc <prvUnlockQueue+0x3c>
+  200552:	f8db 0000 	ldr.w	r0, [fp]
+  200556:	b1f8      	cbz	r0, 200598 <prvUnlockQueue+0xf8>
+  200558:	f04f 0900 	mov.w	r9, #0
+  20055c:	f108 0001 	add.w	r0, r8, #1
+  200560:	f1ba 0fff 	cmp.w	sl, #255	; 0xff
+  200564:	f8cb 0038 	str.w	r0, [fp, #56]	; 0x38
+  200568:	d008      	beq.n	20057c <prvUnlockQueue+0xdc>
+  20056a:	f1ba 0f7f 	cmp.w	sl, #127	; 0x7f
+  20056e:	f000 80c6 	beq.w	2006fe <prvUnlockQueue+0x25e>
+  200572:	f10a 0001 	add.w	r0, sl, #1
+  200576:	f88b 0045 	strb.w	r0, [fp, #69]	; 0x45
+  20057a:	e009      	b.n	200590 <prvUnlockQueue+0xf0>
+  20057c:	f8db 0024 	ldr.w	r0, [fp, #36]	; 0x24
+  200580:	b130      	cbz	r0, 200590 <prvUnlockQueue+0xf0>
+  200582:	f8db 0030 	ldr.w	r0, [fp, #48]	; 0x30
+  200586:	68c0      	ldr	r0, [r0, #12]
+  200588:	f000 fd08 	bl	200f9c <xTaskRemoveFromEventList>
+  20058c:	2800      	cmp	r0, #0
+  20058e:	d1a3      	bne.n	2004d8 <prvUnlockQueue+0x38>
+  200590:	f1b9 0f00 	cmp.w	r9, #0
+  200594:	d1a0      	bne.n	2004d8 <prvUnlockQueue+0x38>
+  200596:	e7a1      	b.n	2004dc <prvUnlockQueue+0x3c>
+  200598:	f8db 0008 	ldr.w	r0, [fp, #8]
+  20059c:	2800      	cmp	r0, #0
+  20059e:	d054      	beq.n	20064a <prvUnlockQueue+0x1aa>
+  2005a0:	f240 0100 	movw	r1, #0
+  2005a4:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2005a8:	6809      	ldr	r1, [r1, #0]
+  2005aa:	4281      	cmp	r1, r0
+  2005ac:	f040 80ab 	bne.w	200706 <prvUnlockQueue+0x266>
+  2005b0:	6f01      	ldr	r1, [r0, #112]	; 0x70
+  2005b2:	2900      	cmp	r1, #0
+  2005b4:	f000 80ab 	beq.w	20070e <prvUnlockQueue+0x26e>
+  2005b8:	1e4a      	subs	r2, r1, #1
+  2005ba:	6d03      	ldr	r3, [r0, #80]	; 0x50
+  2005bc:	6ec1      	ldr	r1, [r0, #108]	; 0x6c
+  2005be:	f04f 0900 	mov.w	r9, #0
+  2005c2:	428b      	cmp	r3, r1
+  2005c4:	6702      	str	r2, [r0, #112]	; 0x70
+  2005c6:	d042      	beq.n	20064e <prvUnlockQueue+0x1ae>
+  2005c8:	2a00      	cmp	r2, #0
+  2005ca:	d140      	bne.n	20064e <prvUnlockQueue+0x1ae>
+  2005cc:	e9d0 260b 	ldrd	r2, r6, [r0, #44]	; 0x2c
+  2005d0:	6b83      	ldr	r3, [r0, #56]	; 0x38
+  2005d2:	f100 0c28 	add.w	ip, r0, #40	; 0x28
+  2005d6:	f8d3 e004 	ldr.w	lr, [r3, #4]
+  2005da:	6096      	str	r6, [r2, #8]
+  2005dc:	6b06      	ldr	r6, [r0, #48]	; 0x30
+  2005de:	45e6      	cmp	lr, ip
+  2005e0:	6072      	str	r2, [r6, #4]
+  2005e2:	bf08      	it	eq
+  2005e4:	605e      	streq	r6, [r3, #4]
+  2005e6:	681a      	ldr	r2, [r3, #0]
+  2005e8:	f240 0e4c 	movw	lr, #76	; 0x4c
+  2005ec:	3a01      	subs	r2, #1
+  2005ee:	601a      	str	r2, [r3, #0]
+  2005f0:	681a      	ldr	r2, [r3, #0]
+  2005f2:	f1c1 0205 	rsb	r2, r1, #5
+  2005f6:	63c2      	str	r2, [r0, #60]	; 0x3c
+  2005f8:	f240 02b0 	movw	r2, #176	; 0xb0
+  2005fc:	6501      	str	r1, [r0, #80]	; 0x50
+  2005fe:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  200602:	6812      	ldr	r2, [r2, #0]
+  200604:	f6c2 0e20 	movt	lr, #10272	; 0x2820
+  200608:	4291      	cmp	r1, r2
+  20060a:	bf82      	ittt	hi
+  20060c:	f240 02b0 	movwhi	r2, #176	; 0xb0
+  200610:	f6c2 0220 	movthi	r2, #10272	; 0x2820
+  200614:	6011      	strhi	r1, [r2, #0]
+  200616:	eb01 0181 	add.w	r1, r1, r1, lsl #2
+  20061a:	f04f 0901 	mov.w	r9, #1
+  20061e:	eb0e 0281 	add.w	r2, lr, r1, lsl #2
+  200622:	6853      	ldr	r3, [r2, #4]
+  200624:	6382      	str	r2, [r0, #56]	; 0x38
+  200626:	689e      	ldr	r6, [r3, #8]
+  200628:	62c3      	str	r3, [r0, #44]	; 0x2c
+  20062a:	6306      	str	r6, [r0, #48]	; 0x30
+  20062c:	689e      	ldr	r6, [r3, #8]
+  20062e:	f8c3 c008 	str.w	ip, [r3, #8]
+  200632:	f8c6 c004 	str.w	ip, [r6, #4]
+  200636:	f85e 0021 	ldr.w	r0, [lr, r1, lsl #2]
+  20063a:	f244 1660 	movw	r6, #16736	; 0x4160
+  20063e:	3001      	adds	r0, #1
+  200640:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  200644:	f84e 0021 	str.w	r0, [lr, r1, lsl #2]
+  200648:	e001      	b.n	20064e <prvUnlockQueue+0x1ae>
+  20064a:	f04f 0900 	mov.w	r9, #0
+  20064e:	2000      	movs	r0, #0
+  200650:	f8cb 0008 	str.w	r0, [fp, #8]
+  200654:	e782      	b.n	20055c <prvUnlockQueue+0xbc>
+  200656:	20ff      	movs	r0, #255	; 0xff
+  200658:	f884 0045 	strb.w	r0, [r4, #69]	; 0x45
+  20065c:	6830      	ldr	r0, [r6, #0]
+  20065e:	2800      	cmp	r0, #0
+  200660:	d041      	beq.n	2006e6 <prvUnlockQueue+0x246>
+  200662:	6830      	ldr	r0, [r6, #0]
+  200664:	3801      	subs	r0, #1
+  200666:	6030      	str	r0, [r6, #0]
+  200668:	6830      	ldr	r0, [r6, #0]
+  20066a:	2800      	cmp	r0, #0
+  20066c:	bf04      	itt	eq
+  20066e:	2000      	moveq	r0, #0
+  200670:	f001 fc04 	bleq	201e7c <vClearInterruptMask>
+  200674:	f001 fbf6 	bl	201e64 <ulSetInterruptMask>
+  200678:	6830      	ldr	r0, [r6, #0]
+  20067a:	46b0      	mov	r8, r6
+  20067c:	3001      	adds	r0, #1
+  20067e:	6030      	str	r0, [r6, #0]
+  200680:	f3bf 8f4f 	dsb	sy
+  200684:	f3bf 8f6f 	isb	sy
+  200688:	f994 5044 	ldrsb.w	r5, [r4, #68]	; 0x44
+  20068c:	2d01      	cmp	r5, #1
+  20068e:	db12      	blt.n	2006b6 <prvUnlockQueue+0x216>
+  200690:	f240 07b4 	movw	r7, #180	; 0xb4
+  200694:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  200698:	2601      	movs	r6, #1
+  20069a:	bf00      	nop
+  20069c:	6920      	ldr	r0, [r4, #16]
+  20069e:	b150      	cbz	r0, 2006b6 <prvUnlockQueue+0x216>
+  2006a0:	69e0      	ldr	r0, [r4, #28]
+  2006a2:	68c0      	ldr	r0, [r0, #12]
+  2006a4:	f000 fc7a 	bl	200f9c <xTaskRemoveFromEventList>
+  2006a8:	2800      	cmp	r0, #0
+  2006aa:	bf18      	it	ne
+  2006ac:	603e      	strne	r6, [r7, #0]
+  2006ae:	b2e8      	uxtb	r0, r5
+  2006b0:	3d01      	subs	r5, #1
+  2006b2:	2801      	cmp	r0, #1
+  2006b4:	d8f2      	bhi.n	20069c <prvUnlockQueue+0x1fc>
+  2006b6:	20ff      	movs	r0, #255	; 0xff
+  2006b8:	f884 0044 	strb.w	r0, [r4, #68]	; 0x44
+  2006bc:	f8d8 0000 	ldr.w	r0, [r8]
+  2006c0:	b1c8      	cbz	r0, 2006f6 <prvUnlockQueue+0x256>
+  2006c2:	f8d8 0000 	ldr.w	r0, [r8]
+  2006c6:	3801      	subs	r0, #1
+  2006c8:	f8c8 0000 	str.w	r0, [r8]
+  2006cc:	f8d8 0000 	ldr.w	r0, [r8]
+  2006d0:	2800      	cmp	r0, #0
+  2006d2:	bf1c      	itt	ne
+  2006d4:	b001      	addne	sp, #4
+  2006d6:	e8bd 8ff0 	ldmiane.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+  2006da:	2000      	movs	r0, #0
+  2006dc:	b001      	add	sp, #4
+  2006de:	e8bd 4ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  2006e2:	f001 bbcb 	b.w	201e7c <vClearInterruptMask>
+  2006e6:	f001 fbbd 	bl	201e64 <ulSetInterruptMask>
+  2006ea:	bf00      	nop
+  2006ec:	e7fe      	b.n	2006ec <prvUnlockQueue+0x24c>
+  2006ee:	f001 fbb9 	bl	201e64 <ulSetInterruptMask>
+  2006f2:	bf00      	nop
+  2006f4:	e7fe      	b.n	2006f4 <prvUnlockQueue+0x254>
+  2006f6:	f001 fbb5 	bl	201e64 <ulSetInterruptMask>
+  2006fa:	bf00      	nop
+  2006fc:	e7fe      	b.n	2006fc <prvUnlockQueue+0x25c>
+  2006fe:	f001 fbb1 	bl	201e64 <ulSetInterruptMask>
+  200702:	bf00      	nop
+  200704:	e7fe      	b.n	200704 <prvUnlockQueue+0x264>
+  200706:	f001 fbad 	bl	201e64 <ulSetInterruptMask>
+  20070a:	bf00      	nop
+  20070c:	e7fe      	b.n	20070c <prvUnlockQueue+0x26c>
+  20070e:	f001 fba9 	bl	201e64 <ulSetInterruptMask>
+  200712:	bf00      	nop
+  200714:	e7fe      	b.n	200714 <prvUnlockQueue+0x274>
+  200716:	bf00      	nop
+
+00200718 <prvInitialiseNewTask>:
+  200718:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  20071c:	b081      	sub	sp, #4
+  20071e:	9d0c      	ldr	r5, [sp, #48]	; 0x30
+  200720:	4681      	mov	r9, r0
+  200722:	f8dd a028 	ldr.w	sl, [sp, #40]	; 0x28
+  200726:	6d68      	ldr	r0, [r5, #84]	; 0x54
+  200728:	ea4f 0b82 	mov.w	fp, r2, lsl #2
+  20072c:	4616      	mov	r6, r2
+  20072e:	460c      	mov	r4, r1
+  200730:	4659      	mov	r1, fp
+  200732:	22a5      	movs	r2, #165	; 0xa5
+  200734:	4698      	mov	r8, r3
+  200736:	f02a 4700 	bic.w	r7, sl, #2147483648	; 0x80000000
+  20073a:	f001 fd2c 	bl	202196 <__aeabi_memset4>
+  20073e:	f8d5 c054 	ldr.w	ip, [r5, #84]	; 0x54
+  200742:	b3c4      	cbz	r4, 2007b6 <prvInitialiseNewTask+0x9e>
+  200744:	7821      	ldrb	r1, [r4, #0]
+  200746:	f885 1058 	strb.w	r1, [r5, #88]	; 0x58
+  20074a:	7821      	ldrb	r1, [r4, #0]
+  20074c:	b359      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  20074e:	7861      	ldrb	r1, [r4, #1]
+  200750:	f885 1059 	strb.w	r1, [r5, #89]	; 0x59
+  200754:	7861      	ldrb	r1, [r4, #1]
+  200756:	b331      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  200758:	78a1      	ldrb	r1, [r4, #2]
+  20075a:	f885 105a 	strb.w	r1, [r5, #90]	; 0x5a
+  20075e:	78a1      	ldrb	r1, [r4, #2]
+  200760:	b309      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  200762:	78e1      	ldrb	r1, [r4, #3]
+  200764:	f885 105b 	strb.w	r1, [r5, #91]	; 0x5b
+  200768:	78e1      	ldrb	r1, [r4, #3]
+  20076a:	b1e1      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  20076c:	7921      	ldrb	r1, [r4, #4]
+  20076e:	f885 105c 	strb.w	r1, [r5, #92]	; 0x5c
+  200772:	7921      	ldrb	r1, [r4, #4]
+  200774:	b1b9      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  200776:	7961      	ldrb	r1, [r4, #5]
+  200778:	f885 105d 	strb.w	r1, [r5, #93]	; 0x5d
+  20077c:	7961      	ldrb	r1, [r4, #5]
+  20077e:	b191      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  200780:	79a1      	ldrb	r1, [r4, #6]
+  200782:	f885 105e 	strb.w	r1, [r5, #94]	; 0x5e
+  200786:	79a1      	ldrb	r1, [r4, #6]
+  200788:	b169      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  20078a:	79e1      	ldrb	r1, [r4, #7]
+  20078c:	f885 105f 	strb.w	r1, [r5, #95]	; 0x5f
+  200790:	79e1      	ldrb	r1, [r4, #7]
+  200792:	b141      	cbz	r1, 2007a6 <prvInitialiseNewTask+0x8e>
+  200794:	7a21      	ldrb	r1, [r4, #8]
+  200796:	f885 1060 	strb.w	r1, [r5, #96]	; 0x60
+  20079a:	7a21      	ldrb	r1, [r4, #8]
+  20079c:	2900      	cmp	r1, #0
+  20079e:	bf1c      	itt	ne
+  2007a0:	7a61      	ldrbne	r1, [r4, #9]
+  2007a2:	f885 1061 	strbne.w	r1, [r5, #97]	; 0x61
+  2007a6:	2100      	movs	r1, #0
+  2007a8:	f885 1061 	strb.w	r1, [r5, #97]	; 0x61
+  2007ac:	2f05      	cmp	r7, #5
+  2007ae:	d307      	bcc.n	2007c0 <prvInitialiseNewTask+0xa8>
+  2007b0:	f001 fb58 	bl	201e64 <ulSetInterruptMask>
+  2007b4:	e7fe      	b.n	2007b4 <prvInitialiseNewTask+0x9c>
+  2007b6:	2100      	movs	r1, #0
+  2007b8:	f885 1058 	strb.w	r1, [r5, #88]	; 0x58
+  2007bc:	2f05      	cmp	r7, #5
+  2007be:	d2f7      	bcs.n	2007b0 <prvInitialiseNewTask+0x98>
+  2007c0:	eb0c 0186 	add.w	r1, ip, r6, lsl #2
+  2007c4:	9b0d      	ldr	r3, [sp, #52]	; 0x34
+  2007c6:	3904      	subs	r1, #4
+  2007c8:	2200      	movs	r2, #0
+  2007ca:	f021 0107 	bic.w	r1, r1, #7
+  2007ce:	e9c5 721b 	strd	r7, r2, [r5, #108]	; 0x6c
+  2007d2:	f1c7 0405 	rsb	r4, r7, #5
+  2007d6:	652f      	str	r7, [r5, #80]	; 0x50
+  2007d8:	f240 47ff 	movw	r7, #1279	; 0x4ff
+  2007dc:	e9c5 520d 	strd	r5, r2, [r5, #52]	; 0x34
+  2007e0:	63ec      	str	r4, [r5, #60]	; 0x3c
+  2007e2:	e9c5 5212 	strd	r5, r2, [r5, #72]	; 0x48
+  2007e6:	606f      	str	r7, [r5, #4]
+  2007e8:	b31e      	cbz	r6, 200832 <prvInitialiseNewTask+0x11a>
+  2007ea:	f240 0600 	movw	r6, #0
+  2007ee:	f244 1480 	movw	r4, #16768	; 0x4180
+  2007f2:	eb0c 070b 	add.w	r7, ip, fp
+  2007f6:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  2007fa:	f6c2 0420 	movt	r4, #10272	; 0x2820
+  2007fe:	3f01      	subs	r7, #1
+  200800:	45b4      	cmp	ip, r6
+  200802:	f04f 0600 	mov.w	r6, #0
+  200806:	f1a4 0401 	sub.w	r4, r4, #1
+  20080a:	bf38      	it	cc
+  20080c:	2601      	movcc	r6, #1
+  20080e:	42a7      	cmp	r7, r4
+  200810:	bf88      	it	hi
+  200812:	2201      	movhi	r2, #1
+  200814:	4332      	orrs	r2, r6
+  200816:	f04f 0603 	mov.w	r6, #3
+  20081a:	4660      	mov	r0, ip
+  20081c:	f366 0004 	bfi	r0, r6, #0, #5
+  200820:	f04f 0601 	mov.w	r6, #1
+  200824:	f366 0704 	bfi	r7, r6, #0, #5
+  200828:	bf04      	itt	eq
+  20082a:	4610      	moveq	r0, r2
+  20082c:	4617      	moveq	r7, r2
+  20082e:	e9c5 0702 	strd	r0, r7, [r5, #8]
+  200832:	f8dd e02c 	ldr.w	lr, [sp, #44]	; 0x2c
+  200836:	b1d3      	cbz	r3, 20086e <prvInitialiseNewTask+0x156>
+  200838:	685f      	ldr	r7, [r3, #4]
+  20083a:	b1f7      	cbz	r7, 20087a <prvInitialiseNewTask+0x162>
+  20083c:	6818      	ldr	r0, [r3, #0]
+  20083e:	689e      	ldr	r6, [r3, #8]
+  200840:	f020 041f 	bic.w	r4, r0, #31
+  200844:	4438      	add	r0, r7
+  200846:	3801      	subs	r0, #1
+  200848:	f020 071f 	bic.w	r7, r0, #31
+  20084c:	07f0      	lsls	r0, r6, #31
+  20084e:	f04f 0006 	mov.w	r0, #6
+  200852:	f3c6 0280 	ubfx	r2, r6, #2, #1
+  200856:	bf08      	it	eq
+  200858:	2002      	moveq	r0, #2
+  20085a:	4410      	add	r0, r2
+  20085c:	4420      	add	r0, r4
+  20085e:	06f2      	lsls	r2, r6, #27
+  200860:	6128      	str	r0, [r5, #16]
+  200862:	bf54      	ite	pl
+  200864:	f047 0001 	orrpl.w	r0, r7, #1
+  200868:	f047 0003 	orrmi.w	r0, r7, #3
+  20086c:	e007      	b.n	20087e <prvInitialiseNewTask+0x166>
+  20086e:	2000      	movs	r0, #0
+  200870:	e9c5 0004 	strd	r0, r0, [r5, #16]
+  200874:	e9c5 0006 	strd	r0, r0, [r5, #24]
+  200878:	e03c      	b.n	2008f4 <prvInitialiseNewTask+0x1dc>
+  20087a:	2000      	movs	r0, #0
+  20087c:	6128      	str	r0, [r5, #16]
+  20087e:	691f      	ldr	r7, [r3, #16]
+  200880:	6168      	str	r0, [r5, #20]
+  200882:	b1c7      	cbz	r7, 2008b6 <prvInitialiseNewTask+0x19e>
+  200884:	68d8      	ldr	r0, [r3, #12]
+  200886:	695a      	ldr	r2, [r3, #20]
+  200888:	f020 041f 	bic.w	r4, r0, #31
+  20088c:	4438      	add	r0, r7
+  20088e:	3801      	subs	r0, #1
+  200890:	f020 071f 	bic.w	r7, r0, #31
+  200894:	07d0      	lsls	r0, r2, #31
+  200896:	f04f 0006 	mov.w	r0, #6
+  20089a:	f3c2 0680 	ubfx	r6, r2, #2, #1
+  20089e:	bf08      	it	eq
+  2008a0:	2002      	moveq	r0, #2
+  2008a2:	06d2      	lsls	r2, r2, #27
+  2008a4:	4430      	add	r0, r6
+  2008a6:	4420      	add	r0, r4
+  2008a8:	61a8      	str	r0, [r5, #24]
+  2008aa:	bf54      	ite	pl
+  2008ac:	f047 0001 	orrpl.w	r0, r7, #1
+  2008b0:	f047 0003 	orrmi.w	r0, r7, #3
+  2008b4:	e001      	b.n	2008ba <prvInitialiseNewTask+0x1a2>
+  2008b6:	2000      	movs	r0, #0
+  2008b8:	61a8      	str	r0, [r5, #24]
+  2008ba:	69df      	ldr	r7, [r3, #28]
+  2008bc:	61e8      	str	r0, [r5, #28]
+  2008be:	b1c7      	cbz	r7, 2008f2 <prvInitialiseNewTask+0x1da>
+  2008c0:	6998      	ldr	r0, [r3, #24]
+  2008c2:	6a1a      	ldr	r2, [r3, #32]
+  2008c4:	f020 041f 	bic.w	r4, r0, #31
+  2008c8:	4438      	add	r0, r7
+  2008ca:	3801      	subs	r0, #1
+  2008cc:	f020 031f 	bic.w	r3, r0, #31
+  2008d0:	07d0      	lsls	r0, r2, #31
+  2008d2:	f04f 0006 	mov.w	r0, #6
+  2008d6:	f3c2 0680 	ubfx	r6, r2, #2, #1
+  2008da:	bf08      	it	eq
+  2008dc:	2002      	moveq	r0, #2
+  2008de:	06d2      	lsls	r2, r2, #27
+  2008e0:	4430      	add	r0, r6
+  2008e2:	4420      	add	r0, r4
+  2008e4:	6228      	str	r0, [r5, #32]
+  2008e6:	bf54      	ite	pl
+  2008e8:	f043 0001 	orrpl.w	r0, r3, #1
+  2008ec:	f043 0003 	orrmi.w	r0, r3, #3
+  2008f0:	e001      	b.n	2008f6 <prvInitialiseNewTask+0x1de>
+  2008f2:	2000      	movs	r0, #0
+  2008f4:	6228      	str	r0, [r5, #32]
+  2008f6:	6268      	str	r0, [r5, #36]	; 0x24
+  2008f8:	2000      	movs	r0, #0
+  2008fa:	f04f 3203 	mov.w	r2, #50529027	; 0x3030303
+  2008fe:	f04f 3302 	mov.w	r3, #33686018	; 0x2020202
+  200902:	6768      	str	r0, [r5, #116]	; 0x74
+  200904:	f885 0078 	strb.w	r0, [r5, #120]	; 0x78
+  200908:	f885 007a 	strb.w	r0, [r5, #122]	; 0x7a
+  20090c:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+  200910:	e941 3206 	strd	r3, r2, [r1, #-24]
+  200914:	f242 6245 	movw	r2, #9797	; 0x2645
+  200918:	e941 9002 	strd	r9, r0, [r1, #-8]
+  20091c:	f04f 3012 	mov.w	r0, #303174162	; 0x12121212
+  200920:	f04f 3401 	mov.w	r4, #16843009	; 0x1010101
+  200924:	f04f 3611 	mov.w	r6, #286331153	; 0x11111111
+  200928:	f04f 3710 	mov.w	r7, #269488144	; 0x10101010
+  20092c:	f2c0 0220 	movt	r2, #32
+  200930:	e941 760a 	strd	r7, r6, [r1, #-40]	; 0x28
+  200934:	e941 8408 	strd	r8, r4, [r1, #-32]
+  200938:	e941 0204 	strd	r0, r2, [r1, #-16]
+  20093c:	f04f 3809 	mov.w	r8, #151587081	; 0x9090909
+  200940:	f04f 3908 	mov.w	r9, #134744072	; 0x8080808
+  200944:	f04f 3307 	mov.w	r3, #117901063	; 0x7070707
+  200948:	f04f 3406 	mov.w	r4, #101058054	; 0x6060606
+  20094c:	f04f 3605 	mov.w	r6, #84215045	; 0x5050505
+  200950:	f04f 3704 	mov.w	r7, #67372036	; 0x4040404
+  200954:	f06f 0043 	mvn.w	r0, #67	; 0x43
+  200958:	2203      	movs	r2, #3
+  20095a:	f1ba 0f00 	cmp.w	sl, #0
+  20095e:	bf48      	it	mi
+  200960:	2202      	movmi	r2, #2
+  200962:	e941 2012 	strd	r2, r0, [r1, #-72]	; 0x48
+  200966:	e941 7610 	strd	r7, r6, [r1, #-64]	; 0x40
+  20096a:	e941 430e 	strd	r4, r3, [r1, #-56]	; 0x38
+  20096e:	e941 980c 	strd	r9, r8, [r1, #-48]	; 0x30
+  200972:	f841 cd4c 	str.w	ip, [r1, #-76]!
+  200976:	f1be 0f00 	cmp.w	lr, #0
+  20097a:	6029      	str	r1, [r5, #0]
+  20097c:	bf18      	it	ne
+  20097e:	f8ce 5000 	strne.w	r5, [lr]
+  200982:	b001      	add	sp, #4
+  200984:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+00200988 <prvAddNewTaskToReadyList>:
+  200988:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+  20098c:	b081      	sub	sp, #4
+  20098e:	4604      	mov	r4, r0
+  200990:	f001 fa68 	bl	201e64 <ulSetInterruptMask>
+  200994:	f244 1060 	movw	r0, #16736	; 0x4160
+  200998:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  20099c:	6801      	ldr	r1, [r0, #0]
+  20099e:	f240 0220 	movw	r2, #32
+  2009a2:	3101      	adds	r1, #1
+  2009a4:	6001      	str	r1, [r0, #0]
+  2009a6:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  2009aa:	f3bf 8f4f 	dsb	sy
+  2009ae:	f3bf 8f6f 	isb	sy
+  2009b2:	6811      	ldr	r1, [r2, #0]
+  2009b4:	f240 0900 	movw	r9, #0
+  2009b8:	3101      	adds	r1, #1
+  2009ba:	6011      	str	r1, [r2, #0]
+  2009bc:	f6c2 0920 	movt	r9, #10272	; 0x2820
+  2009c0:	f8d9 1000 	ldr.w	r1, [r9]
+  2009c4:	f240 0824 	movw	r8, #36	; 0x24
+  2009c8:	f240 054c 	movw	r5, #76	; 0x4c
+  2009cc:	f6c2 0820 	movt	r8, #10272	; 0x2820
+  2009d0:	f6c2 0520 	movt	r5, #10272	; 0x2820
+  2009d4:	b161      	cbz	r1, 2009f0 <prvAddNewTaskToReadyList+0x68>
+  2009d6:	f8d8 1000 	ldr.w	r1, [r8]
+  2009da:	2900      	cmp	r1, #0
+  2009dc:	d179      	bne.n	200ad2 <prvAddNewTaskToReadyList+0x14a>
+  2009de:	f8d9 1000 	ldr.w	r1, [r9]
+  2009e2:	6d22      	ldr	r2, [r4, #80]	; 0x50
+  2009e4:	6d09      	ldr	r1, [r1, #80]	; 0x50
+  2009e6:	4291      	cmp	r1, r2
+  2009e8:	bf98      	it	ls
+  2009ea:	f8c9 4000 	strls.w	r4, [r9]
+  2009ee:	e070      	b.n	200ad2 <prvAddNewTaskToReadyList+0x14a>
+  2009f0:	f8c9 4000 	str.w	r4, [r9]
+  2009f4:	6812      	ldr	r2, [r2, #0]
+  2009f6:	2a01      	cmp	r2, #1
+  2009f8:	d16b      	bne.n	200ad2 <prvAddNewTaskToReadyList+0x14a>
+  2009fa:	f04f 32ff 	mov.w	r2, #4294967295
+  2009fe:	462b      	mov	r3, r5
+  200a00:	f843 2f08 	str.w	r2, [r3, #8]!
+  200a04:	4629      	mov	r1, r5
+  200a06:	606b      	str	r3, [r5, #4]
+  200a08:	e9c5 3303 	strd	r3, r3, [r5, #12]
+  200a0c:	2300      	movs	r3, #0
+  200a0e:	602b      	str	r3, [r5, #0]
+  200a10:	f841 2f1c 	str.w	r2, [r1, #28]!
+  200a14:	f240 0cdc 	movw	ip, #220	; 0xdc
+  200a18:	61a9      	str	r1, [r5, #24]
+  200a1a:	e9c5 1108 	strd	r1, r1, [r5, #32]
+  200a1e:	4629      	mov	r1, r5
+  200a20:	616b      	str	r3, [r5, #20]
+  200a22:	f841 2f30 	str.w	r2, [r1, #48]!
+  200a26:	f6c2 0c20 	movt	ip, #10272	; 0x2820
+  200a2a:	62e9      	str	r1, [r5, #44]	; 0x2c
+  200a2c:	e9c5 110d 	strd	r1, r1, [r5, #52]	; 0x34
+  200a30:	4629      	mov	r1, r5
+  200a32:	62ab      	str	r3, [r5, #40]	; 0x28
+  200a34:	f841 2f44 	str.w	r2, [r1, #68]!
+  200a38:	f240 07f0 	movw	r7, #240	; 0xf0
+  200a3c:	6429      	str	r1, [r5, #64]	; 0x40
+  200a3e:	e9c5 1112 	strd	r1, r1, [r5, #72]	; 0x48
+  200a42:	4629      	mov	r1, r5
+  200a44:	63eb      	str	r3, [r5, #60]	; 0x3c
+  200a46:	f841 2f58 	str.w	r2, [r1, #88]!
+  200a4a:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  200a4e:	f841 1c04 	str.w	r1, [r1, #-4]
+  200a52:	e9c1 1101 	strd	r1, r1, [r1, #4]
+  200a56:	f841 3c08 	str.w	r3, [r1, #-8]
+  200a5a:	4661      	mov	r1, ip
+  200a5c:	f841 2f08 	str.w	r2, [r1, #8]!
+  200a60:	f240 06b8 	movw	r6, #184	; 0xb8
+  200a64:	f8cc 1004 	str.w	r1, [ip, #4]
+  200a68:	e9cc 1103 	strd	r1, r1, [ip, #12]
+  200a6c:	4639      	mov	r1, r7
+  200a6e:	f8cc 3000 	str.w	r3, [ip]
+  200a72:	f841 2f08 	str.w	r2, [r1, #8]!
+  200a76:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  200a7a:	6079      	str	r1, [r7, #4]
+  200a7c:	e9c7 1103 	strd	r1, r1, [r7, #12]
+  200a80:	4631      	mov	r1, r6
+  200a82:	603b      	str	r3, [r7, #0]
+  200a84:	f841 2f08 	str.w	r2, [r1, #8]!
+  200a88:	6071      	str	r1, [r6, #4]
+  200a8a:	e9c6 1103 	strd	r1, r1, [r6, #12]
+  200a8e:	6033      	str	r3, [r6, #0]
+  200a90:	f240 0608 	movw	r6, #8
+  200a94:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  200a98:	4631      	mov	r1, r6
+  200a9a:	f841 2f08 	str.w	r2, [r1, #8]!
+  200a9e:	6071      	str	r1, [r6, #4]
+  200aa0:	e9c6 1103 	strd	r1, r1, [r6, #12]
+  200aa4:	6033      	str	r3, [r6, #0]
+  200aa6:	f240 0638 	movw	r6, #56	; 0x38
+  200aaa:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  200aae:	4631      	mov	r1, r6
+  200ab0:	f841 2f08 	str.w	r2, [r1, #8]!
+  200ab4:	6071      	str	r1, [r6, #4]
+  200ab6:	e9c6 1103 	strd	r1, r1, [r6, #12]
+  200aba:	f240 0130 	movw	r1, #48	; 0x30
+  200abe:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200ac2:	6033      	str	r3, [r6, #0]
+  200ac4:	f8c1 c000 	str.w	ip, [r1]
+  200ac8:	f240 0134 	movw	r1, #52	; 0x34
+  200acc:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200ad0:	600f      	str	r7, [r1, #0]
+  200ad2:	f240 0104 	movw	r1, #4
+  200ad6:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200ada:	680a      	ldr	r2, [r1, #0]
+  200adc:	f240 03b0 	movw	r3, #176	; 0xb0
+  200ae0:	3201      	adds	r2, #1
+  200ae2:	600a      	str	r2, [r1, #0]
+  200ae4:	6662      	str	r2, [r4, #100]	; 0x64
+  200ae6:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  200aea:	6d22      	ldr	r2, [r4, #80]	; 0x50
+  200aec:	6819      	ldr	r1, [r3, #0]
+  200aee:	f104 0628 	add.w	r6, r4, #40	; 0x28
+  200af2:	428a      	cmp	r2, r1
+  200af4:	bf88      	it	hi
+  200af6:	601a      	strhi	r2, [r3, #0]
+  200af8:	eb02 0182 	add.w	r1, r2, r2, lsl #2
+  200afc:	eb05 0281 	add.w	r2, r5, r1, lsl #2
+  200b00:	6853      	ldr	r3, [r2, #4]
+  200b02:	63a2      	str	r2, [r4, #56]	; 0x38
+  200b04:	689f      	ldr	r7, [r3, #8]
+  200b06:	62e3      	str	r3, [r4, #44]	; 0x2c
+  200b08:	6327      	str	r7, [r4, #48]	; 0x30
+  200b0a:	689f      	ldr	r7, [r3, #8]
+  200b0c:	609e      	str	r6, [r3, #8]
+  200b0e:	607e      	str	r6, [r7, #4]
+  200b10:	f855 2021 	ldr.w	r2, [r5, r1, lsl #2]
+  200b14:	3201      	adds	r2, #1
+  200b16:	f845 2021 	str.w	r2, [r5, r1, lsl #2]
+  200b1a:	6801      	ldr	r1, [r0, #0]
+  200b1c:	b1f9      	cbz	r1, 200b5e <prvAddNewTaskToReadyList+0x1d6>
+  200b1e:	6801      	ldr	r1, [r0, #0]
+  200b20:	3901      	subs	r1, #1
+  200b22:	6001      	str	r1, [r0, #0]
+  200b24:	6800      	ldr	r0, [r0, #0]
+  200b26:	2800      	cmp	r0, #0
+  200b28:	bf04      	itt	eq
+  200b2a:	2000      	moveq	r0, #0
+  200b2c:	f001 f9a6 	bleq	201e7c <vClearInterruptMask>
+  200b30:	f8d8 0000 	ldr.w	r0, [r8]
+  200b34:	b180      	cbz	r0, 200b58 <prvAddNewTaskToReadyList+0x1d0>
+  200b36:	f8d9 0000 	ldr.w	r0, [r9]
+  200b3a:	6d21      	ldr	r1, [r4, #80]	; 0x50
+  200b3c:	6d00      	ldr	r0, [r0, #80]	; 0x50
+  200b3e:	4288      	cmp	r0, r1
+  200b40:	d20a      	bcs.n	200b58 <prvAddNewTaskToReadyList+0x1d0>
+  200b42:	f64e 5004 	movw	r0, #60676	; 0xed04
+  200b46:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  200b4a:	f04f 5180 	mov.w	r1, #268435456	; 0x10000000
+  200b4e:	6001      	str	r1, [r0, #0]
+  200b50:	f3bf 8f4f 	dsb	sy
+  200b54:	f3bf 8f6f 	isb	sy
+  200b58:	b001      	add	sp, #4
+  200b5a:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+  200b5e:	f001 f981 	bl	201e64 <ulSetInterruptMask>
+  200b62:	bf00      	nop
+  200b64:	e7fe      	b.n	200b64 <prvAddNewTaskToReadyList+0x1dc>
+  200b66:	bf00      	nop
+
+00200b68 <xTaskResumeAll>:
+  200b68:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  200b6c:	b081      	sub	sp, #4
+  200b6e:	f240 0428 	movw	r4, #40	; 0x28
+  200b72:	f6c2 0420 	movt	r4, #10272	; 0x2820
+  200b76:	6825      	ldr	r5, [r4, #0]
+  200b78:	f001 f974 	bl	201e64 <ulSetInterruptMask>
+  200b7c:	b315      	cbz	r5, 200bc4 <xTaskResumeAll+0x5c>
+  200b7e:	f244 1760 	movw	r7, #16736	; 0x4160
+  200b82:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  200b86:	6838      	ldr	r0, [r7, #0]
+  200b88:	3001      	adds	r0, #1
+  200b8a:	6038      	str	r0, [r7, #0]
+  200b8c:	f3bf 8f4f 	dsb	sy
+  200b90:	f3bf 8f6f 	isb	sy
+  200b94:	6820      	ldr	r0, [r4, #0]
+  200b96:	3801      	subs	r0, #1
+  200b98:	6020      	str	r0, [r4, #0]
+  200b9a:	6820      	ldr	r0, [r4, #0]
+  200b9c:	b198      	cbz	r0, 200bc6 <xTaskResumeAll+0x5e>
+  200b9e:	2400      	movs	r4, #0
+  200ba0:	6838      	ldr	r0, [r7, #0]
+  200ba2:	2800      	cmp	r0, #0
+  200ba4:	f000 8084 	beq.w	200cb0 <xTaskResumeAll+0x148>
+  200ba8:	6838      	ldr	r0, [r7, #0]
+  200baa:	3801      	subs	r0, #1
+  200bac:	6038      	str	r0, [r7, #0]
+  200bae:	6838      	ldr	r0, [r7, #0]
+  200bb0:	2800      	cmp	r0, #0
+  200bb2:	bf04      	itt	eq
+  200bb4:	2000      	moveq	r0, #0
+  200bb6:	f001 f961 	bleq	201e7c <vClearInterruptMask>
+  200bba:	4620      	mov	r0, r4
+  200bbc:	b001      	add	sp, #4
+  200bbe:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+  200bc2:	bf00      	nop
+  200bc4:	e7fe      	b.n	200bc4 <xTaskResumeAll+0x5c>
+  200bc6:	f240 0020 	movw	r0, #32
+  200bca:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  200bce:	6800      	ldr	r0, [r0, #0]
+  200bd0:	2800      	cmp	r0, #0
+  200bd2:	d0e4      	beq.n	200b9e <xTaskResumeAll+0x36>
+  200bd4:	f240 08b8 	movw	r8, #184	; 0xb8
+  200bd8:	f6c2 0820 	movt	r8, #10272	; 0x2820
+  200bdc:	f8d8 1000 	ldr.w	r1, [r8]
+  200be0:	f240 09b4 	movw	r9, #180	; 0xb4
+  200be4:	2900      	cmp	r1, #0
+  200be6:	f6c2 0920 	movt	r9, #10272	; 0x2820
+  200bea:	d06f      	beq.n	200ccc <xTaskResumeAll+0x164>
+  200bec:	f240 0bb0 	movw	fp, #176	; 0xb0
+  200bf0:	f240 034c 	movw	r3, #76	; 0x4c
+  200bf4:	f240 0a00 	movw	sl, #0
+  200bf8:	f04f 0e00 	mov.w	lr, #0
+  200bfc:	f6c2 0b20 	movt	fp, #10272	; 0x2820
+  200c00:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  200c04:	f6c2 0a20 	movt	sl, #10272	; 0x2820
+  200c08:	f8d8 100c 	ldr.w	r1, [r8, #12]
+  200c0c:	68ce      	ldr	r6, [r1, #12]
+  200c0e:	e9d6 5410 	ldrd	r5, r4, [r6, #64]	; 0x40
+  200c12:	6cf7      	ldr	r7, [r6, #76]	; 0x4c
+  200c14:	f106 013c 	add.w	r1, r6, #60	; 0x3c
+  200c18:	687a      	ldr	r2, [r7, #4]
+  200c1a:	60ac      	str	r4, [r5, #8]
+  200c1c:	6c74      	ldr	r4, [r6, #68]	; 0x44
+  200c1e:	428a      	cmp	r2, r1
+  200c20:	6065      	str	r5, [r4, #4]
+  200c22:	bf08      	it	eq
+  200c24:	607c      	streq	r4, [r7, #4]
+  200c26:	f8c6 e04c 	str.w	lr, [r6, #76]	; 0x4c
+  200c2a:	6839      	ldr	r1, [r7, #0]
+  200c2c:	3901      	subs	r1, #1
+  200c2e:	6039      	str	r1, [r7, #0]
+  200c30:	f106 0728 	add.w	r7, r6, #40	; 0x28
+  200c34:	e9d6 210b 	ldrd	r2, r1, [r6, #44]	; 0x2c
+  200c38:	6bb4      	ldr	r4, [r6, #56]	; 0x38
+  200c3a:	6865      	ldr	r5, [r4, #4]
+  200c3c:	6091      	str	r1, [r2, #8]
+  200c3e:	6b31      	ldr	r1, [r6, #48]	; 0x30
+  200c40:	42bd      	cmp	r5, r7
+  200c42:	604a      	str	r2, [r1, #4]
+  200c44:	bf08      	it	eq
+  200c46:	6061      	streq	r1, [r4, #4]
+  200c48:	6821      	ldr	r1, [r4, #0]
+  200c4a:	3901      	subs	r1, #1
+  200c4c:	6021      	str	r1, [r4, #0]
+  200c4e:	6d34      	ldr	r4, [r6, #80]	; 0x50
+  200c50:	f8db 1000 	ldr.w	r1, [fp]
+  200c54:	428c      	cmp	r4, r1
+  200c56:	bf88      	it	hi
+  200c58:	f8cb 4000 	strhi.w	r4, [fp]
+  200c5c:	eb04 0184 	add.w	r1, r4, r4, lsl #2
+  200c60:	eb03 0281 	add.w	r2, r3, r1, lsl #2
+  200c64:	6855      	ldr	r5, [r2, #4]
+  200c66:	63b2      	str	r2, [r6, #56]	; 0x38
+  200c68:	f8d5 c008 	ldr.w	ip, [r5, #8]
+  200c6c:	62f5      	str	r5, [r6, #44]	; 0x2c
+  200c6e:	f8c6 c030 	str.w	ip, [r6, #48]	; 0x30
+  200c72:	68a8      	ldr	r0, [r5, #8]
+  200c74:	60af      	str	r7, [r5, #8]
+  200c76:	6047      	str	r7, [r0, #4]
+  200c78:	f853 0021 	ldr.w	r0, [r3, r1, lsl #2]
+  200c7c:	3001      	adds	r0, #1
+  200c7e:	f843 0021 	str.w	r0, [r3, r1, lsl #2]
+  200c82:	f8da 0000 	ldr.w	r0, [sl]
+  200c86:	6d00      	ldr	r0, [r0, #80]	; 0x50
+  200c88:	4284      	cmp	r4, r0
+  200c8a:	bf24      	itt	cs
+  200c8c:	2001      	movcs	r0, #1
+  200c8e:	f8c9 0000 	strcs.w	r0, [r9]
+  200c92:	f8d8 0000 	ldr.w	r0, [r8]
+  200c96:	2800      	cmp	r0, #0
+  200c98:	d1b6      	bne.n	200c08 <xTaskResumeAll+0xa0>
+  200c9a:	f240 0030 	movw	r0, #48	; 0x30
+  200c9e:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  200ca2:	6801      	ldr	r1, [r0, #0]
+  200ca4:	6809      	ldr	r1, [r1, #0]
+  200ca6:	b131      	cbz	r1, 200cb6 <xTaskResumeAll+0x14e>
+  200ca8:	6800      	ldr	r0, [r0, #0]
+  200caa:	68c0      	ldr	r0, [r0, #12]
+  200cac:	6800      	ldr	r0, [r0, #0]
+  200cae:	e004      	b.n	200cba <xTaskResumeAll+0x152>
+  200cb0:	f001 f8d8 	bl	201e64 <ulSetInterruptMask>
+  200cb4:	e7fe      	b.n	200cb4 <xTaskResumeAll+0x14c>
+  200cb6:	f04f 30ff 	mov.w	r0, #4294967295
+  200cba:	f244 1760 	movw	r7, #16736	; 0x4160
+  200cbe:	f240 01d0 	movw	r1, #208	; 0xd0
+  200cc2:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  200cc6:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200cca:	6008      	str	r0, [r1, #0]
+  200ccc:	f240 05d4 	movw	r5, #212	; 0xd4
+  200cd0:	f6c2 0520 	movt	r5, #10272	; 0x2820
+  200cd4:	682c      	ldr	r4, [r5, #0]
+  200cd6:	b15c      	cbz	r4, 200cf0 <xTaskResumeAll+0x188>
+  200cd8:	2601      	movs	r6, #1
+  200cda:	bf00      	nop
+  200cdc:	f000 f81a 	bl	200d14 <xTaskIncrementTick>
+  200ce0:	2800      	cmp	r0, #0
+  200ce2:	bf18      	it	ne
+  200ce4:	f8c9 6000 	strne.w	r6, [r9]
+  200ce8:	3c01      	subs	r4, #1
+  200cea:	d1f7      	bne.n	200cdc <xTaskResumeAll+0x174>
+  200cec:	2000      	movs	r0, #0
+  200cee:	6028      	str	r0, [r5, #0]
+  200cf0:	f8d9 0000 	ldr.w	r0, [r9]
+  200cf4:	2800      	cmp	r0, #0
+  200cf6:	f43f af52 	beq.w	200b9e <xTaskResumeAll+0x36>
+  200cfa:	f64e 5004 	movw	r0, #60676	; 0xed04
+  200cfe:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  200d02:	f04f 5180 	mov.w	r1, #268435456	; 0x10000000
+  200d06:	6001      	str	r1, [r0, #0]
+  200d08:	f3bf 8f4f 	dsb	sy
+  200d0c:	2401      	movs	r4, #1
+  200d0e:	f3bf 8f6f 	isb	sy
+  200d12:	e745      	b.n	200ba0 <xTaskResumeAll+0x38>
+
+00200d14 <xTaskIncrementTick>:
+  200d14:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  200d18:	b081      	sub	sp, #4
+  200d1a:	f240 0028 	movw	r0, #40	; 0x28
+  200d1e:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  200d22:	6800      	ldr	r0, [r0, #0]
+  200d24:	b150      	cbz	r0, 200d3c <xTaskIncrementTick+0x28>
+  200d26:	f240 00d4 	movw	r0, #212	; 0xd4
+  200d2a:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  200d2e:	6801      	ldr	r1, [r0, #0]
+  200d30:	3101      	adds	r1, #1
+  200d32:	6001      	str	r1, [r0, #0]
+  200d34:	2000      	movs	r0, #0
+  200d36:	b001      	add	sp, #4
+  200d38:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+  200d3c:	f240 002c 	movw	r0, #44	; 0x2c
+  200d40:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  200d44:	6801      	ldr	r1, [r0, #0]
+  200d46:	f111 0b01 	adds.w	fp, r1, #1
+  200d4a:	f8c0 b000 	str.w	fp, [r0]
+  200d4e:	d327      	bcc.n	200da0 <xTaskIncrementTick+0x8c>
+  200d50:	f240 0030 	movw	r0, #48	; 0x30
+  200d54:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  200d58:	6802      	ldr	r2, [r0, #0]
+  200d5a:	6812      	ldr	r2, [r2, #0]
+  200d5c:	b11a      	cbz	r2, 200d66 <xTaskIncrementTick+0x52>
+  200d5e:	f001 f881 	bl	201e64 <ulSetInterruptMask>
+  200d62:	bf00      	nop
+  200d64:	e7fe      	b.n	200d64 <xTaskIncrementTick+0x50>
+  200d66:	f240 0334 	movw	r3, #52	; 0x34
+  200d6a:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  200d6e:	6802      	ldr	r2, [r0, #0]
+  200d70:	681f      	ldr	r7, [r3, #0]
+  200d72:	6007      	str	r7, [r0, #0]
+  200d74:	601a      	str	r2, [r3, #0]
+  200d76:	f240 02d8 	movw	r2, #216	; 0xd8
+  200d7a:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  200d7e:	6813      	ldr	r3, [r2, #0]
+  200d80:	3301      	adds	r3, #1
+  200d82:	6013      	str	r3, [r2, #0]
+  200d84:	6802      	ldr	r2, [r0, #0]
+  200d86:	6812      	ldr	r2, [r2, #0]
+  200d88:	b11a      	cbz	r2, 200d92 <xTaskIncrementTick+0x7e>
+  200d8a:	6800      	ldr	r0, [r0, #0]
+  200d8c:	68c0      	ldr	r0, [r0, #12]
+  200d8e:	6800      	ldr	r0, [r0, #0]
+  200d90:	e001      	b.n	200d96 <xTaskIncrementTick+0x82>
+  200d92:	f04f 30ff 	mov.w	r0, #4294967295
+  200d96:	f240 02d0 	movw	r2, #208	; 0xd0
+  200d9a:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  200d9e:	6010      	str	r0, [r2, #0]
+  200da0:	f240 01d0 	movw	r1, #208	; 0xd0
+  200da4:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200da8:	6808      	ldr	r0, [r1, #0]
+  200daa:	f240 0e00 	movw	lr, #0
+  200dae:	f240 084c 	movw	r8, #76	; 0x4c
+  200db2:	4583      	cmp	fp, r0
+  200db4:	f6c2 0e20 	movt	lr, #10272	; 0x2820
+  200db8:	f6c2 0820 	movt	r8, #10272	; 0x2820
+  200dbc:	d201      	bcs.n	200dc2 <xTaskIncrementTick+0xae>
+  200dbe:	2000      	movs	r0, #0
+  200dc0:	e065      	b.n	200e8e <xTaskIncrementTick+0x17a>
+  200dc2:	f240 0a30 	movw	sl, #48	; 0x30
+  200dc6:	f6c2 0a20 	movt	sl, #10272	; 0x2820
+  200dca:	f8da 0000 	ldr.w	r0, [sl]
+  200dce:	6800      	ldr	r0, [r0, #0]
+  200dd0:	2800      	cmp	r0, #0
+  200dd2:	d051      	beq.n	200e78 <xTaskIncrementTick+0x164>
+  200dd4:	f240 09b0 	movw	r9, #176	; 0xb0
+  200dd8:	f6c2 0920 	movt	r9, #10272	; 0x2820
+  200ddc:	2000      	movs	r0, #0
+  200dde:	e021      	b.n	200e24 <xTaskIncrementTick+0x110>
+  200de0:	6d34      	ldr	r4, [r6, #80]	; 0x50
+  200de2:	f8d9 1000 	ldr.w	r1, [r9]
+  200de6:	428c      	cmp	r4, r1
+  200de8:	bf88      	it	hi
+  200dea:	f8c9 4000 	strhi.w	r4, [r9]
+  200dee:	eb04 0184 	add.w	r1, r4, r4, lsl #2
+  200df2:	eb08 0381 	add.w	r3, r8, r1, lsl #2
+  200df6:	685d      	ldr	r5, [r3, #4]
+  200df8:	63b3      	str	r3, [r6, #56]	; 0x38
+  200dfa:	68aa      	ldr	r2, [r5, #8]
+  200dfc:	62f5      	str	r5, [r6, #44]	; 0x2c
+  200dfe:	6332      	str	r2, [r6, #48]	; 0x30
+  200e00:	68aa      	ldr	r2, [r5, #8]
+  200e02:	60af      	str	r7, [r5, #8]
+  200e04:	6057      	str	r7, [r2, #4]
+  200e06:	f858 2021 	ldr.w	r2, [r8, r1, lsl #2]
+  200e0a:	3201      	adds	r2, #1
+  200e0c:	f848 2021 	str.w	r2, [r8, r1, lsl #2]
+  200e10:	f8de 1000 	ldr.w	r1, [lr]
+  200e14:	6d09      	ldr	r1, [r1, #80]	; 0x50
+  200e16:	f8da 2000 	ldr.w	r2, [sl]
+  200e1a:	428c      	cmp	r4, r1
+  200e1c:	bf28      	it	cs
+  200e1e:	2001      	movcs	r0, #1
+  200e20:	6811      	ldr	r1, [r2, #0]
+  200e22:	b369      	cbz	r1, 200e80 <xTaskIncrementTick+0x16c>
+  200e24:	f8da 4000 	ldr.w	r4, [sl]
+  200e28:	68e4      	ldr	r4, [r4, #12]
+  200e2a:	68e6      	ldr	r6, [r4, #12]
+  200e2c:	4637      	mov	r7, r6
+  200e2e:	f857 4f28 	ldr.w	r4, [r7, #40]!
+  200e32:	45a3      	cmp	fp, r4
+  200e34:	d326      	bcc.n	200e84 <xTaskIncrementTick+0x170>
+  200e36:	e9d6 350b 	ldrd	r3, r5, [r6, #44]	; 0x2c
+  200e3a:	6bb4      	ldr	r4, [r6, #56]	; 0x38
+  200e3c:	6861      	ldr	r1, [r4, #4]
+  200e3e:	609d      	str	r5, [r3, #8]
+  200e40:	6b35      	ldr	r5, [r6, #48]	; 0x30
+  200e42:	42b9      	cmp	r1, r7
+  200e44:	606b      	str	r3, [r5, #4]
+  200e46:	bf08      	it	eq
+  200e48:	6065      	streq	r5, [r4, #4]
+  200e4a:	6821      	ldr	r1, [r4, #0]
+  200e4c:	3901      	subs	r1, #1
+  200e4e:	6021      	str	r1, [r4, #0]
+  200e50:	6cf4      	ldr	r4, [r6, #76]	; 0x4c
+  200e52:	2c00      	cmp	r4, #0
+  200e54:	d0c4      	beq.n	200de0 <xTaskIncrementTick+0xcc>
+  200e56:	e9d6 1310 	ldrd	r1, r3, [r6, #64]	; 0x40
+  200e5a:	f106 0c3c 	add.w	ip, r6, #60	; 0x3c
+  200e5e:	608b      	str	r3, [r1, #8]
+  200e60:	6c75      	ldr	r5, [r6, #68]	; 0x44
+  200e62:	6863      	ldr	r3, [r4, #4]
+  200e64:	6069      	str	r1, [r5, #4]
+  200e66:	2100      	movs	r1, #0
+  200e68:	4563      	cmp	r3, ip
+  200e6a:	bf08      	it	eq
+  200e6c:	6065      	streq	r5, [r4, #4]
+  200e6e:	64f1      	str	r1, [r6, #76]	; 0x4c
+  200e70:	6821      	ldr	r1, [r4, #0]
+  200e72:	3901      	subs	r1, #1
+  200e74:	6021      	str	r1, [r4, #0]
+  200e76:	e7b3      	b.n	200de0 <xTaskIncrementTick+0xcc>
+  200e78:	f04f 34ff 	mov.w	r4, #4294967295
+  200e7c:	2000      	movs	r0, #0
+  200e7e:	e005      	b.n	200e8c <xTaskIncrementTick+0x178>
+  200e80:	f04f 34ff 	mov.w	r4, #4294967295
+  200e84:	f240 01d0 	movw	r1, #208	; 0xd0
+  200e88:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200e8c:	600c      	str	r4, [r1, #0]
+  200e8e:	f8de 1000 	ldr.w	r1, [lr]
+  200e92:	6d09      	ldr	r1, [r1, #80]	; 0x50
+  200e94:	eb01 0181 	add.w	r1, r1, r1, lsl #2
+  200e98:	f858 1021 	ldr.w	r1, [r8, r1, lsl #2]
+  200e9c:	2901      	cmp	r1, #1
+  200e9e:	bf88      	it	hi
+  200ea0:	2001      	movhi	r0, #1
+  200ea2:	f240 01b4 	movw	r1, #180	; 0xb4
+  200ea6:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200eaa:	6809      	ldr	r1, [r1, #0]
+  200eac:	2900      	cmp	r1, #0
+  200eae:	bf18      	it	ne
+  200eb0:	2001      	movne	r0, #1
+  200eb2:	b001      	add	sp, #4
+  200eb4:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+00200eb8 <prvIdleTask>:
+  200eb8:	f240 051c 	movw	r5, #28
+  200ebc:	f240 0a4c 	movw	sl, #76	; 0x4c
+  200ec0:	f244 1760 	movw	r7, #16736	; 0x4160
+  200ec4:	f240 0b08 	movw	fp, #8
+  200ec8:	f240 0820 	movw	r8, #32
+  200ecc:	f6c2 0520 	movt	r5, #10272	; 0x2820
+  200ed0:	f6c2 0a20 	movt	sl, #10272	; 0x2820
+  200ed4:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  200ed8:	f6c2 0b20 	movt	fp, #10272	; 0x2820
+  200edc:	f04f 0900 	mov.w	r9, #0
+  200ee0:	f6c2 0820 	movt	r8, #10272	; 0x2820
+  200ee4:	e003      	b.n	200eee <prvIdleTask+0x36>
+  200ee6:	bf00      	nop
+  200ee8:	4620      	mov	r0, r4
+  200eea:	f000 fee7 	bl	201cbc <vPortFree>
+  200eee:	6828      	ldr	r0, [r5, #0]
+  200ef0:	b3d8      	cbz	r0, 200f6a <prvIdleTask+0xb2>
+  200ef2:	f000 ffb7 	bl	201e64 <ulSetInterruptMask>
+  200ef6:	6838      	ldr	r0, [r7, #0]
+  200ef8:	3001      	adds	r0, #1
+  200efa:	6038      	str	r0, [r7, #0]
+  200efc:	f3bf 8f4f 	dsb	sy
+  200f00:	f3bf 8f6f 	isb	sy
+  200f04:	f8db 000c 	ldr.w	r0, [fp, #12]
+  200f08:	68c4      	ldr	r4, [r0, #12]
+  200f0a:	e9d4 310b 	ldrd	r3, r1, [r4, #44]	; 0x2c
+  200f0e:	6ba0      	ldr	r0, [r4, #56]	; 0x38
+  200f10:	f104 0228 	add.w	r2, r4, #40	; 0x28
+  200f14:	6846      	ldr	r6, [r0, #4]
+  200f16:	6099      	str	r1, [r3, #8]
+  200f18:	6b21      	ldr	r1, [r4, #48]	; 0x30
+  200f1a:	4296      	cmp	r6, r2
+  200f1c:	604b      	str	r3, [r1, #4]
+  200f1e:	bf08      	it	eq
+  200f20:	6041      	streq	r1, [r0, #4]
+  200f22:	f8c4 9038 	str.w	r9, [r4, #56]	; 0x38
+  200f26:	6801      	ldr	r1, [r0, #0]
+  200f28:	3901      	subs	r1, #1
+  200f2a:	6001      	str	r1, [r0, #0]
+  200f2c:	6800      	ldr	r0, [r0, #0]
+  200f2e:	f8d8 0000 	ldr.w	r0, [r8]
+  200f32:	3801      	subs	r0, #1
+  200f34:	f8c8 0000 	str.w	r0, [r8]
+  200f38:	6828      	ldr	r0, [r5, #0]
+  200f3a:	3801      	subs	r0, #1
+  200f3c:	6028      	str	r0, [r5, #0]
+  200f3e:	6838      	ldr	r0, [r7, #0]
+  200f40:	b318      	cbz	r0, 200f8a <prvIdleTask+0xd2>
+  200f42:	6838      	ldr	r0, [r7, #0]
+  200f44:	3801      	subs	r0, #1
+  200f46:	6038      	str	r0, [r7, #0]
+  200f48:	6838      	ldr	r0, [r7, #0]
+  200f4a:	2800      	cmp	r0, #0
+  200f4c:	bf04      	itt	eq
+  200f4e:	2000      	moveq	r0, #0
+  200f50:	f000 ff94 	bleq	201e7c <vClearInterruptMask>
+  200f54:	f894 0079 	ldrb.w	r0, [r4, #121]	; 0x79
+  200f58:	2802      	cmp	r0, #2
+  200f5a:	d0c8      	beq.n	200eee <prvIdleTask+0x36>
+  200f5c:	2801      	cmp	r0, #1
+  200f5e:	d0c3      	beq.n	200ee8 <prvIdleTask+0x30>
+  200f60:	b9b8      	cbnz	r0, 200f92 <prvIdleTask+0xda>
+  200f62:	6d60      	ldr	r0, [r4, #84]	; 0x54
+  200f64:	f000 feaa 	bl	201cbc <vPortFree>
+  200f68:	e7be      	b.n	200ee8 <prvIdleTask+0x30>
+  200f6a:	f8da 0000 	ldr.w	r0, [sl]
+  200f6e:	2802      	cmp	r0, #2
+  200f70:	d3bd      	bcc.n	200eee <prvIdleTask+0x36>
+  200f72:	f64e 5004 	movw	r0, #60676	; 0xed04
+  200f76:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  200f7a:	f04f 5180 	mov.w	r1, #268435456	; 0x10000000
+  200f7e:	6001      	str	r1, [r0, #0]
+  200f80:	f3bf 8f4f 	dsb	sy
+  200f84:	f3bf 8f6f 	isb	sy
+  200f88:	e7b1      	b.n	200eee <prvIdleTask+0x36>
+  200f8a:	f000 ff6b 	bl	201e64 <ulSetInterruptMask>
+  200f8e:	bf00      	nop
+  200f90:	e7fe      	b.n	200f90 <prvIdleTask+0xd8>
+  200f92:	f000 ff67 	bl	201e64 <ulSetInterruptMask>
+  200f96:	bf00      	nop
+  200f98:	e7fe      	b.n	200f98 <prvIdleTask+0xe0>
+  200f9a:	bf00      	nop
+
+00200f9c <xTaskRemoveFromEventList>:
+  200f9c:	b5b0      	push	{r4, r5, r7, lr}
+  200f9e:	b350      	cbz	r0, 200ff6 <xTaskRemoveFromEventList+0x5a>
+  200fa0:	e9d0 1310 	ldrd	r1, r3, [r0, #64]	; 0x40
+  200fa4:	6cc2      	ldr	r2, [r0, #76]	; 0x4c
+  200fa6:	f100 0c3c 	add.w	ip, r0, #60	; 0x3c
+  200faa:	f8d2 e004 	ldr.w	lr, [r2, #4]
+  200fae:	608b      	str	r3, [r1, #8]
+  200fb0:	6c43      	ldr	r3, [r0, #68]	; 0x44
+  200fb2:	45e6      	cmp	lr, ip
+  200fb4:	6059      	str	r1, [r3, #4]
+  200fb6:	bf08      	it	eq
+  200fb8:	6053      	streq	r3, [r2, #4]
+  200fba:	2100      	movs	r1, #0
+  200fbc:	64c1      	str	r1, [r0, #76]	; 0x4c
+  200fbe:	6811      	ldr	r1, [r2, #0]
+  200fc0:	3901      	subs	r1, #1
+  200fc2:	6011      	str	r1, [r2, #0]
+  200fc4:	f240 0128 	movw	r1, #40	; 0x28
+  200fc8:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200fcc:	6809      	ldr	r1, [r1, #0]
+  200fce:	b1b1      	cbz	r1, 200ffe <xTaskRemoveFromEventList+0x62>
+  200fd0:	f240 01b8 	movw	r1, #184	; 0xb8
+  200fd4:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  200fd8:	680a      	ldr	r2, [r1, #0]
+  200fda:	684b      	ldr	r3, [r1, #4]
+  200fdc:	3201      	adds	r2, #1
+  200fde:	689d      	ldr	r5, [r3, #8]
+  200fe0:	6403      	str	r3, [r0, #64]	; 0x40
+  200fe2:	6445      	str	r5, [r0, #68]	; 0x44
+  200fe4:	689d      	ldr	r5, [r3, #8]
+  200fe6:	f8c3 c008 	str.w	ip, [r3, #8]
+  200fea:	f8c5 c004 	str.w	ip, [r5, #4]
+  200fee:	64c1      	str	r1, [r0, #76]	; 0x4c
+  200ff0:	600a      	str	r2, [r1, #0]
+  200ff2:	6d02      	ldr	r2, [r0, #80]	; 0x50
+  200ff4:	e033      	b.n	20105e <xTaskRemoveFromEventList+0xc2>
+  200ff6:	f000 ff35 	bl	201e64 <ulSetInterruptMask>
+  200ffa:	bf00      	nop
+  200ffc:	e7fe      	b.n	200ffc <xTaskRemoveFromEventList+0x60>
+  200ffe:	e9d0 130b 	ldrd	r1, r3, [r0, #44]	; 0x2c
+  201002:	6b82      	ldr	r2, [r0, #56]	; 0x38
+  201004:	f100 0c28 	add.w	ip, r0, #40	; 0x28
+  201008:	f8d2 e004 	ldr.w	lr, [r2, #4]
+  20100c:	608b      	str	r3, [r1, #8]
+  20100e:	6b03      	ldr	r3, [r0, #48]	; 0x30
+  201010:	45e6      	cmp	lr, ip
+  201012:	6059      	str	r1, [r3, #4]
+  201014:	bf08      	it	eq
+  201016:	6053      	streq	r3, [r2, #4]
+  201018:	6811      	ldr	r1, [r2, #0]
+  20101a:	f240 03b0 	movw	r3, #176	; 0xb0
+  20101e:	3901      	subs	r1, #1
+  201020:	6011      	str	r1, [r2, #0]
+  201022:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  201026:	6d02      	ldr	r2, [r0, #80]	; 0x50
+  201028:	6819      	ldr	r1, [r3, #0]
+  20102a:	f240 0e4c 	movw	lr, #76	; 0x4c
+  20102e:	428a      	cmp	r2, r1
+  201030:	bf88      	it	hi
+  201032:	601a      	strhi	r2, [r3, #0]
+  201034:	eb02 0182 	add.w	r1, r2, r2, lsl #2
+  201038:	f6c2 0e20 	movt	lr, #10272	; 0x2820
+  20103c:	eb0e 0381 	add.w	r3, lr, r1, lsl #2
+  201040:	685c      	ldr	r4, [r3, #4]
+  201042:	6383      	str	r3, [r0, #56]	; 0x38
+  201044:	68a5      	ldr	r5, [r4, #8]
+  201046:	62c4      	str	r4, [r0, #44]	; 0x2c
+  201048:	6305      	str	r5, [r0, #48]	; 0x30
+  20104a:	68a5      	ldr	r5, [r4, #8]
+  20104c:	f8c4 c008 	str.w	ip, [r4, #8]
+  201050:	f8c5 c004 	str.w	ip, [r5, #4]
+  201054:	f85e 0021 	ldr.w	r0, [lr, r1, lsl #2]
+  201058:	3001      	adds	r0, #1
+  20105a:	f84e 0021 	str.w	r0, [lr, r1, lsl #2]
+  20105e:	f240 0000 	movw	r0, #0
+  201062:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201066:	6800      	ldr	r0, [r0, #0]
+  201068:	6d00      	ldr	r0, [r0, #80]	; 0x50
+  20106a:	4282      	cmp	r2, r0
+  20106c:	bf91      	iteee	ls
+  20106e:	2000      	movls	r0, #0
+  201070:	f240 01b4 	movwhi	r1, #180	; 0xb4
+  201074:	f6c2 0120 	movthi	r1, #10272	; 0x2820
+  201078:	2001      	movhi	r0, #1
+  20107a:	bf88      	it	hi
+  20107c:	6008      	strhi	r0, [r1, #0]
+  20107e:	bdb0      	pop	{r4, r5, r7, pc}
+
+00201080 <prvTimerTask>:
+  201080:	b0a2      	sub	sp, #136	; 0x88
+  201082:	f242 00ad 	movw	r0, #8365	; 0x20ad
+  201086:	f2c0 0020 	movt	r0, #32
+  20108a:	f644 51a0 	movw	r1, #19872	; 0x4da0
+  20108e:	f040 0001 	orr.w	r0, r0, #1
+  201092:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201096:	2204      	movs	r2, #4
+  201098:	e9c1 0008 	strd	r0, r0, [r1, #32]
+  20109c:	e9c1 000a 	strd	r0, r0, [r1, #40]	; 0x28
+  2010a0:	e9c1 000c 	strd	r0, r0, [r1, #48]	; 0x30
+  2010a4:	e9c1 000e 	strd	r0, r0, [r1, #56]	; 0x38
+  2010a8:	e9c1 0010 	strd	r0, r0, [r1, #64]	; 0x40
+  2010ac:	e9c1 0012 	strd	r0, r0, [r1, #72]	; 0x48
+  2010b0:	e9c1 0000 	strd	r0, r0, [r1]
+  2010b4:	e9c1 0202 	strd	r0, r2, [r1, #8]
+  2010b8:	e9c1 0004 	strd	r0, r0, [r1, #16]
+  2010bc:	6188      	str	r0, [r1, #24]
+  2010be:	f8df 297c 	ldr.w	r2, [pc, #2428]	; 201a3c <prvTimerTask+0x9bc>
+  2010c2:	61c8      	str	r0, [r1, #28]
+  2010c4:	f60f 1074 	addw	r0, pc, #2420	; 0x974
+  2010c8:	1d07      	adds	r7, r0, #4
+  2010ca:	9213      	str	r2, [sp, #76]	; 0x4c
+  2010cc:	cf8e      	ldmia	r7, {r1, r2, r3, r7}
+  2010ce:	e9d0 6c05 	ldrd	r6, ip, [r0, #20]
+  2010d2:	f10d 0e50 	add.w	lr, sp, #80	; 0x50
+  2010d6:	e9d0 4507 	ldrd	r4, r5, [r0, #28]
+  2010da:	e88e 008e 	stmia.w	lr, {r1, r2, r3, r7}
+  2010de:	9618      	str	r6, [sp, #96]	; 0x60
+  2010e0:	f100 0724 	add.w	r7, r0, #36	; 0x24
+  2010e4:	e9d0 600d 	ldrd	r6, r0, [r0, #52]	; 0x34
+  2010e8:	cf8e      	ldmia	r7, {r1, r2, r3, r7}
+  2010ea:	e9cd c419 	strd	ip, r4, [sp, #100]	; 0x64
+  2010ee:	e9cd 511b 	strd	r5, r1, [sp, #108]	; 0x6c
+  2010f2:	e9cd 6020 	strd	r6, r0, [sp, #128]	; 0x80
+  2010f6:	a81d      	add	r0, sp, #116	; 0x74
+  2010f8:	c08c      	stmia	r0!, {r2, r3, r7}
+  2010fa:	207c      	movs	r0, #124	; 0x7c
+  2010fc:	f000 fcda 	bl	201ab4 <pvPortMalloc>
+  201100:	b1f8      	cbz	r0, 201142 <prvTimerTask+0xc2>
+  201102:	4604      	mov	r4, r0
+  201104:	f244 1080 	movw	r0, #16768	; 0x4180
+  201108:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  20110c:	6560      	str	r0, [r4, #84]	; 0x54
+  20110e:	2001      	movs	r0, #1
+  201110:	f884 0079 	strb.w	r0, [r4, #121]	; 0x79
+  201114:	a813      	add	r0, sp, #76	; 0x4c
+  201116:	3018      	adds	r0, #24
+  201118:	2100      	movs	r1, #0
+  20111a:	2202      	movs	r2, #2
+  20111c:	e9cd 2100 	strd	r2, r1, [sp]
+  201120:	9003      	str	r0, [sp, #12]
+  201122:	f242 60d1 	movw	r0, #9937	; 0x26d1
+  201126:	f242 715e 	movw	r1, #10078	; 0x275e
+  20112a:	f2c0 0020 	movt	r0, #32
+  20112e:	f2c0 0120 	movt	r1, #32
+  201132:	2280      	movs	r2, #128	; 0x80
+  201134:	2300      	movs	r3, #0
+  201136:	9402      	str	r4, [sp, #8]
+  201138:	f7ff faee 	bl	200718 <prvInitialiseNewTask>
+  20113c:	4620      	mov	r0, r4
+  20113e:	f7ff fc23 	bl	200988 <prvAddNewTaskToReadyList>
+  201142:	f8df 0934 	ldr.w	r0, [pc, #2356]	; 201a78 <prvTimerTask+0x9f8>
+  201146:	f10d 0e14 	add.w	lr, sp, #20
+  20114a:	9004      	str	r0, [sp, #16]
+  20114c:	f60f 1028 	addw	r0, pc, #2344	; 0x928
+  201150:	1d07      	adds	r7, r0, #4
+  201152:	cf8e      	ldmia	r7, {r1, r2, r3, r7}
+  201154:	e9d0 6c05 	ldrd	r6, ip, [r0, #20]
+  201158:	e9d0 4507 	ldrd	r4, r5, [r0, #28]
+  20115c:	e88e 008e 	stmia.w	lr, {r1, r2, r3, r7}
+  201160:	9609      	str	r6, [sp, #36]	; 0x24
+  201162:	f100 0724 	add.w	r7, r0, #36	; 0x24
+  201166:	e9d0 600d 	ldrd	r6, r0, [r0, #52]	; 0x34
+  20116a:	cf8e      	ldmia	r7, {r1, r2, r3, r7}
+  20116c:	e9cd c40a 	strd	ip, r4, [sp, #40]	; 0x28
+  201170:	e9cd 510c 	strd	r5, r1, [sp, #48]	; 0x30
+  201174:	e9cd 6011 	strd	r6, r0, [sp, #68]	; 0x44
+  201178:	a80e      	add	r0, sp, #56	; 0x38
+  20117a:	c08c      	stmia	r0!, {r2, r3, r7}
+  20117c:	207c      	movs	r0, #124	; 0x7c
+  20117e:	f000 fc99 	bl	201ab4 <pvPortMalloc>
+  201182:	b1b8      	cbz	r0, 2011b4 <prvTimerTask+0x134>
+  201184:	4604      	mov	r4, r0
+  201186:	9809      	ldr	r0, [sp, #36]	; 0x24
+  201188:	e9dd 3707 	ldrd	r3, r7, [sp, #28]
+  20118c:	6560      	str	r0, [r4, #84]	; 0x54
+  20118e:	2001      	movs	r0, #1
+  201190:	f884 0079 	strb.w	r0, [r4, #121]	; 0x79
+  201194:	e9dd 0104 	ldrd	r0, r1, [sp, #16]
+  201198:	f8bd 2018 	ldrh.w	r2, [sp, #24]
+  20119c:	ae04      	add	r6, sp, #16
+  20119e:	3618      	adds	r6, #24
+  2011a0:	2500      	movs	r5, #0
+  2011a2:	e9cd 7500 	strd	r7, r5, [sp]
+  2011a6:	e9cd 4602 	strd	r4, r6, [sp, #8]
+  2011aa:	f7ff fab5 	bl	200718 <prvInitialiseNewTask>
+  2011ae:	4620      	mov	r0, r4
+  2011b0:	f7ff fbea 	bl	200988 <prvAddNewTaskToReadyList>
+  2011b4:	f240 190c 	movw	r9, #268	; 0x10c
+  2011b8:	f240 1614 	movw	r6, #276	; 0x114
+  2011bc:	f6c2 0920 	movt	r9, #10272	; 0x2820
+  2011c0:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  2011c4:	f04f 0b00 	mov.w	fp, #0
+  2011c8:	f8d9 1000 	ldr.w	r1, [r9]
+  2011cc:	f240 0228 	movw	r2, #40	; 0x28
+  2011d0:	6808      	ldr	r0, [r1, #0]
+  2011d2:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  2011d6:	2800      	cmp	r0, #0
+  2011d8:	bf1a      	itte	ne
+  2011da:	68c9      	ldrne	r1, [r1, #12]
+  2011dc:	f8d1 8000 	ldrne.w	r8, [r1]
+  2011e0:	f04f 0800 	moveq.w	r8, #0
+  2011e4:	6811      	ldr	r1, [r2, #0]
+  2011e6:	3101      	adds	r1, #1
+  2011e8:	6011      	str	r1, [r2, #0]
+  2011ea:	f240 012c 	movw	r1, #44	; 0x2c
+  2011ee:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2011f2:	f8d1 a000 	ldr.w	sl, [r1]
+  2011f6:	6831      	ldr	r1, [r6, #0]
+  2011f8:	458a      	cmp	sl, r1
+  2011fa:	d32c      	bcc.n	201256 <prvTimerTask+0x1d6>
+  2011fc:	2800      	cmp	r0, #0
+  2011fe:	f8c6 a000 	str.w	sl, [r6]
+  201202:	f000 80af 	beq.w	201364 <prvTimerTask+0x2e4>
+  201206:	45d0      	cmp	r8, sl
+  201208:	f200 80ac 	bhi.w	201364 <prvTimerTask+0x2e4>
+  20120c:	f7ff fcac 	bl	200b68 <xTaskResumeAll>
+  201210:	f8d9 0000 	ldr.w	r0, [r9]
+  201214:	68c0      	ldr	r0, [r0, #12]
+  201216:	68c5      	ldr	r5, [r0, #12]
+  201218:	e9d5 2102 	ldrd	r2, r1, [r5, #8]
+  20121c:	6968      	ldr	r0, [r5, #20]
+  20121e:	1d2e      	adds	r6, r5, #4
+  201220:	6091      	str	r1, [r2, #8]
+  201222:	68e9      	ldr	r1, [r5, #12]
+  201224:	604a      	str	r2, [r1, #4]
+  201226:	6842      	ldr	r2, [r0, #4]
+  201228:	42b2      	cmp	r2, r6
+  20122a:	bf08      	it	eq
+  20122c:	6041      	streq	r1, [r0, #4]
+  20122e:	f8c5 b014 	str.w	fp, [r5, #20]
+  201232:	6801      	ldr	r1, [r0, #0]
+  201234:	3901      	subs	r1, #1
+  201236:	6001      	str	r1, [r0, #0]
+  201238:	6800      	ldr	r0, [r0, #0]
+  20123a:	f895 0028 	ldrb.w	r0, [r5, #40]	; 0x28
+  20123e:	0741      	lsls	r1, r0, #29
+  201240:	d473      	bmi.n	20132a <prvTimerTask+0x2aa>
+  201242:	f000 00fe 	and.w	r0, r0, #254	; 0xfe
+  201246:	e1f3      	b.n	201630 <prvTimerTask+0x5b0>
+  201248:	f001 00fe 	and.w	r0, r1, #254	; 0xfe
+  20124c:	f885 0028 	strb.w	r0, [r5, #40]	; 0x28
+  201250:	6a29      	ldr	r1, [r5, #32]
+  201252:	4628      	mov	r0, r5
+  201254:	4788      	blx	r1
+  201256:	f8d9 0000 	ldr.w	r0, [r9]
+  20125a:	6801      	ldr	r1, [r0, #0]
+  20125c:	2900      	cmp	r1, #0
+  20125e:	d073      	beq.n	201348 <prvTimerTask+0x2c8>
+  201260:	68c0      	ldr	r0, [r0, #12]
+  201262:	68c5      	ldr	r5, [r0, #12]
+  201264:	6800      	ldr	r0, [r0, #0]
+  201266:	e9d5 3202 	ldrd	r3, r2, [r5, #8]
+  20126a:	6969      	ldr	r1, [r5, #20]
+  20126c:	1d2c      	adds	r4, r5, #4
+  20126e:	609a      	str	r2, [r3, #8]
+  201270:	68ea      	ldr	r2, [r5, #12]
+  201272:	6053      	str	r3, [r2, #4]
+  201274:	684b      	ldr	r3, [r1, #4]
+  201276:	42a3      	cmp	r3, r4
+  201278:	bf08      	it	eq
+  20127a:	604a      	streq	r2, [r1, #4]
+  20127c:	f8c5 b014 	str.w	fp, [r5, #20]
+  201280:	680a      	ldr	r2, [r1, #0]
+  201282:	3a01      	subs	r2, #1
+  201284:	600a      	str	r2, [r1, #0]
+  201286:	6809      	ldr	r1, [r1, #0]
+  201288:	f895 1028 	ldrb.w	r1, [r5, #40]	; 0x28
+  20128c:	074a      	lsls	r2, r1, #29
+  20128e:	d5db      	bpl.n	201248 <prvTimerTask+0x1c8>
+  201290:	69a9      	ldr	r1, [r5, #24]
+  201292:	612d      	str	r5, [r5, #16]
+  201294:	180e      	adds	r6, r1, r0
+  201296:	1840      	adds	r0, r0, r1
+  201298:	606e      	str	r6, [r5, #4]
+  20129a:	d301      	bcc.n	2012a0 <prvTimerTask+0x220>
+  20129c:	4631      	mov	r1, r6
+  20129e:	e009      	b.n	2012b4 <prvTimerTask+0x234>
+  2012a0:	6a29      	ldr	r1, [r5, #32]
+  2012a2:	4628      	mov	r0, r5
+  2012a4:	4788      	blx	r1
+  2012a6:	69a8      	ldr	r0, [r5, #24]
+  2012a8:	612d      	str	r5, [r5, #16]
+  2012aa:	1981      	adds	r1, r0, r6
+  2012ac:	1980      	adds	r0, r0, r6
+  2012ae:	460e      	mov	r6, r1
+  2012b0:	6069      	str	r1, [r5, #4]
+  2012b2:	d3f5      	bcc.n	2012a0 <prvTimerTask+0x220>
+  2012b4:	f240 1010 	movw	r0, #272	; 0x110
+  2012b8:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2012bc:	6800      	ldr	r0, [r0, #0]
+  2012be:	1c4a      	adds	r2, r1, #1
+  2012c0:	d014      	beq.n	2012ec <prvTimerTask+0x26c>
+  2012c2:	f100 0308 	add.w	r3, r0, #8
+  2012c6:	bf00      	nop
+  2012c8:	685a      	ldr	r2, [r3, #4]
+  2012ca:	6817      	ldr	r7, [r2, #0]
+  2012cc:	428f      	cmp	r7, r1
+  2012ce:	d810      	bhi.n	2012f2 <prvTimerTask+0x272>
+  2012d0:	6853      	ldr	r3, [r2, #4]
+  2012d2:	681f      	ldr	r7, [r3, #0]
+  2012d4:	428f      	cmp	r7, r1
+  2012d6:	d80f      	bhi.n	2012f8 <prvTimerTask+0x278>
+  2012d8:	685a      	ldr	r2, [r3, #4]
+  2012da:	6817      	ldr	r7, [r2, #0]
+  2012dc:	428f      	cmp	r7, r1
+  2012de:	d808      	bhi.n	2012f2 <prvTimerTask+0x272>
+  2012e0:	6853      	ldr	r3, [r2, #4]
+  2012e2:	681f      	ldr	r7, [r3, #0]
+  2012e4:	461e      	mov	r6, r3
+  2012e6:	428f      	cmp	r7, r1
+  2012e8:	d9ee      	bls.n	2012c8 <prvTimerTask+0x248>
+  2012ea:	e007      	b.n	2012fc <prvTimerTask+0x27c>
+  2012ec:	6902      	ldr	r2, [r0, #16]
+  2012ee:	6856      	ldr	r6, [r2, #4]
+  2012f0:	e004      	b.n	2012fc <prvTimerTask+0x27c>
+  2012f2:	4616      	mov	r6, r2
+  2012f4:	461a      	mov	r2, r3
+  2012f6:	e001      	b.n	2012fc <prvTimerTask+0x27c>
+  2012f8:	461e      	mov	r6, r3
+  2012fa:	bf00      	nop
+  2012fc:	60ae      	str	r6, [r5, #8]
+  2012fe:	60b4      	str	r4, [r6, #8]
+  201300:	60ea      	str	r2, [r5, #12]
+  201302:	6054      	str	r4, [r2, #4]
+  201304:	6168      	str	r0, [r5, #20]
+  201306:	6801      	ldr	r1, [r0, #0]
+  201308:	f240 1614 	movw	r6, #276	; 0x114
+  20130c:	3101      	adds	r1, #1
+  20130e:	6001      	str	r1, [r0, #0]
+  201310:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  201314:	e79c      	b.n	201250 <prvTimerTask+0x1d0>
+  201316:	bf00      	nop
+  201318:	ebaa 0108 	sub.w	r1, sl, r8
+  20131c:	4281      	cmp	r1, r0
+  20131e:	f0c0 80bd 	bcc.w	20149c <prvTimerTask+0x41c>
+  201322:	6a29      	ldr	r1, [r5, #32]
+  201324:	4628      	mov	r0, r5
+  201326:	4788      	blx	r1
+  201328:	46a0      	mov	r8, r4
+  20132a:	69a8      	ldr	r0, [r5, #24]
+  20132c:	612d      	str	r5, [r5, #16]
+  20132e:	eb00 0408 	add.w	r4, r0, r8
+  201332:	4554      	cmp	r4, sl
+  201334:	606c      	str	r4, [r5, #4]
+  201336:	d9ef      	bls.n	201318 <prvTimerTask+0x298>
+  201338:	45c2      	cmp	sl, r8
+  20133a:	f080 80e9 	bcs.w	201510 <prvTimerTask+0x490>
+  20133e:	4544      	cmp	r4, r8
+  201340:	4648      	mov	r0, r9
+  201342:	d2ee      	bcs.n	201322 <prvTimerTask+0x2a2>
+  201344:	e0e5      	b.n	201512 <prvTimerTask+0x492>
+  201346:	bf00      	nop
+  201348:	f240 1210 	movw	r2, #272	; 0x110
+  20134c:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  201350:	6811      	ldr	r1, [r2, #0]
+  201352:	6010      	str	r0, [r2, #0]
+  201354:	f8c9 1000 	str.w	r1, [r9]
+  201358:	f8c6 a000 	str.w	sl, [r6]
+  20135c:	f7ff fc04 	bl	200b68 <xTaskResumeAll>
+  201360:	e17c      	b.n	20165c <prvTimerTask+0x5dc>
+  201362:	bf00      	nop
+  201364:	b108      	cbz	r0, 20136a <prvTimerTask+0x2ea>
+  201366:	2400      	movs	r4, #0
+  201368:	e008      	b.n	20137c <prvTimerTask+0x2fc>
+  20136a:	f240 1010 	movw	r0, #272	; 0x110
+  20136e:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201372:	6800      	ldr	r0, [r0, #0]
+  201374:	6800      	ldr	r0, [r0, #0]
+  201376:	fab0 f080 	clz	r0, r0
+  20137a:	0944      	lsrs	r4, r0, #5
+  20137c:	f240 1004 	movw	r0, #260	; 0x104
+  201380:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201384:	f8d0 b000 	ldr.w	fp, [r0]
+  201388:	f000 fd6c 	bl	201e64 <ulSetInterruptMask>
+  20138c:	f244 1160 	movw	r1, #16736	; 0x4160
+  201390:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201394:	6808      	ldr	r0, [r1, #0]
+  201396:	3001      	adds	r0, #1
+  201398:	6008      	str	r0, [r1, #0]
+  20139a:	f3bf 8f4f 	dsb	sy
+  20139e:	f3bf 8f6f 	isb	sy
+  2013a2:	f89b 0044 	ldrb.w	r0, [fp, #68]	; 0x44
+  2013a6:	f244 1160 	movw	r1, #16736	; 0x4160
+  2013aa:	28ff      	cmp	r0, #255	; 0xff
+  2013ac:	bf04      	itt	eq
+  2013ae:	2000      	moveq	r0, #0
+  2013b0:	f88b 0044 	strbeq.w	r0, [fp, #68]	; 0x44
+  2013b4:	f89b 0045 	ldrb.w	r0, [fp, #69]	; 0x45
+  2013b8:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2013bc:	28ff      	cmp	r0, #255	; 0xff
+  2013be:	bf04      	itt	eq
+  2013c0:	2000      	moveq	r0, #0
+  2013c2:	f88b 0045 	strbeq.w	r0, [fp, #69]	; 0x45
+  2013c6:	6808      	ldr	r0, [r1, #0]
+  2013c8:	2800      	cmp	r0, #0
+  2013ca:	f000 8332 	beq.w	201a32 <prvTimerTask+0x9b2>
+  2013ce:	6808      	ldr	r0, [r1, #0]
+  2013d0:	3801      	subs	r0, #1
+  2013d2:	6008      	str	r0, [r1, #0]
+  2013d4:	6808      	ldr	r0, [r1, #0]
+  2013d6:	2800      	cmp	r0, #0
+  2013d8:	bf04      	itt	eq
+  2013da:	2000      	moveq	r0, #0
+  2013dc:	f000 fd4e 	bleq	201e7c <vClearInterruptMask>
+  2013e0:	f8db 0038 	ldr.w	r0, [fp, #56]	; 0x38
+  2013e4:	2800      	cmp	r0, #0
+  2013e6:	f040 810f 	bne.w	201608 <prvTimerTask+0x588>
+  2013ea:	f240 0700 	movw	r7, #0
+  2013ee:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  2013f2:	465d      	mov	r5, fp
+  2013f4:	6838      	ldr	r0, [r7, #0]
+  2013f6:	6839      	ldr	r1, [r7, #0]
+  2013f8:	683a      	ldr	r2, [r7, #0]
+  2013fa:	683b      	ldr	r3, [r7, #0]
+  2013fc:	f8d7 c000 	ldr.w	ip, [r7]
+  201400:	f855 6f24 	ldr.w	r6, [r5, #36]!
+  201404:	46a6      	mov	lr, r4
+  201406:	f1be 0f00 	cmp.w	lr, #0
+  20140a:	686c      	ldr	r4, [r5, #4]
+  20140c:	6404      	str	r4, [r0, #64]	; 0x40
+  20140e:	68a0      	ldr	r0, [r4, #8]
+  201410:	6448      	str	r0, [r1, #68]	; 0x44
+  201412:	68a0      	ldr	r0, [r4, #8]
+  201414:	f102 013c 	add.w	r1, r2, #60	; 0x3c
+  201418:	6041      	str	r1, [r0, #4]
+  20141a:	f103 003c 	add.w	r0, r3, #60	; 0x3c
+  20141e:	60a0      	str	r0, [r4, #8]
+  201420:	f106 0001 	add.w	r0, r6, #1
+  201424:	f8cc 504c 	str.w	r5, [ip, #76]	; 0x4c
+  201428:	6028      	str	r0, [r5, #0]
+  20142a:	f240 002c 	movw	r0, #44	; 0x2c
+  20142e:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201432:	6801      	ldr	r1, [r0, #0]
+  201434:	6838      	ldr	r0, [r7, #0]
+  201436:	f04f 0200 	mov.w	r2, #0
+  20143a:	f880 207a 	strb.w	r2, [r0, #122]	; 0x7a
+  20143e:	683a      	ldr	r2, [r7, #0]
+  201440:	e9d2 730b 	ldrd	r7, r3, [r2, #44]	; 0x2c
+  201444:	6b90      	ldr	r0, [r2, #56]	; 0x38
+  201446:	f102 0628 	add.w	r6, r2, #40	; 0x28
+  20144a:	60bb      	str	r3, [r7, #8]
+  20144c:	6b13      	ldr	r3, [r2, #48]	; 0x30
+  20144e:	605f      	str	r7, [r3, #4]
+  201450:	6847      	ldr	r7, [r0, #4]
+  201452:	d028      	beq.n	2014a6 <prvTimerTask+0x426>
+  201454:	2100      	movs	r1, #0
+  201456:	42b7      	cmp	r7, r6
+  201458:	bf08      	it	eq
+  20145a:	6043      	streq	r3, [r0, #4]
+  20145c:	6391      	str	r1, [r2, #56]	; 0x38
+  20145e:	6801      	ldr	r1, [r0, #0]
+  201460:	f240 0738 	movw	r7, #56	; 0x38
+  201464:	3901      	subs	r1, #1
+  201466:	6001      	str	r1, [r0, #0]
+  201468:	f240 0300 	movw	r3, #0
+  20146c:	6800      	ldr	r0, [r0, #0]
+  20146e:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  201472:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  201476:	6878      	ldr	r0, [r7, #4]
+  201478:	6819      	ldr	r1, [r3, #0]
+  20147a:	62c8      	str	r0, [r1, #44]	; 0x2c
+  20147c:	6881      	ldr	r1, [r0, #8]
+  20147e:	681a      	ldr	r2, [r3, #0]
+  201480:	6311      	str	r1, [r2, #48]	; 0x30
+  201482:	6819      	ldr	r1, [r3, #0]
+  201484:	6882      	ldr	r2, [r0, #8]
+  201486:	3128      	adds	r1, #40	; 0x28
+  201488:	6051      	str	r1, [r2, #4]
+  20148a:	6819      	ldr	r1, [r3, #0]
+  20148c:	3128      	adds	r1, #40	; 0x28
+  20148e:	6081      	str	r1, [r0, #8]
+  201490:	6818      	ldr	r0, [r3, #0]
+  201492:	6387      	str	r7, [r0, #56]	; 0x38
+  201494:	6838      	ldr	r0, [r7, #0]
+  201496:	3001      	adds	r0, #1
+  201498:	6038      	str	r0, [r7, #0]
+  20149a:	e0b1      	b.n	201600 <prvTimerTask+0x580>
+  20149c:	f240 1010 	movw	r0, #272	; 0x110
+  2014a0:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2014a4:	e035      	b.n	201512 <prvTimerTask+0x492>
+  2014a6:	42b7      	cmp	r7, r6
+  2014a8:	bf08      	it	eq
+  2014aa:	6043      	streq	r3, [r0, #4]
+  2014ac:	2300      	movs	r3, #0
+  2014ae:	6393      	str	r3, [r2, #56]	; 0x38
+  2014b0:	6802      	ldr	r2, [r0, #0]
+  2014b2:	eba8 030a 	sub.w	r3, r8, sl
+  2014b6:	3a01      	subs	r2, #1
+  2014b8:	6002      	str	r2, [r0, #0]
+  2014ba:	f240 0200 	movw	r2, #0
+  2014be:	6800      	ldr	r0, [r0, #0]
+  2014c0:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  2014c4:	6810      	ldr	r0, [r2, #0]
+  2014c6:	eb11 0c03 	adds.w	ip, r1, r3
+  2014ca:	f8c0 c028 	str.w	ip, [r0, #40]	; 0x28
+  2014ce:	d33c      	bcc.n	20154a <prvTimerTask+0x4ca>
+  2014d0:	f240 0034 	movw	r0, #52	; 0x34
+  2014d4:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2014d8:	f8d0 c000 	ldr.w	ip, [r0]
+  2014dc:	6811      	ldr	r1, [r2, #0]
+  2014de:	460a      	mov	r2, r1
+  2014e0:	f852 6f28 	ldr.w	r6, [r2, #40]!
+  2014e4:	1c70      	adds	r0, r6, #1
+  2014e6:	d050      	beq.n	20158a <prvTimerTask+0x50a>
+  2014e8:	f10c 0408 	add.w	r4, ip, #8
+  2014ec:	6863      	ldr	r3, [r4, #4]
+  2014ee:	6818      	ldr	r0, [r3, #0]
+  2014f0:	42b0      	cmp	r0, r6
+  2014f2:	d855      	bhi.n	2015a0 <prvTimerTask+0x520>
+  2014f4:	6858      	ldr	r0, [r3, #4]
+  2014f6:	6807      	ldr	r7, [r0, #0]
+  2014f8:	42b7      	cmp	r7, r6
+  2014fa:	d854      	bhi.n	2015a6 <prvTimerTask+0x526>
+  2014fc:	6843      	ldr	r3, [r0, #4]
+  2014fe:	681f      	ldr	r7, [r3, #0]
+  201500:	42b7      	cmp	r7, r6
+  201502:	d870      	bhi.n	2015e6 <prvTimerTask+0x566>
+  201504:	685c      	ldr	r4, [r3, #4]
+  201506:	6820      	ldr	r0, [r4, #0]
+  201508:	4627      	mov	r7, r4
+  20150a:	42b0      	cmp	r0, r6
+  20150c:	d9ee      	bls.n	2014ec <prvTimerTask+0x46c>
+  20150e:	e06c      	b.n	2015ea <prvTimerTask+0x56a>
+  201510:	4648      	mov	r0, r9
+  201512:	6800      	ldr	r0, [r0, #0]
+  201514:	1c61      	adds	r1, r4, #1
+  201516:	f000 808f 	beq.w	201638 <prvTimerTask+0x5b8>
+  20151a:	f100 0308 	add.w	r3, r0, #8
+  20151e:	bf00      	nop
+  201520:	6859      	ldr	r1, [r3, #4]
+  201522:	680a      	ldr	r2, [r1, #0]
+  201524:	42a2      	cmp	r2, r4
+  201526:	f200 808a 	bhi.w	20163e <prvTimerTask+0x5be>
+  20152a:	684b      	ldr	r3, [r1, #4]
+  20152c:	681a      	ldr	r2, [r3, #0]
+  20152e:	42a2      	cmp	r2, r4
+  201530:	f200 8272 	bhi.w	201a18 <prvTimerTask+0x998>
+  201534:	6859      	ldr	r1, [r3, #4]
+  201536:	680a      	ldr	r2, [r1, #0]
+  201538:	42a2      	cmp	r2, r4
+  20153a:	f200 8080 	bhi.w	20163e <prvTimerTask+0x5be>
+  20153e:	684b      	ldr	r3, [r1, #4]
+  201540:	681a      	ldr	r2, [r3, #0]
+  201542:	42a2      	cmp	r2, r4
+  201544:	461a      	mov	r2, r3
+  201546:	d9eb      	bls.n	201520 <prvTimerTask+0x4a0>
+  201548:	e07c      	b.n	201644 <prvTimerTask+0x5c4>
+  20154a:	f240 0030 	movw	r0, #48	; 0x30
+  20154e:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201552:	f8d0 e000 	ldr.w	lr, [r0]
+  201556:	6812      	ldr	r2, [r2, #0]
+  201558:	4613      	mov	r3, r2
+  20155a:	f853 4f28 	ldr.w	r4, [r3, #40]!
+  20155e:	1c60      	adds	r0, r4, #1
+  201560:	d017      	beq.n	201592 <prvTimerTask+0x512>
+  201562:	f10e 0008 	add.w	r0, lr, #8
+  201566:	6846      	ldr	r6, [r0, #4]
+  201568:	6831      	ldr	r1, [r6, #0]
+  20156a:	42a1      	cmp	r1, r4
+  20156c:	d815      	bhi.n	20159a <prvTimerTask+0x51a>
+  20156e:	6870      	ldr	r0, [r6, #4]
+  201570:	6801      	ldr	r1, [r0, #0]
+  201572:	42a1      	cmp	r1, r4
+  201574:	d819      	bhi.n	2015aa <prvTimerTask+0x52a>
+  201576:	6846      	ldr	r6, [r0, #4]
+  201578:	6831      	ldr	r1, [r6, #0]
+  20157a:	42a1      	cmp	r1, r4
+  20157c:	d80d      	bhi.n	20159a <prvTimerTask+0x51a>
+  20157e:	6870      	ldr	r0, [r6, #4]
+  201580:	6801      	ldr	r1, [r0, #0]
+  201582:	42a1      	cmp	r1, r4
+  201584:	4601      	mov	r1, r0
+  201586:	d9ee      	bls.n	201566 <prvTimerTask+0x4e6>
+  201588:	e010      	b.n	2015ac <prvTimerTask+0x52c>
+  20158a:	f8dc 3010 	ldr.w	r3, [ip, #16]
+  20158e:	685f      	ldr	r7, [r3, #4]
+  201590:	e02b      	b.n	2015ea <prvTimerTask+0x56a>
+  201592:	f8de 6010 	ldr.w	r6, [lr, #16]
+  201596:	6871      	ldr	r1, [r6, #4]
+  201598:	e008      	b.n	2015ac <prvTimerTask+0x52c>
+  20159a:	4631      	mov	r1, r6
+  20159c:	4606      	mov	r6, r0
+  20159e:	e005      	b.n	2015ac <prvTimerTask+0x52c>
+  2015a0:	461f      	mov	r7, r3
+  2015a2:	4623      	mov	r3, r4
+  2015a4:	e021      	b.n	2015ea <prvTimerTask+0x56a>
+  2015a6:	4607      	mov	r7, r0
+  2015a8:	e01f      	b.n	2015ea <prvTimerTask+0x56a>
+  2015aa:	4601      	mov	r1, r0
+  2015ac:	62d1      	str	r1, [r2, #44]	; 0x2c
+  2015ae:	608b      	str	r3, [r1, #8]
+  2015b0:	6316      	str	r6, [r2, #48]	; 0x30
+  2015b2:	6073      	str	r3, [r6, #4]
+  2015b4:	f8c2 e038 	str.w	lr, [r2, #56]	; 0x38
+  2015b8:	f8de 0000 	ldr.w	r0, [lr]
+  2015bc:	f240 1614 	movw	r6, #276	; 0x114
+  2015c0:	3001      	adds	r0, #1
+  2015c2:	f8ce 0000 	str.w	r0, [lr]
+  2015c6:	f240 00d0 	movw	r0, #208	; 0xd0
+  2015ca:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2015ce:	6800      	ldr	r0, [r0, #0]
+  2015d0:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  2015d4:	4584      	cmp	ip, r0
+  2015d6:	d217      	bcs.n	201608 <prvTimerTask+0x588>
+  2015d8:	f240 00d0 	movw	r0, #208	; 0xd0
+  2015dc:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2015e0:	f8c0 c000 	str.w	ip, [r0]
+  2015e4:	e010      	b.n	201608 <prvTimerTask+0x588>
+  2015e6:	461f      	mov	r7, r3
+  2015e8:	4603      	mov	r3, r0
+  2015ea:	62cf      	str	r7, [r1, #44]	; 0x2c
+  2015ec:	60ba      	str	r2, [r7, #8]
+  2015ee:	630b      	str	r3, [r1, #48]	; 0x30
+  2015f0:	605a      	str	r2, [r3, #4]
+  2015f2:	f8c1 c038 	str.w	ip, [r1, #56]	; 0x38
+  2015f6:	f8dc 0000 	ldr.w	r0, [ip]
+  2015fa:	3001      	adds	r0, #1
+  2015fc:	f8cc 0000 	str.w	r0, [ip]
+  201600:	f240 1614 	movw	r6, #276	; 0x114
+  201604:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  201608:	4658      	mov	r0, fp
+  20160a:	f7fe ff49 	bl	2004a0 <prvUnlockQueue>
+  20160e:	f7ff faab 	bl	200b68 <xTaskResumeAll>
+  201612:	f04f 0b00 	mov.w	fp, #0
+  201616:	bb08      	cbnz	r0, 20165c <prvTimerTask+0x5dc>
+  201618:	f64e 5004 	movw	r0, #60676	; 0xed04
+  20161c:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  201620:	f04f 5180 	mov.w	r1, #268435456	; 0x10000000
+  201624:	6001      	str	r1, [r0, #0]
+  201626:	f3bf 8f4f 	dsb	sy
+  20162a:	f3bf 8f6f 	isb	sy
+  20162e:	e015      	b.n	20165c <prvTimerTask+0x5dc>
+  201630:	f885 0028 	strb.w	r0, [r5, #40]	; 0x28
+  201634:	e00e      	b.n	201654 <prvTimerTask+0x5d4>
+  201636:	bf00      	nop
+  201638:	6901      	ldr	r1, [r0, #16]
+  20163a:	684a      	ldr	r2, [r1, #4]
+  20163c:	e002      	b.n	201644 <prvTimerTask+0x5c4>
+  20163e:	460a      	mov	r2, r1
+  201640:	4619      	mov	r1, r3
+  201642:	bf00      	nop
+  201644:	60aa      	str	r2, [r5, #8]
+  201646:	6096      	str	r6, [r2, #8]
+  201648:	60e9      	str	r1, [r5, #12]
+  20164a:	604e      	str	r6, [r1, #4]
+  20164c:	6168      	str	r0, [r5, #20]
+  20164e:	6801      	ldr	r1, [r0, #0]
+  201650:	3101      	adds	r1, #1
+  201652:	6001      	str	r1, [r0, #0]
+  201654:	6a29      	ldr	r1, [r5, #32]
+  201656:	4628      	mov	r0, r5
+  201658:	4788      	blx	r1
+  20165a:	e1bd      	b.n	2019d8 <prvTimerTask+0x958>
+  20165c:	f240 1004 	movw	r0, #260	; 0x104
+  201660:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201664:	6805      	ldr	r5, [r0, #0]
+  201666:	2d00      	cmp	r5, #0
+  201668:	f000 81d8 	beq.w	201a1c <prvTimerTask+0x99c>
+  20166c:	f240 0024 	movw	r0, #36	; 0x24
+  201670:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201674:	6800      	ldr	r0, [r0, #0]
+  201676:	2800      	cmp	r0, #0
+  201678:	bf1e      	ittt	ne
+  20167a:	f240 0028 	movwne	r0, #40	; 0x28
+  20167e:	f6c2 0020 	movtne	r0, #10272	; 0x2820
+  201682:	6800      	ldrne	r0, [r0, #0]
+  201684:	f000 fbee 	bl	201e64 <ulSetInterruptMask>
+  201688:	f244 1760 	movw	r7, #16736	; 0x4160
+  20168c:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  201690:	6838      	ldr	r0, [r7, #0]
+  201692:	3001      	adds	r0, #1
+  201694:	6038      	str	r0, [r7, #0]
+  201696:	f3bf 8f4f 	dsb	sy
+  20169a:	f3bf 8f6f 	isb	sy
+  20169e:	6bac      	ldr	r4, [r5, #56]	; 0x38
+  2016a0:	b304      	cbz	r4, 2016e4 <prvTimerTask+0x664>
+  2016a2:	6c2a      	ldr	r2, [r5, #64]	; 0x40
+  2016a4:	b152      	cbz	r2, 2016bc <prvTimerTask+0x63c>
+  2016a6:	e9d5 3002 	ldrd	r3, r0, [r5, #8]
+  2016aa:	1881      	adds	r1, r0, r2
+  2016ac:	60e9      	str	r1, [r5, #12]
+  2016ae:	4299      	cmp	r1, r3
+  2016b0:	bf24      	itt	cs
+  2016b2:	6829      	ldrcs	r1, [r5, #0]
+  2016b4:	60e9      	strcs	r1, [r5, #12]
+  2016b6:	a813      	add	r0, sp, #76	; 0x4c
+  2016b8:	f000 fd28 	bl	20210c <__rt_memcpy>
+  2016bc:	1e60      	subs	r0, r4, #1
+  2016be:	63a8      	str	r0, [r5, #56]	; 0x38
+  2016c0:	6928      	ldr	r0, [r5, #16]
+  2016c2:	b178      	cbz	r0, 2016e4 <prvTimerTask+0x664>
+  2016c4:	69e8      	ldr	r0, [r5, #28]
+  2016c6:	68c0      	ldr	r0, [r0, #12]
+  2016c8:	f7ff fc68 	bl	200f9c <xTaskRemoveFromEventList>
+  2016cc:	b150      	cbz	r0, 2016e4 <prvTimerTask+0x664>
+  2016ce:	f64e 5004 	movw	r0, #60676	; 0xed04
+  2016d2:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  2016d6:	f04f 5180 	mov.w	r1, #268435456	; 0x10000000
+  2016da:	6001      	str	r1, [r0, #0]
+  2016dc:	f3bf 8f4f 	dsb	sy
+  2016e0:	f3bf 8f6f 	isb	sy
+  2016e4:	6838      	ldr	r0, [r7, #0]
+  2016e6:	2800      	cmp	r0, #0
+  2016e8:	f000 819b 	beq.w	201a22 <prvTimerTask+0x9a2>
+  2016ec:	6838      	ldr	r0, [r7, #0]
+  2016ee:	3801      	subs	r0, #1
+  2016f0:	6038      	str	r0, [r7, #0]
+  2016f2:	6838      	ldr	r0, [r7, #0]
+  2016f4:	2800      	cmp	r0, #0
+  2016f6:	bf04      	itt	eq
+  2016f8:	2000      	moveq	r0, #0
+  2016fa:	f000 fbbf 	bleq	201e7c <vClearInterruptMask>
+  2016fe:	2c00      	cmp	r4, #0
+  201700:	f43f ad62 	beq.w	2011c8 <prvTimerTask+0x148>
+  201704:	9c13      	ldr	r4, [sp, #76]	; 0x4c
+  201706:	2c00      	cmp	r4, #0
+  201708:	f100 808e 	bmi.w	201828 <prvTimerTask+0x7a8>
+  20170c:	9d15      	ldr	r5, [sp, #84]	; 0x54
+  20170e:	6968      	ldr	r0, [r5, #20]
+  201710:	b178      	cbz	r0, 201732 <prvTimerTask+0x6b2>
+  201712:	e9d5 2102 	ldrd	r2, r1, [r5, #8]
+  201716:	1d2b      	adds	r3, r5, #4
+  201718:	6091      	str	r1, [r2, #8]
+  20171a:	68e9      	ldr	r1, [r5, #12]
+  20171c:	604a      	str	r2, [r1, #4]
+  20171e:	6842      	ldr	r2, [r0, #4]
+  201720:	429a      	cmp	r2, r3
+  201722:	bf08      	it	eq
+  201724:	6041      	streq	r1, [r0, #4]
+  201726:	f8c5 b014 	str.w	fp, [r5, #20]
+  20172a:	6801      	ldr	r1, [r0, #0]
+  20172c:	3901      	subs	r1, #1
+  20172e:	6001      	str	r1, [r0, #0]
+  201730:	6800      	ldr	r0, [r0, #0]
+  201732:	f240 002c 	movw	r0, #44	; 0x2c
+  201736:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  20173a:	f8d0 a000 	ldr.w	sl, [r0]
+  20173e:	6830      	ldr	r0, [r6, #0]
+  201740:	4582      	cmp	sl, r0
+  201742:	d308      	bcc.n	201756 <prvTimerTask+0x6d6>
+  201744:	e082      	b.n	20184c <prvTimerTask+0x7cc>
+  201746:	bf00      	nop
+  201748:	f001 00fe 	and.w	r0, r1, #254	; 0xfe
+  20174c:	f886 0028 	strb.w	r0, [r6, #40]	; 0x28
+  201750:	6a31      	ldr	r1, [r6, #32]
+  201752:	4630      	mov	r0, r6
+  201754:	4788      	blx	r1
+  201756:	f8d9 0000 	ldr.w	r0, [r9]
+  20175a:	6801      	ldr	r1, [r0, #0]
+  20175c:	2900      	cmp	r1, #0
+  20175e:	d069      	beq.n	201834 <prvTimerTask+0x7b4>
+  201760:	68c0      	ldr	r0, [r0, #12]
+  201762:	68c6      	ldr	r6, [r0, #12]
+  201764:	6800      	ldr	r0, [r0, #0]
+  201766:	e9d6 3202 	ldrd	r3, r2, [r6, #8]
+  20176a:	6971      	ldr	r1, [r6, #20]
+  20176c:	f106 0804 	add.w	r8, r6, #4
+  201770:	609a      	str	r2, [r3, #8]
+  201772:	68f2      	ldr	r2, [r6, #12]
+  201774:	6053      	str	r3, [r2, #4]
+  201776:	684b      	ldr	r3, [r1, #4]
+  201778:	4543      	cmp	r3, r8
+  20177a:	bf08      	it	eq
+  20177c:	604a      	streq	r2, [r1, #4]
+  20177e:	f8c6 b014 	str.w	fp, [r6, #20]
+  201782:	680a      	ldr	r2, [r1, #0]
+  201784:	3a01      	subs	r2, #1
+  201786:	600a      	str	r2, [r1, #0]
+  201788:	6809      	ldr	r1, [r1, #0]
+  20178a:	f896 1028 	ldrb.w	r1, [r6, #40]	; 0x28
+  20178e:	074a      	lsls	r2, r1, #29
+  201790:	d5da      	bpl.n	201748 <prvTimerTask+0x6c8>
+  201792:	69b1      	ldr	r1, [r6, #24]
+  201794:	6136      	str	r6, [r6, #16]
+  201796:	eb01 0b00 	add.w	fp, r1, r0
+  20179a:	1840      	adds	r0, r0, r1
+  20179c:	f8c6 b004 	str.w	fp, [r6, #4]
+  2017a0:	d302      	bcc.n	2017a8 <prvTimerTask+0x728>
+  2017a2:	4659      	mov	r1, fp
+  2017a4:	e00c      	b.n	2017c0 <prvTimerTask+0x740>
+  2017a6:	bf00      	nop
+  2017a8:	6a31      	ldr	r1, [r6, #32]
+  2017aa:	4630      	mov	r0, r6
+  2017ac:	4788      	blx	r1
+  2017ae:	69b0      	ldr	r0, [r6, #24]
+  2017b0:	6136      	str	r6, [r6, #16]
+  2017b2:	eb00 010b 	add.w	r1, r0, fp
+  2017b6:	eb10 000b 	adds.w	r0, r0, fp
+  2017ba:	468b      	mov	fp, r1
+  2017bc:	6071      	str	r1, [r6, #4]
+  2017be:	d3f3      	bcc.n	2017a8 <prvTimerTask+0x728>
+  2017c0:	f240 1010 	movw	r0, #272	; 0x110
+  2017c4:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2017c8:	6800      	ldr	r0, [r0, #0]
+  2017ca:	1c4a      	adds	r2, r1, #1
+  2017cc:	d016      	beq.n	2017fc <prvTimerTask+0x77c>
+  2017ce:	f100 0308 	add.w	r3, r0, #8
+  2017d2:	f04f 0b00 	mov.w	fp, #0
+  2017d6:	bf00      	nop
+  2017d8:	685a      	ldr	r2, [r3, #4]
+  2017da:	6817      	ldr	r7, [r2, #0]
+  2017dc:	428f      	cmp	r7, r1
+  2017de:	d812      	bhi.n	201806 <prvTimerTask+0x786>
+  2017e0:	6853      	ldr	r3, [r2, #4]
+  2017e2:	681f      	ldr	r7, [r3, #0]
+  2017e4:	428f      	cmp	r7, r1
+  2017e6:	d811      	bhi.n	20180c <prvTimerTask+0x78c>
+  2017e8:	685a      	ldr	r2, [r3, #4]
+  2017ea:	6817      	ldr	r7, [r2, #0]
+  2017ec:	428f      	cmp	r7, r1
+  2017ee:	d80a      	bhi.n	201806 <prvTimerTask+0x786>
+  2017f0:	6853      	ldr	r3, [r2, #4]
+  2017f2:	681f      	ldr	r7, [r3, #0]
+  2017f4:	428f      	cmp	r7, r1
+  2017f6:	461f      	mov	r7, r3
+  2017f8:	d9ee      	bls.n	2017d8 <prvTimerTask+0x758>
+  2017fa:	e009      	b.n	201810 <prvTimerTask+0x790>
+  2017fc:	6902      	ldr	r2, [r0, #16]
+  2017fe:	f04f 0b00 	mov.w	fp, #0
+  201802:	6857      	ldr	r7, [r2, #4]
+  201804:	e004      	b.n	201810 <prvTimerTask+0x790>
+  201806:	4617      	mov	r7, r2
+  201808:	461a      	mov	r2, r3
+  20180a:	e001      	b.n	201810 <prvTimerTask+0x790>
+  20180c:	461f      	mov	r7, r3
+  20180e:	bf00      	nop
+  201810:	60b7      	str	r7, [r6, #8]
+  201812:	f8c7 8008 	str.w	r8, [r7, #8]
+  201816:	60f2      	str	r2, [r6, #12]
+  201818:	f8c2 8004 	str.w	r8, [r2, #4]
+  20181c:	6170      	str	r0, [r6, #20]
+  20181e:	6801      	ldr	r1, [r0, #0]
+  201820:	3101      	adds	r1, #1
+  201822:	6001      	str	r1, [r0, #0]
+  201824:	e794      	b.n	201750 <prvTimerTask+0x6d0>
+  201826:	bf00      	nop
+  201828:	e9dd 2014 	ldrd	r2, r0, [sp, #80]	; 0x50
+  20182c:	9916      	ldr	r1, [sp, #88]	; 0x58
+  20182e:	4790      	blx	r2
+  201830:	e714      	b.n	20165c <prvTimerTask+0x5dc>
+  201832:	bf00      	nop
+  201834:	f240 1210 	movw	r2, #272	; 0x110
+  201838:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  20183c:	6811      	ldr	r1, [r2, #0]
+  20183e:	f240 1614 	movw	r6, #276	; 0x114
+  201842:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  201846:	f8c9 1000 	str.w	r1, [r9]
+  20184a:	6010      	str	r0, [r2, #0]
+  20184c:	1e60      	subs	r0, r4, #1
+  20184e:	2808      	cmp	r0, #8
+  201850:	f8c6 a000 	str.w	sl, [r6]
+  201854:	f63f af02 	bhi.w	20165c <prvTimerTask+0x5dc>
+  201858:	e8df f000 	tbb	[pc, r0]
+  20185c:	2c051616 	.word	0x2c051616
+  201860:	05161608 	.word	0x05161608
+  201864:	002c      	.short	0x002c
+  201866:	f895 0028 	ldrb.w	r0, [r5, #40]	; 0x28
+  20186a:	e007      	b.n	20187c <prvTimerTask+0x7fc>
+  20186c:	f895 0028 	ldrb.w	r0, [r5, #40]	; 0x28
+  201870:	0781      	lsls	r1, r0, #30
+  201872:	d403      	bmi.n	20187c <prvTimerTask+0x7fc>
+  201874:	4628      	mov	r0, r5
+  201876:	f000 fa21 	bl	201cbc <vPortFree>
+  20187a:	e6ef      	b.n	20165c <prvTimerTask+0x5dc>
+  20187c:	f000 00fe 	and.w	r0, r0, #254	; 0xfe
+  201880:	f885 0028 	strb.w	r0, [r5, #40]	; 0x28
+  201884:	e6ea      	b.n	20165c <prvTimerTask+0x5dc>
+  201886:	bf00      	nop
+  201888:	f895 2028 	ldrb.w	r2, [r5, #40]	; 0x28
+  20188c:	9b14      	ldr	r3, [sp, #80]	; 0x50
+  20188e:	69a9      	ldr	r1, [r5, #24]
+  201890:	f042 0001 	orr.w	r0, r2, #1
+  201894:	f885 0028 	strb.w	r0, [r5, #40]	; 0x28
+  201898:	18c8      	adds	r0, r1, r3
+  20189a:	462e      	mov	r6, r5
+  20189c:	f846 0f04 	str.w	r0, [r6, #4]!
+  2018a0:	4550      	cmp	r0, sl
+  2018a2:	612d      	str	r5, [r5, #16]
+  2018a4:	d936      	bls.n	201914 <prvTimerTask+0x894>
+  2018a6:	459a      	cmp	sl, r3
+  2018a8:	d25a      	bcs.n	201960 <prvTimerTask+0x8e0>
+  2018aa:	4298      	cmp	r0, r3
+  2018ac:	464b      	mov	r3, r9
+  2018ae:	d239      	bcs.n	201924 <prvTimerTask+0x8a4>
+  2018b0:	e057      	b.n	201962 <prvTimerTask+0x8e2>
+  2018b2:	bf00      	nop
+  2018b4:	f895 0028 	ldrb.w	r0, [r5, #40]	; 0x28
+  2018b8:	f040 0101 	orr.w	r1, r0, #1
+  2018bc:	9814      	ldr	r0, [sp, #80]	; 0x50
+  2018be:	f885 1028 	strb.w	r1, [r5, #40]	; 0x28
+  2018c2:	2800      	cmp	r0, #0
+  2018c4:	61a8      	str	r0, [r5, #24]
+  2018c6:	f000 80b0 	beq.w	201a2a <prvTimerTask+0x9aa>
+  2018ca:	f240 1110 	movw	r1, #272	; 0x110
+  2018ce:	eb00 030a 	add.w	r3, r0, sl
+  2018d2:	4628      	mov	r0, r5
+  2018d4:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2018d8:	f840 3f04 	str.w	r3, [r0, #4]!
+  2018dc:	612d      	str	r5, [r5, #16]
+  2018de:	4553      	cmp	r3, sl
+  2018e0:	bf88      	it	hi
+  2018e2:	4649      	movhi	r1, r9
+  2018e4:	6809      	ldr	r1, [r1, #0]
+  2018e6:	1c5a      	adds	r2, r3, #1
+  2018e8:	d036      	beq.n	201958 <prvTimerTask+0x8d8>
+  2018ea:	f101 0608 	add.w	r6, r1, #8
+  2018ee:	bf00      	nop
+  2018f0:	6872      	ldr	r2, [r6, #4]
+  2018f2:	6817      	ldr	r7, [r2, #0]
+  2018f4:	429f      	cmp	r7, r3
+  2018f6:	d858      	bhi.n	2019aa <prvTimerTask+0x92a>
+  2018f8:	6857      	ldr	r7, [r2, #4]
+  2018fa:	683e      	ldr	r6, [r7, #0]
+  2018fc:	429e      	cmp	r6, r3
+  2018fe:	d85e      	bhi.n	2019be <prvTimerTask+0x93e>
+  201900:	687a      	ldr	r2, [r7, #4]
+  201902:	6816      	ldr	r6, [r2, #0]
+  201904:	429e      	cmp	r6, r3
+  201906:	d85c      	bhi.n	2019c2 <prvTimerTask+0x942>
+  201908:	6856      	ldr	r6, [r2, #4]
+  20190a:	6837      	ldr	r7, [r6, #0]
+  20190c:	4634      	mov	r4, r6
+  20190e:	429f      	cmp	r7, r3
+  201910:	d9ee      	bls.n	2018f0 <prvTimerTask+0x870>
+  201912:	e059      	b.n	2019c8 <prvTimerTask+0x948>
+  201914:	ebaa 0303 	sub.w	r3, sl, r3
+  201918:	428b      	cmp	r3, r1
+  20191a:	f240 1310 	movw	r3, #272	; 0x110
+  20191e:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  201922:	d31e      	bcc.n	201962 <prvTimerTask+0x8e2>
+  201924:	0753      	lsls	r3, r2, #29
+  201926:	d40c      	bmi.n	201942 <prvTimerTask+0x8c2>
+  201928:	f002 00fe 	and.w	r0, r2, #254	; 0xfe
+  20192c:	e680      	b.n	201630 <prvTimerTask+0x5b0>
+  20192e:	bf00      	nop
+  201930:	ebaa 0000 	sub.w	r0, sl, r0
+  201934:	4288      	cmp	r0, r1
+  201936:	d333      	bcc.n	2019a0 <prvTimerTask+0x920>
+  201938:	6a29      	ldr	r1, [r5, #32]
+  20193a:	4628      	mov	r0, r5
+  20193c:	4788      	blx	r1
+  20193e:	69a9      	ldr	r1, [r5, #24]
+  201940:	4620      	mov	r0, r4
+  201942:	1844      	adds	r4, r0, r1
+  201944:	4554      	cmp	r4, sl
+  201946:	606c      	str	r4, [r5, #4]
+  201948:	612d      	str	r5, [r5, #16]
+  20194a:	d9f1      	bls.n	201930 <prvTimerTask+0x8b0>
+  20194c:	4582      	cmp	sl, r0
+  20194e:	d248      	bcs.n	2019e2 <prvTimerTask+0x962>
+  201950:	4284      	cmp	r4, r0
+  201952:	4648      	mov	r0, r9
+  201954:	d2f0      	bcs.n	201938 <prvTimerTask+0x8b8>
+  201956:	e045      	b.n	2019e4 <prvTimerTask+0x964>
+  201958:	690a      	ldr	r2, [r1, #16]
+  20195a:	6854      	ldr	r4, [r2, #4]
+  20195c:	e034      	b.n	2019c8 <prvTimerTask+0x948>
+  20195e:	bf00      	nop
+  201960:	464b      	mov	r3, r9
+  201962:	6819      	ldr	r1, [r3, #0]
+  201964:	1c42      	adds	r2, r0, #1
+  201966:	d013      	beq.n	201990 <prvTimerTask+0x910>
+  201968:	f101 0308 	add.w	r3, r1, #8
+  20196c:	685a      	ldr	r2, [r3, #4]
+  20196e:	6817      	ldr	r7, [r2, #0]
+  201970:	4287      	cmp	r7, r0
+  201972:	d811      	bhi.n	201998 <prvTimerTask+0x918>
+  201974:	6853      	ldr	r3, [r2, #4]
+  201976:	681f      	ldr	r7, [r3, #0]
+  201978:	4287      	cmp	r7, r0
+  20197a:	d819      	bhi.n	2019b0 <prvTimerTask+0x930>
+  20197c:	685a      	ldr	r2, [r3, #4]
+  20197e:	6817      	ldr	r7, [r2, #0]
+  201980:	4287      	cmp	r7, r0
+  201982:	d809      	bhi.n	201998 <prvTimerTask+0x918>
+  201984:	6853      	ldr	r3, [r2, #4]
+  201986:	681f      	ldr	r7, [r3, #0]
+  201988:	4287      	cmp	r7, r0
+  20198a:	461f      	mov	r7, r3
+  20198c:	d9ee      	bls.n	20196c <prvTimerTask+0x8ec>
+  20198e:	e011      	b.n	2019b4 <prvTimerTask+0x934>
+  201990:	690a      	ldr	r2, [r1, #16]
+  201992:	6857      	ldr	r7, [r2, #4]
+  201994:	e00e      	b.n	2019b4 <prvTimerTask+0x934>
+  201996:	bf00      	nop
+  201998:	4617      	mov	r7, r2
+  20199a:	461a      	mov	r2, r3
+  20199c:	e00a      	b.n	2019b4 <prvTimerTask+0x934>
+  20199e:	bf00      	nop
+  2019a0:	f240 1010 	movw	r0, #272	; 0x110
+  2019a4:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2019a8:	e01c      	b.n	2019e4 <prvTimerTask+0x964>
+  2019aa:	4614      	mov	r4, r2
+  2019ac:	4632      	mov	r2, r6
+  2019ae:	e00b      	b.n	2019c8 <prvTimerTask+0x948>
+  2019b0:	461f      	mov	r7, r3
+  2019b2:	bf00      	nop
+  2019b4:	60af      	str	r7, [r5, #8]
+  2019b6:	60be      	str	r6, [r7, #8]
+  2019b8:	60ea      	str	r2, [r5, #12]
+  2019ba:	6056      	str	r6, [r2, #4]
+  2019bc:	e008      	b.n	2019d0 <prvTimerTask+0x950>
+  2019be:	463c      	mov	r4, r7
+  2019c0:	e002      	b.n	2019c8 <prvTimerTask+0x948>
+  2019c2:	4614      	mov	r4, r2
+  2019c4:	463a      	mov	r2, r7
+  2019c6:	bf00      	nop
+  2019c8:	60ac      	str	r4, [r5, #8]
+  2019ca:	60a0      	str	r0, [r4, #8]
+  2019cc:	60ea      	str	r2, [r5, #12]
+  2019ce:	6050      	str	r0, [r2, #4]
+  2019d0:	6169      	str	r1, [r5, #20]
+  2019d2:	6808      	ldr	r0, [r1, #0]
+  2019d4:	3001      	adds	r0, #1
+  2019d6:	6008      	str	r0, [r1, #0]
+  2019d8:	f240 1614 	movw	r6, #276	; 0x114
+  2019dc:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  2019e0:	e63c      	b.n	20165c <prvTimerTask+0x5dc>
+  2019e2:	4648      	mov	r0, r9
+  2019e4:	6800      	ldr	r0, [r0, #0]
+  2019e6:	1c61      	adds	r1, r4, #1
+  2019e8:	f43f ae26 	beq.w	201638 <prvTimerTask+0x5b8>
+  2019ec:	f100 0308 	add.w	r3, r0, #8
+  2019f0:	6859      	ldr	r1, [r3, #4]
+  2019f2:	680a      	ldr	r2, [r1, #0]
+  2019f4:	42a2      	cmp	r2, r4
+  2019f6:	f63f ae22 	bhi.w	20163e <prvTimerTask+0x5be>
+  2019fa:	684b      	ldr	r3, [r1, #4]
+  2019fc:	681a      	ldr	r2, [r3, #0]
+  2019fe:	42a2      	cmp	r2, r4
+  201a00:	d80a      	bhi.n	201a18 <prvTimerTask+0x998>
+  201a02:	6859      	ldr	r1, [r3, #4]
+  201a04:	680a      	ldr	r2, [r1, #0]
+  201a06:	42a2      	cmp	r2, r4
+  201a08:	f63f ae19 	bhi.w	20163e <prvTimerTask+0x5be>
+  201a0c:	684b      	ldr	r3, [r1, #4]
+  201a0e:	681a      	ldr	r2, [r3, #0]
+  201a10:	42a2      	cmp	r2, r4
+  201a12:	461a      	mov	r2, r3
+  201a14:	d9ec      	bls.n	2019f0 <prvTimerTask+0x970>
+  201a16:	e615      	b.n	201644 <prvTimerTask+0x5c4>
+  201a18:	461a      	mov	r2, r3
+  201a1a:	e613      	b.n	201644 <prvTimerTask+0x5c4>
+  201a1c:	f000 fa22 	bl	201e64 <ulSetInterruptMask>
+  201a20:	e7fe      	b.n	201a20 <prvTimerTask+0x9a0>
+  201a22:	f000 fa1f 	bl	201e64 <ulSetInterruptMask>
+  201a26:	bf00      	nop
+  201a28:	e7fe      	b.n	201a28 <prvTimerTask+0x9a8>
+  201a2a:	f000 fa1b 	bl	201e64 <ulSetInterruptMask>
+  201a2e:	bf00      	nop
+  201a30:	e7fe      	b.n	201a30 <prvTimerTask+0x9b0>
+  201a32:	f000 fa17 	bl	201e64 <ulSetInterruptMask>
+  201a36:	bf00      	nop
+  201a38:	e7fe      	b.n	201a38 <prvTimerTask+0x9b8>
+  201a3a:	bf00      	nop
+  201a3c:	002026d1 	.word	0x002026d1
+  201a40:	0020275e 	.word	0x0020275e
+  201a44:	00000080 	.word	0x00000080
+  201a48:	00000000 	.word	0x00000000
+  201a4c:	00000002 	.word	0x00000002
+  201a50:	28204180 	.word	0x28204180
+  201a54:	28204180 	.word	0x28204180
+  201a58:	00000100 	.word	0x00000100
+  201a5c:	00000002 	.word	0x00000002
+  201a60:	28204d80 	.word	0x28204d80
+  201a64:	00000020 	.word	0x00000020
+  201a68:	00000002 	.word	0x00000002
+  201a6c:	28204da0 	.word	0x28204da0
+  201a70:	00000200 	.word	0x00000200
+  201a74:	00000002 	.word	0x00000002
+  201a78:	0020267d 	.word	0x0020267d
+  201a7c:	0020275e 	.word	0x0020275e
+  201a80:	00000080 	.word	0x00000080
+  201a84:	00000000 	.word	0x00000000
+  201a88:	80000002 	.word	0x80000002
+  201a8c:	28204980 	.word	0x28204980
+  201a90:	28204980 	.word	0x28204980
+  201a94:	00000100 	.word	0x00000100
+  201a98:	00000002 	.word	0x00000002
+  201a9c:	28204d80 	.word	0x28204d80
+  201aa0:	00000020 	.word	0x00000020
+  201aa4:	00000002 	.word	0x00000002
+  201aa8:	28204da0 	.word	0x28204da0
+  201aac:	00000200 	.word	0x00000200
+  201ab0:	00000002 	.word	0x00000002
+
+00201ab4 <pvPortMalloc>:
+  201ab4:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+  201ab8:	f240 0128 	movw	r1, #40	; 0x28
+  201abc:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201ac0:	680a      	ldr	r2, [r1, #0]
+  201ac2:	f240 1c44 	movw	ip, #324	; 0x144
+  201ac6:	3201      	adds	r2, #1
+  201ac8:	600a      	str	r2, [r1, #0]
+  201aca:	f240 1240 	movw	r2, #320	; 0x140
+  201ace:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  201ad2:	6811      	ldr	r1, [r2, #0]
+  201ad4:	f6c2 0c20 	movt	ip, #10272	; 0x2820
+  201ad8:	b131      	cbz	r1, 201ae8 <pvPortMalloc+0x34>
+  201ada:	f89c 1000 	ldrb.w	r1, [ip]
+  201ade:	2900      	cmp	r1, #0
+  201ae0:	bf18      	it	ne
+  201ae2:	f04f 4100 	movne.w	r1, #2147483648	; 0x80000000
+  201ae6:	e033      	b.n	201b50 <pvPortMalloc+0x9c>
+  201ae8:	f240 1160 	movw	r1, #352	; 0x160
+  201aec:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201af0:	1dcf      	adds	r7, r1, #7
+  201af2:	f027 0707 	bic.w	r7, r7, #7
+  201af6:	f011 0307 	ands.w	r3, r1, #7
+  201afa:	eba1 0607 	sub.w	r6, r1, r7
+  201afe:	bf18      	it	ne
+  201b00:	4639      	movne	r1, r7
+  201b02:	f240 174c 	movw	r7, #332	; 0x14c
+  201b06:	f6c2 0720 	movt	r7, #10272	; 0x2820
+  201b0a:	2500      	movs	r5, #0
+  201b0c:	e9c7 1500 	strd	r1, r5, [r7]
+  201b10:	f44f 4780 	mov.w	r7, #16384	; 0x4000
+  201b14:	2b00      	cmp	r3, #0
+  201b16:	bf18      	it	ne
+  201b18:	f506 4780 	addne.w	r7, r6, #16384	; 0x4000
+  201b1c:	19cb      	adds	r3, r1, r7
+  201b1e:	f023 0307 	bic.w	r3, r3, #7
+  201b22:	f1a3 0708 	sub.w	r7, r3, #8
+  201b26:	6017      	str	r7, [r2, #0]
+  201b28:	e943 5502 	strd	r5, r5, [r3, #-8]
+  201b2c:	1a7b      	subs	r3, r7, r1
+  201b2e:	e9c1 7300 	strd	r7, r3, [r1]
+  201b32:	f240 1154 	movw	r1, #340	; 0x154
+  201b36:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201b3a:	600b      	str	r3, [r1, #0]
+  201b3c:	f240 1148 	movw	r1, #328	; 0x148
+  201b40:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201b44:	600b      	str	r3, [r1, #0]
+  201b46:	2101      	movs	r1, #1
+  201b48:	f88c 1000 	strb.w	r1, [ip]
+  201b4c:	f04f 4100 	mov.w	r1, #2147483648	; 0x80000000
+  201b50:	4201      	tst	r1, r0
+  201b52:	f04f 0400 	mov.w	r4, #0
+  201b56:	d00a      	beq.n	201b6e <pvPortMalloc+0xba>
+  201b58:	f7ff f806 	bl	200b68 <xTaskResumeAll>
+  201b5c:	0760      	lsls	r0, r4, #29
+  201b5e:	bf04      	itt	eq
+  201b60:	4620      	moveq	r0, r4
+  201b62:	e8bd 81f0 	ldmiaeq.w	sp!, {r4, r5, r6, r7, r8, pc}
+  201b66:	f000 f97d 	bl	201e64 <ulSetInterruptMask>
+  201b6a:	bf00      	nop
+  201b6c:	e7fe      	b.n	201b6c <pvPortMalloc+0xb8>
+  201b6e:	f020 0107 	bic.w	r1, r0, #7
+  201b72:	f100 0308 	add.w	r3, r0, #8
+  201b76:	3110      	adds	r1, #16
+  201b78:	4299      	cmp	r1, r3
+  201b7a:	bf98      	it	ls
+  201b7c:	4621      	movls	r1, r4
+  201b7e:	0740      	lsls	r0, r0, #29
+  201b80:	bf08      	it	eq
+  201b82:	4619      	moveq	r1, r3
+  201b84:	2900      	cmp	r1, #0
+  201b86:	d0e7      	beq.n	201b58 <pvPortMalloc+0xa4>
+  201b88:	f240 1e48 	movw	lr, #328	; 0x148
+  201b8c:	f6c2 0e20 	movt	lr, #10272	; 0x2820
+  201b90:	f8de 0000 	ldr.w	r0, [lr]
+  201b94:	4281      	cmp	r1, r0
+  201b96:	d8df      	bhi.n	201b58 <pvPortMalloc+0xa4>
+  201b98:	f240 154c 	movw	r5, #332	; 0x14c
+  201b9c:	f6c2 0520 	movt	r5, #10272	; 0x2820
+  201ba0:	682b      	ldr	r3, [r5, #0]
+  201ba2:	6858      	ldr	r0, [r3, #4]
+  201ba4:	4288      	cmp	r0, r1
+  201ba6:	d228      	bcs.n	201bfa <pvPortMalloc+0x146>
+  201ba8:	681c      	ldr	r4, [r3, #0]
+  201baa:	b1bc      	cbz	r4, 201bdc <pvPortMalloc+0x128>
+  201bac:	461e      	mov	r6, r3
+  201bae:	6860      	ldr	r0, [r4, #4]
+  201bb0:	4288      	cmp	r0, r1
+  201bb2:	d218      	bcs.n	201be6 <pvPortMalloc+0x132>
+  201bb4:	6827      	ldr	r7, [r4, #0]
+  201bb6:	b1b7      	cbz	r7, 201be6 <pvPortMalloc+0x132>
+  201bb8:	6878      	ldr	r0, [r7, #4]
+  201bba:	4288      	cmp	r0, r1
+  201bbc:	d216      	bcs.n	201bec <pvPortMalloc+0x138>
+  201bbe:	683d      	ldr	r5, [r7, #0]
+  201bc0:	b1a5      	cbz	r5, 201bec <pvPortMalloc+0x138>
+  201bc2:	6868      	ldr	r0, [r5, #4]
+  201bc4:	4288      	cmp	r0, r1
+  201bc6:	d214      	bcs.n	201bf2 <pvPortMalloc+0x13e>
+  201bc8:	682e      	ldr	r6, [r5, #0]
+  201bca:	b196      	cbz	r6, 201bf2 <pvPortMalloc+0x13e>
+  201bcc:	6870      	ldr	r0, [r6, #4]
+  201bce:	4288      	cmp	r0, r1
+  201bd0:	d212      	bcs.n	201bf8 <pvPortMalloc+0x144>
+  201bd2:	6834      	ldr	r4, [r6, #0]
+  201bd4:	4633      	mov	r3, r6
+  201bd6:	2c00      	cmp	r4, #0
+  201bd8:	d1e9      	bne.n	201bae <pvPortMalloc+0xfa>
+  201bda:	e00e      	b.n	201bfa <pvPortMalloc+0x146>
+  201bdc:	f240 154c 	movw	r5, #332	; 0x14c
+  201be0:	f6c2 0520 	movt	r5, #10272	; 0x2820
+  201be4:	e009      	b.n	201bfa <pvPortMalloc+0x146>
+  201be6:	4623      	mov	r3, r4
+  201be8:	4635      	mov	r5, r6
+  201bea:	e006      	b.n	201bfa <pvPortMalloc+0x146>
+  201bec:	463b      	mov	r3, r7
+  201bee:	4625      	mov	r5, r4
+  201bf0:	e003      	b.n	201bfa <pvPortMalloc+0x146>
+  201bf2:	462b      	mov	r3, r5
+  201bf4:	463d      	mov	r5, r7
+  201bf6:	e000      	b.n	201bfa <pvPortMalloc+0x146>
+  201bf8:	4633      	mov	r3, r6
+  201bfa:	6814      	ldr	r4, [r2, #0]
+  201bfc:	42a3      	cmp	r3, r4
+  201bfe:	d00c      	beq.n	201c1a <pvPortMalloc+0x166>
+  201c00:	f8d5 8000 	ldr.w	r8, [r5]
+  201c04:	681f      	ldr	r7, [r3, #0]
+  201c06:	1a46      	subs	r6, r0, r1
+  201c08:	2e11      	cmp	r6, #17
+  201c0a:	602f      	str	r7, [r5, #0]
+  201c0c:	d335      	bcc.n	201c7a <pvPortMalloc+0x1c6>
+  201c0e:	1858      	adds	r0, r3, r1
+  201c10:	0745      	lsls	r5, r0, #29
+  201c12:	d004      	beq.n	201c1e <pvPortMalloc+0x16a>
+  201c14:	f000 f926 	bl	201e64 <ulSetInterruptMask>
+  201c18:	e7fe      	b.n	201c18 <pvPortMalloc+0x164>
+  201c1a:	2400      	movs	r4, #0
+  201c1c:	e79c      	b.n	201b58 <pvPortMalloc+0xa4>
+  201c1e:	6046      	str	r6, [r0, #4]
+  201c20:	6059      	str	r1, [r3, #4]
+  201c22:	f240 114c 	movw	r1, #332	; 0x14c
+  201c26:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201c2a:	680e      	ldr	r6, [r1, #0]
+  201c2c:	4286      	cmp	r6, r0
+  201c2e:	d20a      	bcs.n	201c46 <pvPortMalloc+0x192>
+  201c30:	6831      	ldr	r1, [r6, #0]
+  201c32:	4281      	cmp	r1, r0
+  201c34:	d20a      	bcs.n	201c4c <pvPortMalloc+0x198>
+  201c36:	680e      	ldr	r6, [r1, #0]
+  201c38:	4286      	cmp	r6, r0
+  201c3a:	d204      	bcs.n	201c46 <pvPortMalloc+0x192>
+  201c3c:	6831      	ldr	r1, [r6, #0]
+  201c3e:	4635      	mov	r5, r6
+  201c40:	4281      	cmp	r1, r0
+  201c42:	d3f2      	bcc.n	201c2a <pvPortMalloc+0x176>
+  201c44:	e003      	b.n	201c4e <pvPortMalloc+0x19a>
+  201c46:	460d      	mov	r5, r1
+  201c48:	4631      	mov	r1, r6
+  201c4a:	e000      	b.n	201c4e <pvPortMalloc+0x19a>
+  201c4c:	4635      	mov	r5, r6
+  201c4e:	686f      	ldr	r7, [r5, #4]
+  201c50:	6846      	ldr	r6, [r0, #4]
+  201c52:	19ec      	adds	r4, r5, r7
+  201c54:	4284      	cmp	r4, r0
+  201c56:	d102      	bne.n	201c5e <pvPortMalloc+0x1aa>
+  201c58:	443e      	add	r6, r7
+  201c5a:	4628      	mov	r0, r5
+  201c5c:	606e      	str	r6, [r5, #4]
+  201c5e:	1984      	adds	r4, r0, r6
+  201c60:	428c      	cmp	r4, r1
+  201c62:	d106      	bne.n	201c72 <pvPortMalloc+0x1be>
+  201c64:	6812      	ldr	r2, [r2, #0]
+  201c66:	4291      	cmp	r1, r2
+  201c68:	d003      	beq.n	201c72 <pvPortMalloc+0x1be>
+  201c6a:	e9d1 1200 	ldrd	r1, r2, [r1]
+  201c6e:	4432      	add	r2, r6
+  201c70:	6042      	str	r2, [r0, #4]
+  201c72:	4285      	cmp	r5, r0
+  201c74:	6001      	str	r1, [r0, #0]
+  201c76:	bf18      	it	ne
+  201c78:	6028      	strne	r0, [r5, #0]
+  201c7a:	f240 1154 	movw	r1, #340	; 0x154
+  201c7e:	6858      	ldr	r0, [r3, #4]
+  201c80:	f8de 2000 	ldr.w	r2, [lr]
+  201c84:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201c88:	680c      	ldr	r4, [r1, #0]
+  201c8a:	1a12      	subs	r2, r2, r0
+  201c8c:	42a2      	cmp	r2, r4
+  201c8e:	f8ce 2000 	str.w	r2, [lr]
+  201c92:	bf38      	it	cc
+  201c94:	600a      	strcc	r2, [r1, #0]
+  201c96:	f89c 1000 	ldrb.w	r1, [ip]
+  201c9a:	f108 0408 	add.w	r4, r8, #8
+  201c9e:	2900      	cmp	r1, #0
+  201ca0:	bf18      	it	ne
+  201ca2:	f040 4000 	orrne.w	r0, r0, #2147483648	; 0x80000000
+  201ca6:	2100      	movs	r1, #0
+  201ca8:	6019      	str	r1, [r3, #0]
+  201caa:	f240 1158 	movw	r1, #344	; 0x158
+  201cae:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201cb2:	680a      	ldr	r2, [r1, #0]
+  201cb4:	6058      	str	r0, [r3, #4]
+  201cb6:	1c50      	adds	r0, r2, #1
+  201cb8:	6008      	str	r0, [r1, #0]
+  201cba:	e74d      	b.n	201b58 <pvPortMalloc+0xa4>
+
+00201cbc <vPortFree>:
+  201cbc:	b580      	push	{r7, lr}
+  201cbe:	2800      	cmp	r0, #0
+  201cc0:	bf08      	it	eq
+  201cc2:	bd80      	popeq	{r7, pc}
+  201cc4:	f240 1144 	movw	r1, #324	; 0x144
+  201cc8:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  201ccc:	780a      	ldrb	r2, [r1, #0]
+  201cce:	f850 cc04 	ldr.w	ip, [r0, #-4]
+  201cd2:	2a00      	cmp	r2, #0
+  201cd4:	bf18      	it	ne
+  201cd6:	f04f 4200 	movne.w	r2, #2147483648	; 0x80000000
+  201cda:	ea12 0f0c 	tst.w	r2, ip
+  201cde:	d006      	beq.n	201cee <vPortFree+0x32>
+  201ce0:	f1a0 0108 	sub.w	r1, r0, #8
+  201ce4:	680b      	ldr	r3, [r1, #0]
+  201ce6:	b133      	cbz	r3, 201cf6 <vPortFree+0x3a>
+  201ce8:	f000 f8bc 	bl	201e64 <ulSetInterruptMask>
+  201cec:	e7fe      	b.n	201cec <vPortFree+0x30>
+  201cee:	f000 f8b9 	bl	201e64 <ulSetInterruptMask>
+  201cf2:	bf00      	nop
+  201cf4:	e7fe      	b.n	201cf4 <vPortFree+0x38>
+  201cf6:	ea2c 0202 	bic.w	r2, ip, r2
+  201cfa:	f840 2c04 	str.w	r2, [r0, #-4]
+  201cfe:	f240 0228 	movw	r2, #40	; 0x28
+  201d02:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  201d06:	6813      	ldr	r3, [r2, #0]
+  201d08:	3301      	adds	r3, #1
+  201d0a:	6013      	str	r3, [r2, #0]
+  201d0c:	f850 cc04 	ldr.w	ip, [r0, #-4]
+  201d10:	f240 1048 	movw	r0, #328	; 0x148
+  201d14:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201d18:	6802      	ldr	r2, [r0, #0]
+  201d1a:	4462      	add	r2, ip
+  201d1c:	6002      	str	r2, [r0, #0]
+  201d1e:	f240 104c 	movw	r0, #332	; 0x14c
+  201d22:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201d26:	bf00      	nop
+  201d28:	6803      	ldr	r3, [r0, #0]
+  201d2a:	428b      	cmp	r3, r1
+  201d2c:	d20a      	bcs.n	201d44 <vPortFree+0x88>
+  201d2e:	6818      	ldr	r0, [r3, #0]
+  201d30:	4288      	cmp	r0, r1
+  201d32:	d20a      	bcs.n	201d4a <vPortFree+0x8e>
+  201d34:	6803      	ldr	r3, [r0, #0]
+  201d36:	428b      	cmp	r3, r1
+  201d38:	d204      	bcs.n	201d44 <vPortFree+0x88>
+  201d3a:	6818      	ldr	r0, [r3, #0]
+  201d3c:	461a      	mov	r2, r3
+  201d3e:	4288      	cmp	r0, r1
+  201d40:	d3f2      	bcc.n	201d28 <vPortFree+0x6c>
+  201d42:	e003      	b.n	201d4c <vPortFree+0x90>
+  201d44:	4602      	mov	r2, r0
+  201d46:	4618      	mov	r0, r3
+  201d48:	e000      	b.n	201d4c <vPortFree+0x90>
+  201d4a:	461a      	mov	r2, r3
+  201d4c:	f8d2 e004 	ldr.w	lr, [r2, #4]
+  201d50:	eb02 030e 	add.w	r3, r2, lr
+  201d54:	428b      	cmp	r3, r1
+  201d56:	d103      	bne.n	201d60 <vPortFree+0xa4>
+  201d58:	44f4      	add	ip, lr
+  201d5a:	4611      	mov	r1, r2
+  201d5c:	f8c2 c004 	str.w	ip, [r2, #4]
+  201d60:	eb01 030c 	add.w	r3, r1, ip
+  201d64:	4283      	cmp	r3, r0
+  201d66:	d10a      	bne.n	201d7e <vPortFree+0xc2>
+  201d68:	f240 1340 	movw	r3, #320	; 0x140
+  201d6c:	f6c2 0320 	movt	r3, #10272	; 0x2820
+  201d70:	681b      	ldr	r3, [r3, #0]
+  201d72:	4298      	cmp	r0, r3
+  201d74:	d003      	beq.n	201d7e <vPortFree+0xc2>
+  201d76:	e9d0 0300 	ldrd	r0, r3, [r0]
+  201d7a:	4463      	add	r3, ip
+  201d7c:	604b      	str	r3, [r1, #4]
+  201d7e:	6008      	str	r0, [r1, #0]
+  201d80:	f240 105c 	movw	r0, #348	; 0x15c
+  201d84:	428a      	cmp	r2, r1
+  201d86:	bf18      	it	ne
+  201d88:	6011      	strne	r1, [r2, #0]
+  201d8a:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201d8e:	6801      	ldr	r1, [r0, #0]
+  201d90:	3101      	adds	r1, #1
+  201d92:	6001      	str	r1, [r0, #0]
+  201d94:	e8bd 4080 	ldmia.w	sp!, {r7, lr}
+  201d98:	f7fe bee6 	b.w	200b68 <xTaskResumeAll>
+
+00201d9c <SysTick_Handler>:
+  201d9c:	b510      	push	{r4, lr}
+  201d9e:	f000 f861 	bl	201e64 <ulSetInterruptMask>
+  201da2:	4604      	mov	r4, r0
+  201da4:	f7fe ffb6 	bl	200d14 <xTaskIncrementTick>
+  201da8:	b130      	cbz	r0, 201db8 <SysTick_Handler+0x1c>
+  201daa:	f64e 5004 	movw	r0, #60676	; 0xed04
+  201dae:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  201db2:	f04f 5180 	mov.w	r1, #268435456	; 0x10000000
+  201db6:	6001      	str	r1, [r0, #0]
+  201db8:	4620      	mov	r0, r4
+  201dba:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  201dbe:	e05d      	b.n	201e7c <vClearInterruptMask>
+
+00201dc0 <vRestoreContextOfFirstTask>:
+  201dc0:	4a17      	ldr	r2, [pc, #92]	; (201e20 <pxCurrentTCBConst2>)
+  201dc2:	6811      	ldr	r1, [r2, #0]
+  201dc4:	6808      	ldr	r0, [r1, #0]
+  201dc6:	f3bf 8f5f 	dmb	sy
+  201dca:	4a16      	ldr	r2, [pc, #88]	; (201e24 <xMPUCTRLConst2>)
+  201dcc:	6814      	ldr	r4, [r2, #0]
+  201dce:	f024 0401 	bic.w	r4, r4, #1
+  201dd2:	6014      	str	r4, [r2, #0]
+  201dd4:	3104      	adds	r1, #4
+  201dd6:	680b      	ldr	r3, [r1, #0]
+  201dd8:	4a13      	ldr	r2, [pc, #76]	; (201e28 <xMAIR0Const2>)
+  201dda:	6013      	str	r3, [r2, #0]
+  201ddc:	4a13      	ldr	r2, [pc, #76]	; (201e2c <xRNRConst2>)
+  201dde:	2304      	movs	r3, #4
+  201de0:	6013      	str	r3, [r2, #0]
+  201de2:	3104      	adds	r1, #4
+  201de4:	4a12      	ldr	r2, [pc, #72]	; (201e30 <xRBARConst2>)
+  201de6:	e8b1 0ff0 	ldmia.w	r1!, {r4, r5, r6, r7, r8, r9, sl, fp}
+  201dea:	e8a2 0ff0 	stmia.w	r2!, {r4, r5, r6, r7, r8, r9, sl, fp}
+  201dee:	4a0d      	ldr	r2, [pc, #52]	; (201e24 <xMPUCTRLConst2>)
+  201df0:	6814      	ldr	r4, [r2, #0]
+  201df2:	f044 0401 	orr.w	r4, r4, #1
+  201df6:	6014      	str	r4, [r2, #0]
+  201df8:	f3bf 8f4f 	dsb	sy
+  201dfc:	c80e      	ldmia	r0!, {r1, r2, r3}
+  201dfe:	f381 880b 	msr	PSPLIM, r1
+  201e02:	f382 8814 	msr	CONTROL, r2
+  201e06:	3020      	adds	r0, #32
+  201e08:	f380 8809 	msr	PSP, r0
+  201e0c:	f3bf 8f6f 	isb	sy
+  201e10:	f04f 0000 	mov.w	r0, #0
+  201e14:	f380 8811 	msr	BASEPRI, r0
+  201e18:	4718      	bx	r3
+  201e1a:	bf00      	nop
+  201e1c:	bf00      	nop
+  201e1e:	bf00      	nop
+
+00201e20 <pxCurrentTCBConst2>:
+  201e20:	28200000 	.word	0x28200000
+
+00201e24 <xMPUCTRLConst2>:
+  201e24:	e000ed94 	.word	0xe000ed94
+
+00201e28 <xMAIR0Const2>:
+  201e28:	e000edc0 	.word	0xe000edc0
+
+00201e2c <xRNRConst2>:
+  201e2c:	e000ed98 	.word	0xe000ed98
+
+00201e30 <xRBARConst2>:
+  201e30:	e000ed9c 	.word	0xe000ed9c
+
+00201e34 <vRaisePrivilege>:
+  201e34:	f3ef 8014 	mrs	r0, CONTROL
+  201e38:	f020 0001 	bic.w	r0, r0, #1
+  201e3c:	f380 8814 	msr	CONTROL, r0
+  201e40:	4770      	bx	lr
+  201e42:	bf00      	nop
+
+00201e44 <vStartFirstTask>:
+  201e44:	4806      	ldr	r0, [pc, #24]	; (201e60 <xVTORConst>)
+  201e46:	6800      	ldr	r0, [r0, #0]
+  201e48:	6800      	ldr	r0, [r0, #0]
+  201e4a:	f380 8808 	msr	MSP, r0
+  201e4e:	b662      	cpsie	i
+  201e50:	b661      	cpsie	f
+  201e52:	f3bf 8f4f 	dsb	sy
+  201e56:	f3bf 8f6f 	isb	sy
+  201e5a:	df02      	svc	2
+  201e5c:	bf00      	nop
+  201e5e:	bf00      	nop
+
+00201e60 <xVTORConst>:
+  201e60:	e000ed08 	.word	0xe000ed08
+
+00201e64 <ulSetInterruptMask>:
+  201e64:	f3ef 8011 	mrs	r0, BASEPRI
+  201e68:	f04f 01a0 	mov.w	r1, #160	; 0xa0
+  201e6c:	f381 8811 	msr	BASEPRI, r1
+  201e70:	f3bf 8f4f 	dsb	sy
+  201e74:	f3bf 8f6f 	isb	sy
+  201e78:	4770      	bx	lr
+  201e7a:	bf00      	nop
+
+00201e7c <vClearInterruptMask>:
+  201e7c:	f380 8811 	msr	BASEPRI, r0
+  201e80:	f3bf 8f4f 	dsb	sy
+  201e84:	f3bf 8f6f 	isb	sy
+  201e88:	4770      	bx	lr
+  201e8a:	bf00      	nop
+
+00201e8c <PendSV_Handler>:
+  201e8c:	f3ef 8009 	mrs	r0, PSP
+  201e90:	f01e 0f10 	tst.w	lr, #16
+  201e94:	bf08      	it	eq
+  201e96:	ed20 8a10 	vstmdbeq	r0!, {s16-s31}
+  201e9a:	f3ef 810b 	mrs	r1, PSPLIM
+  201e9e:	f3ef 8214 	mrs	r2, CONTROL
+  201ea2:	4673      	mov	r3, lr
+  201ea4:	e920 0ffe 	stmdb	r0!, {r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+  201ea8:	4a21      	ldr	r2, [pc, #132]	; (201f30 <pxCurrentTCBConst>)
+  201eaa:	6811      	ldr	r1, [r2, #0]
+  201eac:	6008      	str	r0, [r1, #0]
+  201eae:	f04f 00a0 	mov.w	r0, #160	; 0xa0
+  201eb2:	f380 8811 	msr	BASEPRI, r0
+  201eb6:	f3bf 8f4f 	dsb	sy
+  201eba:	f3bf 8f6f 	isb	sy
+  201ebe:	f000 f851 	bl	201f64 <vTaskSwitchContext>
+  201ec2:	f04f 0000 	mov.w	r0, #0
+  201ec6:	f380 8811 	msr	BASEPRI, r0
+  201eca:	4a19      	ldr	r2, [pc, #100]	; (201f30 <pxCurrentTCBConst>)
+  201ecc:	6811      	ldr	r1, [r2, #0]
+  201ece:	6808      	ldr	r0, [r1, #0]
+  201ed0:	f3bf 8f5f 	dmb	sy
+  201ed4:	4a17      	ldr	r2, [pc, #92]	; (201f34 <xMPUCTRLConst>)
+  201ed6:	6814      	ldr	r4, [r2, #0]
+  201ed8:	f024 0401 	bic.w	r4, r4, #1
+  201edc:	6014      	str	r4, [r2, #0]
+  201ede:	3104      	adds	r1, #4
+  201ee0:	680b      	ldr	r3, [r1, #0]
+  201ee2:	4a15      	ldr	r2, [pc, #84]	; (201f38 <xMAIR0Const>)
+  201ee4:	6013      	str	r3, [r2, #0]
+  201ee6:	4a15      	ldr	r2, [pc, #84]	; (201f3c <xRNRConst>)
+  201ee8:	2304      	movs	r3, #4
+  201eea:	6013      	str	r3, [r2, #0]
+  201eec:	3104      	adds	r1, #4
+  201eee:	4a14      	ldr	r2, [pc, #80]	; (201f40 <xRBARConst>)
+  201ef0:	e8b1 0ff0 	ldmia.w	r1!, {r4, r5, r6, r7, r8, r9, sl, fp}
+  201ef4:	e8a2 0ff0 	stmia.w	r2!, {r4, r5, r6, r7, r8, r9, sl, fp}
+  201ef8:	4a0e      	ldr	r2, [pc, #56]	; (201f34 <xMPUCTRLConst>)
+  201efa:	6814      	ldr	r4, [r2, #0]
+  201efc:	f044 0401 	orr.w	r4, r4, #1
+  201f00:	6014      	str	r4, [r2, #0]
+  201f02:	f3bf 8f4f 	dsb	sy
+  201f06:	e8b0 0ffe 	ldmia.w	r0!, {r1, r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+  201f0a:	f013 0f10 	tst.w	r3, #16
+  201f0e:	bf08      	it	eq
+  201f10:	ecb0 8a10 	vldmiaeq	r0!, {s16-s31}
+  201f14:	f381 880b 	msr	PSPLIM, r1
+  201f18:	f382 8814 	msr	CONTROL, r2
+  201f1c:	f380 8809 	msr	PSP, r0
+  201f20:	4718      	bx	r3
+  201f22:	bf00      	nop
+  201f24:	bf00      	nop
+  201f26:	bf00      	nop
+  201f28:	bf00      	nop
+  201f2a:	bf00      	nop
+  201f2c:	bf00      	nop
+  201f2e:	bf00      	nop
+
+00201f30 <pxCurrentTCBConst>:
+  201f30:	28200000 	.word	0x28200000
+
+00201f34 <xMPUCTRLConst>:
+  201f34:	e000ed94 	.word	0xe000ed94
+
+00201f38 <xMAIR0Const>:
+  201f38:	e000edc0 	.word	0xe000edc0
+
+00201f3c <xRNRConst>:
+  201f3c:	e000ed98 	.word	0xe000ed98
+
+00201f40 <xRBARConst>:
+  201f40:	e000ed9c 	.word	0xe000ed9c
+
+00201f44 <SVC_Handler>:
+  201f44:	f01e 0f04 	tst.w	lr, #4
+  201f48:	bf0c      	ite	eq
+  201f4a:	f3ef 8008 	mrseq	r0, MSP
+  201f4e:	f3ef 8009 	mrsne	r0, PSP
+  201f52:	4903      	ldr	r1, [pc, #12]	; (201f60 <svchandler_address_const>)
+  201f54:	4708      	bx	r1
+  201f56:	bf00      	nop
+  201f58:	bf00      	nop
+  201f5a:	bf00      	nop
+  201f5c:	bf00      	nop
+  201f5e:	bf00      	nop
+
+00201f60 <svchandler_address_const>:
+  201f60:	00202021 	.word	0x00202021
+
+00201f64 <vTaskSwitchContext>:
+  201f64:	b580      	push	{r7, lr}
+  201f66:	f240 0028 	movw	r0, #40	; 0x28
+  201f6a:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201f6e:	6800      	ldr	r0, [r0, #0]
+  201f70:	b130      	cbz	r0, 201f80 <vTaskSwitchContext+0x1c>
+  201f72:	f240 00b4 	movw	r0, #180	; 0xb4
+  201f76:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201f7a:	2101      	movs	r1, #1
+  201f7c:	6001      	str	r1, [r0, #0]
+  201f7e:	bd80      	pop	{r7, pc}
+  201f80:	f240 00b4 	movw	r0, #180	; 0xb4
+  201f84:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  201f88:	2100      	movs	r1, #0
+  201f8a:	f240 0cb0 	movw	ip, #176	; 0xb0
+  201f8e:	6001      	str	r1, [r0, #0]
+  201f90:	f6c2 0c20 	movt	ip, #10272	; 0x2820
+  201f94:	f8dc 1000 	ldr.w	r1, [ip]
+  201f98:	f240 024c 	movw	r2, #76	; 0x4c
+  201f9c:	eb01 0381 	add.w	r3, r1, r1, lsl #2
+  201fa0:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  201fa4:	f852 0023 	ldr.w	r0, [r2, r3, lsl #2]
+  201fa8:	b1a8      	cbz	r0, 201fd6 <vTaskSwitchContext+0x72>
+  201faa:	eb01 0081 	add.w	r0, r1, r1, lsl #2
+  201fae:	eb02 0380 	add.w	r3, r2, r0, lsl #2
+  201fb2:	f853 0f04 	ldr.w	r0, [r3, #4]!
+  201fb6:	6842      	ldr	r2, [r0, #4]
+  201fb8:	1d18      	adds	r0, r3, #4
+  201fba:	4282      	cmp	r2, r0
+  201fbc:	601a      	str	r2, [r3, #0]
+  201fbe:	d101      	bne.n	201fc4 <vTaskSwitchContext+0x60>
+  201fc0:	6852      	ldr	r2, [r2, #4]
+  201fc2:	601a      	str	r2, [r3, #0]
+  201fc4:	68d0      	ldr	r0, [r2, #12]
+  201fc6:	f240 0200 	movw	r2, #0
+  201fca:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  201fce:	6010      	str	r0, [r2, #0]
+  201fd0:	f8cc 1000 	str.w	r1, [ip]
+  201fd4:	bd80      	pop	{r7, pc}
+  201fd6:	eb02 0083 	add.w	r0, r2, r3, lsl #2
+  201fda:	3901      	subs	r1, #1
+  201fdc:	f1a0 0328 	sub.w	r3, r0, #40	; 0x28
+  201fe0:	1c48      	adds	r0, r1, #1
+  201fe2:	d015      	beq.n	202010 <vTaskSwitchContext+0xac>
+  201fe4:	6958      	ldr	r0, [r3, #20]
+  201fe6:	2800      	cmp	r0, #0
+  201fe8:	d1df      	bne.n	201faa <vTaskSwitchContext+0x46>
+  201fea:	b189      	cbz	r1, 202010 <vTaskSwitchContext+0xac>
+  201fec:	6818      	ldr	r0, [r3, #0]
+  201fee:	b990      	cbnz	r0, 202016 <vTaskSwitchContext+0xb2>
+  201ff0:	2901      	cmp	r1, #1
+  201ff2:	d00d      	beq.n	202010 <vTaskSwitchContext+0xac>
+  201ff4:	f853 0c14 	ldr.w	r0, [r3, #-20]
+  201ff8:	b978      	cbnz	r0, 20201a <vTaskSwitchContext+0xb6>
+  201ffa:	2902      	cmp	r1, #2
+  201ffc:	d008      	beq.n	202010 <vTaskSwitchContext+0xac>
+  201ffe:	f853 0c28 	ldr.w	r0, [r3, #-40]
+  202002:	3904      	subs	r1, #4
+  202004:	2800      	cmp	r0, #0
+  202006:	f1a3 0350 	sub.w	r3, r3, #80	; 0x50
+  20200a:	d0e9      	beq.n	201fe0 <vTaskSwitchContext+0x7c>
+  20200c:	3101      	adds	r1, #1
+  20200e:	e7cc      	b.n	201faa <vTaskSwitchContext+0x46>
+  202010:	f7ff ff28 	bl	201e64 <ulSetInterruptMask>
+  202014:	e7fe      	b.n	202014 <vTaskSwitchContext+0xb0>
+  202016:	3901      	subs	r1, #1
+  202018:	e7c7      	b.n	201faa <vTaskSwitchContext+0x46>
+  20201a:	3902      	subs	r1, #2
+  20201c:	e7c5      	b.n	201faa <vTaskSwitchContext+0x46>
+	...
+
+00202020 <vPortSVCHandler_C>:
+  202020:	b580      	push	{r7, lr}
+  202022:	6980      	ldr	r0, [r0, #24]
+  202024:	f810 1c02 	ldrb.w	r1, [r0, #-2]
+  202028:	2903      	cmp	r1, #3
+  20202a:	d013      	beq.n	202054 <vPortSVCHandler_C+0x34>
+  20202c:	2902      	cmp	r1, #2
+  20202e:	d123      	bne.n	202078 <vPortSVCHandler_C+0x58>
+  202030:	f64e 5088 	movw	r0, #60808	; 0xed88
+  202034:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  202038:	6801      	ldr	r1, [r0, #0]
+  20203a:	f441 0170 	orr.w	r1, r1, #15728640	; 0xf00000
+  20203e:	6001      	str	r1, [r0, #0]
+  202040:	f8d0 11ac 	ldr.w	r1, [r0, #428]	; 0x1ac
+  202044:	f041 4140 	orr.w	r1, r1, #3221225472	; 0xc0000000
+  202048:	f8c0 11ac 	str.w	r1, [r0, #428]	; 0x1ac
+  20204c:	e8bd 4080 	ldmia.w	sp!, {r7, lr}
+  202050:	f7ff beb6 	b.w	201dc0 <vRestoreContextOfFirstTask>
+  202054:	f242 01a0 	movw	r1, #8352	; 0x20a0
+  202058:	f2c0 0120 	movt	r1, #32
+  20205c:	4288      	cmp	r0, r1
+  20205e:	d30e      	bcc.n	20207e <vPortSVCHandler_C+0x5e>
+  202060:	f242 01c0 	movw	r1, #8384	; 0x20c0
+  202064:	f2c0 0120 	movt	r1, #32
+  202068:	3901      	subs	r1, #1
+  20206a:	4288      	cmp	r0, r1
+  20206c:	bf88      	it	hi
+  20206e:	bd80      	pophi	{r7, pc}
+  202070:	e8bd 4080 	ldmia.w	sp!, {r7, lr}
+  202074:	f7ff bede 	b.w	201e34 <vRaisePrivilege>
+  202078:	f7ff fef4 	bl	201e64 <ulSetInterruptMask>
+  20207c:	e7fe      	b.n	20207c <vPortSVCHandler_C+0x5c>
+  20207e:	bd80      	pop	{r7, pc}
+
+00202080 <Region$$Table$$Base>:
+  202080:	00202780 	.word	0x00202780
+  202084:	28200000 	.word	0x28200000
+  202088:	00004164 	.word	0x00004164
+  20208c:	0020043c 	.word	0x0020043c
+  202090:	00202828 	.word	0x00202828
+  202094:	28204180 	.word	0x28204180
+  202098:	00001020 	.word	0x00001020
+  20209c:	00200478 	.word	0x00200478
+
+Disassembly of section ER_IROM_NS_FREERTOS_SYSCALL:
+
+002020a0 <escalate_privilege-0xc>:
+  2020a0:	f64f 6c19 	movw	ip, #65049	; 0xfe19
+  2020a4:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  2020a8:	4760      	bx	ip
+	...
+
+002020ac <escalate_privilege>:
+  2020ac:	b580      	push	{r7, lr}
+  2020ae:	df03      	svc	3
+  2020b0:	200a      	movs	r0, #10
+  2020b2:	f7ff fff5 	bl	2020a0 <Image$$ER_IROM_NS_FREERTOS_SYSCALL$$Base>
+  2020b6:	bd80      	pop	{r7, pc}
+
+Disassembly of section ER_IROM_NS_UNPRIVILEGED:
+
+002020c0 <__rt_lib_init>:
+  2020c0:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+
+002020c2 <__rt_lib_init_fp_1>:
+  2020c2:	f000 fb3f 	bl	202744 <_fp_init>
+
+002020c6 <__rt_lib_init_alloca_1>:
+  2020c6:	bd1f      	pop	{r0, r1, r2, r3, r4, pc}
+
+002020c8 <__rt_lib_shutdown>:
+  2020c8:	b510      	push	{r4, lr}
+
+002020ca <__rt_lib_shutdown_cpp_1>:
+  2020ca:	bd10      	pop	{r4, pc}
+
+002020cc <__rt_entry>:
+  2020cc:	f8df d00c 	ldr.w	sp, [pc, #12]	; 2020dc <__lit__00000000>
+
+002020d0 <__rt_entry_li>:
+  2020d0:	f7ff fff6 	bl	2020c0 <__rt_lib_init>
+
+002020d4 <__rt_entry_main>:
+  2020d4:	f000 f8ee 	bl	2022b4 <main>
+  2020d8:	f000 f808 	bl	2020ec <exit>
+
+002020dc <__lit__00000000>:
+  2020dc:	0000 2840                                   ..@(
+
+002020e0 <__rt_exit>:
+  2020e0:	b403      	push	{r0, r1}
+
+002020e2 <__rt_exit_ls>:
+  2020e2:	f7ff fff1 	bl	2020c8 <__rt_lib_shutdown>
+
+002020e6 <__rt_exit_exit>:
+  2020e6:	bc03      	pop	{r0, r1}
+  2020e8:	f000 f80a 	bl	202100 <_sys_exit>
+
+002020ec <exit>:
+  2020ec:	b510      	push	{r4, lr}
+  2020ee:	4604      	mov	r4, r0
+  2020f0:	f3af 8000 	nop.w
+  2020f4:	4620      	mov	r0, r4
+  2020f6:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  2020fa:	f7ff bff1 	b.w	2020e0 <__rt_exit>
+
+002020fe <__use_no_semihosting_swi>:
+  2020fe:	4770      	bx	lr
+
+00202100 <_sys_exit>:
+  202100:	4901      	ldr	r1, [pc, #4]	; (202108 <_sys_exit+0x8>)
+  202102:	2018      	movs	r0, #24
+  202104:	beab      	bkpt	0x00ab
+  202106:	e7fe      	b.n	202106 <_sys_exit+0x6>
+  202108:	00020026 	.word	0x00020026
+
+0020210c <__rt_memcpy>:
+  20210c:	2a03      	cmp	r2, #3
+  20210e:	f240 8030 	bls.w	202172 <_memcpy_lastbytes>
+  202112:	f010 0c03 	ands.w	ip, r0, #3
+  202116:	f000 8015 	beq.w	202144 <__rt_memcpy+0x38>
+  20211a:	f811 3b01 	ldrb.w	r3, [r1], #1
+  20211e:	f1bc 0f02 	cmp.w	ip, #2
+  202122:	4462      	add	r2, ip
+  202124:	bf98      	it	ls
+  202126:	f811 cb01 	ldrbls.w	ip, [r1], #1
+  20212a:	f800 3b01 	strb.w	r3, [r0], #1
+  20212e:	bf38      	it	cc
+  202130:	f811 3b01 	ldrbcc.w	r3, [r1], #1
+  202134:	f1a2 0204 	sub.w	r2, r2, #4
+  202138:	bf98      	it	ls
+  20213a:	f800 cb01 	strbls.w	ip, [r0], #1
+  20213e:	bf38      	it	cc
+  202140:	f800 3b01 	strbcc.w	r3, [r0], #1
+  202144:	f011 0303 	ands.w	r3, r1, #3
+  202148:	f000 802d 	beq.w	2021a6 <__rt_memcpy_w>
+  20214c:	3a08      	subs	r2, #8
+  20214e:	f0c0 8008 	bcc.w	202162 <__rt_memcpy+0x56>
+  202152:	f851 3b04 	ldr.w	r3, [r1], #4
+  202156:	3a08      	subs	r2, #8
+  202158:	f851 cb04 	ldr.w	ip, [r1], #4
+  20215c:	e8a0 1008 	stmia.w	r0!, {r3, ip}
+  202160:	e7f5      	b.n	20214e <__rt_memcpy+0x42>
+  202162:	1d12      	adds	r2, r2, #4
+  202164:	bf5c      	itt	pl
+  202166:	f851 3b04 	ldrpl.w	r3, [r1], #4
+  20216a:	f840 3b04 	strpl.w	r3, [r0], #4
+  20216e:	f3af 8000 	nop.w
+
+00202172 <_memcpy_lastbytes>:
+  202172:	07d2      	lsls	r2, r2, #31
+  202174:	bf24      	itt	cs
+  202176:	f811 3b01 	ldrbcs.w	r3, [r1], #1
+  20217a:	f811 cb01 	ldrbcs.w	ip, [r1], #1
+  20217e:	bf48      	it	mi
+  202180:	f811 2b01 	ldrbmi.w	r2, [r1], #1
+  202184:	bf24      	itt	cs
+  202186:	f800 3b01 	strbcs.w	r3, [r0], #1
+  20218a:	f800 cb01 	strbcs.w	ip, [r0], #1
+  20218e:	bf48      	it	mi
+  202190:	f800 2b01 	strbmi.w	r2, [r0], #1
+  202194:	4770      	bx	lr
+
+00202196 <__aeabi_memset4>:
+  202196:	f002 03ff 	and.w	r3, r2, #255	; 0xff
+  20219a:	ea43 2203 	orr.w	r2, r3, r3, lsl #8
+  20219e:	ea42 4202 	orr.w	r2, r2, r2, lsl #16
+  2021a2:	f000 b834 	b.w	20220e <_memset_w>
+
+002021a6 <__rt_memcpy_w>:
+  2021a6:	b510      	push	{r4, lr}
+  2021a8:	3a20      	subs	r2, #32
+  2021aa:	f0c0 800b 	bcc.w	2021c4 <__rt_memcpy_w+0x1e>
+  2021ae:	e8b1 5018 	ldmia.w	r1!, {r3, r4, ip, lr}
+  2021b2:	e8a0 5018 	stmia.w	r0!, {r3, r4, ip, lr}
+  2021b6:	e8b1 5018 	ldmia.w	r1!, {r3, r4, ip, lr}
+  2021ba:	e8a0 5018 	stmia.w	r0!, {r3, r4, ip, lr}
+  2021be:	3a20      	subs	r2, #32
+  2021c0:	f4bf aff5 	bcs.w	2021ae <__rt_memcpy_w+0x8>
+  2021c4:	ea5f 7c02 	movs.w	ip, r2, lsl #28
+  2021c8:	bf24      	itt	cs
+  2021ca:	e8b1 5018 	ldmiacs.w	r1!, {r3, r4, ip, lr}
+  2021ce:	e8a0 5018 	stmiacs.w	r0!, {r3, r4, ip, lr}
+  2021d2:	bf44      	itt	mi
+  2021d4:	c918      	ldmiami	r1!, {r3, r4}
+  2021d6:	c018      	stmiami	r0!, {r3, r4}
+  2021d8:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  2021dc:	ea5f 7c82 	movs.w	ip, r2, lsl #30
+  2021e0:	bf24      	itt	cs
+  2021e2:	f851 3b04 	ldrcs.w	r3, [r1], #4
+  2021e6:	f840 3b04 	strcs.w	r3, [r0], #4
+  2021ea:	bf08      	it	eq
+  2021ec:	4770      	bxeq	lr
+
+002021ee <_memcpy_lastbytes_aligned>:
+  2021ee:	07d2      	lsls	r2, r2, #31
+  2021f0:	bf28      	it	cs
+  2021f2:	f831 3b02 	ldrhcs.w	r3, [r1], #2
+  2021f6:	bf48      	it	mi
+  2021f8:	f811 2b01 	ldrbmi.w	r2, [r1], #1
+  2021fc:	bf28      	it	cs
+  2021fe:	f820 3b02 	strhcs.w	r3, [r0], #2
+  202202:	bf48      	it	mi
+  202204:	f800 2b01 	strbmi.w	r2, [r0], #1
+  202208:	4770      	bx	lr
+
+0020220a <__aeabi_memclr4>:
+  20220a:	f04f 0200 	mov.w	r2, #0
+
+0020220e <_memset_w>:
+  20220e:	b500      	push	{lr}
+  202210:	4613      	mov	r3, r2
+  202212:	4694      	mov	ip, r2
+  202214:	4696      	mov	lr, r2
+  202216:	3920      	subs	r1, #32
+  202218:	bf22      	ittt	cs
+  20221a:	e8a0 500c 	stmiacs.w	r0!, {r2, r3, ip, lr}
+  20221e:	e8a0 500c 	stmiacs.w	r0!, {r2, r3, ip, lr}
+  202222:	f1b1 0120 	subscs.w	r1, r1, #32
+  202226:	f4bf aff7 	bcs.w	202218 <_memset_w+0xa>
+  20222a:	0709      	lsls	r1, r1, #28
+  20222c:	bf28      	it	cs
+  20222e:	e8a0 500c 	stmiacs.w	r0!, {r2, r3, ip, lr}
+  202232:	bf48      	it	mi
+  202234:	c00c      	stmiami	r0!, {r2, r3}
+  202236:	f85d eb04 	ldr.w	lr, [sp], #4
+  20223a:	0089      	lsls	r1, r1, #2
+  20223c:	bf28      	it	cs
+  20223e:	f840 2b04 	strcs.w	r2, [r0], #4
+  202242:	bf08      	it	eq
+  202244:	4770      	bxeq	lr
+  202246:	bf48      	it	mi
+  202248:	f820 2b02 	strhmi.w	r2, [r0], #2
+  20224c:	f011 4f80 	tst.w	r1, #1073741824	; 0x40000000
+  202250:	bf18      	it	ne
+  202252:	f800 2b01 	strbne.w	r2, [r0], #1
+  202256:	4770      	bx	lr
+
+00202258 <Default_Handler>:
+  202258:	e7fe      	b.n	202258 <Default_Handler>
+	...
+
+0020225c <HardFault_Handler>:
+  20225c:	e7fe      	b.n	20225c <HardFault_Handler>
+	...
+
+00202260 <MemManage_Handler>:
+  202260:	f01e 0f04 	tst.w	lr, #4
+  202264:	bf0c      	ite	eq
+  202266:	f3ef 8008 	mrseq	r0, MSP
+  20226a:	f3ef 8009 	mrsne	r0, PSP
+  20226e:	f8df 1004 	ldr.w	r1, [pc, #4]	; 202274 <handler_address_const>
+  202272:	4708      	bx	r1
+
+00202274 <handler_address_const>:
+  202274:	00202681 	.word	0x00202681
+
+00202278 <Reset_Handler>:
+  202278:	f240 0000 	movw	r0, #0
+  20227c:	f6c2 0040 	movt	r0, #10304	; 0x2840
+  202280:	f380 8809 	msr	PSP, r0
+  202284:	f240 0000 	movw	r0, #0
+  202288:	f64e 5288 	movw	r2, #60808	; 0xed88
+  20228c:	f64f 4100 	movw	r1, #64512	; 0xfc00
+  202290:	f2c0 0020 	movt	r0, #32
+  202294:	f2ce 0200 	movt	r2, #57344	; 0xe000
+  202298:	f6c2 013f 	movt	r1, #10303	; 0x283f
+  20229c:	f381 880a 	msr	MSPLIM, r1
+  2022a0:	f381 880b 	msr	PSPLIM, r1
+  2022a4:	f842 0c80 	str.w	r0, [r2, #-128]
+  2022a8:	6810      	ldr	r0, [r2, #0]
+  2022aa:	f440 0070 	orr.w	r0, r0, #15728640	; 0xf00000
+  2022ae:	6010      	str	r0, [r2, #0]
+  2022b0:	f7fe f8a6 	bl	200400 <__main>
+
+002022b4 <main>:
+  2022b4:	b086      	sub	sp, #24
+  2022b6:	f44f 3080 	mov.w	r0, #65536	; 0x10000
+  2022ba:	f000 fa39 	bl	202730 <vulfooTask+0x60>
+  2022be:	f241 0004 	movw	r0, #4100	; 0x1004
+  2022c2:	f2ce 0000 	movt	r0, #57344	; 0xe000
+  2022c6:	2100      	movs	r1, #0
+  2022c8:	6001      	str	r1, [r0, #0]
+  2022ca:	6081      	str	r1, [r0, #8]
+  2022cc:	f44f 7000 	mov.w	r0, #512	; 0x200
+  2022d0:	f7ff fbf0 	bl	201ab4 <pvPortMalloc>
+  2022d4:	2800      	cmp	r0, #0
+  2022d6:	f000 8185 	beq.w	2025e4 <main+0x330>
+  2022da:	4604      	mov	r4, r0
+  2022dc:	207c      	movs	r0, #124	; 0x7c
+  2022de:	f7ff fbe9 	bl	201ab4 <pvPortMalloc>
+  2022e2:	2800      	cmp	r0, #0
+  2022e4:	f000 817b 	beq.w	2025de <main+0x32a>
+  2022e8:	2700      	movs	r7, #0
+  2022ea:	4605      	mov	r5, r0
+  2022ec:	6544      	str	r4, [r0, #84]	; 0x54
+  2022ee:	f880 7079 	strb.w	r7, [r0, #121]	; 0x79
+  2022f2:	f04f 4000 	mov.w	r0, #2147483648	; 0x80000000
+  2022f6:	f240 01cc 	movw	r1, #204	; 0xcc
+  2022fa:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2022fe:	e88d 0023 	stmia.w	sp, {r0, r1, r5}
+  202302:	f640 60b9 	movw	r0, #3769	; 0xeb9
+  202306:	f2c0 0020 	movt	r0, #32
+  20230a:	a1ca      	add	r1, pc, #808	; (adr r1, 202634 <main+0x380>)
+  20230c:	2280      	movs	r2, #128	; 0x80
+  20230e:	2300      	movs	r3, #0
+  202310:	9703      	str	r7, [sp, #12]
+  202312:	f7fe fa01 	bl	200718 <prvInitialiseNewTask>
+  202316:	4628      	mov	r0, r5
+  202318:	f7fe fb36 	bl	200988 <prvAddNewTaskToReadyList>
+  20231c:	f7ff fda2 	bl	201e64 <ulSetInterruptMask>
+  202320:	f244 1660 	movw	r6, #16736	; 0x4160
+  202324:	f6c2 0620 	movt	r6, #10272	; 0x2820
+  202328:	6830      	ldr	r0, [r6, #0]
+  20232a:	f240 1804 	movw	r8, #260	; 0x104
+  20232e:	3001      	adds	r0, #1
+  202330:	6030      	str	r0, [r6, #0]
+  202332:	f6c2 0820 	movt	r8, #10272	; 0x2820
+  202336:	f3bf 8f4f 	dsb	sy
+  20233a:	f3bf 8f6f 	isb	sy
+  20233e:	f8d8 4000 	ldr.w	r4, [r8]
+  202342:	2c00      	cmp	r4, #0
+  202344:	d16a      	bne.n	20241c <main+0x168>
+  202346:	f240 1018 	movw	r0, #280	; 0x118
+  20234a:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  20234e:	f04f 35ff 	mov.w	r5, #4294967295
+  202352:	4601      	mov	r1, r0
+  202354:	f841 5f08 	str.w	r5, [r1, #8]!
+  202358:	6041      	str	r1, [r0, #4]
+  20235a:	e9c0 1103 	strd	r1, r1, [r0, #12]
+  20235e:	f240 112c 	movw	r1, #300	; 0x12c
+  202362:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  202366:	460a      	mov	r2, r1
+  202368:	6007      	str	r7, [r0, #0]
+  20236a:	f842 5f08 	str.w	r5, [r2, #8]!
+  20236e:	604a      	str	r2, [r1, #4]
+  202370:	e9c1 2203 	strd	r2, r2, [r1, #12]
+  202374:	f240 120c 	movw	r2, #268	; 0x10c
+  202378:	f6c2 0220 	movt	r2, #10272	; 0x2820
+  20237c:	600f      	str	r7, [r1, #0]
+  20237e:	6010      	str	r0, [r2, #0]
+  202380:	f240 1010 	movw	r0, #272	; 0x110
+  202384:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  202388:	6001      	str	r1, [r0, #0]
+  20238a:	20a4      	movs	r0, #164	; 0xa4
+  20238c:	f7ff fb92 	bl	201ab4 <pvPortMalloc>
+  202390:	4604      	mov	r4, r0
+  202392:	2800      	cmp	r0, #0
+  202394:	d040      	beq.n	202418 <main+0x164>
+  202396:	f104 0054 	add.w	r0, r4, #84	; 0x54
+  20239a:	6020      	str	r0, [r4, #0]
+  20239c:	2005      	movs	r0, #5
+  20239e:	2110      	movs	r1, #16
+  2023a0:	e9c4 010f 	strd	r0, r1, [r4, #60]	; 0x3c
+  2023a4:	f7ff fd5e 	bl	201e64 <ulSetInterruptMask>
+  2023a8:	6830      	ldr	r0, [r6, #0]
+  2023aa:	2700      	movs	r7, #0
+  2023ac:	3001      	adds	r0, #1
+  2023ae:	6030      	str	r0, [r6, #0]
+  2023b0:	f3bf 8f4f 	dsb	sy
+  2023b4:	f3bf 8f6f 	isb	sy
+  2023b8:	e9d4 120f 	ldrd	r1, r2, [r4, #60]	; 0x3c
+  2023bc:	6820      	ldr	r0, [r4, #0]
+  2023be:	63a7      	str	r7, [r4, #56]	; 0x38
+  2023c0:	fb02 0301 	mla	r3, r2, r1, r0
+  2023c4:	3901      	subs	r1, #1
+  2023c6:	fb01 0102 	mla	r1, r1, r2, r0
+  2023ca:	e9c4 0301 	strd	r0, r3, [r4, #4]
+  2023ce:	20ff      	movs	r0, #255	; 0xff
+  2023d0:	60e1      	str	r1, [r4, #12]
+  2023d2:	f884 0044 	strb.w	r0, [r4, #68]	; 0x44
+  2023d6:	f884 0045 	strb.w	r0, [r4, #69]	; 0x45
+  2023da:	4620      	mov	r0, r4
+  2023dc:	f840 5f18 	str.w	r5, [r0, #24]!
+  2023e0:	6160      	str	r0, [r4, #20]
+  2023e2:	e9c4 0007 	strd	r0, r0, [r4, #28]
+  2023e6:	4620      	mov	r0, r4
+  2023e8:	6127      	str	r7, [r4, #16]
+  2023ea:	f840 5f2c 	str.w	r5, [r0, #44]!
+  2023ee:	62a0      	str	r0, [r4, #40]	; 0x28
+  2023f0:	e9c4 000c 	strd	r0, r0, [r4, #48]	; 0x30
+  2023f4:	6267      	str	r7, [r4, #36]	; 0x24
+  2023f6:	6830      	ldr	r0, [r6, #0]
+  2023f8:	2800      	cmp	r0, #0
+  2023fa:	f000 8116 	beq.w	20262a <main+0x376>
+  2023fe:	6830      	ldr	r0, [r6, #0]
+  202400:	3801      	subs	r0, #1
+  202402:	6030      	str	r0, [r6, #0]
+  202404:	6830      	ldr	r0, [r6, #0]
+  202406:	2800      	cmp	r0, #0
+  202408:	bf04      	itt	eq
+  20240a:	2000      	moveq	r0, #0
+  20240c:	f7ff fd36 	bleq	201e7c <vClearInterruptMask>
+  202410:	2000      	movs	r0, #0
+  202412:	f884 0050 	strb.w	r0, [r4, #80]	; 0x50
+  202416:	64a0      	str	r0, [r4, #72]	; 0x48
+  202418:	f8c8 4000 	str.w	r4, [r8]
+  20241c:	6830      	ldr	r0, [r6, #0]
+  20241e:	2800      	cmp	r0, #0
+  202420:	f000 80f3 	beq.w	20260a <main+0x356>
+  202424:	6830      	ldr	r0, [r6, #0]
+  202426:	3801      	subs	r0, #1
+  202428:	6030      	str	r0, [r6, #0]
+  20242a:	6830      	ldr	r0, [r6, #0]
+  20242c:	2800      	cmp	r0, #0
+  20242e:	f000 80f0 	beq.w	202612 <main+0x35e>
+  202432:	2c00      	cmp	r4, #0
+  202434:	f000 80f5 	beq.w	202622 <main+0x36e>
+  202438:	f44f 6080 	mov.w	r0, #1024	; 0x400
+  20243c:	f7ff fb3a 	bl	201ab4 <pvPortMalloc>
+  202440:	2800      	cmp	r0, #0
+  202442:	f000 80cf 	beq.w	2025e4 <main+0x330>
+  202446:	4604      	mov	r4, r0
+  202448:	207c      	movs	r0, #124	; 0x7c
+  20244a:	f7ff fb33 	bl	201ab4 <pvPortMalloc>
+  20244e:	2800      	cmp	r0, #0
+  202450:	f000 80c5 	beq.w	2025de <main+0x32a>
+  202454:	f04f 0800 	mov.w	r8, #0
+  202458:	4605      	mov	r5, r0
+  20245a:	6544      	str	r4, [r0, #84]	; 0x54
+  20245c:	f880 8079 	strb.w	r8, [r0, #121]	; 0x79
+  202460:	2002      	movs	r0, #2
+  202462:	f2c8 0000 	movt	r0, #32768	; 0x8000
+  202466:	f240 1108 	movw	r1, #264	; 0x108
+  20246a:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  20246e:	e88d 0023 	stmia.w	sp, {r0, r1, r5}
+  202472:	f241 0081 	movw	r0, #4225	; 0x1081
+  202476:	f64e 5498 	movw	r4, #60824	; 0xed98
+  20247a:	f64e 5720 	movw	r7, #60704	; 0xed20
+  20247e:	f2c0 0020 	movt	r0, #32
+  202482:	a16e      	add	r1, pc, #440	; (adr r1, 20263c <main+0x388>)
+  202484:	f44f 7280 	mov.w	r2, #256	; 0x100
+  202488:	2300      	movs	r3, #0
+  20248a:	f2ce 0400 	movt	r4, #57344	; 0xe000
+  20248e:	f2ce 0700 	movt	r7, #57344	; 0xe000
+  202492:	f8cd 800c 	str.w	r8, [sp, #12]
+  202496:	f7fe f93f 	bl	200718 <prvInitialiseNewTask>
+  20249a:	4628      	mov	r0, r5
+  20249c:	f7fe fa74 	bl	200988 <prvAddNewTaskToReadyList>
+  2024a0:	f7ff fce0 	bl	201e64 <ulSetInterruptMask>
+  2024a4:	f240 00d0 	movw	r0, #208	; 0xd0
+  2024a8:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2024ac:	f04f 31ff 	mov.w	r1, #4294967295
+  2024b0:	6001      	str	r1, [r0, #0]
+  2024b2:	f240 0124 	movw	r1, #36	; 0x24
+  2024b6:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2024ba:	2001      	movs	r0, #1
+  2024bc:	6008      	str	r0, [r1, #0]
+  2024be:	f240 012c 	movw	r1, #44	; 0x2c
+  2024c2:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2024c6:	f8c1 8000 	str.w	r8, [r1]
+  2024ca:	6839      	ldr	r1, [r7, #0]
+  2024cc:	f441 017f 	orr.w	r1, r1, #16711680	; 0xff0000
+  2024d0:	6039      	str	r1, [r7, #0]
+  2024d2:	6839      	ldr	r1, [r7, #0]
+  2024d4:	f041 417f 	orr.w	r1, r1, #4278190080	; 0xff000000
+  2024d8:	6039      	str	r1, [r7, #0]
+  2024da:	f854 1c08 	ldr.w	r1, [r4, #-8]
+  2024de:	f5b1 6f00 	cmp.w	r1, #2048	; 0x800
+  2024e2:	d158      	bne.n	202596 <main+0x2e2>
+  2024e4:	6aa1      	ldr	r1, [r4, #40]	; 0x28
+  2024e6:	2204      	movs	r2, #4
+  2024e8:	f041 01ff 	orr.w	r1, r1, #255	; 0xff
+  2024ec:	62a1      	str	r1, [r4, #40]	; 0x28
+  2024ee:	6aa1      	ldr	r1, [r4, #40]	; 0x28
+  2024f0:	f441 6180 	orr.w	r1, r1, #1024	; 0x400
+  2024f4:	62a1      	str	r1, [r4, #40]	; 0x28
+  2024f6:	f240 0100 	movw	r1, #0
+  2024fa:	f2c0 0120 	movt	r1, #32
+  2024fe:	f362 0104 	bfi	r1, r2, #0, #5
+  202502:	f8c4 8000 	str.w	r8, [r4]
+  202506:	6061      	str	r1, [r4, #4]
+  202508:	f242 01a0 	movw	r1, #8352	; 0x20a0
+  20250c:	f2c0 0120 	movt	r1, #32
+  202510:	3901      	subs	r1, #1
+  202512:	f360 0104 	bfi	r1, r0, #0, #5
+  202516:	60a1      	str	r1, [r4, #8]
+  202518:	f242 01c0 	movw	r1, #8384	; 0x20c0
+  20251c:	f2c0 0120 	movt	r1, #32
+  202520:	2206      	movs	r2, #6
+  202522:	f362 0104 	bfi	r1, r2, #0, #5
+  202526:	6020      	str	r0, [r4, #0]
+  202528:	6061      	str	r1, [r4, #4]
+  20252a:	f242 7180 	movw	r1, #10112	; 0x2780
+  20252e:	f2c0 0120 	movt	r1, #32
+  202532:	3901      	subs	r1, #1
+  202534:	f360 0104 	bfi	r1, r0, #0, #5
+  202538:	60a1      	str	r1, [r4, #8]
+  20253a:	2102      	movs	r1, #2
+  20253c:	6021      	str	r1, [r4, #0]
+  20253e:	f242 01a0 	movw	r1, #8352	; 0x20a0
+  202542:	f2c0 0120 	movt	r1, #32
+  202546:	f362 0104 	bfi	r1, r2, #0, #5
+  20254a:	6061      	str	r1, [r4, #4]
+  20254c:	f242 01c0 	movw	r1, #8384	; 0x20c0
+  202550:	f2c0 0120 	movt	r1, #32
+  202554:	3901      	subs	r1, #1
+  202556:	f360 0104 	bfi	r1, r0, #0, #5
+  20255a:	60a1      	str	r1, [r4, #8]
+  20255c:	2103      	movs	r1, #3
+  20255e:	6021      	str	r1, [r4, #0]
+  202560:	f240 0100 	movw	r1, #0
+  202564:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  202568:	f360 0104 	bfi	r1, r0, #0, #5
+  20256c:	6061      	str	r1, [r4, #4]
+  20256e:	f244 1180 	movw	r1, #16768	; 0x4180
+  202572:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  202576:	3901      	subs	r1, #1
+  202578:	f360 0104 	bfi	r1, r0, #0, #5
+  20257c:	60a1      	str	r1, [r4, #8]
+  20257e:	f854 0c74 	ldr.w	r0, [r4, #-116]
+  202582:	f440 3080 	orr.w	r0, r0, #65536	; 0x10000
+  202586:	f844 0c74 	str.w	r0, [r4, #-116]
+  20258a:	f854 0c04 	ldr.w	r0, [r4, #-4]
+  20258e:	f040 0005 	orr.w	r0, r0, #5
+  202592:	f844 0c04 	str.w	r0, [r4, #-4]
+  202596:	f24f 20f0 	movw	r0, #62192	; 0xf2f0
+  20259a:	f24f 21f8 	movw	r1, #62200	; 0xf2f8
+  20259e:	f6cf 70ff 	movt	r0, #65535	; 0xffff
+  2025a2:	f6cf 71ff 	movt	r1, #65535	; 0xffff
+  2025a6:	f847 8000 	str.w	r8, [r7, r0]
+  2025aa:	f847 8001 	str.w	r8, [r7, r1]
+  2025ae:	f24f 21f4 	movw	r1, #62196	; 0xf2f4
+  2025b2:	f6cf 71ff 	movt	r1, #65535	; 0xffff
+  2025b6:	f246 12a7 	movw	r2, #24999	; 0x61a7
+  2025ba:	507a      	str	r2, [r7, r1]
+  2025bc:	2107      	movs	r1, #7
+  2025be:	5039      	str	r1, [r7, r0]
+  2025c0:	f8c6 8000 	str.w	r8, [r6]
+  2025c4:	f7ff fc3e 	bl	201e44 <vStartFirstTask>
+  2025c8:	f7ff fccc 	bl	201f64 <vTaskSwitchContext>
+  2025cc:	f8cd 8014 	str.w	r8, [sp, #20]
+  2025d0:	6834      	ldr	r4, [r6, #0]
+  2025d2:	f7ff fc47 	bl	201e64 <ulSetInterruptMask>
+  2025d6:	1c60      	adds	r0, r4, #1
+  2025d8:	d00d      	beq.n	2025f6 <main+0x342>
+  2025da:	bf00      	nop
+  2025dc:	e7fe      	b.n	2025dc <main+0x328>
+  2025de:	4620      	mov	r0, r4
+  2025e0:	f7ff fb6c 	bl	201cbc <vPortFree>
+  2025e4:	f7ff fc3e 	bl	201e64 <ulSetInterruptMask>
+  2025e8:	e7fe      	b.n	2025e8 <main+0x334>
+  2025ea:	9805      	ldr	r0, [sp, #20]
+  2025ec:	b930      	cbnz	r0, 2025fc <main+0x348>
+  2025ee:	9805      	ldr	r0, [sp, #20]
+  2025f0:	b920      	cbnz	r0, 2025fc <main+0x348>
+  2025f2:	9805      	ldr	r0, [sp, #20]
+  2025f4:	b910      	cbnz	r0, 2025fc <main+0x348>
+  2025f6:	9805      	ldr	r0, [sp, #20]
+  2025f8:	2800      	cmp	r0, #0
+  2025fa:	d0f6      	beq.n	2025ea <main+0x336>
+  2025fc:	f242 706c 	movw	r0, #10092	; 0x276c
+  202600:	f2c0 0020 	movt	r0, #32
+  202604:	6800      	ldr	r0, [r0, #0]
+  202606:	bf00      	nop
+  202608:	e7fe      	b.n	202608 <main+0x354>
+  20260a:	f7ff fc2b 	bl	201e64 <ulSetInterruptMask>
+  20260e:	bf00      	nop
+  202610:	e7fe      	b.n	202610 <main+0x35c>
+  202612:	2000      	movs	r0, #0
+  202614:	f7ff fc32 	bl	201e7c <vClearInterruptMask>
+  202618:	f8d8 4000 	ldr.w	r4, [r8]
+  20261c:	2c00      	cmp	r4, #0
+  20261e:	f47f af0b 	bne.w	202438 <main+0x184>
+  202622:	f7ff fc1f 	bl	201e64 <ulSetInterruptMask>
+  202626:	bf00      	nop
+  202628:	e7fe      	b.n	202628 <main+0x374>
+  20262a:	f7ff fc1b 	bl	201e64 <ulSetInterruptMask>
+  20262e:	bf00      	nop
+  202630:	e7fe      	b.n	202630 <main+0x37c>
+  202632:	bf00      	nop
+  202634:	454c4449 	.word	0x454c4449
+  202638:	00000000 	.word	0x00000000
+  20263c:	20726d54 	.word	0x20726d54
+  202640:	00637653 	.word	0x00637653
+
+00202644 <prvTaskExitError>:
+  202644:	b510      	push	{r4, lr}
+  202646:	b082      	sub	sp, #8
+  202648:	2000      	movs	r0, #0
+  20264a:	9001      	str	r0, [sp, #4]
+  20264c:	f244 1060 	movw	r0, #16736	; 0x4160
+  202650:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  202654:	6804      	ldr	r4, [r0, #0]
+  202656:	f7ff fc05 	bl	201e64 <ulSetInterruptMask>
+  20265a:	1c60      	adds	r0, r4, #1
+  20265c:	d008      	beq.n	202670 <prvTaskExitError+0x2c>
+  20265e:	bf00      	nop
+  202660:	e7fe      	b.n	202660 <prvTaskExitError+0x1c>
+  202662:	bf00      	nop
+  202664:	9801      	ldr	r0, [sp, #4]
+  202666:	b930      	cbnz	r0, 202676 <prvTaskExitError+0x32>
+  202668:	9801      	ldr	r0, [sp, #4]
+  20266a:	b920      	cbnz	r0, 202676 <prvTaskExitError+0x32>
+  20266c:	9801      	ldr	r0, [sp, #4]
+  20266e:	b910      	cbnz	r0, 202676 <prvTaskExitError+0x32>
+  202670:	9801      	ldr	r0, [sp, #4]
+  202672:	2800      	cmp	r0, #0
+  202674:	d0f6      	beq.n	202664 <prvTaskExitError+0x20>
+  202676:	b002      	add	sp, #8
+  202678:	bd10      	pop	{r4, pc}
+	...
+
+0020267c <sherlocEmptyTask>:
+  20267c:	e7fe      	b.n	20267c <sherlocEmptyTask>
+	...
+
+00202680 <vHandleMemoryFault>:
+  202680:	e7fe      	b.n	202680 <vHandleMemoryFault>
+	...
+
+00202684 <vulfoo>:
+  202684:	b580      	push	{r7, lr}
+  202686:	b086      	sub	sp, #24
+  202688:	2006      	movs	r0, #6
+  20268a:	9005      	str	r0, [sp, #20]
+  20268c:	2000      	movs	r0, #0
+  20268e:	9004      	str	r0, [sp, #16]
+  202690:	9003      	str	r0, [sp, #12]
+  202692:	9002      	str	r0, [sp, #8]
+  202694:	9001      	str	r0, [sp, #4]
+  202696:	f3af 8000 	nop.w
+  20269a:	e7ff      	b.n	20269c <vulfoo+0x18>
+  20269c:	2000      	movs	r0, #0
+  20269e:	9001      	str	r0, [sp, #4]
+  2026a0:	e7ff      	b.n	2026a2 <vulfoo+0x1e>
+  2026a2:	9801      	ldr	r0, [sp, #4]
+  2026a4:	9905      	ldr	r1, [sp, #20]
+  2026a6:	4288      	cmp	r0, r1
+  2026a8:	da0f      	bge.n	2026ca <vulfoo+0x46>
+  2026aa:	e7ff      	b.n	2026ac <vulfoo+0x28>
+  2026ac:	9801      	ldr	r0, [sp, #4]
+  2026ae:	f644 51a0 	movw	r1, #19872	; 0x4da0
+  2026b2:	f6c2 0120 	movt	r1, #10272	; 0x2820
+  2026b6:	f851 1020 	ldr.w	r1, [r1, r0, lsl #2]
+  2026ba:	aa02      	add	r2, sp, #8
+  2026bc:	f842 1020 	str.w	r1, [r2, r0, lsl #2]
+  2026c0:	e7ff      	b.n	2026c2 <vulfoo+0x3e>
+  2026c2:	9801      	ldr	r0, [sp, #4]
+  2026c4:	3001      	adds	r0, #1
+  2026c6:	9001      	str	r0, [sp, #4]
+  2026c8:	e7eb      	b.n	2026a2 <vulfoo+0x1e>
+  2026ca:	e7ff      	b.n	2026cc <vulfoo+0x48>
+  2026cc:	b006      	add	sp, #24
+  2026ce:	bd80      	pop	{r7, pc}
+
+002026d0 <vulfooTask>:
+  2026d0:	b5b0      	push	{r4, r5, r7, lr}
+  2026d2:	b082      	sub	sp, #8
+  2026d4:	9001      	str	r0, [sp, #4]
+  2026d6:	e7ff      	b.n	2026d8 <vulfooTask+0x8>
+  2026d8:	f7ff ffd4 	bl	202684 <vulfoo>
+  2026dc:	2000      	movs	r0, #0
+  2026de:	9000      	str	r0, [sp, #0]
+  2026e0:	f644 50a0 	movw	r0, #19872	; 0x4da0
+  2026e4:	f6c2 0020 	movt	r0, #10272	; 0x2820
+  2026e8:	68c0      	ldr	r0, [r0, #12]
+  2026ea:	2806      	cmp	r0, #6
+  2026ec:	d31c      	bcc.n	202728 <vulfooTask+0x58>
+  2026ee:	e7ff      	b.n	2026f0 <vulfooTask+0x20>
+  2026f0:	f3bf 8f5f 	dmb	sy
+  2026f4:	4a0d      	ldr	r2, [pc, #52]	; (20272c <vulfooTask+0x5c>)
+  2026f6:	6813      	ldr	r3, [r2, #0]
+  2026f8:	f023 0301 	bic.w	r3, r3, #1
+  2026fc:	6013      	str	r3, [r2, #0]
+  2026fe:	f3bf 8f4f 	dsb	sy
+  202702:	f3bf 8f6f 	isb	sy
+  202706:	f241 0404 	movw	r4, #4100	; 0x1004
+  20270a:	f2ce 0400 	movt	r4, #57344	; 0xe000
+  20270e:	6820      	ldr	r0, [r4, #0]
+  202710:	f241 050c 	movw	r5, #4108	; 0x100c
+  202714:	f2ce 0500 	movt	r5, #57344	; 0xe000
+  202718:	6829      	ldr	r1, [r5, #0]
+  20271a:	4408      	add	r0, r1
+  20271c:	f000 f80d 	bl	20273a <vulfooTask+0x6a>
+  202720:	2000      	movs	r0, #0
+  202722:	6028      	str	r0, [r5, #0]
+  202724:	6020      	str	r0, [r4, #0]
+  202726:	e7ff      	b.n	202728 <vulfooTask+0x58>
+  202728:	e7d6      	b.n	2026d8 <vulfooTask+0x8>
+  20272a:	0000      	movs	r0, r0
+  20272c:	e000ed94 	.word	0xe000ed94
+  202730:	f64f 6c11 	movw	ip, #65041	; 0xfe11
+  202734:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  202738:	4760      	bx	ip
+  20273a:	f64f 6c21 	movw	ip, #65057	; 0xfe21
+  20273e:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  202742:	4760      	bx	ip
+
+00202744 <_fp_init>:
+  202744:	eef1 0a10 	vmrs	r0, fpscr
+  202748:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  20274c:	f2c0 31c0 	movt	r1, #960	; 0x3c0
+  202750:	ea20 0001 	bic.w	r0, r0, r1
+  202754:	f040 7040 	orr.w	r0, r0, #50331648	; 0x3000000
+  202758:	eee1 0a10 	vmsr	fpscr, r0
+
+0020275c <__fplib_config_fpu_vfp>:
+  20275c:	4770      	bx	lr
+
+0020275e <.L.str>:
+  20275e:	4853 5245 4f4c 5643 6c75 6f66 006f          SHERLOCVulfoo.
+
+0020276c <uxTopUsedPriority>:
+  20276c:	0004 0000                                   ....

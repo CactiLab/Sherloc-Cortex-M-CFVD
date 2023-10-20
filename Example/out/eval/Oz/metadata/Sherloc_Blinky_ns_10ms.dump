@@ -1,0 +1,1689 @@
+
+../../Example/out/eval/Oz/elf_ns/TeeCFI_Blinky_ns_10ms.axf:     file format elf32-littlearm
+
+
+Disassembly of section ER_ROM:
+
+00200000 <__Vectors>:
+  200000:	00 00 40 28 2d 07 20 00 a5 04 20 00 b9 05 20 00     ..@(-. ... ... .
+  200010:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+  20002c:	a5 04 20 00 a5 04 20 00 00 00 00 00 a5 04 20 00     .. ... ....... .
+  20003c:	65 07 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     e. ... ... ... .
+  20004c:	a5 04 20 00 a5 04 20 00 a5 04 20 00 00 00 00 00     .. ... ... .....
+	...
+  200064:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+  2000c0:	dd 07 20 00 f1 07 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000d0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000e0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000f0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200100:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200110:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200120:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200130:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200140:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200150:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200160:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200170:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200180:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200190:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001a0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001b0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001c0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001d0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001e0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001f0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200200:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200210:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200220:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+
+00200400 <__main>:
+  200400:	f000 f802 	bl	200408 <__scatterload_rt2>
+  200404:	f000 f82e 	bl	200464 <__rt_entry>
+
+00200408 <__scatterload_rt2>:
+  200408:	a00a      	add	r0, pc, #40	; (adr r0, 200434 <__scatterload_null+0x1e>)
+  20040a:	e890 0c00 	ldmia.w	r0, {sl, fp}
+  20040e:	4482      	add	sl, r0
+  200410:	4483      	add	fp, r0
+  200412:	f1aa 0701 	sub.w	r7, sl, #1
+
+00200416 <__scatterload_null>:
+  200416:	45da      	cmp	sl, fp
+  200418:	d101      	bne.n	20041e <__scatterload_null+0x8>
+  20041a:	f000 f823 	bl	200464 <__rt_entry>
+  20041e:	f2af 0e09 	subw	lr, pc, #9
+  200422:	e8ba 000f 	ldmia.w	sl!, {r0, r1, r2, r3}
+  200426:	f013 0f01 	tst.w	r3, #1
+  20042a:	bf18      	it	ne
+  20042c:	1afb      	subne	r3, r7, r3
+  20042e:	f043 0301 	orr.w	r3, r3, #1
+  200432:	4718      	bx	r3
+  200434:	00002030 	.word	0x00002030
+  200438:	00002040 	.word	0x00002040
+
+0020043c <__scatterload_zeroinit>:
+  20043c:	2300      	movs	r3, #0
+  20043e:	2400      	movs	r4, #0
+  200440:	2500      	movs	r5, #0
+  200442:	2600      	movs	r6, #0
+  200444:	3a10      	subs	r2, #16
+  200446:	bf28      	it	cs
+  200448:	c178      	stmiacs	r1!, {r3, r4, r5, r6}
+  20044a:	d8fb      	bhi.n	200444 <__scatterload_zeroinit+0x8>
+  20044c:	0752      	lsls	r2, r2, #29
+  20044e:	bf28      	it	cs
+  200450:	c130      	stmiacs	r1!, {r4, r5}
+  200452:	bf48      	it	mi
+  200454:	600b      	strmi	r3, [r1, #0]
+  200456:	4770      	bx	lr
+
+00200458 <__rt_lib_init>:
+  200458:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+
+0020045a <__rt_lib_init_fp_1>:
+  20045a:	f000 fd60 	bl	200f1e <_fp_init>
+
+0020045e <__rt_lib_init_alloca_1>:
+  20045e:	bd1f      	pop	{r0, r1, r2, r3, r4, pc}
+
+00200460 <__rt_lib_shutdown>:
+  200460:	b510      	push	{r4, lr}
+
+00200462 <__rt_lib_shutdown_cpp_1>:
+  200462:	bd10      	pop	{r4, pc}
+
+00200464 <__rt_entry>:
+  200464:	f8df d00c 	ldr.w	sp, [pc, #12]	; 200474 <__lit__00000000>
+
+00200468 <__rt_entry_li>:
+  200468:	f7ff fff6 	bl	200458 <__rt_lib_init>
+
+0020046c <__rt_entry_main>:
+  20046c:	f000 f9de 	bl	20082c <main>
+  200470:	f000 f808 	bl	200484 <exit>
+
+00200474 <__lit__00000000>:
+  200474:	0000 2840                                   ..@(
+
+00200478 <__rt_exit>:
+  200478:	b403      	push	{r0, r1}
+
+0020047a <__rt_exit_ls>:
+  20047a:	f7ff fff1 	bl	200460 <__rt_lib_shutdown>
+
+0020047e <__rt_exit_exit>:
+  20047e:	bc03      	pop	{r0, r1}
+  200480:	f000 f80a 	bl	200498 <_sys_exit>
+
+00200484 <exit>:
+  200484:	b510      	push	{r4, lr}
+  200486:	4604      	mov	r4, r0
+  200488:	f3af 8000 	nop.w
+  20048c:	4620      	mov	r0, r4
+  20048e:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  200492:	f7ff bff1 	b.w	200478 <__rt_exit>
+
+00200496 <__use_no_semihosting_swi>:
+  200496:	4770      	bx	lr
+
+00200498 <_sys_exit>:
+  200498:	4901      	ldr	r1, [pc, #4]	; (2004a0 <_sys_exit+0x8>)
+  20049a:	2018      	movs	r0, #24
+  20049c:	beab      	bkpt	0x00ab
+  20049e:	e7fe      	b.n	20049e <_sys_exit+0x6>
+  2004a0:	00020026 	.word	0x00020026
+
+002004a4 <Default_Handler>:
+  2004a4:	e7fe      	b.n	2004a4 <Default_Handler>
+	...
+
+002004a8 <GLCD_DrawChar>:
+  2004a8:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
+  2004ac:	4ebc      	ldr	r6, [pc, #752]	; (2007a0 <__arm_cp.0_0>)
+  2004ae:	4614      	mov	r4, r2
+  2004b0:	69b2      	ldr	r2, [r6, #24]
+  2004b2:	2a00      	cmp	r2, #0
+  2004b4:	d03f      	beq.n	200536 <GLCD_DrawChar+0x8e>
+  2004b6:	2210      	movs	r2, #16
+  2004b8:	2318      	movs	r3, #24
+  2004ba:	f000 f851 	bl	200560 <GLCD_SetWindow>
+  2004be:	2022      	movs	r0, #34	; 0x22
+  2004c0:	f000 fcf0 	bl	200ea4 <wr_cmd>
+  2004c4:	f000 fd08 	bl	200ed8 <wr_dat_start>
+  2004c8:	7ab0      	ldrb	r0, [r6, #10]
+  2004ca:	491c      	ldr	r1, [pc, #112]	; (20053c <__arm_cp.9_1>)
+  2004cc:	f04f 39ff 	mov.w	r9, #4294967295
+  2004d0:	f04f 0800 	mov.w	r8, #0
+  2004d4:	2800      	cmp	r0, #0
+  2004d6:	eb04 0044 	add.w	r0, r4, r4, lsl #1
+  2004da:	bf18      	it	ne
+  2004dc:	f04f 091f 	movne.w	r9, #31
+  2004e0:	89b6      	ldrh	r6, [r6, #12]
+  2004e2:	eb01 1000 	add.w	r0, r1, r0, lsl #4
+  2004e6:	f5a0 64c0 	sub.w	r4, r0, #1536	; 0x600
+  2004ea:	f1b8 0f18 	cmp.w	r8, #24
+  2004ee:	d01d      	beq.n	20052c <GLCD_DrawChar+0x84>
+  2004f0:	2700      	movs	r7, #0
+  2004f2:	2f10      	cmp	r7, #16
+  2004f4:	d016      	beq.n	200524 <GLCD_DrawChar+0x7c>
+  2004f6:	f007 0507 	and.w	r5, r7, #7
+  2004fa:	7820      	ldrb	r0, [r4, #0]
+  2004fc:	40e8      	lsrs	r0, r5
+  2004fe:	07c0      	lsls	r0, r0, #31
+  200500:	4630      	mov	r0, r6
+  200502:	bf08      	it	eq
+  200504:	4648      	moveq	r0, r9
+  200506:	b280      	uxth	r0, r0
+  200508:	f000 fcdc 	bl	200ec4 <wr_dat_only>
+  20050c:	f1b7 000f 	subs.w	r0, r7, #15
+  200510:	bf18      	it	ne
+  200512:	2001      	movne	r0, #1
+  200514:	1fe9      	subs	r1, r5, #7
+  200516:	3701      	adds	r7, #1
+  200518:	fab1 f181 	clz	r1, r1
+  20051c:	0949      	lsrs	r1, r1, #5
+  20051e:	4008      	ands	r0, r1
+  200520:	4404      	add	r4, r0
+  200522:	e7e6      	b.n	2004f2 <GLCD_DrawChar+0x4a>
+  200524:	f108 0801 	add.w	r8, r8, #1
+  200528:	3401      	adds	r4, #1
+  20052a:	e7de      	b.n	2004ea <GLCD_DrawChar+0x42>
+  20052c:	4804      	ldr	r0, [pc, #16]	; (200540 <__arm_cp.9_2>)
+  20052e:	6801      	ldr	r1, [r0, #0]
+  200530:	f041 0101 	orr.w	r1, r1, #1
+  200534:	6001      	str	r1, [r0, #0]
+  200536:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
+  20053a:	bf00      	nop
+
+0020053c <__arm_cp.9_1>:
+  20053c:	00200f38 	.word	0x00200f38
+
+00200540 <__arm_cp.9_2>:
+  200540:	4030204c 	.word	0x4030204c
+
+00200544 <GLCD_DrawString>:
+  200544:	b570      	push	{r4, r5, r6, lr}
+  200546:	4614      	mov	r4, r2
+  200548:	460d      	mov	r5, r1
+  20054a:	4606      	mov	r6, r0
+  20054c:	7822      	ldrb	r2, [r4, #0]
+  20054e:	b132      	cbz	r2, 20055e <GLCD_DrawString+0x1a>
+  200550:	4630      	mov	r0, r6
+  200552:	4629      	mov	r1, r5
+  200554:	f7ff ffa8 	bl	2004a8 <GLCD_DrawChar>
+  200558:	3610      	adds	r6, #16
+  20055a:	3401      	adds	r4, #1
+  20055c:	e7f6      	b.n	20054c <GLCD_DrawString+0x8>
+  20055e:	bd70      	pop	{r4, r5, r6, pc}
+
+00200560 <GLCD_SetWindow>:
+  200560:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+  200564:	460c      	mov	r4, r1
+  200566:	f3c0 210f 	ubfx	r1, r0, #8, #16
+  20056a:	4d12      	ldr	r5, [pc, #72]	; (2005b4 <__arm_cp.6_0>)
+  20056c:	4607      	mov	r7, r0
+  20056e:	2002      	movs	r0, #2
+  200570:	4698      	mov	r8, r3
+  200572:	4616      	mov	r6, r2
+  200574:	47a8      	blx	r5
+  200576:	b2f9      	uxtb	r1, r7
+  200578:	2003      	movs	r0, #3
+  20057a:	47a8      	blx	r5
+  20057c:	19b8      	adds	r0, r7, r6
+  20057e:	1e46      	subs	r6, r0, #1
+  200580:	2004      	movs	r0, #4
+  200582:	f3c6 210f 	ubfx	r1, r6, #8, #16
+  200586:	47a8      	blx	r5
+  200588:	b2f1      	uxtb	r1, r6
+  20058a:	2005      	movs	r0, #5
+  20058c:	47a8      	blx	r5
+  20058e:	2006      	movs	r0, #6
+  200590:	2100      	movs	r1, #0
+  200592:	47a8      	blx	r5
+  200594:	b2e1      	uxtb	r1, r4
+  200596:	2007      	movs	r0, #7
+  200598:	47a8      	blx	r5
+  20059a:	eb04 0008 	add.w	r0, r4, r8
+  20059e:	1e44      	subs	r4, r0, #1
+  2005a0:	2008      	movs	r0, #8
+  2005a2:	f3c4 210f 	ubfx	r1, r4, #8, #16
+  2005a6:	47a8      	blx	r5
+  2005a8:	b2e1      	uxtb	r1, r4
+  2005aa:	2009      	movs	r0, #9
+  2005ac:	462a      	mov	r2, r5
+  2005ae:	e8bd 41f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, lr}
+  2005b2:	4710      	bx	r2
+
+002005b4 <__arm_cp.6_0>:
+  2005b4:	00200ee9 	.word	0x00200ee9
+
+002005b8 <HardFault_Handler>:
+  2005b8:	e7fe      	b.n	2005b8 <HardFault_Handler>
+
+002005ba <I2C_MasterReceive>:
+  2005ba:	b1f0      	cbz	r0, 2005fa <I2C_MasterReceive+0x40>
+  2005bc:	b570      	push	{r4, r5, r6, lr}
+  2005be:	460c      	mov	r4, r1
+  2005c0:	4605      	mov	r5, r0
+  2005c2:	f000 f88b 	bl	2006dc <I2C_txStart>
+  2005c6:	2083      	movs	r0, #131	; 0x83
+  2005c8:	f000 f87a 	bl	2006c0 <I2C_txByte>
+  2005cc:	f000 f84a 	bl	200664 <I2C_rxBit>
+  2005d0:	f000 f858 	bl	200684 <I2C_rxByte>
+  2005d4:	2601      	movs	r6, #1
+  2005d6:	7028      	strb	r0, [r5, #0]
+  2005d8:	42a6      	cmp	r6, r4
+  2005da:	d207      	bcs.n	2005ec <I2C_MasterReceive+0x32>
+  2005dc:	2000      	movs	r0, #0
+  2005de:	f000 f85f 	bl	2006a0 <I2C_txBit>
+  2005e2:	f000 f84f 	bl	200684 <I2C_rxByte>
+  2005e6:	55a8      	strb	r0, [r5, r6]
+  2005e8:	3601      	adds	r6, #1
+  2005ea:	e7f5      	b.n	2005d8 <I2C_MasterReceive+0x1e>
+  2005ec:	2001      	movs	r0, #1
+  2005ee:	f000 f857 	bl	2006a0 <I2C_txBit>
+  2005f2:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  2005f6:	f000 b881 	b.w	2006fc <I2C_txStop>
+  2005fa:	4770      	bx	lr
+
+002005fc <I2C_MasterTransmit>:
+  2005fc:	b1c8      	cbz	r0, 200632 <I2C_MasterTransmit+0x36>
+  2005fe:	b570      	push	{r4, r5, r6, lr}
+  200600:	4614      	mov	r4, r2
+  200602:	460d      	mov	r5, r1
+  200604:	4606      	mov	r6, r0
+  200606:	f000 f869 	bl	2006dc <I2C_txStart>
+  20060a:	2082      	movs	r0, #130	; 0x82
+  20060c:	f000 f858 	bl	2006c0 <I2C_txByte>
+  200610:	f000 f828 	bl	200664 <I2C_rxBit>
+  200614:	b13d      	cbz	r5, 200626 <I2C_MasterTransmit+0x2a>
+  200616:	f816 0b01 	ldrb.w	r0, [r6], #1
+  20061a:	f000 f851 	bl	2006c0 <I2C_txByte>
+  20061e:	f000 f821 	bl	200664 <I2C_rxBit>
+  200622:	3d01      	subs	r5, #1
+  200624:	e7f6      	b.n	200614 <I2C_MasterTransmit+0x18>
+  200626:	2c00      	cmp	r4, #0
+  200628:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  20062c:	bf08      	it	eq
+  20062e:	f000 b865 	beq.w	2006fc <I2C_txStop>
+  200632:	4770      	bx	lr
+
+00200634 <I2C_delay>:
+  200634:	480a      	ldr	r0, [pc, #40]	; (200660 <__arm_cp.12_0>)
+  200636:	6802      	ldr	r2, [r0, #0]
+  200638:	f102 010f 	add.w	r1, r2, #15
+  20063c:	f112 0f10 	cmn.w	r2, #16
+  200640:	d906      	bls.n	200650 <I2C_delay+0x1c>
+  200642:	6803      	ldr	r3, [r0, #0]
+  200644:	4293      	cmp	r3, r2
+  200646:	d2fc      	bcs.n	200642 <I2C_delay+0xe>
+  200648:	6802      	ldr	r2, [r0, #0]
+  20064a:	428a      	cmp	r2, r1
+  20064c:	d3fc      	bcc.n	200648 <I2C_delay+0x14>
+  20064e:	e005      	b.n	20065c <I2C_delay+0x28>
+  200650:	6803      	ldr	r3, [r0, #0]
+  200652:	4293      	cmp	r3, r2
+  200654:	d302      	bcc.n	20065c <I2C_delay+0x28>
+  200656:	6803      	ldr	r3, [r0, #0]
+  200658:	428b      	cmp	r3, r1
+  20065a:	d3f9      	bcc.n	200650 <I2C_delay+0x1c>
+  20065c:	4770      	bx	lr
+  20065e:	bf00      	nop
+
+00200660 <__arm_cp.12_0>:
+  200660:	40302018 	.word	0x40302018
+
+00200664 <I2C_rxBit>:
+  200664:	b5b0      	push	{r4, r5, r7, lr}
+  200666:	4c2c      	ldr	r4, [pc, #176]	; (200718 <__arm_cp.13_0>)
+  200668:	2002      	movs	r0, #2
+  20066a:	6020      	str	r0, [r4, #0]
+  20066c:	f7ff ffe2 	bl	200634 <I2C_delay>
+  200670:	2501      	movs	r5, #1
+  200672:	6025      	str	r5, [r4, #0]
+  200674:	f7ff ffde 	bl	200634 <I2C_delay>
+  200678:	6820      	ldr	r0, [r4, #0]
+  20067a:	6065      	str	r5, [r4, #4]
+  20067c:	f3c0 0040 	ubfx	r0, r0, #1, #1
+  200680:	bdb0      	pop	{r4, r5, r7, pc}
+  200682:	bf00      	nop
+
+00200684 <I2C_rxByte>:
+  200684:	b5b0      	push	{r4, r5, r7, lr}
+  200686:	2400      	movs	r4, #0
+  200688:	2500      	movs	r5, #0
+  20068a:	2c07      	cmp	r4, #7
+  20068c:	bf84      	itt	hi
+  20068e:	b2e8      	uxtbhi	r0, r5
+  200690:	bdb0      	pophi	{r4, r5, r7, pc}
+  200692:	f7ff ffe7 	bl	200664 <I2C_rxBit>
+  200696:	ea40 0545 	orr.w	r5, r0, r5, lsl #1
+  20069a:	3401      	adds	r4, #1
+  20069c:	e7f5      	b.n	20068a <I2C_rxByte+0x6>
+	...
+
+002006a0 <I2C_txBit>:
+  2006a0:	b5b0      	push	{r4, r5, r7, lr}
+  2006a2:	4c1d      	ldr	r4, [pc, #116]	; (200718 <__arm_cp.13_0>)
+  2006a4:	2800      	cmp	r0, #0
+  2006a6:	4620      	mov	r0, r4
+  2006a8:	bf08      	it	eq
+  2006aa:	3004      	addeq	r0, #4
+  2006ac:	2102      	movs	r1, #2
+  2006ae:	6001      	str	r1, [r0, #0]
+  2006b0:	f7ff ffc0 	bl	200634 <I2C_delay>
+  2006b4:	2501      	movs	r5, #1
+  2006b6:	6025      	str	r5, [r4, #0]
+  2006b8:	f7ff ffbc 	bl	200634 <I2C_delay>
+  2006bc:	6065      	str	r5, [r4, #4]
+  2006be:	bdb0      	pop	{r4, r5, r7, pc}
+
+002006c0 <I2C_txByte>:
+  2006c0:	b5b0      	push	{r4, r5, r7, lr}
+  2006c2:	4604      	mov	r4, r0
+  2006c4:	2500      	movs	r5, #0
+  2006c6:	2d07      	cmp	r5, #7
+  2006c8:	bf88      	it	hi
+  2006ca:	bdb0      	pophi	{r4, r5, r7, pc}
+  2006cc:	f004 0080 	and.w	r0, r4, #128	; 0x80
+  2006d0:	f7ff ffe6 	bl	2006a0 <I2C_txBit>
+  2006d4:	3501      	adds	r5, #1
+  2006d6:	0064      	lsls	r4, r4, #1
+  2006d8:	e7f5      	b.n	2006c6 <I2C_txByte+0x6>
+	...
+
+002006dc <I2C_txStart>:
+  2006dc:	b5b0      	push	{r4, r5, r7, lr}
+  2006de:	4d0f      	ldr	r5, [pc, #60]	; (20071c <__arm_cp.13_1>)
+  2006e0:	4c0d      	ldr	r4, [pc, #52]	; (200718 <__arm_cp.13_0>)
+  2006e2:	2003      	movs	r0, #3
+  2006e4:	6020      	str	r0, [r4, #0]
+  2006e6:	47a8      	blx	r5
+  2006e8:	2002      	movs	r0, #2
+  2006ea:	6060      	str	r0, [r4, #4]
+  2006ec:	47a8      	blx	r5
+  2006ee:	2001      	movs	r0, #1
+  2006f0:	6060      	str	r0, [r4, #4]
+  2006f2:	4628      	mov	r0, r5
+  2006f4:	e8bd 40b0 	ldmia.w	sp!, {r4, r5, r7, lr}
+  2006f8:	4700      	bx	r0
+  2006fa:	bf00      	nop
+
+002006fc <I2C_txStop>:
+  2006fc:	b570      	push	{r4, r5, r6, lr}
+  2006fe:	4e07      	ldr	r6, [pc, #28]	; (20071c <__arm_cp.13_1>)
+  200700:	4c05      	ldr	r4, [pc, #20]	; (200718 <__arm_cp.13_0>)
+  200702:	2502      	movs	r5, #2
+  200704:	6065      	str	r5, [r4, #4]
+  200706:	47b0      	blx	r6
+  200708:	2001      	movs	r0, #1
+  20070a:	6020      	str	r0, [r4, #0]
+  20070c:	47b0      	blx	r6
+  20070e:	6025      	str	r5, [r4, #0]
+  200710:	4630      	mov	r0, r6
+  200712:	e8bd 4070 	ldmia.w	sp!, {r4, r5, r6, lr}
+  200716:	4700      	bx	r0
+
+00200718 <__arm_cp.13_0>:
+  200718:	40207000 	.word	0x40207000
+
+0020071c <__arm_cp.13_1>:
+  20071c:	00200635 	.word	0x00200635
+
+00200720 <OUTLINED_FUNCTION_0>:
+  200720:	6828      	ldr	r0, [r5, #0]
+  200722:	f040 0001 	orr.w	r0, r0, #1
+  200726:	6028      	str	r0, [r5, #0]
+  200728:	bd70      	pop	{r4, r5, r6, pc}
+	...
+
+0020072c <Reset_Handler>:
+  20072c:	4809      	ldr	r0, [pc, #36]	; (200754 <__arm_cp.25_0>)
+  20072e:	f380 8809 	msr	PSP, r0
+  200732:	490b      	ldr	r1, [pc, #44]	; (200760 <__arm_cp.25_3>)
+  200734:	4808      	ldr	r0, [pc, #32]	; (200758 <__arm_cp.25_1>)
+  200736:	f380 880a 	msr	MSPLIM, r0
+  20073a:	f380 880b 	msr	PSPLIM, r0
+  20073e:	4807      	ldr	r0, [pc, #28]	; (20075c <__arm_cp.25_2>)
+  200740:	6001      	str	r1, [r0, #0]
+  200742:	f8d0 1080 	ldr.w	r1, [r0, #128]	; 0x80
+  200746:	f441 0170 	orr.w	r1, r1, #15728640	; 0xf00000
+  20074a:	f8c0 1080 	str.w	r1, [r0, #128]	; 0x80
+  20074e:	f7ff fe57 	bl	200400 <__main>
+  200752:	bf00      	nop
+
+00200754 <__arm_cp.25_0>:
+  200754:	28400000 	.word	0x28400000
+
+00200758 <__arm_cp.25_1>:
+  200758:	283ffc00 	.word	0x283ffc00
+
+0020075c <__arm_cp.25_2>:
+  20075c:	e000ed08 	.word	0xe000ed08
+
+00200760 <__arm_cp.25_3>:
+  200760:	00200000 	.word	0x00200000
+
+00200764 <SysTick_Handler>:
+  200764:	480e      	ldr	r0, [pc, #56]	; (2007a0 <__arm_cp.0_0>)
+  200766:	6941      	ldr	r1, [r0, #20]
+  200768:	1c4a      	adds	r2, r1, #1
+  20076a:	6142      	str	r2, [r0, #20]
+  20076c:	2963      	cmp	r1, #99	; 0x63
+  20076e:	bf21      	itttt	cs
+  200770:	2101      	movcs	r1, #1
+  200772:	7001      	strbcs	r1, [r0, #0]
+  200774:	2100      	movcs	r1, #0
+  200776:	6141      	strcs	r1, [r0, #20]
+  200778:	6902      	ldr	r2, [r0, #16]
+  20077a:	1c51      	adds	r1, r2, #1
+  20077c:	2a2d      	cmp	r2, #45	; 0x2d
+  20077e:	6101      	str	r1, [r0, #16]
+  200780:	d00a      	beq.n	200798 <SysTick_Handler+0x34>
+  200782:	2a28      	cmp	r2, #40	; 0x28
+  200784:	bf02      	ittt	eq
+  200786:	2101      	moveq	r1, #1
+  200788:	7201      	strbeq	r1, [r0, #8]
+  20078a:	4770      	bxeq	lr
+  20078c:	b912      	cbnz	r2, 200794 <SysTick_Handler+0x30>
+  20078e:	2101      	movs	r1, #1
+  200790:	7101      	strb	r1, [r0, #4]
+  200792:	4770      	bx	lr
+  200794:	2933      	cmp	r1, #51	; 0x33
+  200796:	d301      	bcc.n	20079c <SysTick_Handler+0x38>
+  200798:	2100      	movs	r1, #0
+  20079a:	6101      	str	r1, [r0, #16]
+  20079c:	4770      	bx	lr
+  20079e:	bf00      	nop
+
+002007a0 <__arm_cp.0_0>:
+  2007a0:	28200000 	.word	0x28200000
+
+002007a4 <Touch_ReadReg>:
+  2007a4:	b51c      	push	{r2, r3, r4, lr}
+  2007a6:	460c      	mov	r4, r1
+  2007a8:	f88d 0007 	strb.w	r0, [sp, #7]
+  2007ac:	f10d 0007 	add.w	r0, sp, #7
+  2007b0:	2101      	movs	r1, #1
+  2007b2:	2201      	movs	r2, #1
+  2007b4:	f7ff ff22 	bl	2005fc <I2C_MasterTransmit>
+  2007b8:	4620      	mov	r0, r4
+  2007ba:	2101      	movs	r1, #1
+  2007bc:	f7ff fefd 	bl	2005ba <I2C_MasterReceive>
+  2007c0:	bd1c      	pop	{r2, r3, r4, pc}
+
+002007c2 <Touch_WriteReg>:
+  2007c2:	b5e0      	push	{r5, r6, r7, lr}
+  2007c4:	f88d 1007 	strb.w	r1, [sp, #7]
+  2007c8:	f88d 0006 	strb.w	r0, [sp, #6]
+  2007cc:	f10d 0006 	add.w	r0, sp, #6
+  2007d0:	2102      	movs	r1, #2
+  2007d2:	2200      	movs	r2, #0
+  2007d4:	f7ff ff12 	bl	2005fc <I2C_MasterTransmit>
+  2007d8:	bd8c      	pop	{r2, r3, r7, pc}
+	...
+
+002007dc <UART0RX_Handler>:
+  2007dc:	4803      	ldr	r0, [pc, #12]	; (2007ec <__arm_cp.23_0>)
+  2007de:	6841      	ldr	r1, [r0, #4]
+  2007e0:	6802      	ldr	r2, [r0, #0]
+  2007e2:	f022 0208 	bic.w	r2, r2, #8
+  2007e6:	6002      	str	r2, [r0, #0]
+  2007e8:	6041      	str	r1, [r0, #4]
+  2007ea:	4770      	bx	lr
+
+002007ec <__arm_cp.23_0>:
+  2007ec:	40200008 	.word	0x40200008
+
+002007f0 <UART0TX_Handler>:
+  2007f0:	4801      	ldr	r0, [pc, #4]	; (2007f8 <__arm_cp.24_0>)
+  2007f2:	6801      	ldr	r1, [r0, #0]
+  2007f4:	6001      	str	r1, [r0, #0]
+  2007f6:	4770      	bx	lr
+
+002007f8 <__arm_cp.24_0>:
+  2007f8:	4020000c 	.word	0x4020000c
+
+002007fc <delay_ms>:
+  2007fc:	4903      	ldr	r1, [pc, #12]	; (20080c <__arm_cp.2_0>)
+  2007fe:	4348      	muls	r0, r1
+  200800:	b110      	cbz	r0, 200808 <delay_ms+0xc>
+  200802:	bf00      	nop
+  200804:	3001      	adds	r0, #1
+  200806:	e7fb      	b.n	200800 <delay_ms+0x4>
+  200808:	4770      	bx	lr
+  20080a:	bf00      	nop
+
+0020080c <__arm_cp.2_0>:
+  20080c:	ffff9e58 	.word	0xffff9e58
+
+00200810 <delay_ms.33>:
+  200810:	4805      	ldr	r0, [pc, #20]	; (200828 <__arm_cp.21_0>)
+  200812:	b138      	cbz	r0, 200824 <delay_ms.33+0x14>
+  200814:	bf00      	nop
+  200816:	3001      	adds	r0, #1
+  200818:	bf00      	nop
+  20081a:	bf00      	nop
+  20081c:	bf00      	nop
+  20081e:	bf00      	nop
+  200820:	bf00      	nop
+  200822:	e7f6      	b.n	200812 <delay_ms.33+0x2>
+  200824:	4770      	bx	lr
+  200826:	bf00      	nop
+
+00200828 <__arm_cp.21_0>:
+  200828:	fffc2f70 	.word	0xfffc2f70
+
+0020082c <main>:
+  20082c:	b088      	sub	sp, #32
+  20082e:	f8df 75a0 	ldr.w	r7, [pc, #1440]	; 200dd0 <__arm_cp.1_2>
+  200832:	49d7      	ldr	r1, [pc, #860]	; (200b90 <main+0x364>)
+  200834:	2000      	movs	r0, #0
+  200836:	2405      	movs	r4, #5
+  200838:	4dd6      	ldr	r5, [pc, #856]	; (200b94 <__arm_cp.1_25>)
+  20083a:	f04f 0802 	mov.w	r8, #2
+  20083e:	2601      	movs	r6, #1
+  200840:	6008      	str	r0, [r1, #0]
+  200842:	b15c      	cbz	r4, 20085c <main+0x30>
+  200844:	f8c5 8004 	str.w	r8, [r5, #4]
+  200848:	47b8      	blx	r7
+  20084a:	606e      	str	r6, [r5, #4]
+  20084c:	47b8      	blx	r7
+  20084e:	602e      	str	r6, [r5, #0]
+  200850:	47b8      	blx	r7
+  200852:	f8c5 8000 	str.w	r8, [r5]
+  200856:	47b8      	blx	r7
+  200858:	3c01      	subs	r4, #1
+  20085a:	e7f2      	b.n	200842 <main+0x16>
+  20085c:	2600      	movs	r6, #0
+  20085e:	2101      	movs	r1, #1
+  200860:	2201      	movs	r2, #1
+  200862:	f88d 6018 	strb.w	r6, [sp, #24]
+  200866:	ac06      	add	r4, sp, #24
+  200868:	4620      	mov	r0, r4
+  20086a:	f7ff fec7 	bl	2005fc <I2C_MasterTransmit>
+  20086e:	4620      	mov	r0, r4
+  200870:	2102      	movs	r1, #2
+  200872:	2502      	movs	r5, #2
+  200874:	f7ff fea1 	bl	2005ba <I2C_MasterReceive>
+  200878:	f8df 7558 	ldr.w	r7, [pc, #1368]	; 200dd4 <__arm_cp.1_3>
+  20087c:	2003      	movs	r0, #3
+  20087e:	2102      	movs	r1, #2
+  200880:	2403      	movs	r4, #3
+  200882:	47b8      	blx	r7
+  200884:	f7ff ffc4 	bl	200810 <delay_ms.33>
+  200888:	2004      	movs	r0, #4
+  20088a:	210c      	movs	r1, #12
+  20088c:	47b8      	blx	r7
+  20088e:	200a      	movs	r0, #10
+  200890:	2107      	movs	r1, #7
+  200892:	47b8      	blx	r7
+  200894:	2020      	movs	r0, #32
+  200896:	2169      	movs	r1, #105	; 0x69
+  200898:	47b8      	blx	r7
+  20089a:	f7ff ffb9 	bl	200810 <delay_ms.33>
+  20089e:	2021      	movs	r0, #33	; 0x21
+  2008a0:	2101      	movs	r1, #1
+  2008a2:	47b8      	blx	r7
+  2008a4:	2041      	movs	r0, #65	; 0x41
+  2008a6:	21c2      	movs	r1, #194	; 0xc2
+  2008a8:	47b8      	blx	r7
+  2008aa:	204a      	movs	r0, #74	; 0x4a
+  2008ac:	2101      	movs	r1, #1
+  2008ae:	47b8      	blx	r7
+  2008b0:	204b      	movs	r0, #75	; 0x4b
+  2008b2:	2101      	movs	r1, #1
+  2008b4:	47b8      	blx	r7
+  2008b6:	204b      	movs	r0, #75	; 0x4b
+  2008b8:	2100      	movs	r1, #0
+  2008ba:	47b8      	blx	r7
+  2008bc:	2056      	movs	r0, #86	; 0x56
+  2008be:	2107      	movs	r1, #7
+  2008c0:	47b8      	blx	r7
+  2008c2:	2058      	movs	r0, #88	; 0x58
+  2008c4:	2101      	movs	r1, #1
+  2008c6:	47b8      	blx	r7
+  2008c8:	2017      	movs	r0, #23
+  2008ca:	2100      	movs	r1, #0
+  2008cc:	47b8      	blx	r7
+  2008ce:	2040      	movs	r0, #64	; 0x40
+  2008d0:	2101      	movs	r1, #1
+  2008d2:	47b8      	blx	r7
+  2008d4:	200b      	movs	r0, #11
+  2008d6:	21ff      	movs	r1, #255	; 0xff
+  2008d8:	47b8      	blx	r7
+  2008da:	48af      	ldr	r0, [pc, #700]	; (200b98 <__arm_cp.1_26>)
+  2008dc:	f240 1107 	movw	r1, #263	; 0x107
+  2008e0:	4fab      	ldr	r7, [pc, #684]	; (200b90 <main+0x364>)
+  2008e2:	6046      	str	r6, [r0, #4]
+  2008e4:	6246      	str	r6, [r0, #36]	; 0x24
+  2008e6:	6146      	str	r6, [r0, #20]
+  2008e8:	6204      	str	r4, [r0, #32]
+  2008ea:	6001      	str	r1, [r0, #0]
+  2008ec:	6105      	str	r5, [r0, #16]
+  2008ee:	6045      	str	r5, [r0, #4]
+  2008f0:	f8df 54e4 	ldr.w	r5, [pc, #1252]	; 200dd8 <__arm_cp.1_5>
+  2008f4:	6cf8      	ldr	r0, [r7, #76]	; 0x4c
+  2008f6:	f040 0009 	orr.w	r0, r0, #9
+  2008fa:	64f8      	str	r0, [r7, #76]	; 0x4c
+  2008fc:	6cf8      	ldr	r0, [r7, #76]	; 0x4c
+  2008fe:	f020 0070 	bic.w	r0, r0, #112	; 0x70
+  200902:	64f8      	str	r0, [r7, #76]	; 0x4c
+  200904:	6cf8      	ldr	r0, [r7, #76]	; 0x4c
+  200906:	f020 0008 	bic.w	r0, r0, #8
+  20090a:	64f8      	str	r0, [r7, #76]	; 0x4c
+  20090c:	2001      	movs	r0, #1
+  20090e:	47a8      	blx	r5
+  200910:	6cf8      	ldr	r0, [r7, #76]	; 0x4c
+  200912:	f040 0008 	orr.w	r0, r0, #8
+  200916:	64f8      	str	r0, [r7, #76]	; 0x4c
+  200918:	2005      	movs	r0, #5
+  20091a:	47a8      	blx	r5
+  20091c:	f8df 44bc 	ldr.w	r4, [pc, #1212]	; 200ddc <__arm_cp.1_6>
+  200920:	20ea      	movs	r0, #234	; 0xea
+  200922:	2100      	movs	r1, #0
+  200924:	47a0      	blx	r4
+  200926:	20eb      	movs	r0, #235	; 0xeb
+  200928:	2120      	movs	r1, #32
+  20092a:	47a0      	blx	r4
+  20092c:	20ec      	movs	r0, #236	; 0xec
+  20092e:	210c      	movs	r1, #12
+  200930:	47a0      	blx	r4
+  200932:	20ed      	movs	r0, #237	; 0xed
+  200934:	21c7      	movs	r1, #199	; 0xc7
+  200936:	47a0      	blx	r4
+  200938:	20e8      	movs	r0, #232	; 0xe8
+  20093a:	2138      	movs	r1, #56	; 0x38
+  20093c:	47a0      	blx	r4
+  20093e:	20e9      	movs	r0, #233	; 0xe9
+  200940:	2110      	movs	r1, #16
+  200942:	47a0      	blx	r4
+  200944:	20f1      	movs	r0, #241	; 0xf1
+  200946:	2101      	movs	r1, #1
+  200948:	47a0      	blx	r4
+  20094a:	20f2      	movs	r0, #242	; 0xf2
+  20094c:	2110      	movs	r1, #16
+  20094e:	47a0      	blx	r4
+  200950:	2040      	movs	r0, #64	; 0x40
+  200952:	2101      	movs	r1, #1
+  200954:	47a0      	blx	r4
+  200956:	2041      	movs	r0, #65	; 0x41
+  200958:	2100      	movs	r1, #0
+  20095a:	47a0      	blx	r4
+  20095c:	2042      	movs	r0, #66	; 0x42
+  20095e:	2100      	movs	r1, #0
+  200960:	47a0      	blx	r4
+  200962:	2043      	movs	r0, #67	; 0x43
+  200964:	2110      	movs	r1, #16
+  200966:	47a0      	blx	r4
+  200968:	2044      	movs	r0, #68	; 0x44
+  20096a:	210e      	movs	r1, #14
+  20096c:	47a0      	blx	r4
+  20096e:	2045      	movs	r0, #69	; 0x45
+  200970:	2124      	movs	r1, #36	; 0x24
+  200972:	47a0      	blx	r4
+  200974:	2046      	movs	r0, #70	; 0x46
+  200976:	2104      	movs	r1, #4
+  200978:	47a0      	blx	r4
+  20097a:	2047      	movs	r0, #71	; 0x47
+  20097c:	2150      	movs	r1, #80	; 0x50
+  20097e:	47a0      	blx	r4
+  200980:	2048      	movs	r0, #72	; 0x48
+  200982:	2102      	movs	r1, #2
+  200984:	47a0      	blx	r4
+  200986:	2049      	movs	r0, #73	; 0x49
+  200988:	2113      	movs	r1, #19
+  20098a:	47a0      	blx	r4
+  20098c:	204a      	movs	r0, #74	; 0x4a
+  20098e:	2119      	movs	r1, #25
+  200990:	47a0      	blx	r4
+  200992:	204b      	movs	r0, #75	; 0x4b
+  200994:	2119      	movs	r1, #25
+  200996:	47a0      	blx	r4
+  200998:	204c      	movs	r0, #76	; 0x4c
+  20099a:	2116      	movs	r1, #22
+  20099c:	47a0      	blx	r4
+  20099e:	2050      	movs	r0, #80	; 0x50
+  2009a0:	211b      	movs	r1, #27
+  2009a2:	47a0      	blx	r4
+  2009a4:	2051      	movs	r0, #81	; 0x51
+  2009a6:	2131      	movs	r1, #49	; 0x31
+  2009a8:	47a0      	blx	r4
+  2009aa:	2052      	movs	r0, #82	; 0x52
+  2009ac:	212f      	movs	r1, #47	; 0x2f
+  2009ae:	47a0      	blx	r4
+  2009b0:	2053      	movs	r0, #83	; 0x53
+  2009b2:	213f      	movs	r1, #63	; 0x3f
+  2009b4:	47a0      	blx	r4
+  2009b6:	2054      	movs	r0, #84	; 0x54
+  2009b8:	213f      	movs	r1, #63	; 0x3f
+  2009ba:	47a0      	blx	r4
+  2009bc:	2055      	movs	r0, #85	; 0x55
+  2009be:	213e      	movs	r1, #62	; 0x3e
+  2009c0:	47a0      	blx	r4
+  2009c2:	2056      	movs	r0, #86	; 0x56
+  2009c4:	212f      	movs	r1, #47	; 0x2f
+  2009c6:	47a0      	blx	r4
+  2009c8:	2057      	movs	r0, #87	; 0x57
+  2009ca:	217b      	movs	r1, #123	; 0x7b
+  2009cc:	47a0      	blx	r4
+  2009ce:	2058      	movs	r0, #88	; 0x58
+  2009d0:	2109      	movs	r1, #9
+  2009d2:	47a0      	blx	r4
+  2009d4:	2059      	movs	r0, #89	; 0x59
+  2009d6:	2106      	movs	r1, #6
+  2009d8:	47a0      	blx	r4
+  2009da:	205a      	movs	r0, #90	; 0x5a
+  2009dc:	2106      	movs	r1, #6
+  2009de:	47a0      	blx	r4
+  2009e0:	205b      	movs	r0, #91	; 0x5b
+  2009e2:	210c      	movs	r1, #12
+  2009e4:	47a0      	blx	r4
+  2009e6:	205c      	movs	r0, #92	; 0x5c
+  2009e8:	211d      	movs	r1, #29
+  2009ea:	47a0      	blx	r4
+  2009ec:	205d      	movs	r0, #93	; 0x5d
+  2009ee:	21cc      	movs	r1, #204	; 0xcc
+  2009f0:	47a0      	blx	r4
+  2009f2:	201b      	movs	r0, #27
+  2009f4:	211b      	movs	r1, #27
+  2009f6:	47a0      	blx	r4
+  2009f8:	201a      	movs	r0, #26
+  2009fa:	2101      	movs	r1, #1
+  2009fc:	47a0      	blx	r4
+  2009fe:	2024      	movs	r0, #36	; 0x24
+  200a00:	212f      	movs	r1, #47	; 0x2f
+  200a02:	47a0      	blx	r4
+  200a04:	2025      	movs	r0, #37	; 0x25
+  200a06:	2157      	movs	r1, #87	; 0x57
+  200a08:	47a0      	blx	r4
+  200a0a:	2023      	movs	r0, #35	; 0x23
+  200a0c:	2188      	movs	r1, #136	; 0x88
+  200a0e:	47a0      	blx	r4
+  200a10:	2018      	movs	r0, #24
+  200a12:	2136      	movs	r1, #54	; 0x36
+  200a14:	47a0      	blx	r4
+  200a16:	2019      	movs	r0, #25
+  200a18:	2101      	movs	r1, #1
+  200a1a:	47a0      	blx	r4
+  200a1c:	2001      	movs	r0, #1
+  200a1e:	2100      	movs	r1, #0
+  200a20:	47a0      	blx	r4
+  200a22:	201f      	movs	r0, #31
+  200a24:	2188      	movs	r1, #136	; 0x88
+  200a26:	47a0      	blx	r4
+  200a28:	2032      	movs	r0, #50	; 0x32
+  200a2a:	47a8      	blx	r5
+  200a2c:	201f      	movs	r0, #31
+  200a2e:	2182      	movs	r1, #130	; 0x82
+  200a30:	47a0      	blx	r4
+  200a32:	200a      	movs	r0, #10
+  200a34:	47a8      	blx	r5
+  200a36:	201f      	movs	r0, #31
+  200a38:	2192      	movs	r1, #146	; 0x92
+  200a3a:	47a0      	blx	r4
+  200a3c:	200a      	movs	r0, #10
+  200a3e:	47a8      	blx	r5
+  200a40:	201f      	movs	r0, #31
+  200a42:	21d2      	movs	r1, #210	; 0xd2
+  200a44:	47a0      	blx	r4
+  200a46:	200a      	movs	r0, #10
+  200a48:	47a8      	blx	r5
+  200a4a:	2017      	movs	r0, #23
+  200a4c:	2155      	movs	r1, #85	; 0x55
+  200a4e:	47a0      	blx	r4
+  200a50:	2000      	movs	r0, #0
+  200a52:	2100      	movs	r1, #0
+  200a54:	47a0      	blx	r4
+  200a56:	202f      	movs	r0, #47	; 0x2f
+  200a58:	2111      	movs	r1, #17
+  200a5a:	47a0      	blx	r4
+  200a5c:	2031      	movs	r0, #49	; 0x31
+  200a5e:	2100      	movs	r1, #0
+  200a60:	47a0      	blx	r4
+  200a62:	2032      	movs	r0, #50	; 0x32
+  200a64:	2100      	movs	r1, #0
+  200a66:	47a0      	blx	r4
+  200a68:	2028      	movs	r0, #40	; 0x28
+  200a6a:	2138      	movs	r1, #56	; 0x38
+  200a6c:	47a0      	blx	r4
+  200a6e:	20c8      	movs	r0, #200	; 0xc8
+  200a70:	47a8      	blx	r5
+  200a72:	2028      	movs	r0, #40	; 0x28
+  200a74:	213c      	movs	r1, #60	; 0x3c
+  200a76:	47a0      	blx	r4
+  200a78:	2016      	movs	r0, #22
+  200a7a:	21a8      	movs	r1, #168	; 0xa8
+  200a7c:	47a0      	blx	r4
+  200a7e:	200e      	movs	r0, #14
+  200a80:	2100      	movs	r1, #0
+  200a82:	47a0      	blx	r4
+  200a84:	200f      	movs	r0, #15
+  200a86:	2100      	movs	r1, #0
+  200a88:	47a0      	blx	r4
+  200a8a:	2010      	movs	r0, #16
+  200a8c:	2101      	movs	r1, #1
+  200a8e:	47a0      	blx	r4
+  200a90:	2011      	movs	r0, #17
+  200a92:	2140      	movs	r1, #64	; 0x40
+  200a94:	47a0      	blx	r4
+  200a96:	2012      	movs	r0, #18
+  200a98:	2100      	movs	r1, #0
+  200a9a:	47a0      	blx	r4
+  200a9c:	2013      	movs	r0, #19
+  200a9e:	2100      	movs	r1, #0
+  200aa0:	47a0      	blx	r4
+  200aa2:	6cf8      	ldr	r0, [r7, #76]	; 0x4c
+  200aa4:	4dce      	ldr	r5, [pc, #824]	; (200de0 <__arm_cp.1_7>)
+  200aa6:	2100      	movs	r1, #0
+  200aa8:	f44f 72a0 	mov.w	r2, #320	; 0x140
+  200aac:	23f0      	movs	r3, #240	; 0xf0
+  200aae:	f040 0040 	orr.w	r0, r0, #64	; 0x40
+  200ab2:	64f8      	str	r0, [r7, #76]	; 0x4c
+  200ab4:	48cb      	ldr	r0, [pc, #812]	; (200de4 <__arm_cp.1_8>)
+  200ab6:	72ae      	strb	r6, [r5, #10]
+  200ab8:	61a8      	str	r0, [r5, #24]
+  200aba:	2000      	movs	r0, #0
+  200abc:	f7ff fd50 	bl	200560 <GLCD_SetWindow>
+  200ac0:	2022      	movs	r0, #34	; 0x22
+  200ac2:	f000 f9ef 	bl	200ea4 <wr_cmd>
+  200ac6:	f000 fa07 	bl	200ed8 <wr_dat_start>
+  200aca:	f06f 001f 	mvn.w	r0, #31
+  200ace:	7aa9      	ldrb	r1, [r5, #10]
+  200ad0:	f44f 3696 	mov.w	r6, #76800	; 0x12c00
+  200ad4:	301f      	adds	r0, #31
+  200ad6:	2900      	cmp	r1, #0
+  200ad8:	bf18      	it	ne
+  200ada:	201f      	movne	r0, #31
+  200adc:	b284      	uxth	r4, r0
+  200ade:	b126      	cbz	r6, 200aea <main+0x2be>
+  200ae0:	4620      	mov	r0, r4
+  200ae2:	f000 f9ef 	bl	200ec4 <wr_dat_only>
+  200ae6:	3e01      	subs	r6, #1
+  200ae8:	e7f9      	b.n	200ade <main+0x2b2>
+  200aea:	6cf8      	ldr	r0, [r7, #76]	; 0x4c
+  200aec:	4abe      	ldr	r2, [pc, #760]	; (200de8 <__arm_cp.1_9>)
+  200aee:	2100      	movs	r1, #0
+  200af0:	2400      	movs	r4, #0
+  200af2:	f040 0001 	orr.w	r0, r0, #1
+  200af6:	64f8      	str	r0, [r7, #76]	; 0x4c
+  200af8:	f44f 4078 	mov.w	r0, #63488	; 0xf800
+  200afc:	4fbb      	ldr	r7, [pc, #748]	; (200dec <__arm_cp.1_10>)
+  200afe:	81a8      	strh	r0, [r5, #12]
+  200b00:	2001      	movs	r0, #1
+  200b02:	72a8      	strb	r0, [r5, #10]
+  200b04:	2000      	movs	r0, #0
+  200b06:	47b8      	blx	r7
+  200b08:	a2b9      	add	r2, pc, #740	; (adr r2, 200df0 <__arm_cp.1_10+0x4>)
+  200b0a:	2000      	movs	r0, #0
+  200b0c:	2118      	movs	r1, #24
+  200b0e:	47b8      	blx	r7
+  200b10:	a2bd      	add	r2, pc, #756	; (adr r2, 200e08 <__arm_cp.1_10+0x1c>)
+  200b12:	2000      	movs	r0, #0
+  200b14:	2130      	movs	r1, #48	; 0x30
+  200b16:	47b8      	blx	r7
+  200b18:	72ac      	strb	r4, [r5, #10]
+  200b1a:	81ac      	strh	r4, [r5, #12]
+  200b1c:	4ec0      	ldr	r6, [pc, #768]	; (200e20 <__arm_cp.1_13>)
+  200b1e:	f640 5121 	movw	r1, #3361	; 0xd21
+  200b22:	a2c0      	add	r2, pc, #768	; (adr r2, 200e24 <__arm_cp.1_13+0x4>)
+  200b24:	a3c5      	add	r3, pc, #788	; (adr r3, 200e3c <__arm_cp.1_13+0x1c>)
+  200b26:	f8d6 0cf0 	ldr.w	r0, [r6, #3312]	; 0xcf0
+  200b2a:	f3c0 100b 	ubfx	r0, r0, #4, #12
+  200b2e:	4288      	cmp	r0, r1
+  200b30:	bf08      	it	eq
+  200b32:	4613      	moveq	r3, r2
+  200b34:	a2c7      	add	r2, pc, #796	; (adr r2, 200e54 <__arm_cp.1_13+0x34>)
+  200b36:	f5b0 6f52 	cmp.w	r0, #3360	; 0xd20
+  200b3a:	bf18      	it	ne
+  200b3c:	461a      	movne	r2, r3
+  200b3e:	2000      	movs	r0, #0
+  200b40:	2160      	movs	r1, #96	; 0x60
+  200b42:	47b8      	blx	r7
+  200b44:	a2c9      	add	r2, pc, #804	; (adr r2, 200e6c <__arm_cp.1_13+0x4c>)
+  200b46:	2020      	movs	r0, #32
+  200b48:	2190      	movs	r1, #144	; 0x90
+  200b4a:	2490      	movs	r4, #144	; 0x90
+  200b4c:	47b8      	blx	r7
+  200b4e:	a2c9      	add	r2, pc, #804	; (adr r2, 200e74 <__arm_cp.1_13+0x54>)
+  200b50:	2020      	movs	r0, #32
+  200b52:	21a8      	movs	r1, #168	; 0xa8
+  200b54:	47b8      	blx	r7
+  200b56:	4ac9      	ldr	r2, [pc, #804]	; (200e7c <__arm_cp.1_19>)
+  200b58:	2020      	movs	r0, #32
+  200b5a:	21c0      	movs	r1, #192	; 0xc0
+  200b5c:	47b8      	blx	r7
+  200b5e:	48c8      	ldr	r0, [pc, #800]	; (200e80 <__arm_cp.1_20>)
+  200b60:	f24c 6a18 	movw	sl, #50712	; 0xc618
+  200b64:	81a8      	strh	r0, [r5, #12]
+  200b66:	2cb0      	cmp	r4, #176	; 0xb0
+  200b68:	d006      	beq.n	200b78 <main+0x34c>
+  200b6a:	4620      	mov	r0, r4
+  200b6c:	2190      	movs	r1, #144	; 0x90
+  200b6e:	2280      	movs	r2, #128	; 0x80
+  200b70:	f7ff fc9a 	bl	2004a8 <GLCD_DrawChar>
+  200b74:	3410      	adds	r4, #16
+  200b76:	e7f6      	b.n	200b66 <main+0x33a>
+  200b78:	2490      	movs	r4, #144	; 0x90
+  200b7a:	4f94      	ldr	r7, [pc, #592]	; (200dcc <__arm_cp.1_0>)
+  200b7c:	2cb0      	cmp	r4, #176	; 0xb0
+  200b7e:	d00d      	beq.n	200b9c <__arm_cp.1_26+0x4>
+  200b80:	4620      	mov	r0, r4
+  200b82:	21a8      	movs	r1, #168	; 0xa8
+  200b84:	2280      	movs	r2, #128	; 0x80
+  200b86:	f7ff fc8f 	bl	2004a8 <GLCD_DrawChar>
+  200b8a:	3410      	adds	r4, #16
+  200b8c:	e7f6      	b.n	200b7c <main+0x350>
+  200b8e:	bf00      	nop
+  200b90:	40302000 	.word	0x40302000
+
+00200b94 <__arm_cp.1_25>:
+  200b94:	40207000 	.word	0x40207000
+
+00200b98 <__arm_cp.1_26>:
+  200b98:	40206000 	.word	0x40206000
+  200b9c:	2090      	movs	r0, #144	; 0x90
+  200b9e:	21c0      	movs	r1, #192	; 0xc0
+  200ba0:	2280      	movs	r2, #128	; 0x80
+  200ba2:	f7ff fc81 	bl	2004a8 <GLCD_DrawChar>
+  200ba6:	48b7      	ldr	r0, [pc, #732]	; (200e84 <__arm_cp.1_21>)
+  200ba8:	21e0      	movs	r1, #224	; 0xe0
+  200baa:	2201      	movs	r2, #1
+  200bac:	f04f 0901 	mov.w	r9, #1
+  200bb0:	f04f 0800 	mov.w	r8, #0
+  200bb4:	6070      	str	r0, [r6, #4]
+  200bb6:	48b4      	ldr	r0, [pc, #720]	; (200e88 <__arm_cp.1_22>)
+  200bb8:	7001      	strb	r1, [r0, #0]
+  200bba:	2100      	movs	r1, #0
+  200bbc:	200a      	movs	r0, #10
+  200bbe:	60b1      	str	r1, [r6, #8]
+  200bc0:	e9c5 0108 	strd	r0, r1, [r5, #32]
+  200bc4:	2107      	movs	r1, #7
+  200bc6:	6031      	str	r1, [r6, #0]
+  200bc8:	f04f 31ff 	mov.w	r1, #4294967295
+  200bcc:	9203      	str	r2, [sp, #12]
+  200bce:	f04f 32ff 	mov.w	r2, #4294967295
+  200bd2:	9105      	str	r1, [sp, #20]
+  200bd4:	9204      	str	r2, [sp, #16]
+  200bd6:	2100      	movs	r1, #0
+  200bd8:	4308      	orrs	r0, r1
+  200bda:	f000 80f1 	beq.w	200dc0 <__arm_cp.1_26+0x228>
+  200bde:	7928      	ldrb	r0, [r5, #4]
+  200be0:	2801      	cmp	r0, #1
+  200be2:	d11a      	bne.n	200c1a <__arm_cp.1_26+0x82>
+  200be4:	2000      	movs	r0, #0
+  200be6:	7128      	strb	r0, [r5, #4]
+  200be8:	f1b8 0f01 	cmp.w	r8, #1
+  200bec:	bf9f      	itttt	ls
+  200bee:	fa09 f008 	lslls.w	r0, r9, r8
+  200bf2:	6839      	ldrls	r1, [r7, #0]
+  200bf4:	4308      	orrls	r0, r1
+  200bf6:	6038      	strls	r0, [r7, #0]
+  200bf8:	2281      	movs	r2, #129	; 0x81
+  200bfa:	f44f 60fc 	mov.w	r0, #2016	; 0x7e0
+  200bfe:	2190      	movs	r1, #144	; 0x90
+  200c00:	81a8      	strh	r0, [r5, #12]
+  200c02:	2090      	movs	r0, #144	; 0x90
+  200c04:	eb00 1008 	add.w	r0, r0, r8, lsl #4
+  200c08:	f7ff fc4e 	bl	2004a8 <GLCD_DrawChar>
+  200c0c:	e9d5 0108 	ldrd	r0, r1, [r5, #32]
+  200c10:	3801      	subs	r0, #1
+  200c12:	f161 0100 	sbc.w	r1, r1, #0
+  200c16:	e9c5 0108 	strd	r0, r1, [r5, #32]
+  200c1a:	7a28      	ldrb	r0, [r5, #8]
+  200c1c:	2801      	cmp	r0, #1
+  200c1e:	d128      	bne.n	200c72 <__arm_cp.1_26+0xda>
+  200c20:	2000      	movs	r0, #0
+  200c22:	7228      	strb	r0, [r5, #8]
+  200c24:	f1b8 0f01 	cmp.w	r8, #1
+  200c28:	bf9f      	itttt	ls
+  200c2a:	fa09 f008 	lslls.w	r0, r9, r8
+  200c2e:	6839      	ldrls	r1, [r7, #0]
+  200c30:	ea21 0000 	bicls.w	r0, r1, r0
+  200c34:	6038      	strls	r0, [r7, #0]
+  200c36:	2280      	movs	r2, #128	; 0x80
+  200c38:	f8a5 a00c 	strh.w	sl, [r5, #12]
+  200c3c:	2090      	movs	r0, #144	; 0x90
+  200c3e:	2190      	movs	r1, #144	; 0x90
+  200c40:	eb00 1008 	add.w	r0, r0, r8, lsl #4
+  200c44:	f7ff fc30 	bl	2004a8 <GLCD_DrawChar>
+  200c48:	e9d5 0108 	ldrd	r0, r1, [r5, #32]
+  200c4c:	9a03      	ldr	r2, [sp, #12]
+  200c4e:	3801      	subs	r0, #1
+  200c50:	f161 0100 	sbc.w	r1, r1, #0
+  200c54:	eb18 0802 	adds.w	r8, r8, r2
+  200c58:	e9c5 0108 	strd	r0, r1, [r5, #32]
+  200c5c:	f082 0101 	eor.w	r1, r2, #1
+  200c60:	f088 0001 	eor.w	r0, r8, #1
+  200c64:	bf08      	it	eq
+  200c66:	2201      	moveq	r2, #1
+  200c68:	4308      	orrs	r0, r1
+  200c6a:	bf08      	it	eq
+  200c6c:	f04f 32ff 	moveq.w	r2, #4294967295
+  200c70:	9203      	str	r2, [sp, #12]
+  200c72:	68b8      	ldr	r0, [r7, #8]
+  200c74:	f000 0403 	and.w	r4, r0, #3
+  200c78:	9805      	ldr	r0, [sp, #20]
+  200c7a:	4284      	cmp	r4, r0
+  200c7c:	d017      	beq.n	200cae <__arm_cp.1_26+0x116>
+  200c7e:	2700      	movs	r7, #0
+  200c80:	2690      	movs	r6, #144	; 0x90
+  200c82:	2f02      	cmp	r7, #2
+  200c84:	d011      	beq.n	200caa <__arm_cp.1_26+0x112>
+  200c86:	fa09 f007 	lsl.w	r0, r9, r7
+  200c8a:	2281      	movs	r2, #129	; 0x81
+  200c8c:	4020      	ands	r0, r4
+  200c8e:	f04f 0000 	mov.w	r0, #0
+  200c92:	bf08      	it	eq
+  200c94:	4650      	moveq	r0, sl
+  200c96:	81a8      	strh	r0, [r5, #12]
+  200c98:	bf08      	it	eq
+  200c9a:	2280      	moveq	r2, #128	; 0x80
+  200c9c:	21a8      	movs	r1, #168	; 0xa8
+  200c9e:	4630      	mov	r0, r6
+  200ca0:	f7ff fc02 	bl	2004a8 <GLCD_DrawChar>
+  200ca4:	3610      	adds	r6, #16
+  200ca6:	3701      	adds	r7, #1
+  200ca8:	e7eb      	b.n	200c82 <__arm_cp.1_26+0xea>
+  200caa:	4f48      	ldr	r7, [pc, #288]	; (200dcc <__arm_cp.1_0>)
+  200cac:	9405      	str	r4, [sp, #20]
+  200cae:	f10d 041f 	add.w	r4, sp, #31
+  200cb2:	2040      	movs	r0, #64	; 0x40
+  200cb4:	4621      	mov	r1, r4
+  200cb6:	f7ff fd75 	bl	2007a4 <Touch_ReadReg>
+  200cba:	f89d b01f 	ldrb.w	fp, [sp, #31]
+  200cbe:	fa4f f68b 	sxtb.w	r6, fp
+  200cc2:	f1b6 3fff 	cmp.w	r6, #4294967295
+  200cc6:	dc2b      	bgt.n	200d20 <__arm_cp.1_26+0x188>
+  200cc8:	20d7      	movs	r0, #215	; 0xd7
+  200cca:	f10d 011e 	add.w	r1, sp, #30
+  200cce:	f88d 001f 	strb.w	r0, [sp, #31]
+  200cd2:	204c      	movs	r0, #76	; 0x4c
+  200cd4:	f7ff fd66 	bl	2007a4 <Touch_ReadReg>
+  200cd8:	f89d 001e 	ldrb.w	r0, [sp, #30]
+  200cdc:	b960      	cbnz	r0, 200cf8 <__arm_cp.1_26+0x160>
+  200cde:	e067      	b.n	200db0 <__arm_cp.1_26+0x218>
+  200ce0:	4620      	mov	r0, r4
+  200ce2:	2101      	movs	r1, #1
+  200ce4:	2201      	movs	r2, #1
+  200ce6:	f7ff fc89 	bl	2005fc <I2C_MasterTransmit>
+  200cea:	f10d 001a 	add.w	r0, sp, #26
+  200cee:	2104      	movs	r1, #4
+  200cf0:	f7ff fc63 	bl	2005ba <I2C_MasterReceive>
+  200cf4:	f89d 001e 	ldrb.w	r0, [sp, #30]
+  200cf8:	1e41      	subs	r1, r0, #1
+  200cfa:	0600      	lsls	r0, r0, #24
+  200cfc:	f88d 101e 	strb.w	r1, [sp, #30]
+  200d00:	d1ee      	bne.n	200ce0 <__arm_cp.1_26+0x148>
+  200d02:	f89d 001a 	ldrb.w	r0, [sp, #26]
+  200d06:	f89d 101b 	ldrb.w	r1, [sp, #27]
+  200d0a:	f89d 201c 	ldrb.w	r2, [sp, #28]
+  200d0e:	0100      	lsls	r0, r0, #4
+  200d10:	f001 030f 	and.w	r3, r1, #15
+  200d14:	ea42 2203 	orr.w	r2, r2, r3, lsl #8
+  200d18:	ea40 1011 	orr.w	r0, r0, r1, lsr #4
+  200d1c:	9202      	str	r2, [sp, #8]
+  200d1e:	9001      	str	r0, [sp, #4]
+  200d20:	200b      	movs	r0, #11
+  200d22:	211f      	movs	r1, #31
+  200d24:	ea4f 14db 	mov.w	r4, fp, lsr #7
+  200d28:	f7ff fd4b 	bl	2007c2 <Touch_WriteReg>
+  200d2c:	9804      	ldr	r0, [sp, #16]
+  200d2e:	42a0      	cmp	r0, r4
+  200d30:	d03e      	beq.n	200db0 <__arm_cp.1_26+0x218>
+  200d32:	9802      	ldr	r0, [sp, #8]
+  200d34:	f240 2125 	movw	r1, #549	; 0x225
+  200d38:	2200      	movs	r2, #0
+  200d3a:	b200      	sxth	r0, r0
+  200d3c:	4288      	cmp	r0, r1
+  200d3e:	f04f 0100 	mov.w	r1, #0
+  200d42:	bfc8      	it	gt
+  200d44:	2101      	movgt	r1, #1
+  200d46:	2e00      	cmp	r6, #0
+  200d48:	bf48      	it	mi
+  200d4a:	2201      	movmi	r2, #1
+  200d4c:	9b01      	ldr	r3, [sp, #4]
+  200d4e:	2600      	movs	r6, #0
+  200d50:	b21b      	sxth	r3, r3
+  200d52:	f5b3 7ffa 	cmp.w	r3, #500	; 0x1f4
+  200d56:	bfa8      	it	ge
+  200d58:	2601      	movge	r6, #1
+  200d5a:	4032      	ands	r2, r6
+  200d5c:	f5b3 7f7a 	cmp.w	r3, #1000	; 0x3e8
+  200d60:	f04f 0300 	mov.w	r3, #0
+  200d64:	bfd8      	it	le
+  200d66:	2301      	movle	r3, #1
+  200d68:	401a      	ands	r2, r3
+  200d6a:	4011      	ands	r1, r2
+  200d6c:	f240 620f 	movw	r2, #1551	; 0x60f
+  200d70:	4290      	cmp	r0, r2
+  200d72:	f04f 0000 	mov.w	r0, #0
+  200d76:	4a41      	ldr	r2, [pc, #260]	; (200e7c <__arm_cp.1_19>)
+  200d78:	bfb8      	it	lt
+  200d7a:	2001      	movlt	r0, #1
+  200d7c:	ea11 0600 	ands.w	r6, r1, r0
+  200d80:	4630      	mov	r0, r6
+  200d82:	bf18      	it	ne
+  200d84:	4650      	movne	r0, sl
+  200d86:	81a8      	strh	r0, [r5, #12]
+  200d88:	21c0      	movs	r1, #192	; 0xc0
+  200d8a:	2020      	movs	r0, #32
+  200d8c:	f7ff fbda 	bl	200544 <GLCD_DrawString>
+  200d90:	f24c 6018 	movw	r0, #50712	; 0xc618
+  200d94:	2e00      	cmp	r6, #0
+  200d96:	f04f 0280 	mov.w	r2, #128	; 0x80
+  200d9a:	bf18      	it	ne
+  200d9c:	f64f 70e0 	movwne	r0, #65504	; 0xffe0
+  200da0:	81a8      	strh	r0, [r5, #12]
+  200da2:	bf18      	it	ne
+  200da4:	2281      	movne	r2, #129	; 0x81
+  200da6:	21c0      	movs	r1, #192	; 0xc0
+  200da8:	2090      	movs	r0, #144	; 0x90
+  200daa:	f7ff fb7d 	bl	2004a8 <GLCD_DrawChar>
+  200dae:	9404      	str	r4, [sp, #16]
+  200db0:	7828      	ldrb	r0, [r5, #0]
+  200db2:	2801      	cmp	r0, #1
+  200db4:	bf04      	itt	eq
+  200db6:	2000      	moveq	r0, #0
+  200db8:	7028      	strbeq	r0, [r5, #0]
+  200dba:	e9d5 0108 	ldrd	r0, r1, [r5, #32]
+  200dbe:	e70b      	b.n	200bd8 <__arm_cp.1_26+0x40>
+  200dc0:	4832      	ldr	r0, [pc, #200]	; (200e8c <__arm_cp.1_23>)
+  200dc2:	6800      	ldr	r0, [r0, #0]
+  200dc4:	f000 f8a6 	bl	200f14 <__arm_cp.3_1+0x4>
+  200dc8:	e7fe      	b.n	200dc8 <__arm_cp.1_26+0x230>
+  200dca:	bf00      	nop
+
+00200dcc <__arm_cp.1_0>:
+  200dcc:	40302000 	.word	0x40302000
+
+00200dd0 <__arm_cp.1_2>:
+  200dd0:	00200635 	.word	0x00200635
+
+00200dd4 <__arm_cp.1_3>:
+  200dd4:	002007c3 	.word	0x002007c3
+
+00200dd8 <__arm_cp.1_5>:
+  200dd8:	002007fd 	.word	0x002007fd
+
+00200ddc <__arm_cp.1_6>:
+  200ddc:	00200ee9 	.word	0x00200ee9
+
+00200de0 <__arm_cp.1_7>:
+  200de0:	28200000 	.word	0x28200000
+
+00200de4 <__arm_cp.1_8>:
+  200de4:	00202438 	.word	0x00202438
+
+00200de8 <__arm_cp.1_9>:
+  200de8:	00202448 	.word	0x00202448
+
+00200dec <__arm_cp.1_10>:
+  200dec:	00200545 	.word	0x00200545
+  200df0:	20202020 	.word	0x20202020
+  200df4:	6c422020 	.word	0x6c422020
+  200df8:	796b6e69 	.word	0x796b6e69
+  200dfc:	20202020 	.word	0x20202020
+  200e00:	20202020 	.word	0x20202020
+  200e04:	00000000 	.word	0x00000000
+  200e08:	77202020 	.word	0x77202020
+  200e0c:	6b2e7777 	.word	0x6b2e7777
+  200e10:	2e6c6965 	.word	0x2e6c6965
+  200e14:	206d6f63 	.word	0x206d6f63
+  200e18:	20202020 	.word	0x20202020
+  200e1c:	00000000 	.word	0x00000000
+
+00200e20 <__arm_cp.1_13>:
+  200e20:	e000e010 	.word	0xe000e010
+  200e24:	6f432020 	.word	0x6f432020
+  200e28:	78657472 	.word	0x78657472
+  200e2c:	33334d2d 	.word	0x33334d2d
+  200e30:	20202020 	.word	0x20202020
+  200e34:	20202020 	.word	0x20202020
+  200e38:	00000000 	.word	0x00000000
+  200e3c:	6e752020 	.word	0x6e752020
+  200e40:	776f6e6b 	.word	0x776f6e6b
+  200e44:	6f43206e 	.word	0x6f43206e
+  200e48:	78657472 	.word	0x78657472
+  200e4c:	20204d2d 	.word	0x20204d2d
+  200e50:	00000000 	.word	0x00000000
+  200e54:	6f432020 	.word	0x6f432020
+  200e58:	78657472 	.word	0x78657472
+  200e5c:	33324d2d 	.word	0x33324d2d
+  200e60:	20202020 	.word	0x20202020
+  200e64:	20202020 	.word	0x20202020
+  200e68:	00000000 	.word	0x00000000
+  200e6c:	3a44454c 	.word	0x3a44454c
+  200e70:	00000000 	.word	0x00000000
+  200e74:	3a59454b 	.word	0x3a59454b
+  200e78:	00000000 	.word	0x00000000
+
+00200e7c <__arm_cp.1_19>:
+  200e7c:	0020245d 	.word	0x0020245d
+
+00200e80 <__arm_cp.1_20>:
+  200e80:	ffffc618 	.word	0xffffc618
+
+00200e84 <__arm_cp.1_21>:
+  200e84:	0003d08f 	.word	0x0003d08f
+
+00200e88 <__arm_cp.1_22>:
+  200e88:	e000ed23 	.word	0xe000ed23
+
+00200e8c <__arm_cp.1_23>:
+  200e8c:	e0001004 	.word	0xe0001004
+
+00200e90 <spi_tran>:
+  200e90:	4903      	ldr	r1, [pc, #12]	; (200ea0 <__arm_cp.5_0>)
+  200e92:	6008      	str	r0, [r1, #0]
+  200e94:	6848      	ldr	r0, [r1, #4]
+  200e96:	0740      	lsls	r0, r0, #29
+  200e98:	d5fc      	bpl.n	200e94 <spi_tran+0x4>
+  200e9a:	6808      	ldr	r0, [r1, #0]
+  200e9c:	4770      	bx	lr
+  200e9e:	bf00      	nop
+
+00200ea0 <__arm_cp.5_0>:
+  200ea0:	40206008 	.word	0x40206008
+
+00200ea4 <wr_cmd>:
+  200ea4:	b570      	push	{r4, r5, r6, lr}
+  200ea6:	4d19      	ldr	r5, [pc, #100]	; (200f0c <__arm_cp.3_0>)
+  200ea8:	4604      	mov	r4, r0
+  200eaa:	4e19      	ldr	r6, [pc, #100]	; (200f10 <__arm_cp.3_1>)
+  200eac:	6828      	ldr	r0, [r5, #0]
+  200eae:	f020 0001 	bic.w	r0, r0, #1
+  200eb2:	6028      	str	r0, [r5, #0]
+  200eb4:	2070      	movs	r0, #112	; 0x70
+  200eb6:	47b0      	blx	r6
+  200eb8:	2000      	movs	r0, #0
+  200eba:	47b0      	blx	r6
+  200ebc:	4620      	mov	r0, r4
+  200ebe:	47b0      	blx	r6
+  200ec0:	f7ff bc2e 	b.w	200720 <OUTLINED_FUNCTION_0>
+
+00200ec4 <wr_dat_only>:
+  200ec4:	b510      	push	{r4, lr}
+  200ec6:	4604      	mov	r4, r0
+  200ec8:	0a00      	lsrs	r0, r0, #8
+  200eca:	f7ff ffe1 	bl	200e90 <spi_tran>
+  200ece:	b2e0      	uxtb	r0, r4
+  200ed0:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  200ed4:	f7ff bfdc 	b.w	200e90 <spi_tran>
+
+00200ed8 <wr_dat_start>:
+  200ed8:	480c      	ldr	r0, [pc, #48]	; (200f0c <__arm_cp.3_0>)
+  200eda:	6801      	ldr	r1, [r0, #0]
+  200edc:	f021 0101 	bic.w	r1, r1, #1
+  200ee0:	6001      	str	r1, [r0, #0]
+  200ee2:	2072      	movs	r0, #114	; 0x72
+  200ee4:	f7ff bfd4 	b.w	200e90 <spi_tran>
+
+00200ee8 <wr_reg>:
+  200ee8:	b570      	push	{r4, r5, r6, lr}
+  200eea:	460c      	mov	r4, r1
+  200eec:	f7ff ffda 	bl	200ea4 <wr_cmd>
+  200ef0:	4d06      	ldr	r5, [pc, #24]	; (200f0c <__arm_cp.3_0>)
+  200ef2:	4e07      	ldr	r6, [pc, #28]	; (200f10 <__arm_cp.3_1>)
+  200ef4:	6828      	ldr	r0, [r5, #0]
+  200ef6:	f020 0001 	bic.w	r0, r0, #1
+  200efa:	6028      	str	r0, [r5, #0]
+  200efc:	2072      	movs	r0, #114	; 0x72
+  200efe:	47b0      	blx	r6
+  200f00:	0a20      	lsrs	r0, r4, #8
+  200f02:	47b0      	blx	r6
+  200f04:	b2e0      	uxtb	r0, r4
+  200f06:	47b0      	blx	r6
+  200f08:	f7ff bc0a 	b.w	200720 <OUTLINED_FUNCTION_0>
+
+00200f0c <__arm_cp.3_0>:
+  200f0c:	4030204c 	.word	0x4030204c
+
+00200f10 <__arm_cp.3_1>:
+  200f10:	00200e91 	.word	0x00200e91
+  200f14:	f64f 6c21 	movw	ip, #65057	; 0xfe21
+  200f18:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  200f1c:	4760      	bx	ip
+
+00200f1e <_fp_init>:
+  200f1e:	eef1 0a10 	vmrs	r0, fpscr
+  200f22:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  200f26:	f2c0 31c0 	movt	r1, #960	; 0x3c0
+  200f2a:	ea20 0001 	bic.w	r0, r0, r1
+  200f2e:	f040 7040 	orr.w	r0, r0, #50331648	; 0x3000000
+  200f32:	eee1 0a10 	vmsr	fpscr, r0
+
+00200f36 <__fplib_config_fpu_vfp>:
+  200f36:	4770      	bx	lr
+
+00200f38 <Font_16x24_h>:
+	...
+  200f68:	0000 0180 0180 0180 0180 0180 0180 0180     ................
+  200f78:	0180 0180 0180 0180 0180 0180 0000 0000     ................
+  200f88:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  200f98:	0000 0000 00cc 00cc 00cc 00cc 00cc 00cc     ................
+	...
+  200fd4:	0c60 0c60 0c60 0630 0630 1ffe 1ffe 0630     `.`.`.0.0.....0.
+  200fe4:	0738 0318 1ffe 1ffe 0318 0318 018c 018c     8...............
+  200ff4:	018c 0000 0000 0080 03e0 0ff8 0e9c 1c8c     ................
+  201004:	188c 008c 0098 01f8 07e0 0e80 1c80 188c     ................
+  201014:	188c 189c 0cb8 0ff0 03e0 0080 0080 0000     ................
+	...
+  20102c:	0000 180e 0c1b 0c11 0611 0611 0311 0311     ................
+  20103c:	019b 018e 38c0 6cc0 4460 4460 4430 4430     .....8.l`D`D0D0D
+  20104c:	4418 6c18 380c 0000 0000 0000 0000 01e0     .D.l.8..........
+  20105c:	03f0 0738 0618 0618 0330 01f0 00f0 00f8     ..8.....0.......
+  20106c:	319c 330e 1e06 1c06 1c06 3f06 73fc 21f0     .1.3.......?.s.!
+	...
+  20108c:	000c 000c 000c 000c 000c 000c 0000 0000     ................
+	...
+  2010b8:	0000 0200 0300 0180 00c0 00c0 0060 0060     ............`.`.
+  2010c8:	0030 0030 0030 0030 0030 0030 0030 0030     0.0.0.0.0.0.0.0.
+  2010d8:	0060 0060 00c0 00c0 0180 0300 0200 0000     `.`.............
+  2010e8:	0000 0020 0060 00c0 0180 0180 0300 0300     .. .`...........
+  2010f8:	0600 0600 0600 0600 0600 0600 0600 0600     ................
+  201108:	0300 0300 0180 0180 00c0 0060 0020 0000     ..........`. ...
+	...
+  201124:	00c0 00c0 06d8 07f8 01e0 0330 0738 0000     ..........0.8...
+	...
+  201154:	0180 0180 0180 0180 0180 3ffc 3ffc 0180     ...........?.?..
+  201164:	0180 0180 0180 0180 0000 0000 0000 0000     ................
+	...
+  201198:	0000 0180 0180 0100 0100 0080 0000 0000     ................
+	...
+  2011c0:	07e0 07e0 0000 0000 0000 0000 0000 0000     ................
+	...
+  2011f8:	0000 00c0 00c0 0000 0000 0000 0000 0000     ................
+  201208:	0000 0c00 0c00 0600 0600 0600 0300 0300     ................
+  201218:	0300 0380 0180 0180 0180 00c0 00c0 00c0     ................
+  201228:	0060 0060 0000 0000 0000 0000 0000 0000     `.`.............
+  201238:	0000 03e0 07f0 0e38 0c18 180c 180c 180c     ......8.........
+  201248:	180c 180c 180c 180c 180c 180c 0c18 0e38     ..............8.
+  201258:	07f0 03e0 0000 0000 0000 0000 0000 0000     ................
+  201268:	0000 0100 0180 01c0 01f0 0198 0188 0180     ................
+  201278:	0180 0180 0180 0180 0180 0180 0180 0180     ................
+  201288:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  201298:	0000 03e0 0ff8 0c18 180c 180c 1800 1800     ................
+  2012a8:	0c00 0600 0300 0180 00c0 0060 0030 0018     ..........`.0...
+  2012b8:	1ffc 1ffc 0000 0000 0000 0000 0000 0000     ................
+  2012c8:	0000 01e0 07f8 0e18 0c0c 0c0c 0c00 0600     ................
+  2012d8:	03c0 07c0 0c00 1800 1800 180c 180c 0c18     ................
+  2012e8:	07f8 03e0 0000 0000 0000 0000 0000 0000     ................
+  2012f8:	0000 0c00 0e00 0f00 0f00 0d80 0cc0 0c60     ..............`.
+  201308:	0c60 0c30 0c18 0c0c 3ffc 3ffc 0c00 0c00     `.0......?.?....
+  201318:	0c00 0c00 0000 0000 0000 0000 0000 0000     ................
+  201328:	0000 0ff8 0ff8 0018 0018 000c 03ec 07fc     ................
+  201338:	0e1c 1c00 1800 1800 1800 180c 0c1c 0e18     ................
+  201348:	07f8 03e0 0000 0000 0000 0000 0000 0000     ................
+  201358:	0000 07c0 0ff0 1c38 1818 0018 000c 03cc     ......8.........
+  201368:	0fec 0e3c 1c1c 180c 180c 180c 1c18 0e38     ..<...........8.
+  201378:	07f0 03e0 0000 0000 0000 0000 0000 0000     ................
+  201388:	0000 1ffc 1ffc 0c00 0600 0600 0300 0380     ................
+  201398:	0180 01c0 00c0 00e0 0060 0060 0070 0030     ........`.`.p.0.
+  2013a8:	0030 0030 0000 0000 0000 0000 0000 0000     0.0.............
+  2013b8:	0000 03e0 07f0 0e38 0c18 0c18 0c18 0638     ......8.......8.
+  2013c8:	07f0 07f0 0c18 180c 180c 180c 180c 0c38     ..............8.
+  2013d8:	0ff8 03e0 0000 0000 0000 0000 0000 0000     ................
+  2013e8:	0000 03e0 07f0 0e38 0c1c 180c 180c 180c     ......8.........
+  2013f8:	1c1c 1e38 1bf8 19e0 1800 0c00 0c00 0e1c     ..8.............
+  201408:	07f8 01f0 0000 0000 0000 0000 0000 0000     ................
+	...
+  201424:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  201434:	0000 0000 0180 0180 0000 0000 0000 0000     ................
+	...
+  201454:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  201464:	0000 0000 0180 0180 0100 0100 0080 0000     ................
+	...
+  201488:	1000 1c00 0f80 03e0 00f8 0018 00f8 03e0     ................
+  201498:	0f80 1c00 1000 0000 0000 0000 0000 0000     ................
+	...
+  2014b8:	1ff8 0000 0000 0000 1ff8 0000 0000 0000     ................
+	...
+  2014e8:	0008 0038 01f0 07c0 1f00 1800 1f00 07c0     ..8.............
+  2014f8:	01f0 0038 0008 0000 0000 0000 0000 0000     ..8.............
+  201508:	0000 03e0 0ff8 0c18 180c 180c 1800 0c00     ................
+  201518:	0600 0300 0180 00c0 00c0 00c0 0000 0000     ................
+  201528:	00c0 00c0 0000 0000 0000 0000 0000 0000     ................
+  201538:	0000 0000 07e0 1818 2004 29c2 4a22 4411     ......... .)"J.D
+  201548:	4409 4409 4409 2209 1311 0ce2 4002 2004     .D.D.D.".....@. 
+  201558:	1818 07e0 0000 0000 0000 0000 0000 0000     ................
+  201568:	0000 0380 0380 06c0 06c0 06c0 0c60 0c60     ............`.`.
+  201578:	1830 1830 1830 3ff8 3ff8 701c 600c 600c     0.0.0..?.?.p.`.`
+  201588:	c006 c006 0000 0000 0000 0000 0000 0000     ................
+  201598:	0000 03fc 0ffc 0c0c 180c 180c 180c 0c0c     ................
+  2015a8:	07fc 0ffc 180c 300c 300c 300c 300c 180c     .......0.0.0.0..
+  2015b8:	1ffc 07fc 0000 0000 0000 0000 0000 0000     ................
+  2015c8:	0000 07c0 1ff0 3838 301c 700c 6006 0006     ......88.0.p.`..
+  2015d8:	0006 0006 0006 0006 0006 6006 700c 301c     ...........`.p.0
+  2015e8:	1ff0 07e0 0000 0000 0000 0000 0000 0000     ................
+  2015f8:	0000 03fe 0ffe 0e06 1806 1806 3006 3006     .............0.0
+  201608:	3006 3006 3006 3006 3006 1806 1806 0e06     .0.0.0.0.0......
+  201618:	0ffe 03fe 0000 0000 0000 0000 0000 0000     ................
+  201628:	0000 3ffc 3ffc 000c 000c 000c 000c 000c     ...?.?..........
+  201638:	1ffc 1ffc 000c 000c 000c 000c 000c 000c     ................
+  201648:	3ffc 3ffc 0000 0000 0000 0000 0000 0000     .?.?............
+  201658:	0000 3ff8 3ff8 0018 0018 0018 0018 0018     ...?.?..........
+  201668:	1ff8 1ff8 0018 0018 0018 0018 0018 0018     ................
+  201678:	0018 0018 0000 0000 0000 0000 0000 0000     ................
+  201688:	0000 0fe0 3ff8 783c 600e e006 c007 0003     .....?<x.`......
+  201698:	0003 fe03 fe03 c003 c007 c006 c00e f03c     ..............<.
+  2016a8:	3ff8 0fe0 0000 0000 0000 0000 0000 0000     .?..............
+  2016b8:	0000 300c 300c 300c 300c 300c 300c 300c     ...0.0.0.0.0.0.0
+  2016c8:	3ffc 3ffc 300c 300c 300c 300c 300c 300c     .?.?.0.0.0.0.0.0
+  2016d8:	300c 300c 0000 0000 0000 0000 0000 0000     .0.0............
+  2016e8:	0000 0180 0180 0180 0180 0180 0180 0180     ................
+  2016f8:	0180 0180 0180 0180 0180 0180 0180 0180     ................
+  201708:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  201718:	0000 0600 0600 0600 0600 0600 0600 0600     ................
+  201728:	0600 0600 0600 0600 0600 0618 0618 0738     ..............8.
+  201738:	03f0 01e0 0000 0000 0000 0000 0000 0000     ................
+  201748:	0000 3006 1806 0c06 0606 0306 0186 00c6     ...0............
+  201758:	0066 0076 00de 018e 0306 0606 0c06 1806     f.v.............
+  201768:	3006 6006 0000 0000 0000 0000 0000 0000     .0.`............
+  201778:	0000 0018 0018 0018 0018 0018 0018 0018     ................
+  201788:	0018 0018 0018 0018 0018 0018 0018 0018     ................
+  201798:	1ff8 1ff8 0000 0000 0000 0000 0000 0000     ................
+  2017a8:	0000 e00e f01e f01e f01e d836 d836 d836     ..........6.6.6.
+  2017b8:	d836 cc66 cc66 cc66 c6c6 c6c6 c6c6 c6c6     6.f.f.f.........
+  2017c8:	c386 c386 0000 0000 0000 0000 0000 0000     ................
+  2017d8:	0000 300c 301c 303c 303c 306c 306c 30cc     ...0.0<0<0l0l0.0
+  2017e8:	30cc 318c 330c 330c 360c 360c 3c0c 3c0c     .0.1.3.3.6.6.<.<
+  2017f8:	380c 300c 0000 0000 0000 0000 0000 0000     .8.0............
+  201808:	0000 07e0 1ff8 381c 700e 6006 c003 c003     .......8.p.`....
+  201818:	c003 c003 c003 c003 c003 6006 700e 381c     ...........`.p.8
+  201828:	1ff8 07e0 0000 0000 0000 0000 0000 0000     ................
+  201838:	0000 0ffc 1ffc 380c 300c 300c 300c 300c     .......8.0.0.0.0
+  201848:	180c 1ffc 07fc 000c 000c 000c 000c 000c     ................
+  201858:	000c 000c 0000 0000 0000 0000 0000 0000     ................
+  201868:	0000 07e0 1ff8 381c 700e 6006 e003 c003     .......8.p.`....
+  201878:	c003 c003 c003 c003 e007 6306 3f0e 3c1c     ...........c.?.<
+  201888:	3ff8 f7e0 c000 0000 0000 0000 0000 0000     .?..............
+  201898:	0000 0ffe 1ffe 3806 3006 3006 3006 3806     .......8.0.0.0.8
+  2018a8:	1ffe 07fe 0306 0606 0c06 1806 1806 3006     ...............0
+  2018b8:	3006 6006 0000 0000 0000 0000 0000 0000     .0.`............
+  2018c8:	0000 03e0 0ff8 0c1c 180c 180c 000c 001c     ................
+  2018d8:	03f8 0fe0 1e00 3800 3006 3006 300e 1c1c     .......8.0.0.0..
+  2018e8:	0ff8 07e0 0000 0000 0000 0000 0000 0000     ................
+  2018f8:	0000 7ffe 7ffe 0180 0180 0180 0180 0180     ................
+  201908:	0180 0180 0180 0180 0180 0180 0180 0180     ................
+  201918:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  201928:	0000 300c 300c 300c 300c 300c 300c 300c     ...0.0.0.0.0.0.0
+  201938:	300c 300c 300c 300c 300c 300c 300c 1818     .0.0.0.0.0.0.0..
+  201948:	1ff8 07e0 0000 0000 0000 0000 0000 0000     ................
+  201958:	0000 6003 3006 3006 3006 180c 180c 180c     ...`.0.0.0......
+  201968:	0c18 0c18 0e38 0630 0630 0770 0360 0360     ....8.0.0.p.`.`.
+  201978:	01c0 01c0 0000 0000 0000 0000 0000 0000     ................
+  201988:	0000 6003 61c3 61c3 61c3 3366 3366 3366     ...`.a.a.af3f3f3
+  201998:	3366 3366 3366 1b6c 1b6c 1b6c 1a2c 1e3c     f3f3f3l.l.l.,.<.
+  2019a8:	0e38 0e38 0000 0000 0000 0000 0000 0000     8.8.............
+  2019b8:	0000 e00f 700c 3018 1830 0c70 0e60 07c0     .....p.00.p.`...
+  2019c8:	0380 0380 03c0 06e0 0c70 1c30 1818 300c     ........p.0....0
+  2019d8:	600e e007 0000 0000 0000 0000 0000 0000     .`..............
+  2019e8:	0000 c003 6006 300c 381c 1838 0c30 0660     .....`.0.88.0.`.
+  2019f8:	07e0 03c0 0180 0180 0180 0180 0180 0180     ................
+  201a08:	0180 0180 0000 0000 0000 0000 0000 0000     ................
+  201a18:	0000 7ffc 7ffc 6000 3000 1800 0c00 0600     .......`.0......
+  201a28:	0300 0180 00c0 0060 0030 0018 000c 0006     ......`.0.......
+  201a38:	7ffe 7ffe 0000 0000 0000 0000 0000 0000     ................
+  201a48:	0000 03e0 03e0 0060 0060 0060 0060 0060     ......`.`.`.`.`.
+  201a58:	0060 0060 0060 0060 0060 0060 0060 0060     `.`.`.`.`.`.`.`.
+  201a68:	0060 0060 0060 0060 0060 03e0 03e0 0000     `.`.`.`.`.......
+  201a78:	0000 0030 0030 0060 0060 0060 00c0 00c0     ..0.0.`.`.`.....
+  201a88:	00c0 01c0 0180 0180 0180 0300 0300 0300     ................
+  201a98:	0600 0600 0000 0000 0000 0000 0000 0000     ................
+  201aa8:	0000 03e0 03e0 0300 0300 0300 0300 0300     ................
+  201ab8:	0300 0300 0300 0300 0300 0300 0300 0300     ................
+  201ac8:	0300 0300 0300 0300 0300 03e0 03e0 0000     ................
+  201ad8:	0000 0000 01c0 01c0 0360 0360 0360 0630     ........`.`.`.0.
+  201ae8:	0630 0c18 0c18 0000 0000 0000 0000 0000     0...............
+	...
+  201b28:	0000 ffff ffff 0000 0000 0000 0000 0000     ................
+  201b38:	0000 000c 000c 000c 000c 000c 000c 0000     ................
+	...
+  201b74:	03f0 07f8 0c1c 0c0c 0f00 0ff0 0cf8 0c0c     ................
+  201b84:	0c0c 0f1c 0ff8 18f0 0000 0000 0000 0000     ................
+  201b94:	0000 0000 0000 0018 0018 0018 0018 0018     ................
+  201ba4:	03d8 0ff8 0c38 1818 1818 1818 1818 1818     ....8...........
+  201bb4:	1818 0c38 0ff8 03d8 0000 0000 0000 0000     ..8.............
+	...
+  201bd4:	03c0 07f0 0e30 0c18 0018 0018 0018 0018     ....0...........
+  201be4:	0c18 0e30 07f0 03c0 0000 0000 0000 0000     ..0.............
+  201bf4:	0000 0000 0000 1800 1800 1800 1800 1800     ................
+  201c04:	1bc0 1ff0 1c30 1818 1818 1818 1818 1818     ....0...........
+  201c14:	1818 1c30 1ff0 1bc0 0000 0000 0000 0000     ..0.............
+	...
+  201c34:	03c0 0ff0 0c30 1818 1ff8 1ff8 0018 0018     ....0...........
+  201c44:	1838 1c30 0ff0 07c0 0000 0000 0000 0000     8.0.............
+  201c54:	0000 0000 0000 0f80 0fc0 00c0 00c0 00c0     ................
+  201c64:	07f0 07f0 00c0 00c0 00c0 00c0 00c0 00c0     ................
+  201c74:	00c0 00c0 00c0 00c0 0000 0000 0000 0000     ................
+	...
+  201c94:	0de0 0ff8 0e18 0c0c 0c0c 0c0c 0c0c 0c0c     ................
+  201ca4:	0c0c 0e18 0ff8 0de0 0c00 0c0c 061c 07f8     ................
+  201cb4:	01f0 0000 0000 0018 0018 0018 0018 0018     ................
+  201cc4:	07d8 0ff8 1c38 1818 1818 1818 1818 1818     ....8...........
+  201cd4:	1818 1818 1818 1818 0000 0000 0000 0000     ................
+  201ce4:	0000 0000 0000 00c0 00c0 0000 0000 0000     ................
+  201cf4:	00c0 00c0 00c0 00c0 00c0 00c0 00c0 00c0     ................
+  201d04:	00c0 00c0 00c0 00c0 0000 0000 0000 0000     ................
+  201d14:	0000 0000 0000 00c0 00c0 0000 0000 0000     ................
+  201d24:	00c0 00c0 00c0 00c0 00c0 00c0 00c0 00c0     ................
+  201d34:	00c0 00c0 00c0 00c0 00c0 00c0 00c0 00f8     ................
+  201d44:	0078 0000 0000 000c 000c 000c 000c 000c     x...............
+  201d54:	0c0c 060c 030c 018c 00cc 006c 00fc 019c     ..........l.....
+  201d64:	038c 030c 060c 0c0c 0000 0000 0000 0000     ................
+  201d74:	0000 0000 0000 00c0 00c0 00c0 00c0 00c0     ................
+  201d84:	00c0 00c0 00c0 00c0 00c0 00c0 00c0 00c0     ................
+  201d94:	00c0 00c0 00c0 00c0 0000 0000 0000 0000     ................
+	...
+  201db4:	3c7c 7eff e3c7 c183 c183 c183 c183 c183     |<.~............
+  201dc4:	c183 c183 c183 c183 0000 0000 0000 0000     ................
+	...
+  201de4:	0798 0ff8 1c38 1818 1818 1818 1818 1818     ....8...........
+  201df4:	1818 1818 1818 1818 0000 0000 0000 0000     ................
+	...
+  201e14:	03c0 0ff0 0c30 1818 1818 1818 1818 1818     ....0...........
+  201e24:	1818 0c30 0ff0 03c0 0000 0000 0000 0000     ..0.............
+	...
+  201e44:	03d8 0ff8 0c38 1818 1818 1818 1818 1818     ....8...........
+  201e54:	1818 0c38 0ff8 03d8 0018 0018 0018 0018     ..8.............
+  201e64:	0018 0000 0000 0000 0000 0000 0000 0000     ................
+  201e74:	1bc0 1ff0 1c30 1818 1818 1818 1818 1818     ....0...........
+  201e84:	1818 1c30 1ff0 1bc0 1800 1800 1800 1800     ..0.............
+  201e94:	1800 0000 0000 0000 0000 0000 0000 0000     ................
+  201ea4:	07b0 03f0 0070 0030 0030 0030 0030 0030     ....p.0.0.0.0.0.
+  201eb4:	0030 0030 0030 0030 0000 0000 0000 0000     0.0.0.0.........
+	...
+  201ed4:	03e0 03f0 0e38 0c18 0038 03f0 07c0 0c00     ....8...8.......
+  201ee4:	0c18 0e38 07f0 03e0 0000 0000 0000 0000     ..8.............
+	...
+  201efc:	0080 00c0 00c0 00c0 07f0 07f0 00c0 00c0     ................
+  201f0c:	00c0 00c0 00c0 00c0 00c0 00c0 07c0 0780     ................
+	...
+  201f34:	1818 1818 1818 1818 1818 1818 1818 1818     ................
+  201f44:	1818 1c38 1ff0 19e0 0000 0000 0000 0000     ..8.............
+	...
+  201f64:	180c 0c18 0c18 0c18 0630 0630 0630 0360     ........0.0.0.`.
+  201f74:	0360 0360 01c0 01c0 0000 0000 0000 0000     `.`.............
+	...
+  201f94:	41c1 41c1 61c3 6363 6363 6363 3636 3636     .A.A.acccccc6666
+  201fa4:	3636 1c1c 1c1c 1c1c 0000 0000 0000 0000     66..............
+	...
+  201fc4:	381c 1c38 0c30 0660 03c0 03c0 03c0 03c0     .88.0.`.........
+  201fd4:	0660 0c30 1c38 381c 0000 0000 0000 0000     `.0.8..8........
+	...
+  201ff4:	3018 1830 1830 1870 0c60 0c60 0ce0 06c0     .00.0.p.`.`.....
+  202004:	06c0 0380 0380 0380 0180 0180 01c0 00f0     ................
+  202014:	0070 0000 0000 0000 0000 0000 0000 0000     p...............
+  202024:	1ffc 1ffc 0c00 0600 0300 0180 00c0 0060     ..............`.
+  202034:	0030 0018 1ffc 1ffc 0000 0000 0000 0000     0...............
+  202044:	0000 0000 0000 0300 0180 00c0 00c0 00c0     ................
+  202054:	00c0 00c0 00c0 0060 0060 0030 0060 0040     ......`.`.0.`.@.
+  202064:	00c0 00c0 00c0 00c0 00c0 00c0 0180 0300     ................
+  202074:	0000 0000 0000 0180 0180 0180 0180 0180     ................
+  202084:	0180 0180 0180 0180 0180 0180 0180 0180     ................
+  202094:	0180 0180 0180 0180 0180 0180 0180 0180     ................
+  2020a4:	0180 0000 0000 0060 00c0 01c0 0180 0180     ......`.........
+  2020b4:	0180 0180 0180 0300 0300 0600 0300 0100     ................
+  2020c4:	0180 0180 0180 0180 0180 0180 00c0 0060     ..............`.
+	...
+  2020e8:	10f0 1ff8 0f08 0000 0000 0000 0000 0000     ................
+	...
+  202140:	0000 03c0 0c30 1008 2004 2004 4002 4002     ....0.... . .@.@
+  202150:	4002 4002 4002 2004 2004 1008 0c30 03c0     .@.@.@. . ..0...
+	...
+  202170:	0000 03c0 0ff0 1ff8 3ffc 3ffc 7ffe 7ffe     .........?.?....
+  202180:	7ffe 7ffe 7ffe 3ffc 3ffc 1ff8 0ff0 03c0     .......?.?......
+	...
+  2021a4:	0000 07e0 0ff0 1818 1818 1818 1818 1818     ................
+  2021b4:	1818 0ff0 07e0 0000 0000 0000 0000 0000     ................
+	...
+  2021d4:	0000 07e0 0ff0 1ff8 1ff8 1ff8 1ff8 1ff8     ................
+  2021e4:	1ff8 0ff0 07e0 0000 0000 0000 0000 0000     ................
+	...
+  202210:	0180 03c0 0660 0c30 1818 1818 1ff8 1ff8     ....`.0.........
+	...
+  202240:	0180 03c0 07e0 0ff0 1ff8 1ff8 1ff8 1ff8     ................
+	...
+  202260:	1ff8 1ff8 1818 1818 0c30 0660 03c0 0180     ........0.`.....
+	...
+  202290:	1ff8 1ff8 1ff8 1ff8 0ff0 07e0 03c0 0180     ................
+	...
+  2022c4:	0000 01e0 01f0 0198 018c 0186 0186 018c     ................
+  2022d4:	0198 01f0 01e0 0000 0000 0000 0000 0000     ................
+	...
+  2022f4:	0000 01e0 01f0 01f8 01fc 01fe 01fe 01fc     ................
+  202304:	01f8 01f0 01e0 0000 0000 0000 0000 0000     ................
+	...
+  202324:	0000 0780 0f80 1980 3180 6180 6180 3180     .........1.a.a.1
+  202334:	1980 0f80 0780 0000 0000 0000 0000 0000     ................
+	...
+  202354:	0000 0780 0f80 1f80 3f80 7f80 7f80 3f80     .........?.....?
+  202364:	1f80 0f80 0780 0000 0000 0000 0000 0000     ................
+  202374:	0000 0000 0000 01c0 0220 0220 0140 0630     ........ . .@.0.
+  202384:	0808 0808 0808 0808 0808 0808 0808 0220     .............. .
+  202394:	0220 0220 0220 0220 0220 0220 0220 0220      . . . . . . . .
+  2023a4:	0220 0000 0000 01c0 03e0 03e0 01c0 07f0      ...............
+  2023b4:	0dd8 0dd8 0dd8 0dd8 0dd8 0dd8 0dd8 0360     ..............`.
+  2023c4:	0360 0360 0360 0360 0360 0360 0360 0360     `.`.`.`.`.`.`.`.
+  2023d4:	0360 0000 0000 01c0 0220 0220 0140 0630     `....... . .@.0.
+  2023e4:	0808 0808 0808 1004 2002 2002 0140 0220     ......... . @. .
+  2023f4:	0220 0410 0808 0808 1004 1004 2004 4004      ............ .@
+  202404:	0000 0000 0000 01c0 03e0 03e0 01c0 07f0     ................
+  202414:	0dd8 0dd8 0dd8 19cc 31c6 61c2 01c0 0360     .........1.a..`.
+  202424:	0360 0670 0c38 0c18 180c 180c 300c 600c     `.p.8........0.`
+  202434:	0000 0000                                   ....
+
+00202438 <GLCD_Font_16x24>:
+  202438:	0010 0018 0020 0000 0070 0000 0f38 0020     .... ...p...8. .
+  202448:	2020 5620 4d32 4d2d 5350 2032 6544 6f6d        V2M-MPS2 Demo
+  202458:	2020 2020 5400 756f 6863 003a                   .Touch:.
+
+00202464 <Region$$Table$$Base>:
+  202464:	00202474 	.word	0x00202474
+  202468:	28200000 	.word	0x28200000
+  20246c:	00000028 	.word	0x00000028
+  202470:	0020043c 	.word	0x0020043c

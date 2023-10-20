@@ -1,0 +1,826 @@
+
+../../Example/out/eval/O3/elf_ns/levenshtein.axf:     file format elf32-littlearm
+
+
+Disassembly of section ER_ROM:
+
+00200000 <__Vectors>:
+  200000:	00 00 40 28 9d 04 20 00 95 04 20 00 99 04 20 00     ..@(.. ... ... .
+  200010:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+	...
+  20002c:	95 04 20 00 95 04 20 00 00 00 00 00 95 04 20 00     .. ... ....... .
+  20003c:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  20004c:	95 04 20 00 95 04 20 00 95 04 20 00 00 00 00 00     .. ... ... .....
+	...
+  200064:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+	...
+  2000c0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2000d0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2000e0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2000f0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200100:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200110:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200120:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200130:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200140:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200150:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200160:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200170:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200180:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200190:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2001a0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2001b0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2001c0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2001d0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2001e0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  2001f0:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200200:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200210:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+  200220:	95 04 20 00 95 04 20 00 95 04 20 00 95 04 20 00     .. ... ... ... .
+	...
+
+00200400 <__main>:
+  200400:	f3af 8000 	nop.w
+  200404:	f000 f806 	bl	200414 <__rt_entry>
+
+00200408 <__rt_lib_init>:
+  200408:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+
+0020040a <__rt_lib_init_fp_1>:
+  20040a:	f000 fbe6 	bl	200bda <_fp_init>
+
+0020040e <__rt_lib_init_alloca_1>:
+  20040e:	bd1f      	pop	{r0, r1, r2, r3, r4, pc}
+
+00200410 <__rt_lib_shutdown>:
+  200410:	b510      	push	{r4, lr}
+
+00200412 <__rt_lib_shutdown_cpp_1>:
+  200412:	bd10      	pop	{r4, pc}
+
+00200414 <__rt_entry>:
+  200414:	f8df d00c 	ldr.w	sp, [pc, #12]	; 200424 <__lit__00000000>
+
+00200418 <__rt_entry_li>:
+  200418:	f7ff fff6 	bl	200408 <__rt_lib_init>
+
+0020041c <__rt_entry_main>:
+  20041c:	f000 fb82 	bl	200b24 <main>
+  200420:	f000 f827 	bl	200472 <exit>
+
+00200424 <__lit__00000000>:
+  200424:	0000 2840                                   ..@(
+
+00200428 <__rt_exit>:
+  200428:	b403      	push	{r0, r1}
+
+0020042a <__rt_exit_ls>:
+  20042a:	f7ff fff1 	bl	200410 <__rt_lib_shutdown>
+
+0020042e <__rt_exit_exit>:
+  20042e:	bc03      	pop	{r0, r1}
+  200430:	f000 f82a 	bl	200488 <_sys_exit>
+
+00200434 <strlen>:
+  200434:	b510      	push	{r4, lr}
+  200436:	1c43      	adds	r3, r0, #1
+  200438:	e002      	b.n	200440 <strlen+0xc>
+  20043a:	f810 1b01 	ldrb.w	r1, [r0], #1
+  20043e:	b171      	cbz	r1, 20045e <strlen+0x2a>
+  200440:	0781      	lsls	r1, r0, #30
+  200442:	d1fa      	bne.n	20043a <strlen+0x6>
+  200444:	f04f 3201 	mov.w	r2, #16843009	; 0x1010101
+  200448:	c802      	ldmia	r0!, {r1}
+  20044a:	1a8c      	subs	r4, r1, r2
+  20044c:	438c      	bics	r4, r1
+  20044e:	ea14 11c2 	ands.w	r1, r4, r2, lsl #7
+  200452:	d0f9      	beq.n	200448 <strlen+0x14>
+  200454:	1ac0      	subs	r0, r0, r3
+  200456:	060a      	lsls	r2, r1, #24
+  200458:	d003      	beq.n	200462 <strlen+0x2e>
+  20045a:	1ec0      	subs	r0, r0, #3
+  20045c:	bd10      	pop	{r4, pc}
+  20045e:	1ac0      	subs	r0, r0, r3
+  200460:	bd10      	pop	{r4, pc}
+  200462:	040a      	lsls	r2, r1, #16
+  200464:	d001      	beq.n	20046a <strlen+0x36>
+  200466:	1e80      	subs	r0, r0, #2
+  200468:	bd10      	pop	{r4, pc}
+  20046a:	0209      	lsls	r1, r1, #8
+  20046c:	d0fc      	beq.n	200468 <strlen+0x34>
+  20046e:	1e40      	subs	r0, r0, #1
+  200470:	bd10      	pop	{r4, pc}
+
+00200472 <exit>:
+  200472:	b510      	push	{r4, lr}
+  200474:	4604      	mov	r4, r0
+  200476:	f3af 8000 	nop.w
+  20047a:	4620      	mov	r0, r4
+  20047c:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  200480:	f7ff bfd2 	b.w	200428 <__rt_exit>
+
+00200484 <__use_no_semihosting_swi>:
+  200484:	4770      	bx	lr
+
+00200486 <__semihosting_library_function>:
+	...
+
+00200488 <_sys_exit>:
+  200488:	4901      	ldr	r1, [pc, #4]	; (200490 <_sys_exit+0x8>)
+  20048a:	2018      	movs	r0, #24
+  20048c:	beab      	bkpt	0x00ab
+  20048e:	e7fe      	b.n	20048e <_sys_exit+0x6>
+  200490:	00020026 	.word	0x00020026
+
+00200494 <Default_Handler>:
+  200494:	e7fe      	b.n	200494 <Default_Handler>
+	...
+
+00200498 <HardFault_Handler>:
+  200498:	e7fe      	b.n	200498 <HardFault_Handler>
+	...
+
+0020049c <Reset_Handler>:
+  20049c:	f240 0000 	movw	r0, #0
+  2004a0:	f6c2 0040 	movt	r0, #10304	; 0x2840
+  2004a4:	f380 8809 	msr	PSP, r0
+  2004a8:	f240 0000 	movw	r0, #0
+  2004ac:	f64e 5288 	movw	r2, #60808	; 0xed88
+  2004b0:	f64f 4100 	movw	r1, #64512	; 0xfc00
+  2004b4:	f2c0 0020 	movt	r0, #32
+  2004b8:	f2ce 0200 	movt	r2, #57344	; 0xe000
+  2004bc:	f6c2 013f 	movt	r1, #10303	; 0x283f
+  2004c0:	f381 880a 	msr	MSPLIM, r1
+  2004c4:	f381 880b 	msr	PSPLIM, r1
+  2004c8:	f842 0c80 	str.w	r0, [r2, #-128]
+  2004cc:	6810      	ldr	r0, [r2, #0]
+  2004ce:	f440 0070 	orr.w	r0, r0, #15728640	; 0xf00000
+  2004d2:	6010      	str	r0, [r2, #0]
+  2004d4:	f7ff ff94 	bl	200400 <__main>
+
+002004d8 <benchmark>:
+  2004d8:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+  2004dc:	b082      	sub	sp, #8
+  2004de:	f640 38f8 	movw	r8, #3064	; 0xbf8
+  2004e2:	2000      	movs	r0, #0
+  2004e4:	f2c0 0820 	movt	r8, #32
+  2004e8:	9001      	str	r0, [sp, #4]
+  2004ea:	4640      	mov	r0, r8
+  2004ec:	4641      	mov	r1, r8
+  2004ee:	f000 f8bf 	bl	200670 <levenshtein_distance>
+  2004f2:	9901      	ldr	r1, [sp, #4]
+  2004f4:	f640 4508 	movw	r5, #3080	; 0xc08
+  2004f8:	4408      	add	r0, r1
+  2004fa:	f2c0 0520 	movt	r5, #32
+  2004fe:	9001      	str	r0, [sp, #4]
+  200500:	4640      	mov	r0, r8
+  200502:	4629      	mov	r1, r5
+  200504:	f000 f8b4 	bl	200670 <levenshtein_distance>
+  200508:	9901      	ldr	r1, [sp, #4]
+  20050a:	f640 4601 	movw	r6, #3073	; 0xc01
+  20050e:	4408      	add	r0, r1
+  200510:	f2c0 0620 	movt	r6, #32
+  200514:	9001      	str	r0, [sp, #4]
+  200516:	4640      	mov	r0, r8
+  200518:	4631      	mov	r1, r6
+  20051a:	f000 f8a9 	bl	200670 <levenshtein_distance>
+  20051e:	9901      	ldr	r1, [sp, #4]
+  200520:	f640 37f4 	movw	r7, #3060	; 0xbf4
+  200524:	4408      	add	r0, r1
+  200526:	f2c0 0720 	movt	r7, #32
+  20052a:	9001      	str	r0, [sp, #4]
+  20052c:	4640      	mov	r0, r8
+  20052e:	4639      	mov	r1, r7
+  200530:	f000 f89e 	bl	200670 <levenshtein_distance>
+  200534:	9901      	ldr	r1, [sp, #4]
+  200536:	f640 4413 	movw	r4, #3091	; 0xc13
+  20053a:	4408      	add	r0, r1
+  20053c:	f2c0 0420 	movt	r4, #32
+  200540:	9001      	str	r0, [sp, #4]
+  200542:	4640      	mov	r0, r8
+  200544:	4621      	mov	r1, r4
+  200546:	f000 f893 	bl	200670 <levenshtein_distance>
+  20054a:	9901      	ldr	r1, [sp, #4]
+  20054c:	4408      	add	r0, r1
+  20054e:	9001      	str	r0, [sp, #4]
+  200550:	4628      	mov	r0, r5
+  200552:	4641      	mov	r1, r8
+  200554:	f000 f88c 	bl	200670 <levenshtein_distance>
+  200558:	9901      	ldr	r1, [sp, #4]
+  20055a:	4408      	add	r0, r1
+  20055c:	9001      	str	r0, [sp, #4]
+  20055e:	4628      	mov	r0, r5
+  200560:	4629      	mov	r1, r5
+  200562:	f000 f885 	bl	200670 <levenshtein_distance>
+  200566:	9901      	ldr	r1, [sp, #4]
+  200568:	4408      	add	r0, r1
+  20056a:	9001      	str	r0, [sp, #4]
+  20056c:	4628      	mov	r0, r5
+  20056e:	4631      	mov	r1, r6
+  200570:	f000 f87e 	bl	200670 <levenshtein_distance>
+  200574:	9901      	ldr	r1, [sp, #4]
+  200576:	4408      	add	r0, r1
+  200578:	9001      	str	r0, [sp, #4]
+  20057a:	4628      	mov	r0, r5
+  20057c:	4639      	mov	r1, r7
+  20057e:	f000 f877 	bl	200670 <levenshtein_distance>
+  200582:	9901      	ldr	r1, [sp, #4]
+  200584:	4408      	add	r0, r1
+  200586:	9001      	str	r0, [sp, #4]
+  200588:	4628      	mov	r0, r5
+  20058a:	4621      	mov	r1, r4
+  20058c:	f000 f870 	bl	200670 <levenshtein_distance>
+  200590:	9901      	ldr	r1, [sp, #4]
+  200592:	4408      	add	r0, r1
+  200594:	9001      	str	r0, [sp, #4]
+  200596:	4630      	mov	r0, r6
+  200598:	4641      	mov	r1, r8
+  20059a:	f000 f869 	bl	200670 <levenshtein_distance>
+  20059e:	9901      	ldr	r1, [sp, #4]
+  2005a0:	4408      	add	r0, r1
+  2005a2:	9001      	str	r0, [sp, #4]
+  2005a4:	4630      	mov	r0, r6
+  2005a6:	4629      	mov	r1, r5
+  2005a8:	f000 f862 	bl	200670 <levenshtein_distance>
+  2005ac:	9901      	ldr	r1, [sp, #4]
+  2005ae:	4408      	add	r0, r1
+  2005b0:	9001      	str	r0, [sp, #4]
+  2005b2:	4630      	mov	r0, r6
+  2005b4:	4631      	mov	r1, r6
+  2005b6:	f000 f85b 	bl	200670 <levenshtein_distance>
+  2005ba:	9901      	ldr	r1, [sp, #4]
+  2005bc:	4408      	add	r0, r1
+  2005be:	9001      	str	r0, [sp, #4]
+  2005c0:	4630      	mov	r0, r6
+  2005c2:	4639      	mov	r1, r7
+  2005c4:	f000 f854 	bl	200670 <levenshtein_distance>
+  2005c8:	9901      	ldr	r1, [sp, #4]
+  2005ca:	4408      	add	r0, r1
+  2005cc:	9001      	str	r0, [sp, #4]
+  2005ce:	4630      	mov	r0, r6
+  2005d0:	4621      	mov	r1, r4
+  2005d2:	f000 f84d 	bl	200670 <levenshtein_distance>
+  2005d6:	9901      	ldr	r1, [sp, #4]
+  2005d8:	4408      	add	r0, r1
+  2005da:	9001      	str	r0, [sp, #4]
+  2005dc:	4638      	mov	r0, r7
+  2005de:	4641      	mov	r1, r8
+  2005e0:	f000 f846 	bl	200670 <levenshtein_distance>
+  2005e4:	9901      	ldr	r1, [sp, #4]
+  2005e6:	4408      	add	r0, r1
+  2005e8:	9001      	str	r0, [sp, #4]
+  2005ea:	4638      	mov	r0, r7
+  2005ec:	4629      	mov	r1, r5
+  2005ee:	f000 f83f 	bl	200670 <levenshtein_distance>
+  2005f2:	9901      	ldr	r1, [sp, #4]
+  2005f4:	4408      	add	r0, r1
+  2005f6:	9001      	str	r0, [sp, #4]
+  2005f8:	4638      	mov	r0, r7
+  2005fa:	4631      	mov	r1, r6
+  2005fc:	f000 f838 	bl	200670 <levenshtein_distance>
+  200600:	9901      	ldr	r1, [sp, #4]
+  200602:	4408      	add	r0, r1
+  200604:	9001      	str	r0, [sp, #4]
+  200606:	4638      	mov	r0, r7
+  200608:	4639      	mov	r1, r7
+  20060a:	f000 f831 	bl	200670 <levenshtein_distance>
+  20060e:	9901      	ldr	r1, [sp, #4]
+  200610:	4408      	add	r0, r1
+  200612:	9001      	str	r0, [sp, #4]
+  200614:	4638      	mov	r0, r7
+  200616:	4621      	mov	r1, r4
+  200618:	f000 f82a 	bl	200670 <levenshtein_distance>
+  20061c:	9901      	ldr	r1, [sp, #4]
+  20061e:	4408      	add	r0, r1
+  200620:	9001      	str	r0, [sp, #4]
+  200622:	4620      	mov	r0, r4
+  200624:	4641      	mov	r1, r8
+  200626:	f000 f823 	bl	200670 <levenshtein_distance>
+  20062a:	9901      	ldr	r1, [sp, #4]
+  20062c:	4408      	add	r0, r1
+  20062e:	9001      	str	r0, [sp, #4]
+  200630:	4620      	mov	r0, r4
+  200632:	4629      	mov	r1, r5
+  200634:	f000 f81c 	bl	200670 <levenshtein_distance>
+  200638:	9901      	ldr	r1, [sp, #4]
+  20063a:	4408      	add	r0, r1
+  20063c:	9001      	str	r0, [sp, #4]
+  20063e:	4620      	mov	r0, r4
+  200640:	4631      	mov	r1, r6
+  200642:	f000 f815 	bl	200670 <levenshtein_distance>
+  200646:	9901      	ldr	r1, [sp, #4]
+  200648:	4408      	add	r0, r1
+  20064a:	9001      	str	r0, [sp, #4]
+  20064c:	4620      	mov	r0, r4
+  20064e:	4639      	mov	r1, r7
+  200650:	f000 f80e 	bl	200670 <levenshtein_distance>
+  200654:	9901      	ldr	r1, [sp, #4]
+  200656:	4408      	add	r0, r1
+  200658:	9001      	str	r0, [sp, #4]
+  20065a:	4620      	mov	r0, r4
+  20065c:	4621      	mov	r1, r4
+  20065e:	f000 f807 	bl	200670 <levenshtein_distance>
+  200662:	9901      	ldr	r1, [sp, #4]
+  200664:	4408      	add	r0, r1
+  200666:	9001      	str	r0, [sp, #4]
+  200668:	9801      	ldr	r0, [sp, #4]
+  20066a:	b002      	add	sp, #8
+  20066c:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+
+00200670 <levenshtein_distance>:
+  200670:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  200674:	af03      	add	r7, sp, #12
+  200676:	b095      	sub	sp, #84	; 0x54
+  200678:	460c      	mov	r4, r1
+  20067a:	f847 0c14 	str.w	r0, [r7, #-20]
+  20067e:	f7ff fed9 	bl	200434 <strlen>
+  200682:	4605      	mov	r5, r0
+  200684:	4620      	mov	r0, r4
+  200686:	f847 4c54 	str.w	r4, [r7, #-84]
+  20068a:	f7ff fed3 	bl	200434 <strlen>
+  20068e:	1c6e      	adds	r6, r5, #1
+  200690:	f100 0901 	add.w	r9, r0, #1
+  200694:	fb09 f206 	mul.w	r2, r9, r6
+  200698:	2307      	movs	r3, #7
+  20069a:	eb03 0282 	add.w	r2, r3, r2, lsl #2
+  20069e:	4601      	mov	r1, r0
+  2006a0:	f022 0207 	bic.w	r2, r2, #7
+  2006a4:	f847 0c50 	str.w	r0, [r7, #-80]
+  2006a8:	ebad 0002 	sub.w	r0, sp, r2
+  2006ac:	f847 0c1c 	str.w	r0, [r7, #-28]
+  2006b0:	4685      	mov	sp, r0
+  2006b2:	2d00      	cmp	r5, #0
+  2006b4:	4629      	mov	r1, r5
+  2006b6:	f847 5c5c 	str.w	r5, [r7, #-92]
+  2006ba:	f847 9c18 	str.w	r9, [r7, #-24]
+  2006be:	d44a      	bmi.n	200756 <levenshtein_distance+0xe6>
+  2006c0:	f857 1c5c 	ldr.w	r1, [r7, #-92]
+  2006c4:	f006 0c03 	and.w	ip, r6, #3
+  2006c8:	2903      	cmp	r1, #3
+  2006ca:	d204      	bcs.n	2006d6 <levenshtein_distance+0x66>
+  2006cc:	2300      	movs	r3, #0
+  2006ce:	f1bc 0f00 	cmp.w	ip, #0
+  2006d2:	d126      	bne.n	200722 <levenshtein_distance+0xb2>
+  2006d4:	e03f      	b.n	200756 <levenshtein_distance+0xe6>
+  2006d6:	f857 1c50 	ldr.w	r1, [r7, #-80]
+  2006da:	220c      	movs	r2, #12
+  2006dc:	eb01 0041 	add.w	r0, r1, r1, lsl #1
+  2006e0:	2304      	movs	r3, #4
+  2006e2:	eb02 0980 	add.w	r9, r2, r0, lsl #2
+  2006e6:	2010      	movs	r0, #16
+  2006e8:	2208      	movs	r2, #8
+  2006ea:	f026 0803 	bic.w	r8, r6, #3
+  2006ee:	eb00 1a01 	add.w	sl, r0, r1, lsl #4
+  2006f2:	eb02 02c1 	add.w	r2, r2, r1, lsl #3
+  2006f6:	eb03 0681 	add.w	r6, r3, r1, lsl #2
+  2006fa:	f857 4c1c 	ldr.w	r4, [r7, #-28]
+  2006fe:	2300      	movs	r3, #0
+  200700:	1c58      	adds	r0, r3, #1
+  200702:	6023      	str	r3, [r4, #0]
+  200704:	51a0      	str	r0, [r4, r6]
+  200706:	1c98      	adds	r0, r3, #2
+  200708:	50a0      	str	r0, [r4, r2]
+  20070a:	1cd8      	adds	r0, r3, #3
+  20070c:	3304      	adds	r3, #4
+  20070e:	f844 0009 	str.w	r0, [r4, r9]
+  200712:	4543      	cmp	r3, r8
+  200714:	4454      	add	r4, sl
+  200716:	d1f3      	bne.n	200700 <levenshtein_distance+0x90>
+  200718:	f857 9c18 	ldr.w	r9, [r7, #-24]
+  20071c:	f1bc 0f00 	cmp.w	ip, #0
+  200720:	d019      	beq.n	200756 <levenshtein_distance+0xe6>
+  200722:	fb03 f009 	mul.w	r0, r3, r9
+  200726:	f857 1c1c 	ldr.w	r1, [r7, #-28]
+  20072a:	f1bc 0f01 	cmp.w	ip, #1
+  20072e:	f841 3020 	str.w	r3, [r1, r0, lsl #2]
+  200732:	d010      	beq.n	200756 <levenshtein_distance+0xe6>
+  200734:	1c58      	adds	r0, r3, #1
+  200736:	fb00 f209 	mul.w	r2, r0, r9
+  20073a:	f857 1c1c 	ldr.w	r1, [r7, #-28]
+  20073e:	f1bc 0f02 	cmp.w	ip, #2
+  200742:	f841 0022 	str.w	r0, [r1, r2, lsl #2]
+  200746:	d006      	beq.n	200756 <levenshtein_distance+0xe6>
+  200748:	1c98      	adds	r0, r3, #2
+  20074a:	fb00 f209 	mul.w	r2, r0, r9
+  20074e:	f857 1c1c 	ldr.w	r1, [r7, #-28]
+  200752:	f841 0022 	str.w	r0, [r1, r2, lsl #2]
+  200756:	f857 0c50 	ldr.w	r0, [r7, #-80]
+  20075a:	f857 4c1c 	ldr.w	r4, [r7, #-28]
+  20075e:	2800      	cmp	r0, #0
+  200760:	f100 81d0 	bmi.w	200b04 <levenshtein_distance+0x494>
+  200764:	f857 0c50 	ldr.w	r0, [r7, #-80]
+  200768:	f009 0c03 	and.w	ip, r9, #3
+  20076c:	2803      	cmp	r0, #3
+  20076e:	d204      	bcs.n	20077a <levenshtein_distance+0x10a>
+  200770:	2300      	movs	r3, #0
+  200772:	f1bc 0f00 	cmp.w	ip, #0
+  200776:	d115      	bne.n	2007a4 <levenshtein_distance+0x134>
+  200778:	e022      	b.n	2007c0 <levenshtein_distance+0x150>
+  20077a:	f029 0803 	bic.w	r8, r9, #3
+  20077e:	f1a4 0610 	sub.w	r6, r4, #16
+  200782:	2300      	movs	r3, #0
+  200784:	f846 3f10 	str.w	r3, [r6, #16]!
+  200788:	1c5c      	adds	r4, r3, #1
+  20078a:	1c98      	adds	r0, r3, #2
+  20078c:	1cda      	adds	r2, r3, #3
+  20078e:	3304      	adds	r3, #4
+  200790:	4543      	cmp	r3, r8
+  200792:	e9c6 4001 	strd	r4, r0, [r6, #4]
+  200796:	60f2      	str	r2, [r6, #12]
+  200798:	d1f4      	bne.n	200784 <levenshtein_distance+0x114>
+  20079a:	f857 4c1c 	ldr.w	r4, [r7, #-28]
+  20079e:	f1bc 0f00 	cmp.w	ip, #0
+  2007a2:	d00d      	beq.n	2007c0 <levenshtein_distance+0x150>
+  2007a4:	f1bc 0f01 	cmp.w	ip, #1
+  2007a8:	f844 3023 	str.w	r3, [r4, r3, lsl #2]
+  2007ac:	d008      	beq.n	2007c0 <levenshtein_distance+0x150>
+  2007ae:	1c5a      	adds	r2, r3, #1
+  2007b0:	f1bc 0f02 	cmp.w	ip, #2
+  2007b4:	f844 2022 	str.w	r2, [r4, r2, lsl #2]
+  2007b8:	bf1c      	itt	ne
+  2007ba:	1c98      	addne	r0, r3, #2
+  2007bc:	f844 0020 	strne.w	r0, [r4, r0, lsl #2]
+  2007c0:	f857 0c50 	ldr.w	r0, [r7, #-80]
+  2007c4:	2801      	cmp	r0, #1
+  2007c6:	f2c0 819d 	blt.w	200b04 <levenshtein_distance+0x494>
+  2007ca:	f857 0c5c 	ldr.w	r0, [r7, #-92]
+  2007ce:	2801      	cmp	r0, #1
+  2007d0:	f2c0 8198 	blt.w	200b04 <levenshtein_distance+0x494>
+  2007d4:	f857 1c5c 	ldr.w	r1, [r7, #-92]
+  2007d8:	f857 3c50 	ldr.w	r3, [r7, #-80]
+  2007dc:	1e48      	subs	r0, r1, #1
+  2007de:	f847 0c58 	str.w	r0, [r7, #-88]
+  2007e2:	f001 0003 	and.w	r0, r1, #3
+  2007e6:	f847 0c4c 	str.w	r0, [r7, #-76]
+  2007ea:	0118      	lsls	r0, r3, #4
+  2007ec:	f847 0c30 	str.w	r0, [r7, #-48]
+  2007f0:	2010      	movs	r0, #16
+  2007f2:	eb03 0243 	add.w	r2, r3, r3, lsl #1
+  2007f6:	eb00 1003 	add.w	r0, r0, r3, lsl #4
+  2007fa:	f04f 0e01 	mov.w	lr, #1
+  2007fe:	f847 0c24 	str.w	r0, [r7, #-36]
+  200802:	1cd0      	adds	r0, r2, #3
+  200804:	f847 0c40 	str.w	r0, [r7, #-64]
+  200808:	0098      	lsls	r0, r3, #2
+  20080a:	f847 0c34 	str.w	r0, [r7, #-52]
+  20080e:	2004      	movs	r0, #4
+  200810:	eb00 0083 	add.w	r0, r0, r3, lsl #2
+  200814:	f847 4c48 	str.w	r4, [r7, #-72]
+  200818:	f847 0c28 	str.w	r0, [r7, #-40]
+  20081c:	0090      	lsls	r0, r2, #2
+  20081e:	f847 0c38 	str.w	r0, [r7, #-56]
+  200822:	2002      	movs	r0, #2
+  200824:	eb00 0043 	add.w	r0, r0, r3, lsl #1
+  200828:	f847 0c44 	str.w	r0, [r7, #-68]
+  20082c:	00d8      	lsls	r0, r3, #3
+  20082e:	f847 0c3c 	str.w	r0, [r7, #-60]
+  200832:	f021 0003 	bic.w	r0, r1, #3
+  200836:	4240      	negs	r0, r0
+  200838:	f847 0c2c 	str.w	r0, [r7, #-44]
+  20083c:	4620      	mov	r0, r4
+  20083e:	e016      	b.n	20086e <levenshtein_distance+0x1fe>
+  200840:	f857 0c20 	ldr.w	r0, [r7, #-32]
+  200844:	fb02 f109 	mul.w	r1, r2, r9
+  200848:	f850 0026 	ldr.w	r0, [r0, r6, lsl #2]
+  20084c:	f844 0021 	str.w	r0, [r4, r1, lsl #2]
+  200850:	f857 0c50 	ldr.w	r0, [r7, #-80]
+  200854:	f857 4c1c 	ldr.w	r4, [r7, #-28]
+  200858:	4586      	cmp	lr, r0
+  20085a:	f857 0c48 	ldr.w	r0, [r7, #-72]
+  20085e:	f10e 0e01 	add.w	lr, lr, #1
+  200862:	f100 0004 	add.w	r0, r0, #4
+  200866:	f847 0c48 	str.w	r0, [r7, #-72]
+  20086a:	f000 814b 	beq.w	200b04 <levenshtein_distance+0x494>
+  20086e:	f857 0c54 	ldr.w	r0, [r7, #-84]
+  200872:	f1ae 0a01 	sub.w	sl, lr, #1
+  200876:	f810 b00a 	ldrb.w	fp, [r0, sl]
+  20087a:	eb04 008a 	add.w	r0, r4, sl, lsl #2
+  20087e:	2301      	movs	r3, #1
+  200880:	f847 0c20 	str.w	r0, [r7, #-32]
+  200884:	f857 0c58 	ldr.w	r0, [r7, #-88]
+  200888:	2803      	cmp	r0, #3
+  20088a:	d219      	bcs.n	2008c0 <levenshtein_distance+0x250>
+  20088c:	f857 0c4c 	ldr.w	r0, [r7, #-76]
+  200890:	2800      	cmp	r0, #0
+  200892:	d0dd      	beq.n	200850 <levenshtein_distance+0x1e0>
+  200894:	f857 1c14 	ldr.w	r1, [r7, #-20]
+  200898:	f857 6c1c 	ldr.w	r6, [r7, #-28]
+  20089c:	1e58      	subs	r0, r3, #1
+  20089e:	5c09      	ldrb	r1, [r1, r0]
+  2008a0:	eb06 048e 	add.w	r4, r6, lr, lsl #2
+  2008a4:	fb00 f209 	mul.w	r2, r0, r9
+  2008a8:	4559      	cmp	r1, fp
+  2008aa:	f040 80bd 	bne.w	200a28 <levenshtein_distance+0x3b8>
+  2008ae:	f857 0c20 	ldr.w	r0, [r7, #-32]
+  2008b2:	fb03 f109 	mul.w	r1, r3, r9
+  2008b6:	f850 0022 	ldr.w	r0, [r0, r2, lsl #2]
+  2008ba:	f844 0021 	str.w	r0, [r4, r1, lsl #2]
+  2008be:	e0ca      	b.n	200a56 <levenshtein_distance+0x3e6>
+  2008c0:	f857 4c48 	ldr.w	r4, [r7, #-72]
+  2008c4:	2600      	movs	r6, #0
+  2008c6:	e015      	b.n	2008f4 <levenshtein_distance+0x284>
+  2008c8:	f857 0c20 	ldr.w	r0, [r7, #-32]
+  2008cc:	f857 1c30 	ldr.w	r1, [r7, #-48]
+  2008d0:	f850 0029 	ldr.w	r0, [r0, r9, lsl #2]
+  2008d4:	4421      	add	r1, r4
+  2008d6:	6148      	str	r0, [r1, #20]
+  2008d8:	f857 0c24 	ldr.w	r0, [r7, #-36]
+  2008dc:	3304      	adds	r3, #4
+  2008de:	4404      	add	r4, r0
+  2008e0:	f857 0c2c 	ldr.w	r0, [r7, #-44]
+  2008e4:	f857 9c18 	ldr.w	r9, [r7, #-24]
+  2008e8:	4418      	add	r0, r3
+  2008ea:	2801      	cmp	r0, #1
+  2008ec:	f857 0c28 	ldr.w	r0, [r7, #-40]
+  2008f0:	4406      	add	r6, r0
+  2008f2:	d0cb      	beq.n	20088c <levenshtein_distance+0x21c>
+  2008f4:	f857 0c14 	ldr.w	r0, [r7, #-20]
+  2008f8:	eb00 0803 	add.w	r8, r0, r3
+  2008fc:	f818 2c01 	ldrb.w	r2, [r8, #-1]
+  200900:	455a      	cmp	r2, fp
+  200902:	d107      	bne.n	200914 <levenshtein_distance+0x2a4>
+  200904:	f857 0c34 	ldr.w	r0, [r7, #-52]
+  200908:	6825      	ldr	r5, [r4, #0]
+  20090a:	1821      	adds	r1, r4, r0
+  20090c:	fb03 f909 	mul.w	r9, r3, r9
+  200910:	608d      	str	r5, [r1, #8]
+  200912:	e011      	b.n	200938 <levenshtein_distance+0x2c8>
+  200914:	f857 0c34 	ldr.w	r0, [r7, #-52]
+  200918:	e9d4 c100 	ldrd	ip, r1, [r4]
+  20091c:	4420      	add	r0, r4
+  20091e:	6845      	ldr	r5, [r0, #4]
+  200920:	f10c 0201 	add.w	r2, ip, #1
+  200924:	3501      	adds	r5, #1
+  200926:	3101      	adds	r1, #1
+  200928:	44b1      	add	r9, r6
+  20092a:	4295      	cmp	r5, r2
+  20092c:	bfb8      	it	lt
+  20092e:	462a      	movlt	r2, r5
+  200930:	4291      	cmp	r1, r2
+  200932:	bfb8      	it	lt
+  200934:	460a      	movlt	r2, r1
+  200936:	6082      	str	r2, [r0, #8]
+  200938:	f857 0c14 	ldr.w	r0, [r7, #-20]
+  20093c:	5cc0      	ldrb	r0, [r0, r3]
+  20093e:	4558      	cmp	r0, fp
+  200940:	d10e      	bne.n	200960 <levenshtein_distance+0x2f0>
+  200942:	f857 1c44 	ldr.w	r1, [r7, #-68]
+  200946:	f857 0c20 	ldr.w	r0, [r7, #-32]
+  20094a:	eb01 0c06 	add.w	ip, r1, r6
+  20094e:	f857 1c3c 	ldr.w	r1, [r7, #-60]
+  200952:	f850 0029 	ldr.w	r0, [r0, r9, lsl #2]
+  200956:	f857 9c18 	ldr.w	r9, [r7, #-24]
+  20095a:	4421      	add	r1, r4
+  20095c:	60c8      	str	r0, [r1, #12]
+  20095e:	e01a      	b.n	200996 <levenshtein_distance+0x326>
+  200960:	f857 0c1c 	ldr.w	r0, [r7, #-28]
+  200964:	1c5a      	adds	r2, r3, #1
+  200966:	eb00 0089 	add.w	r0, r0, r9, lsl #2
+  20096a:	f857 9c18 	ldr.w	r9, [r7, #-24]
+  20096e:	f850 102e 	ldr.w	r1, [r0, lr, lsl #2]
+  200972:	fb02 fc09 	mul.w	ip, r2, r9
+  200976:	f857 2c3c 	ldr.w	r2, [r7, #-60]
+  20097a:	f850 002a 	ldr.w	r0, [r0, sl, lsl #2]
+  20097e:	4422      	add	r2, r4
+  200980:	6895      	ldr	r5, [r2, #8]
+  200982:	3001      	adds	r0, #1
+  200984:	3501      	adds	r5, #1
+  200986:	3101      	adds	r1, #1
+  200988:	4285      	cmp	r5, r0
+  20098a:	bfb8      	it	lt
+  20098c:	4628      	movlt	r0, r5
+  20098e:	4281      	cmp	r1, r0
+  200990:	bfb8      	it	lt
+  200992:	4608      	movlt	r0, r1
+  200994:	60d0      	str	r0, [r2, #12]
+  200996:	f898 0001 	ldrb.w	r0, [r8, #1]
+  20099a:	4558      	cmp	r0, fp
+  20099c:	d10c      	bne.n	2009b8 <levenshtein_distance+0x348>
+  20099e:	f857 1c40 	ldr.w	r1, [r7, #-64]
+  2009a2:	f857 0c20 	ldr.w	r0, [r7, #-32]
+  2009a6:	eb01 0906 	add.w	r9, r1, r6
+  2009aa:	f857 1c38 	ldr.w	r1, [r7, #-56]
+  2009ae:	f850 002c 	ldr.w	r0, [r0, ip, lsl #2]
+  2009b2:	4421      	add	r1, r4
+  2009b4:	6108      	str	r0, [r1, #16]
+  2009b6:	e01a      	b.n	2009ee <levenshtein_distance+0x37e>
+  2009b8:	f857 0c1c 	ldr.w	r0, [r7, #-28]
+  2009bc:	1c9a      	adds	r2, r3, #2
+  2009be:	fb02 f909 	mul.w	r9, r2, r9
+  2009c2:	f857 2c38 	ldr.w	r2, [r7, #-56]
+  2009c6:	eb00 008c 	add.w	r0, r0, ip, lsl #2
+  2009ca:	18a5      	adds	r5, r4, r2
+  2009cc:	f850 102e 	ldr.w	r1, [r0, lr, lsl #2]
+  2009d0:	f8d5 c00c 	ldr.w	ip, [r5, #12]
+  2009d4:	f850 002a 	ldr.w	r0, [r0, sl, lsl #2]
+  2009d8:	f10c 0201 	add.w	r2, ip, #1
+  2009dc:	3001      	adds	r0, #1
+  2009de:	3101      	adds	r1, #1
+  2009e0:	4282      	cmp	r2, r0
+  2009e2:	bfb8      	it	lt
+  2009e4:	4610      	movlt	r0, r2
+  2009e6:	4281      	cmp	r1, r0
+  2009e8:	bfb8      	it	lt
+  2009ea:	4608      	movlt	r0, r1
+  2009ec:	6128      	str	r0, [r5, #16]
+  2009ee:	f898 0002 	ldrb.w	r0, [r8, #2]
+  2009f2:	4558      	cmp	r0, fp
+  2009f4:	f43f af68 	beq.w	2008c8 <levenshtein_distance+0x258>
+  2009f8:	f857 0c1c 	ldr.w	r0, [r7, #-28]
+  2009fc:	f857 2c30 	ldr.w	r2, [r7, #-48]
+  200a00:	eb00 0089 	add.w	r0, r0, r9, lsl #2
+  200a04:	4422      	add	r2, r4
+  200a06:	f850 102e 	ldr.w	r1, [r0, lr, lsl #2]
+  200a0a:	6915      	ldr	r5, [r2, #16]
+  200a0c:	f850 002a 	ldr.w	r0, [r0, sl, lsl #2]
+  200a10:	3501      	adds	r5, #1
+  200a12:	3001      	adds	r0, #1
+  200a14:	3101      	adds	r1, #1
+  200a16:	4285      	cmp	r5, r0
+  200a18:	bfb8      	it	lt
+  200a1a:	4628      	movlt	r0, r5
+  200a1c:	4281      	cmp	r1, r0
+  200a1e:	bfb8      	it	lt
+  200a20:	4608      	movlt	r0, r1
+  200a22:	6150      	str	r0, [r2, #20]
+  200a24:	e758      	b.n	2008d8 <levenshtein_distance+0x268>
+  200a26:	bf00      	nop
+  200a28:	fb03 f109 	mul.w	r1, r3, r9
+  200a2c:	eb06 0082 	add.w	r0, r6, r2, lsl #2
+  200a30:	eb06 0181 	add.w	r1, r6, r1, lsl #2
+  200a34:	f850 202e 	ldr.w	r2, [r0, lr, lsl #2]
+  200a38:	f851 602a 	ldr.w	r6, [r1, sl, lsl #2]
+  200a3c:	f850 002a 	ldr.w	r0, [r0, sl, lsl #2]
+  200a40:	3601      	adds	r6, #1
+  200a42:	3001      	adds	r0, #1
+  200a44:	3201      	adds	r2, #1
+  200a46:	4286      	cmp	r6, r0
+  200a48:	bfb8      	it	lt
+  200a4a:	4630      	movlt	r0, r6
+  200a4c:	4282      	cmp	r2, r0
+  200a4e:	bfb8      	it	lt
+  200a50:	4610      	movlt	r0, r2
+  200a52:	f841 002e 	str.w	r0, [r1, lr, lsl #2]
+  200a56:	f857 0c4c 	ldr.w	r0, [r7, #-76]
+  200a5a:	2801      	cmp	r0, #1
+  200a5c:	f43f aef8 	beq.w	200850 <levenshtein_distance+0x1e0>
+  200a60:	f857 0c14 	ldr.w	r0, [r7, #-20]
+  200a64:	fb03 f209 	mul.w	r2, r3, r9
+  200a68:	5cc0      	ldrb	r0, [r0, r3]
+  200a6a:	1c5e      	adds	r6, r3, #1
+  200a6c:	4558      	cmp	r0, fp
+  200a6e:	d108      	bne.n	200a82 <levenshtein_distance+0x412>
+  200a70:	f857 0c20 	ldr.w	r0, [r7, #-32]
+  200a74:	fb06 f109 	mul.w	r1, r6, r9
+  200a78:	f850 0022 	ldr.w	r0, [r0, r2, lsl #2]
+  200a7c:	f844 0021 	str.w	r0, [r4, r1, lsl #2]
+  200a80:	e018      	b.n	200ab4 <levenshtein_distance+0x444>
+  200a82:	f857 5c1c 	ldr.w	r5, [r7, #-28]
+  200a86:	fb06 f109 	mul.w	r1, r6, r9
+  200a8a:	eb05 0082 	add.w	r0, r5, r2, lsl #2
+  200a8e:	eb05 0181 	add.w	r1, r5, r1, lsl #2
+  200a92:	f850 202e 	ldr.w	r2, [r0, lr, lsl #2]
+  200a96:	f851 502a 	ldr.w	r5, [r1, sl, lsl #2]
+  200a9a:	f850 002a 	ldr.w	r0, [r0, sl, lsl #2]
+  200a9e:	3501      	adds	r5, #1
+  200aa0:	3001      	adds	r0, #1
+  200aa2:	3201      	adds	r2, #1
+  200aa4:	4285      	cmp	r5, r0
+  200aa6:	bfb8      	it	lt
+  200aa8:	4628      	movlt	r0, r5
+  200aaa:	4282      	cmp	r2, r0
+  200aac:	bfb8      	it	lt
+  200aae:	4610      	movlt	r0, r2
+  200ab0:	f841 002e 	str.w	r0, [r1, lr, lsl #2]
+  200ab4:	f857 0c4c 	ldr.w	r0, [r7, #-76]
+  200ab8:	2802      	cmp	r0, #2
+  200aba:	f43f aec9 	beq.w	200850 <levenshtein_distance+0x1e0>
+  200abe:	f857 0c14 	ldr.w	r0, [r7, #-20]
+  200ac2:	1c9a      	adds	r2, r3, #2
+  200ac4:	5d80      	ldrb	r0, [r0, r6]
+  200ac6:	fb06 f609 	mul.w	r6, r6, r9
+  200aca:	4558      	cmp	r0, fp
+  200acc:	f43f aeb8 	beq.w	200840 <levenshtein_distance+0x1d0>
+  200ad0:	f857 3c1c 	ldr.w	r3, [r7, #-28]
+  200ad4:	fb02 f109 	mul.w	r1, r2, r9
+  200ad8:	eb03 0086 	add.w	r0, r3, r6, lsl #2
+  200adc:	eb03 0181 	add.w	r1, r3, r1, lsl #2
+  200ae0:	f850 202e 	ldr.w	r2, [r0, lr, lsl #2]
+  200ae4:	f851 302a 	ldr.w	r3, [r1, sl, lsl #2]
+  200ae8:	f850 002a 	ldr.w	r0, [r0, sl, lsl #2]
+  200aec:	3301      	adds	r3, #1
+  200aee:	3001      	adds	r0, #1
+  200af0:	3201      	adds	r2, #1
+  200af2:	4283      	cmp	r3, r0
+  200af4:	bfb8      	it	lt
+  200af6:	4618      	movlt	r0, r3
+  200af8:	4282      	cmp	r2, r0
+  200afa:	bfb8      	it	lt
+  200afc:	4610      	movlt	r0, r2
+  200afe:	f841 002e 	str.w	r0, [r1, lr, lsl #2]
+  200b02:	e6a5      	b.n	200850 <levenshtein_distance+0x1e0>
+  200b04:	f857 0c5c 	ldr.w	r0, [r7, #-92]
+  200b08:	f857 1c50 	ldr.w	r1, [r7, #-80]
+  200b0c:	fb09 f000 	mul.w	r0, r9, r0
+  200b10:	eb04 0080 	add.w	r0, r4, r0, lsl #2
+  200b14:	f1a7 040c 	sub.w	r4, r7, #12
+  200b18:	f850 0021 	ldr.w	r0, [r0, r1, lsl #2]
+  200b1c:	46a5      	mov	sp, r4
+  200b1e:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+	...
+
+00200b24 <main>:
+  200b24:	b082      	sub	sp, #8
+  200b26:	2500      	movs	r5, #0
+  200b28:	f241 0404 	movw	r4, #4100	; 0x1004
+  200b2c:	f44f 3080 	mov.w	r0, #65536	; 0x10000
+  200b30:	f2ce 0400 	movt	r4, #57344	; 0xe000
+  200b34:	9501      	str	r5, [sp, #4]
+  200b36:	f000 f846 	bl	200bc6 <main+0xa2>
+  200b3a:	6025      	str	r5, [r4, #0]
+  200b3c:	f44f 7580 	mov.w	r5, #256	; 0x100
+  200b40:	9801      	ldr	r0, [sp, #4]
+  200b42:	f7ff fcc9 	bl	2004d8 <benchmark>
+  200b46:	9001      	str	r0, [sp, #4]
+  200b48:	9801      	ldr	r0, [sp, #4]
+  200b4a:	3d01      	subs	r5, #1
+  200b4c:	d1f8      	bne.n	200b40 <main+0x1c>
+  200b4e:	6820      	ldr	r0, [r4, #0]
+  200b50:	f000 f83e 	bl	200bd0 <main+0xac>
+  200b54:	2000      	movs	r0, #0
+  200b56:	f44f 7580 	mov.w	r5, #256	; 0x100
+  200b5a:	6020      	str	r0, [r4, #0]
+  200b5c:	9801      	ldr	r0, [sp, #4]
+  200b5e:	f7ff fcbb 	bl	2004d8 <benchmark>
+  200b62:	9001      	str	r0, [sp, #4]
+  200b64:	9801      	ldr	r0, [sp, #4]
+  200b66:	3d01      	subs	r5, #1
+  200b68:	d1f8      	bne.n	200b5c <main+0x38>
+  200b6a:	6820      	ldr	r0, [r4, #0]
+  200b6c:	f000 f830 	bl	200bd0 <main+0xac>
+  200b70:	2000      	movs	r0, #0
+  200b72:	f44f 7580 	mov.w	r5, #256	; 0x100
+  200b76:	6020      	str	r0, [r4, #0]
+  200b78:	9801      	ldr	r0, [sp, #4]
+  200b7a:	f7ff fcad 	bl	2004d8 <benchmark>
+  200b7e:	9001      	str	r0, [sp, #4]
+  200b80:	9801      	ldr	r0, [sp, #4]
+  200b82:	3d01      	subs	r5, #1
+  200b84:	d1f8      	bne.n	200b78 <main+0x54>
+  200b86:	6820      	ldr	r0, [r4, #0]
+  200b88:	f000 f822 	bl	200bd0 <main+0xac>
+  200b8c:	2000      	movs	r0, #0
+  200b8e:	f44f 7580 	mov.w	r5, #256	; 0x100
+  200b92:	6020      	str	r0, [r4, #0]
+  200b94:	9801      	ldr	r0, [sp, #4]
+  200b96:	f7ff fc9f 	bl	2004d8 <benchmark>
+  200b9a:	9001      	str	r0, [sp, #4]
+  200b9c:	9801      	ldr	r0, [sp, #4]
+  200b9e:	3d01      	subs	r5, #1
+  200ba0:	d1f8      	bne.n	200b94 <main+0x70>
+  200ba2:	6820      	ldr	r0, [r4, #0]
+  200ba4:	f000 f814 	bl	200bd0 <main+0xac>
+  200ba8:	2000      	movs	r0, #0
+  200baa:	f44f 7580 	mov.w	r5, #256	; 0x100
+  200bae:	6020      	str	r0, [r4, #0]
+  200bb0:	9801      	ldr	r0, [sp, #4]
+  200bb2:	f7ff fc91 	bl	2004d8 <benchmark>
+  200bb6:	9001      	str	r0, [sp, #4]
+  200bb8:	9801      	ldr	r0, [sp, #4]
+  200bba:	3d01      	subs	r5, #1
+  200bbc:	d1f8      	bne.n	200bb0 <main+0x8c>
+  200bbe:	6820      	ldr	r0, [r4, #0]
+  200bc0:	f000 f806 	bl	200bd0 <main+0xac>
+  200bc4:	e7fe      	b.n	200bc4 <main+0xa0>
+  200bc6:	f64f 6c11 	movw	ip, #65041	; 0xfe11
+  200bca:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  200bce:	4760      	bx	ip
+  200bd0:	f64f 6c19 	movw	ip, #65049	; 0xfe19
+  200bd4:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  200bd8:	4760      	bx	ip
+
+00200bda <_fp_init>:
+  200bda:	eef1 0a10 	vmrs	r0, fpscr
+  200bde:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  200be2:	f2c0 31c0 	movt	r1, #960	; 0x3c0
+  200be6:	ea20 0001 	bic.w	r0, r0, r1
+  200bea:	f040 7040 	orr.w	r0, r0, #50331648	; 0x3000000
+  200bee:	eee1 0a10 	vmsr	fpscr, r0
+
+00200bf2 <__fplib_config_fpu_vfp>:
+  200bf2:	4770      	bx	lr
+
+00200bf4 <.L.str.3>:
+  200bf4:	736d 0064                                   msd.
+
+00200bf8 <.L.str>:
+  200bf8:	7273 6a72 676e 6572                          srrjngre.
+
+00200c01 <.L.str.2>:
+  200c01:	7473 6972 676e                               string.
+
+00200c08 <.L.str.1>:
+  200c08:	7361 6366 6e6a 6473 6a6b                     asfcjnsdkj.
+
+00200c13 <.L.str.4>:
+  200c13:	7473 6972 676e 0073                          strings..

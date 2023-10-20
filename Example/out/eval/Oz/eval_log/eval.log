@@ -1,0 +1,2667 @@
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/bubblesort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/bubblesort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 51570533, enter_exit: 21271278, ibt_check: 30299255, ins_identification_garbage: 1369413
+EVAL: 51581529, enter_exit: 21271347, ibt_check: 30310182, ins_identification_garbage: 1369904
+EVAL: 51581639, enter_exit: 21271347, ibt_check: 30310292, ins_identification_garbage: 1369909
+EVAL: 51581570, enter_exit: 21271344, ibt_check: 30310226, ins_identification_garbage: 1369906
+EVAL: 51581553, enter_exit: 21271349, ibt_check: 30310204, ins_identification_garbage: 1369905
+
+bubblesort_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/crc32.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/crc32.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8734256, enter_exit: 2925682, ibt_check: 5808574, ins_identification_garbage: 262526
+EVAL: 8734164, enter_exit: 2925682, ibt_check: 5808482, ins_identification_garbage: 262519
+EVAL: 8734186, enter_exit: 2925682, ibt_check: 5808504, ins_identification_garbage: 262520
+EVAL: 8745322, enter_exit: 2925755, ibt_check: 5819567, ins_identification_garbage: 263020
+EVAL: 8734186, enter_exit: 2925682, ibt_check: 5808504, ins_identification_garbage: 262520
+
+crc32_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/dijkstra.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/dijkstra.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 407841960, enter_exit: 134828896, ibt_check: 273013064, ins_identification_garbage: 12339234
+EVAL: 407852759, enter_exit: 134828988, ibt_check: 273023771, ins_identification_garbage: 12339715
+EVAL: 407852759, enter_exit: 134828988, ibt_check: 273023771, ins_identification_garbage: 12339715
+EVAL: 407852759, enter_exit: 134828988, ibt_check: 273023771, ins_identification_garbage: 12339715
+EVAL: 407852759, enter_exit: 134828988, ibt_check: 273023771, ins_identification_garbage: 12339715
+
+dijkstra_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/edn.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/edn.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 35427941, enter_exit: 11316338, ibt_check: 24111603, ins_identification_garbage: 1089754
+EVAL: 35438980, enter_exit: 11316428, ibt_check: 24122552, ins_identification_garbage: 1090246
+EVAL: 35428041, enter_exit: 11316354, ibt_check: 24111687, ins_identification_garbage: 1089755
+EVAL: 35439197, enter_exit: 11316447, ibt_check: 24122750, ins_identification_garbage: 1090255
+EVAL: 35428108, enter_exit: 11316377, ibt_check: 24111731, ins_identification_garbage: 1089757
+
+edn_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/fasta.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/fasta.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 74594698, enter_exit: 29124974, ibt_check: 45469724, ins_identification_garbage: 2054594
+EVAL: 74594656, enter_exit: 29124958, ibt_check: 45469698, ins_identification_garbage: 2054590
+EVAL: 74594591, enter_exit: 29124915, ibt_check: 45469676, ins_identification_garbage: 2054589
+EVAL: 74594630, enter_exit: 29124932, ibt_check: 45469698, ins_identification_garbage: 2054590
+EVAL: 74594614, enter_exit: 29124960, ibt_check: 45469654, ins_identification_garbage: 2054588
+
+fasta_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/frac.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/frac.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 38381961, enter_exit: 16077621, ibt_check: 22304340, ins_identification_garbage: 872838
+EVAL: 38392919, enter_exit: 16077692, ibt_check: 22315227, ins_identification_garbage: 873269
+EVAL: 38392937, enter_exit: 16077694, ibt_check: 22315243, ins_identification_garbage: 873267
+EVAL: 38392873, enter_exit: 16077680, ibt_check: 22315193, ins_identification_garbage: 873262
+EVAL: 38392877, enter_exit: 16077684, ibt_check: 22315193, ins_identification_garbage: 873262
+
+frac_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/levenshtein.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/levenshtein.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 30040218, enter_exit: 9967094, ibt_check: 20073124, ins_identification_garbage: 907232
+EVAL: 30039969, enter_exit: 9967091, ibt_check: 20072878, ins_identification_garbage: 907218
+EVAL: 30040107, enter_exit: 9967097, ibt_check: 20073010, ins_identification_garbage: 907224
+EVAL: 30040082, enter_exit: 9967094, ibt_check: 20072988, ins_identification_garbage: 907223
+EVAL: 30040084, enter_exit: 9967096, ibt_check: 20072988, ins_identification_garbage: 907223
+
+levenshtein_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nbody.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nbody.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 412584258, enter_exit: 189918287, ibt_check: 222665971, ins_identification_garbage: 8895907
+EVAL: 412583460, enter_exit: 189918707, ibt_check: 222664753, ins_identification_garbage: 8895857
+EVAL: 412583457, enter_exit: 189918706, ibt_check: 222664751, ins_identification_garbage: 8895856
+EVAL: 412594490, enter_exit: 189918776, ibt_check: 222675714, ins_identification_garbage: 8896296
+EVAL: 412583460, enter_exit: 189918707, ibt_check: 222664753, ins_identification_garbage: 8895857
+
+nbody_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/ndes.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/ndes.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 3, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 28923583, enter_exit: 10305634, ibt_check: 18617949, ins_identification_garbage: 599140
+EVAL: 28934728, enter_exit: 10305522, ibt_check: 18629206, ins_identification_garbage: 599646
+EVAL: 28934323, enter_exit: 10305447, ibt_check: 18628876, ins_identification_garbage: 599631
+EVAL: 28934641, enter_exit: 10305523, ibt_check: 18629118, ins_identification_garbage: 599642
+EVAL: 28934433, enter_exit: 10305447, ibt_check: 18628986, ins_identification_garbage: 599636
+
+ndes_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nettle_aes.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nettle_aes.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 5, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 16653347, enter_exit: 11798626, ibt_check: 4854721, ins_identification_garbage: 213367
+EVAL: 16664382, enter_exit: 11798692, ibt_check: 4865690, ins_identification_garbage: 213849
+EVAL: 16664290, enter_exit: 11798698, ibt_check: 4865592, ins_identification_garbage: 213850
+EVAL: 16664350, enter_exit: 11798692, ibt_check: 4865658, ins_identification_garbage: 213853
+EVAL: 16664379, enter_exit: 11798699, ibt_check: 4865680, ins_identification_garbage: 213854
+
+nettle_aes_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/picojpeg.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/picojpeg.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 20, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 428992002, enter_exit: 169533710, ibt_check: 259458292, ins_identification_garbage: 11612503
+EVAL: 428991399, enter_exit: 169533703, ibt_check: 259457696, ins_identification_garbage: 11612474
+EVAL: 429002959, enter_exit: 169533764, ibt_check: 259469195, ins_identification_garbage: 11612992
+EVAL: 428992087, enter_exit: 169533665, ibt_check: 259458422, ins_identification_garbage: 11612507
+EVAL: 428991593, enter_exit: 169533699, ibt_check: 259457894, ins_identification_garbage: 11612483
+
+picojpeg_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/qrduino.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/qrduino.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 24, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 529016545, enter_exit: 168898786, ibt_check: 360117759, ins_identification_garbage: 14665427
+EVAL: 529027767, enter_exit: 168898857, ibt_check: 360128910, ins_identification_garbage: 14665790
+EVAL: 529027732, enter_exit: 168898850, ibt_check: 360128882, ins_identification_garbage: 14665776
+EVAL: 529027917, enter_exit: 168898841, ibt_check: 360129076, ins_identification_garbage: 14665803
+EVAL: 529027530, enter_exit: 168898848, ibt_check: 360128682, ins_identification_garbage: 14665776
+
+qrduino_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/rijndael.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/rijndael.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 281232562, enter_exit: 144654509, ibt_check: 136578053, ins_identification_garbage: 5635151
+EVAL: 281232337, enter_exit: 144654480, ibt_check: 136577857, ins_identification_garbage: 5635142
+EVAL: 281243241, enter_exit: 144654569, ibt_check: 136588672, ins_identification_garbage: 5635598
+EVAL: 281232488, enter_exit: 144654499, ibt_check: 136577989, ins_identification_garbage: 5635148
+EVAL: 281243537, enter_exit: 144654579, ibt_check: 136588958, ins_identification_garbage: 5635611
+
+rijndael_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arraybinsearch.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arraybinsearch.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 7193372, enter_exit: 2956954, ibt_check: 4236418, ins_identification_garbage: 191471
+EVAL: 7193344, enter_exit: 2956952, ibt_check: 4236392, ins_identification_garbage: 191467
+EVAL: 7193389, enter_exit: 2956953, ibt_check: 4236436, ins_identification_garbage: 191469
+EVAL: 7193408, enter_exit: 2956950, ibt_check: 4236458, ins_identification_garbage: 191470
+EVAL: 7193366, enter_exit: 2956952, ibt_check: 4236414, ins_identification_garbage: 191468
+
+sglib_arraybinsearch_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_dllist.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_dllist.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 24281764, enter_exit: 6578102, ibt_check: 17703662, ins_identification_garbage: 800142
+EVAL: 24281684, enter_exit: 6578136, ibt_check: 17703548, ins_identification_garbage: 800134
+EVAL: 24281831, enter_exit: 6578129, ibt_check: 17703702, ins_identification_garbage: 800141
+EVAL: 24281815, enter_exit: 6578135, ibt_check: 17703680, ins_identification_garbage: 800140
+EVAL: 24292971, enter_exit: 6578206, ibt_check: 17714765, ins_identification_garbage: 800641
+
+sglib_dllist_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_hashtable.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_hashtable.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 16968289, enter_exit: 4323941, ibt_check: 12644348, ins_identification_garbage: 571479
+EVAL: 16968132, enter_exit: 4323942, ibt_check: 12644190, ins_identification_garbage: 571469
+EVAL: 16979299, enter_exit: 4324024, ibt_check: 12655275, ins_identification_garbage: 571970
+EVAL: 16968143, enter_exit: 4323953, ibt_check: 12644190, ins_identification_garbage: 571469
+EVAL: 16968091, enter_exit: 4323945, ibt_check: 12644146, ins_identification_garbage: 571467
+
+sglib_hashtable_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_listsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_listsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 17089354, enter_exit: 4530848, ibt_check: 12558506, ins_identification_garbage: 567600
+EVAL: 17100325, enter_exit: 4530914, ibt_check: 12569411, ins_identification_garbage: 568090
+EVAL: 17100522, enter_exit: 4530913, ibt_check: 12569609, ins_identification_garbage: 568099
+EVAL: 17100228, enter_exit: 4530927, ibt_check: 12569301, ins_identification_garbage: 568085
+EVAL: 17100350, enter_exit: 4530917, ibt_check: 12569433, ins_identification_garbage: 568091
+
+sglib_listsort_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_queue.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_queue.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 10373486, enter_exit: 3783594, ibt_check: 6589892, ins_identification_garbage: 297840
+EVAL: 10373234, enter_exit: 3783610, ibt_check: 6589624, ins_identification_garbage: 297825
+EVAL: 10373235, enter_exit: 3783611, ibt_check: 6589624, ins_identification_garbage: 297825
+EVAL: 10384404, enter_exit: 3783673, ibt_check: 6600731, ins_identification_garbage: 298327
+EVAL: 10373224, enter_exit: 3783600, ibt_check: 6589624, ins_identification_garbage: 297825
+
+sglib_queue_ibt_baseline_no_systick.log testing success.
+reset board success
+
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_rbtree.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_rbtree.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 56932021, enter_exit: 17564944, ibt_check: 39367077, ins_identification_garbage: 1779250
+EVAL: 56932198, enter_exit: 17564949, ibt_check: 39367249, ins_identification_garbage: 1779255
+EVAL: 56942849, enter_exit: 17565021, ibt_check: 39377828, ins_identification_garbage: 1779733
+EVAL: 56932138, enter_exit: 17564955, ibt_check: 39367183, ins_identification_garbage: 1779252
+EVAL: 56943321, enter_exit: 17565031, ibt_check: 39378290, ins_identification_garbage: 1779754
+
+sglib_rbtree_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/st.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/st.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 80201923, enter_exit: 39077328, ibt_check: 41124595, ins_identification_garbage: 1486178
+EVAL: 80212841, enter_exit: 39077309, ibt_check: 41135532, ins_identification_garbage: 1486595
+EVAL: 80212841, enter_exit: 39077309, ibt_check: 41135532, ins_identification_garbage: 1486595
+EVAL: 80212841, enter_exit: 39077309, ibt_check: 41135532, ins_identification_garbage: 1486595
+EVAL: 80212841, enter_exit: 39077309, ibt_check: 41135532, ins_identification_garbage: 1486595
+
+st_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/whetstone.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/whetstone.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 6, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 527901041, enter_exit: 250753280, ibt_check: 277147761, ins_identification_garbage: 10954451
+EVAL: 527901081, enter_exit: 250753302, ibt_check: 277147779, ins_identification_garbage: 10954449
+EVAL: 527900394, enter_exit: 250753051, ibt_check: 277147343, ins_identification_garbage: 10954431
+EVAL: 527901592, enter_exit: 250754009, ibt_check: 277147583, ins_identification_garbage: 10954441
+EVAL: 527901746, enter_exit: 250754009, ibt_check: 277147737, ins_identification_garbage: 10954448
+
+whetstone_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/bubblesort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/bubblesort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 51690783, enter_exit: 21271278, ibt_check: 30419505, ins_identification_garbage: 1369413
+EVAL: 51701834, enter_exit: 21271347, ibt_check: 30430487, ins_identification_garbage: 1369904
+EVAL: 51701944, enter_exit: 21271347, ibt_check: 30430597, ins_identification_garbage: 1369909
+EVAL: 51701875, enter_exit: 21271344, ibt_check: 30430531, ins_identification_garbage: 1369906
+EVAL: 51701858, enter_exit: 21271349, ibt_check: 30430509, ins_identification_garbage: 1369905
+
+bubblesort_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/crc32.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/crc32.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8757310, enter_exit: 2925682, ibt_check: 5831628, ins_identification_garbage: 262526
+EVAL: 8757229, enter_exit: 2925682, ibt_check: 5831547, ins_identification_garbage: 262519
+EVAL: 8757251, enter_exit: 2925682, ibt_check: 5831569, ins_identification_garbage: 262520
+EVAL: 8768431, enter_exit: 2925755, ibt_check: 5842676, ins_identification_garbage: 263020
+EVAL: 8757251, enter_exit: 2925682, ibt_check: 5831569, ins_identification_garbage: 262520
+
+crc32_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/dijkstra.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/dijkstra.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 408924446, enter_exit: 134828896, ibt_check: 274095550, ins_identification_garbage: 12339234
+EVAL: 408935300, enter_exit: 134828988, ibt_check: 274106312, ins_identification_garbage: 12339715
+EVAL: 408935300, enter_exit: 134828988, ibt_check: 274106312, ins_identification_garbage: 12339715
+EVAL: 408935300, enter_exit: 134828988, ibt_check: 274106312, ins_identification_garbage: 12339715
+EVAL: 408935300, enter_exit: 134828988, ibt_check: 274106312, ins_identification_garbage: 12339715
+
+dijkstra_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/edn.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/edn.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 35523639, enter_exit: 11316338, ibt_check: 24207301, ins_identification_garbage: 1089754
+EVAL: 35534733, enter_exit: 11316428, ibt_check: 24218305, ins_identification_garbage: 1090246
+EVAL: 35523750, enter_exit: 11316354, ibt_check: 24207396, ins_identification_garbage: 1089755
+EVAL: 35534950, enter_exit: 11316447, ibt_check: 24218503, ins_identification_garbage: 1090255
+EVAL: 35523817, enter_exit: 11316377, ibt_check: 24207440, ins_identification_garbage: 1089757
+
+edn_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/fasta.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/fasta.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 74775696, enter_exit: 29124974, ibt_check: 45650722, ins_identification_garbage: 2054594
+EVAL: 74775665, enter_exit: 29124958, ibt_check: 45650707, ins_identification_garbage: 2054590
+EVAL: 74775600, enter_exit: 29124915, ibt_check: 45650685, ins_identification_garbage: 2054589
+EVAL: 74775639, enter_exit: 29124932, ibt_check: 45650707, ins_identification_garbage: 2054590
+EVAL: 74775623, enter_exit: 29124960, ibt_check: 45650663, ins_identification_garbage: 2054588
+
+fasta_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/frac.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/frac.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 38620307, enter_exit: 16077621, ibt_check: 22542686, ins_identification_garbage: 872838
+EVAL: 38631384, enter_exit: 16077692, ibt_check: 22553692, ins_identification_garbage: 873269
+EVAL: 38631405, enter_exit: 16077694, ibt_check: 22553711, ins_identification_garbage: 873267
+EVAL: 38631344, enter_exit: 16077680, ibt_check: 22553664, ins_identification_garbage: 873262
+EVAL: 38631348, enter_exit: 16077684, ibt_check: 22553664, ins_identification_garbage: 873262
+
+frac_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/levenshtein.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/levenshtein.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 30119856, enter_exit: 9967094, ibt_check: 20152762, ins_identification_garbage: 907232
+EVAL: 30119618, enter_exit: 9967091, ibt_check: 20152527, ins_identification_garbage: 907218
+EVAL: 30119756, enter_exit: 9967097, ibt_check: 20152659, ins_identification_garbage: 907224
+EVAL: 30119731, enter_exit: 9967094, ibt_check: 20152637, ins_identification_garbage: 907223
+EVAL: 30119733, enter_exit: 9967096, ibt_check: 20152637, ins_identification_garbage: 907223
+
+levenshtein_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nbody.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nbody.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 414761680, enter_exit: 189918287, ibt_check: 224843393, ins_identification_garbage: 8895907
+EVAL: 414760884, enter_exit: 189918707, ibt_check: 224842177, ins_identification_garbage: 8895857
+EVAL: 414760882, enter_exit: 189918706, ibt_check: 224842176, ins_identification_garbage: 8895856
+EVAL: 414772020, enter_exit: 189918776, ibt_check: 224853244, ins_identification_garbage: 8896296
+EVAL: 414760884, enter_exit: 189918707, ibt_check: 224842177, ins_identification_garbage: 8895857
+
+nbody_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/ndes.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/ndes.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 3, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 38464041, enter_exit: 10305634, ibt_check: 28158407, ins_identification_garbage: 402532
+EVAL: 38475241, enter_exit: 10305522, ibt_check: 28169719, ins_identification_garbage: 403038
+EVAL: 38474836, enter_exit: 10305447, ibt_check: 28169389, ins_identification_garbage: 403023
+EVAL: 38475154, enter_exit: 10305523, ibt_check: 28169631, ins_identification_garbage: 403034
+EVAL: 38474946, enter_exit: 10305447, ibt_check: 28169499, ins_identification_garbage: 403028
+
+ndes_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nettle_aes.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nettle_aes.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 5, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 16679311, enter_exit: 11798626, ibt_check: 4880685, ins_identification_garbage: 213367
+EVAL: 16690413, enter_exit: 11798692, ibt_check: 4891721, ins_identification_garbage: 213849
+EVAL: 16690315, enter_exit: 11798698, ibt_check: 4891617, ins_identification_garbage: 213850
+EVAL: 16690375, enter_exit: 11798692, ibt_check: 4891683, ins_identification_garbage: 213853
+EVAL: 16690404, enter_exit: 11798699, ibt_check: 4891705, ins_identification_garbage: 213854
+
+nettle_aes_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/picojpeg.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/picojpeg.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 20, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 430507344, enter_exit: 169533710, ibt_check: 260973634, ins_identification_garbage: 11607639
+EVAL: 430506751, enter_exit: 169533703, ibt_check: 260973048, ins_identification_garbage: 11607610
+EVAL: 430518357, enter_exit: 169533764, ibt_check: 260984593, ins_identification_garbage: 11608128
+EVAL: 430507439, enter_exit: 169533665, ibt_check: 260973774, ins_identification_garbage: 11607643
+EVAL: 430506945, enter_exit: 169533699, ibt_check: 260973246, ins_identification_garbage: 11607619
+
+picojpeg_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/qrduino.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/qrduino.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 24, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 534275303, enter_exit: 168898786, ibt_check: 365376517, ins_identification_garbage: 14639571
+EVAL: 534286732, enter_exit: 168898857, ibt_check: 365387875, ins_identification_garbage: 14639934
+EVAL: 534286711, enter_exit: 168898850, ibt_check: 365387861, ins_identification_garbage: 14639920
+EVAL: 534286876, enter_exit: 168898841, ibt_check: 365388035, ins_identification_garbage: 14639947
+EVAL: 534286499, enter_exit: 168898848, ibt_check: 365387651, ins_identification_garbage: 14639920
+
+qrduino_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/rijndael.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/rijndael.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 282370440, enter_exit: 144654509, ibt_check: 137715931, ins_identification_garbage: 5635151
+EVAL: 282370223, enter_exit: 144654480, ibt_check: 137715743, ins_identification_garbage: 5635142
+EVAL: 282381207, enter_exit: 144654569, ibt_check: 137726638, ins_identification_garbage: 5635598
+EVAL: 282370374, enter_exit: 144654499, ibt_check: 137715875, ins_identification_garbage: 5635148
+EVAL: 282381503, enter_exit: 144654579, ibt_check: 137726924, ins_identification_garbage: 5635611
+
+rijndael_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arraybinsearch.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arraybinsearch.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 7210178, enter_exit: 2956954, ibt_check: 4253224, ins_identification_garbage: 191471
+EVAL: 7210161, enter_exit: 2956952, ibt_check: 4253209, ins_identification_garbage: 191467
+EVAL: 7210206, enter_exit: 2956953, ibt_check: 4253253, ins_identification_garbage: 191469
+EVAL: 7210225, enter_exit: 2956950, ibt_check: 4253275, ins_identification_garbage: 191470
+EVAL: 7210183, enter_exit: 2956952, ibt_check: 4253231, ins_identification_garbage: 191468
+
+sglib_arraybinsearch_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_dllist.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_dllist.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 24351986, enter_exit: 6578102, ibt_check: 17773884, ins_identification_garbage: 800142
+EVAL: 24351917, enter_exit: 6578136, ibt_check: 17773781, ins_identification_garbage: 800134
+EVAL: 24352064, enter_exit: 6578129, ibt_check: 17773935, ins_identification_garbage: 800141
+EVAL: 24352048, enter_exit: 6578135, ibt_check: 17773913, ins_identification_garbage: 800140
+EVAL: 24363248, enter_exit: 6578206, ibt_check: 17785042, ins_identification_garbage: 800641
+
+sglib_dllist_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_hashtable.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_hashtable.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 17018447, enter_exit: 4323941, ibt_check: 12694506, ins_identification_garbage: 571479
+EVAL: 17018301, enter_exit: 4323942, ibt_check: 12694359, ins_identification_garbage: 571469
+EVAL: 17029512, enter_exit: 4324024, ibt_check: 12705488, ins_identification_garbage: 571970
+EVAL: 17018312, enter_exit: 4323953, ibt_check: 12694359, ins_identification_garbage: 571469
+EVAL: 17018260, enter_exit: 4323945, ibt_check: 12694315, ins_identification_garbage: 571467
+
+sglib_hashtable_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_listsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_listsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 17139160, enter_exit: 4530848, ibt_check: 12608312, ins_identification_garbage: 567600
+EVAL: 17150186, enter_exit: 4530914, ibt_check: 12619272, ins_identification_garbage: 568090
+EVAL: 17150383, enter_exit: 4530913, ibt_check: 12619470, ins_identification_garbage: 568099
+EVAL: 17150089, enter_exit: 4530927, ibt_check: 12619162, ins_identification_garbage: 568085
+EVAL: 17150211, enter_exit: 4530917, ibt_check: 12619294, ins_identification_garbage: 568091
+
+sglib_listsort_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_queue.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_queue.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 10399620, enter_exit: 3783594, ibt_check: 6616026, ins_identification_garbage: 297840
+EVAL: 10399379, enter_exit: 3783610, ibt_check: 6615769, ins_identification_garbage: 297825
+EVAL: 10399380, enter_exit: 3783611, ibt_check: 6615769, ins_identification_garbage: 297825
+EVAL: 10410593, enter_exit: 3783673, ibt_check: 6626920, ins_identification_garbage: 298327
+EVAL: 10399369, enter_exit: 3783600, ibt_check: 6615769, ins_identification_garbage: 297825
+
+sglib_queue_ibt_no_systick.log testing success.
+reset board success
+
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_rbtree.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_rbtree.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 57088175, enter_exit: 17564944, ibt_check: 39523231, ins_identification_garbage: 1779250
+EVAL: 57088363, enter_exit: 17564949, ibt_check: 39523414, ins_identification_garbage: 1779255
+EVAL: 57099058, enter_exit: 17565021, ibt_check: 39534037, ins_identification_garbage: 1779733
+EVAL: 57088303, enter_exit: 17564955, ibt_check: 39523348, ins_identification_garbage: 1779252
+EVAL: 57099530, enter_exit: 17565031, ibt_check: 39534499, ins_identification_garbage: 1779754
+
+sglib_rbtree_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/st.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/st.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 80777891, enter_exit: 39077328, ibt_check: 41700563, ins_identification_garbage: 1486178
+EVAL: 80788947, enter_exit: 39077309, ibt_check: 41711638, ins_identification_garbage: 1486595
+EVAL: 80788947, enter_exit: 39077309, ibt_check: 41711638, ins_identification_garbage: 1486595
+EVAL: 80788947, enter_exit: 39077309, ibt_check: 41711638, ins_identification_garbage: 1486595
+EVAL: 80788947, enter_exit: 39077309, ibt_check: 41711638, ins_identification_garbage: 1486595
+
+st_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/whetstone.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/whetstone.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 6, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 533533339, enter_exit: 250753280, ibt_check: 282780059, ins_identification_garbage: 10905299
+EVAL: 533533390, enter_exit: 250753302, ibt_check: 282780088, ins_identification_garbage: 10905297
+EVAL: 533532701, enter_exit: 250753051, ibt_check: 282779650, ins_identification_garbage: 10905279
+EVAL: 533533900, enter_exit: 250754009, ibt_check: 282779891, ins_identification_garbage: 10905289
+EVAL: 533534054, enter_exit: 250754009, ibt_check: 282780045, ins_identification_garbage: 10905296
+
+whetstone_ibt_no_systick.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nettle_arcfour.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nettle_arcfour.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 9439442, enter_exit: 3375847, ibt_check: 6063595, ins_identification_garbage: 274052
+EVAL: 9439398, enter_exit: 3375851, ibt_check: 6063547, ins_identification_garbage: 274047
+EVAL: 9439402, enter_exit: 3375855, ibt_check: 6063547, ins_identification_garbage: 274047
+EVAL: 9450513, enter_exit: 3375925, ibt_check: 6074588, ins_identification_garbage: 274546
+EVAL: 9439417, enter_exit: 3375848, ibt_check: 6063569, ins_identification_garbage: 274048
+
+nettle_arcfour_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arrayheapsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arrayheapsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8370638, enter_exit: 3279245, ibt_check: 5091393, ins_identification_garbage: 230113
+EVAL: 8381875, enter_exit: 3279313, ibt_check: 5102562, ins_identification_garbage: 230615
+EVAL: 8370537, enter_exit: 3279236, ibt_check: 5091301, ins_identification_garbage: 230106
+EVAL: 8381766, enter_exit: 3279314, ibt_check: 5102452, ins_identification_garbage: 230610
+EVAL: 8370558, enter_exit: 3279235, ibt_check: 5091323, ins_identification_garbage: 230107
+
+sglib_arrayheapsort_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arrayquicksort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arrayquicksort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8696692, enter_exit: 2116191, ibt_check: 6580501, ins_identification_garbage: 297416
+EVAL: 8696652, enter_exit: 2116199, ibt_check: 6580453, ins_identification_garbage: 297411
+EVAL: 8696648, enter_exit: 2116195, ibt_check: 6580453, ins_identification_garbage: 297411
+EVAL: 8696596, enter_exit: 2116187, ibt_check: 6580409, ins_identification_garbage: 297409
+EVAL: 8696624, enter_exit: 2116193, ibt_check: 6580431, ins_identification_garbage: 297410
+
+sglib_arrayquicksort_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_listinsertsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_listinsertsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 27134929, enter_exit: 7300310, ibt_check: 19834619, ins_identification_garbage: 896451
+EVAL: 27134966, enter_exit: 7300307, ibt_check: 19834659, ins_identification_garbage: 896450
+EVAL: 27134966, enter_exit: 7300307, ibt_check: 19834659, ins_identification_garbage: 896450
+EVAL: 27134859, enter_exit: 7300310, ibt_check: 19834549, ins_identification_garbage: 896445
+EVAL: 27134624, enter_exit: 7300317, ibt_check: 19834307, ins_identification_garbage: 896434
+
+sglib_listinsertsort_ibt_baseline_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nettle_arcfour.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nettle_arcfour.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 9463508, enter_exit: 3375847, ibt_check: 6087661, ins_identification_garbage: 274052
+EVAL: 9463475, enter_exit: 3375851, ibt_check: 6087624, ins_identification_garbage: 274047
+EVAL: 9463479, enter_exit: 3375855, ibt_check: 6087624, ins_identification_garbage: 274047
+EVAL: 9474634, enter_exit: 3375925, ibt_check: 6098709, ins_identification_garbage: 274546
+EVAL: 9463494, enter_exit: 3375848, ibt_check: 6087646, ins_identification_garbage: 274048
+
+nettle_arcfour_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arrayheapsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arrayheapsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8390832, enter_exit: 3279245, ibt_check: 5111587, ins_identification_garbage: 230113
+EVAL: 8402124, enter_exit: 3279313, ibt_check: 5122811, ins_identification_garbage: 230615
+EVAL: 8390742, enter_exit: 3279236, ibt_check: 5111506, ins_identification_garbage: 230106
+EVAL: 8402015, enter_exit: 3279314, ibt_check: 5122701, ins_identification_garbage: 230610
+EVAL: 8390763, enter_exit: 3279235, ibt_check: 5111528, ins_identification_garbage: 230107
+
+sglib_arrayheapsort_ibt_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arrayquicksort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arrayquicksort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8722782, enter_exit: 2116191, ibt_check: 6606591, ins_identification_garbage: 297416
+EVAL: 8722753, enter_exit: 2116199, ibt_check: 6606554, ins_identification_garbage: 297411
+EVAL: 8722749, enter_exit: 2116195, ibt_check: 6606554, ins_identification_garbage: 297411
+EVAL: 8722697, enter_exit: 2116187, ibt_check: 6606510, ins_identification_garbage: 297409
+EVAL: 8722725, enter_exit: 2116193, ibt_check: 6606532, ins_identification_garbage: 297410
+
+sglib_arrayquicksort_ibt_no_systick.log testing success.
+reset board success
+
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_listinsertsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_listinsertsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 27213643, enter_exit: 7300310, ibt_check: 19913333, ins_identification_garbage: 896451
+EVAL: 27213691, enter_exit: 7300307, ibt_check: 19913384, ins_identification_garbage: 896450
+EVAL: 27213691, enter_exit: 7300307, ibt_check: 19913384, ins_identification_garbage: 896450
+EVAL: 27213584, enter_exit: 7300310, ibt_check: 19913274, ins_identification_garbage: 896445
+EVAL: 27213349, enter_exit: 7300317, ibt_check: 19913032, ins_identification_garbage: 896434
+
+sglib_listinsertsort_ibt_no_systick.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_no_systick.axf loading success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_10ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_10ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 117, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (Securereset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_10ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_10ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 117, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureEVAL: 384122257, enter_exit: 100211203, ibt_check: 283911054, ins_identification_garbage: 11792382
+
+Sherloc_Blinky_ns_10ms_ibt_baseline_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_100ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_100ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 119, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureEVAL: 1688638016, enter_exit: 607630037, ibt_check: 1081007979, ins_identification_garbage: 40554600
+
+Sherloc_Blinky_ns_100ms_ibt_baseline_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_10ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_10ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 117, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]illegal bx/blx:0x0f060e90
+Stack empty.
+Check task list. num: 0.
+Original IBT_data: b'K\x002\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f'
+count of IBT_data: 118
+sorted IBT_data: b'K\x002\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_10ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_10ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 118, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]illegal bx/blx:0x06ec0764
+Stack empty.
+Check task list. num: 0.
+Original IBT_data: b'K\x002\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+count of IBT_data: 119
+sorted IBT_data: b'K\x002\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_10ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_10ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 119, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureEVAL: 394058194, enter_exit: 100221996, ibt_check: 293836198, ins_identification_garbage: 11726866
+
+Sherloc_Blinky_ns_10ms_ibt_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_100ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_100ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 119, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]illegal bx/blx:0x06ec0764
+Stack empty.
+Check task list. num: 0.
+Original IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+count of IBT_data: 120
+sorted IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_100ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_100ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 120, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]illegal bx/blx:0x07060764
+Stack empty.
+Check task list. num: 0.
+Original IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+count of IBT_data: 121
+sorted IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x07d\x07\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_freertos_baseline.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_100ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_100ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 121, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]illegal bx/blx:0x06e60764
+Stack empty.
+Check task list. num: 0.
+Original IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x07d\x07\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+count of IBT_data: 122
+sorted IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x06d\x07\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x07d\x07\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_100ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_100ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 122, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]illegal bx/blx:0x070c0764
+Stack empty.
+Check task list. num: 0.
+Original IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x06d\x07\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x07d\x07\x06\x074\x06\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+count of IBT_data: 123
+sorted IBT_data: b'K\x002\x04<\x042\x04\xe8\x0et\x05\xe8\x0ez\x05\xe8\x0e\x86\x05\xe8\x0e\x8c\x05\xe8\x0e\x92\x05\xe8\x0e\x98\x05\xe8\x0e\xa6\x05K\x00\xb2\x05\xe8\x0e\xb2\x054\x06\xe6\x06d\x07\xe6\x064\x06\xec\x06d\x07\xec\x064\x06\xf8\x064\x06\x06\x07\xfc\x06\x06\x07d\x07\x06\x074\x06\x0c\x07d\x07\x0c\x074\x06\x16\x074\x06H\x08D\x08H\x08\\\x08H\x084\x06L\x084\x06P\x084\x06V\x08\xc2\x07\x82\x08\xc2\x07\x8c\x08\xc2\x07\x92\x08\xc2\x07\x98\x08\xc2\x07\xa2\x08\xc2\x07\xa8\x08\xc2\x07\xae\x08\xc2\x07\xb4\x08\xc2\x07\xba\x08\xc2\x07\xc0\x08\xc2\x07\xc6\x08\xc2\x07\xcc\x08\xc2\x07\xd2\x08\xc2\x07\xd8\x08\xfc\x07\x0e\t\xfc\x07\x1a\t\xe8\x0e$\t\xe8\x0e*\t\xe8\x0e0\t\xe8\x0e6\t\xe8\x0e<\t\xe8\x0eB\t\xe8\x0eH\t\xe8\x0eN\t\xe8\x0eT\t\xe8\x0eZ\t\xe8\x0e`\t\xe8\x0ef\t\xe8\x0el\t\xe8\x0er\t\xe8\x0ex\t\xe8\x0e~\t\xe8\x0e\x84\t\xe8\x0e\x8a\t\xe8\x0e\x90\t\xe8\x0e\x96\t\xe8\x0e\x9c\t\xe8\x0e\xa2\t\xe8\x0e\xa8\t\xe8\x0e\xae\t\xe8\x0e\xb4\t\xe8\x0e\xba\t\xe8\x0e\xc0\t\xe8\x0e\xc6\t\xe8\x0e\xcc\t\xe8\x0e\xd2\t\xe8\x0e\xd8\t\xe8\x0e\xde\t\xe8\x0e\xe4\t\xe8\x0e\xea\t\xe8\x0e\xf0\t\xe8\x0e\xf6\t\xe8\x0e\xfc\t\xe8\x0e\x02\n\xe8\x0e\x08\n\xe8\x0e\x0e\n\xe8\x0e\x14\n\xe8\x0e\x1a\n\xe8\x0e \n\xe8\x0e&\n\xfc\x07*\n\xe8\x0e0\n\xfc\x074\n\xe8\x0e:\n\xfc\x07>\n\xe8\x0eD\n\xfc\x07H\n\xe8\x0eN\n\xe8\x0eT\n\xe8\x0eZ\n\xe8\x0e`\n\xe8\x0ef\n\xe8\x0el\n\xfc\x07p\n\xe8\x0ev\n\xe8\x0e|\n\xe8\x0e\x82\n\xe8\x0e\x88\n\xe8\x0e\x8e\n\xe8\x0e\x94\n\xe8\x0e\x9a\n\xe8\x0e\xa0\nD\x05\x06\x0bD\x05\x0e\x0bD\x05\x16\x0bD\x05B\x0bD\x05L\x0bD\x05T\x0bD\x05\\\x0b\x90\x0e\xb6\x0e\x90\x0e\xba\x0e\x90\x0e\xbe\x0e\x90\x0e\xfe\x0e\x90\x0e\x02\x0f\x90\x0e\x06\x0f'
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/Sherloc_Blinky_ns_100ms.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/Sherloc_Blinky_ns_100ms.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 123, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureEVAL: 1780389893, enter_exit: 608121717, ibt_check: 1172268176, ins_identification_garbage: 39858890
+
+Sherloc_Blinky_ns_100ms_ibt_systick.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_freertos_baseline.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 129421470, enter_exit: 16529140, ibt_check: 112892330, ins_identification_garbage: 5091283
+
+FreeRTOS_MPU_ns_1_ibt_freertos_baseline.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_freertos.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 129672975, enter_exit: 16489509, ibt_check: 113183466, ins_identification_garbage: 5082311
+
+FreeRTOS_MPU_ns_1_ibt_freertos.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_freertos_baseline.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_freertos.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ins_rtos.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 144523218, enter_exit: 16488150, sherloc_ins_identification: 128035068, ins_identification_garbage: 4890
+FreeRTOS_MPU_ns_1_ins_rtos.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/ibt_enter_no_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/bubblesort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/bubblesort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 44726201, enter_exit: 21271278, ibt_check: 23454923, ins_identification_garbage: 0
+EVAL: 44734743, enter_exit: 21271347, ibt_check: 23463396, ins_identification_garbage: 0
+EVAL: 44734828, enter_exit: 21271347, ibt_check: 23463481, ins_identification_garbage: 0
+EVAL: 44734774, enter_exit: 21271344, ibt_check: 23463430, ins_identification_garbage: 0
+EVAL: 44734762, enter_exit: 21271349, ibt_check: 23463413, ins_identification_garbage: 0
+
+bubblesort_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/crc32.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/crc32.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 7422150, enter_exit: 2925682, ibt_check: 4496468, ins_identification_garbage: 0
+EVAL: 7422093, enter_exit: 2925682, ibt_check: 4496411, ins_identification_garbage: 0
+EVAL: 7422110, enter_exit: 2925682, ibt_check: 4496428, ins_identification_garbage: 0
+EVAL: 7430747, enter_exit: 2925755, ibt_check: 4504992, ins_identification_garbage: 0
+EVAL: 7422110, enter_exit: 2925682, ibt_check: 4496428, ins_identification_garbage: 0
+
+crc32_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/dijkstra.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/dijkstra.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 346170392, enter_exit: 134828896, ibt_check: 211341496, ins_identification_garbage: 0
+EVAL: 346178787, enter_exit: 134828988, ibt_check: 211349799, ins_identification_garbage: 0
+EVAL: 346178787, enter_exit: 134828988, ibt_check: 211349799, ins_identification_garbage: 0
+EVAL: 346178787, enter_exit: 134828988, ibt_check: 211349799, ins_identification_garbage: 0
+EVAL: 346178787, enter_exit: 134828988, ibt_check: 211349799, ins_identification_garbage: 0
+
+dijkstra_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/edn.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/edn.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 29981346, enter_exit: 11316338, ibt_check: 18665008, ins_identification_garbage: 0
+EVAL: 29989926, enter_exit: 11316428, ibt_check: 18673498, ins_identification_garbage: 0
+EVAL: 29981441, enter_exit: 11316354, ibt_check: 18665087, ins_identification_garbage: 0
+EVAL: 29990098, enter_exit: 11316447, ibt_check: 18673651, ins_identification_garbage: 0
+EVAL: 29981498, enter_exit: 11316377, ibt_check: 18665121, ins_identification_garbage: 0
+
+edn_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/fasta.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/fasta.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 64325830, enter_exit: 29124974, ibt_check: 35200856, ins_identification_garbage: 0
+EVAL: 64325808, enter_exit: 29124958, ibt_check: 35200850, ins_identification_garbage: 0
+EVAL: 64325748, enter_exit: 29124915, ibt_check: 35200833, ins_identification_garbage: 0
+EVAL: 64325782, enter_exit: 29124932, ibt_check: 35200850, ins_identification_garbage: 0
+EVAL: 64325776, enter_exit: 29124960, ibt_check: 35200816, ins_identification_garbage: 0
+
+fasta_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/frac.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/frac.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 34019809, enter_exit: 16077621, ibt_check: 17942188, ins_identification_garbage: 0
+EVAL: 34028613, enter_exit: 16077692, ibt_check: 17950921, ins_identification_garbage: 0
+EVAL: 34028641, enter_exit: 16077694, ibt_check: 17950947, ins_identification_garbage: 0
+EVAL: 34028602, enter_exit: 16077680, ibt_check: 17950922, ins_identification_garbage: 0
+EVAL: 34028606, enter_exit: 16077684, ibt_check: 17950922, ins_identification_garbage: 0
+
+frac_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/levenshtein.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/levenshtein.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 25505868, enter_exit: 9967094, ibt_check: 15538774, ins_identification_garbage: 0
+EVAL: 25505689, enter_exit: 9967091, ibt_check: 15538598, ins_identification_garbage: 0
+EVAL: 25505797, enter_exit: 9967097, ibt_check: 15538700, ins_identification_garbage: 0
+EVAL: 25505777, enter_exit: 9967094, ibt_check: 15538683, ins_identification_garbage: 0
+EVAL: 25505779, enter_exit: 9967096, ibt_check: 15538683, ins_identification_garbage: 0
+
+levenshtein_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nbody.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nbody.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 368125032, enter_exit: 189918287, ibt_check: 178206745, ins_identification_garbage: 0
+EVAL: 368124484, enter_exit: 189918707, ibt_check: 178205777, ins_identification_garbage: 0
+EVAL: 368124486, enter_exit: 189918706, ibt_check: 178205780, ins_identification_garbage: 0
+EVAL: 368133320, enter_exit: 189918776, ibt_check: 178214544, ins_identification_garbage: 0
+EVAL: 368124484, enter_exit: 189918707, ibt_check: 178205777, ins_identification_garbage: 0
+
+nbody_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/ndes.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/ndes.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 3, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 26715964, enter_exit: 10305634, ibt_check: 16410330, ins_identification_garbage: 196608
+EVAL: 26724580, enter_exit: 10305522, ibt_check: 16419058, ins_identification_garbage: 196608
+EVAL: 26724250, enter_exit: 10305447, ibt_check: 16418803, ins_identification_garbage: 196608
+EVAL: 26724513, enter_exit: 10305523, ibt_check: 16418990, ins_identification_garbage: 196608
+EVAL: 26724335, enter_exit: 10305447, ibt_check: 16418888, ins_identification_garbage: 196608
+
+ndes_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nettle_aes.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nettle_aes.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 5, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 15586951, enter_exit: 11798626, ibt_check: 3788325, ins_identification_garbage: 0
+EVAL: 15595577, enter_exit: 11798692, ibt_check: 3796885, ins_identification_garbage: 0
+EVAL: 15595480, enter_exit: 11798698, ibt_check: 3796782, ins_identification_garbage: 0
+EVAL: 15595525, enter_exit: 11798692, ibt_check: 3796833, ins_identification_garbage: 0
+EVAL: 15595549, enter_exit: 11798699, ibt_check: 3796850, ins_identification_garbage: 0
+
+nettle_aes_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/nettle_arcfour.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/nettle_arcfour.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8069729, enter_exit: 3375847, ibt_check: 4693882, ins_identification_garbage: 0
+EVAL: 8069710, enter_exit: 3375851, ibt_check: 4693859, ins_identification_garbage: 0
+EVAL: 8069714, enter_exit: 3375855, ibt_check: 4693859, ins_identification_garbage: 0
+EVAL: 8078331, enter_exit: 3375925, ibt_check: 4702406, ins_identification_garbage: 0
+EVAL: 8069724, enter_exit: 3375848, ibt_check: 4693876, ins_identification_garbage: 0
+
+nettle_arcfour_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/picojpeg.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/picojpeg.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 20, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 370972363, enter_exit: 169533710, ibt_check: 201438653, ins_identification_garbage: 4864
+EVAL: 370971905, enter_exit: 169533703, ibt_check: 201438202, ins_identification_garbage: 4864
+EVAL: 370980876, enter_exit: 169533764, ibt_check: 201447112, ins_identification_garbage: 4864
+EVAL: 370972428, enter_exit: 169533665, ibt_check: 201438763, ins_identification_garbage: 4864
+EVAL: 370972054, enter_exit: 169533699, ibt_check: 201438355, ins_identification_garbage: 4864
+
+picojpeg_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/qrduino.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/qrduino.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 22, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 455825611, enter_exit: 168898786, ibt_check: 286926825, ins_identification_garbage: 25856
+EVAL: 455835019, enter_exit: 168898857, ibt_check: 286936162, ins_identification_garbage: 25856
+EVAL: 455835054, enter_exit: 168898850, ibt_check: 286936204, ins_identification_garbage: 25856
+EVAL: 455835104, enter_exit: 168898841, ibt_check: 286936263, ins_identification_garbage: 25856
+EVAL: 455834852, enter_exit: 168898848, ibt_check: 286936004, ins_identification_garbage: 25856
+
+qrduino_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/rijndael.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/rijndael.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 253069234, enter_exit: 144654509, ibt_check: 108414725, ins_identification_garbage: 0
+EVAL: 253069054, enter_exit: 144654480, ibt_check: 108414574, ins_identification_garbage: 0
+EVAL: 253077679, enter_exit: 144654569, ibt_check: 108423110, ins_identification_garbage: 0
+EVAL: 253069175, enter_exit: 144654499, ibt_check: 108414676, ins_identification_garbage: 0
+EVAL: 253077910, enter_exit: 144654579, ibt_check: 108423331, ins_identification_garbage: 0
+
+rijndael_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arraybinsearch.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arraybinsearch.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 6236399, enter_exit: 2956954, ibt_check: 3279445, ins_identification_garbage: 0
+EVAL: 6236391, enter_exit: 2956952, ibt_check: 3279439, ins_identification_garbage: 0
+EVAL: 6236426, enter_exit: 2956953, ibt_check: 3279473, ins_identification_garbage: 0
+EVAL: 6236440, enter_exit: 2956950, ibt_check: 3279490, ins_identification_garbage: 0
+EVAL: 6236408, enter_exit: 2956952, ibt_check: 3279456, ins_identification_garbage: 0
+
+sglib_arraybinsearch_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arrayheapsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arrayheapsort.bin loading success.
+on board success
+ 
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 7220532, enter_exit: 3279245, ibt_check: 3941287, ins_identification_garbage: 0
+EVAL: 7229260, enter_exit: 3279313, ibt_check: 3949947, ins_identification_garbage: 0
+EVAL: 7220466, enter_exit: 3279236, ibt_check: 3941230, ins_identification_garbage: 0
+EVAL: 7229176, enter_exit: 3279314, ibt_check: 3949862, ins_identification_garbage: 0
+EVAL: 7220482, enter_exit: 3279235, ibt_check: 3941247, ins_identification_garbage: 0
+
+sglib_arrayheapsort_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_arrayquicksort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_arrayquicksort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 7210205, enter_exit: 2116191, ibt_check: 5094014, ins_identification_garbage: 0
+EVAL: 7210190, enter_exit: 2116199, ibt_check: 5093991, ins_identification_garbage: 0
+EVAL: 7210186, enter_exit: 2116195, ibt_check: 5093991, ins_identification_garbage: 0
+EVAL: 7210144, enter_exit: 2116187, ibt_check: 5093957, ins_identification_garbage: 0
+EVAL: 7210167, enter_exit: 2116193, ibt_check: 5093974, ins_identification_garbage: 0
+
+sglib_arrayquicksort_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_dllist.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_dllist.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 20282650, enter_exit: 6578102, ibt_check: 13704548, ins_identification_garbage: 0
+EVAL: 20282610, enter_exit: 6578136, ibt_check: 13704474, ins_identification_garbage: 0
+EVAL: 20282722, enter_exit: 6578129, ibt_check: 13704593, ins_identification_garbage: 0
+EVAL: 20282711, enter_exit: 6578135, ibt_check: 13704576, ins_identification_garbage: 0
+EVAL: 20291363, enter_exit: 6578206, ibt_check: 13713157, ins_identification_garbage: 0
+
+sglib_dllist_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_hashtable.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_hashtable.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 14112034, enter_exit: 4323941, ibt_check: 9788093, ins_identification_garbage: 0
+EVAL: 14111927, enter_exit: 4323942, ibt_check: 9787985, ins_identification_garbage: 0
+EVAL: 14120590, enter_exit: 4324024, ibt_check: 9796566, ins_identification_garbage: 0
+EVAL: 14111938, enter_exit: 4323953, ibt_check: 9787985, ins_identification_garbage: 0
+EVAL: 14111896, enter_exit: 4323945, ibt_check: 9787951, ins_identification_garbage: 0
+
+sglib_hashtable_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_listinsertsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_listinsertsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 22654463, enter_exit: 7300310, ibt_check: 15354153, ins_identification_garbage: 0
+EVAL: 22654505, enter_exit: 7300307, ibt_check: 15354198, ins_identification_garbage: 0
+EVAL: 22654505, enter_exit: 7300307, ibt_check: 15354198, ins_identification_garbage: 0
+EVAL: 22654423, enter_exit: 7300310, ibt_check: 15354113, ins_identification_garbage: 0
+EVAL: 22654243, enter_exit: 7300317, ibt_check: 15353926, ins_identification_garbage: 0
+
+sglib_listinsertsort_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_listsort.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_listsort.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 14252486, enter_exit: 4530848, ibt_check: 9721638, ins_identification_garbage: 0
+EVAL: 14261008, enter_exit: 4530914, ibt_check: 9730094, ins_identification_garbage: 0
+EVAL: 14261160, enter_exit: 4530913, ibt_check: 9730247, ins_identification_garbage: 0
+EVAL: 14260936, enter_exit: 4530927, ibt_check: 9730009, ins_identification_garbage: 0
+EVAL: 14261028, enter_exit: 4530917, ibt_check: 9730111, ins_identification_garbage: 0
+
+sglib_listsort_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_queue.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_queue.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 8884880, enter_exit: 3783594, ibt_check: 5101286, ins_identification_garbage: 0
+EVAL: 8884703, enter_exit: 3783610, ibt_check: 5101093, ins_identification_garbage: 0
+EVAL: 8884704, enter_exit: 3783611, ibt_check: 5101093, ins_identification_garbage: 0
+EVAL: 8893364, enter_exit: 3783673, ibt_check: 5109691, ins_identification_garbage: 0
+EVAL: 8884693, enter_exit: 3783600, ibt_check: 5101093, ins_identification_garbage: 0
+
+sglib_queue_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/sglib_rbtree.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/sglib_rbtree.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 48039320, enter_exit: 17564944, ibt_check: 30474376, ins_identification_garbage: 0
+EVAL: 48039472, enter_exit: 17564949, ibt_check: 30474523, ins_identification_garbage: 0
+EVAL: 48047734, enter_exit: 17565021, ibt_check: 30482713, ins_identification_garbage: 0
+EVAL: 48039427, enter_exit: 17564955, ibt_check: 30474472, ins_identification_garbage: 0
+EVAL: 48048101, enter_exit: 17565031, ibt_check: 30483070, ins_identification_garbage: 0
+
+sglib_rbtree_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/st.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/st.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 72774816, enter_exit: 39077328, ibt_check: 33697488, ins_identification_garbage: 0
+EVAL: 72783650, enter_exit: 39077309, ibt_check: 33706341, ins_identification_garbage: 0
+EVAL: 72783650, enter_exit: 39077309, ibt_check: 33706341, ins_identification_garbage: 0
+EVAL: 72783650, enter_exit: 39077309, ibt_check: 33706341, ins_identification_garbage: 0
+EVAL: 72783650, enter_exit: 39077309, ibt_check: 33706341, ins_identification_garbage: 0
+
+st_ibt_enter_no_systick.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/whetstone.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/whetstone.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 6, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (SecureEVAL: 473350681, enter_exit: 250753280, ibt_check: 222597401, ins_identification_garbage: 49152
+EVAL: 473350731, enter_exit: 250753302, ibt_check: 222597429, ins_identification_garbage: 49152
+EVAL: 473350134, enter_exit: 250753051, ibt_check: 222597083, ins_identification_garbage: 49152
+EVAL: 473351282, enter_exit: 250754009, ibt_check: 222597273, ins_identification_garbage: 49152
+EVAL: 473351401, enter_exit: 250754009, ibt_check: 222597392, ins_identification_garbage: 49152
+
+whetstone_ibt_enter_no_systick.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureSreset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/trigger_MPU.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 28700139, enter_exit: 15998964
+FreeRTOS_MPU_ns_1_trigger_MPU.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureSreset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureSreset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/trigger_MPU.axf loading success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/trigger_MPU.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureSreset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureSreset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 28700139, enter_exit: 15998964
+FreeRTOS_MPU_ns_1_MPU_trigger.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger.axf loading success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/baseline_systick.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/led_trigger.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854731, enter_exit: 5849638
+Trigger: 5868007, enter_exit: 5849637
+Trigger: 5867051, enter_exit: 5849635
+Trigger: 5867184, enter_exit: 5849639
+Trigger: 5867053, enter_exit: 5849637
+
+FreeRTOS_MPU_ns_led_led_trigger.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_systick.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 15915207, enter_exit: 15915207
+FreeRTOS_MPU_ns_1_MPU_trigger_systick.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 15915207, enter_exit: 15915207
+FreeRTOS_MPU_ns_1_MPU_trigger_read.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 15915207, enter_exit: 15915207
+FreeRTOS_MPU_ns_1_MPU_trigger_read.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 15915207, enter_exit: 15915207, sherloc_read: 0, sherloc_read_garbage: 0
+FreeRTOS_MPU_ns_1_MPU_trigger_read.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 15915207, enter_exit: 15915207
+FreeRTOS_MPU_ns_1_MPU_trigger_ins.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 15915207, enter_exit: 15915207, sherloc_ins_identification: 0, ins_identification_garbage: 0
+FreeRTOS_MPU_ns_1_MPU_trigger_ins.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 21067645, enter_exit: 16000249, sherloc_read: 5067396, sherloc_read_garbage: 229303
+FreeRTOS_MPU_ns_1_MPU_trigger_read.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 27315166, enter_exit: 15998964, sherloc_ins_identification: 11316202, ins_identification_garbage: 3928
+FreeRTOS_MPU_ns_1_MPU_trigger_ins.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/LED_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5853600, enter_exit: 5849638, sherloc_read: 3962, sherloc_read_garbage: 500
+FreeRTOS_MPU_ns_led_LED_trigger_read.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/LED_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854549, enter_exit: 5849638, sherloc_ins_identification: 4911, ins_identification_garbage: 1
+FreeRTOS_MPU_ns_led_LED_trigger_ins.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 21067645, enter_exit: 16000249, sherloc_read: 5067396, sherloc_read_garbage: 229303
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 21067645, enter_exit: 16000249, sherloc_read: 5067396, sherloc_read_garbage: 229303
+FreeRTOS_MPU_ns_1_MPU_trigger_read.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 27315166, enter_exit: 15998964, sherloc_ins_identification: 11316202, ins_identification_garbage: 3928
+FreeRTOS_MPU_ns_1_MPU_trigger_ins.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/LED_trigger_read.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5853600, enter_exit: 5849638, sherloc_read: 3962, sherloc_read_garbage: 500
+FreeRTOS_MPU_ns_led_LED_trigger_read.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/LED_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854579, enter_exit: 5849638, sherloc_ins_identification: 4941, ins_identification_garbage: 1
+FreeRTOS_MPU_ns_led_LED_trigger_ins.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/LED_trigger_new.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854767, enter_exit: 5849638
+
+FreeRTOS_MPU_ns_led_LED_trigger_new.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/baseline_rtos.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+Hello World (Securebranch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+NONE: 5849638
+FreeRTOS_MPU_ns_led_baseline_rtos.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]!!! illegal indirect call: 0x178c0e30
+Stack empty.
+Check task list. num: 0.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure[0]!!! illegal transfer: 0x12e81274
+Stack empty.
+Check task list. num: 0.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 28195580, enter_exit: 15998964
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 28195580, enter_exit: 15998964
+FreeRTOS_MPU_ns_1_MPU_trigger_IBT.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/baseline_rtos.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/led_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854598, enter_exit: 5849638
+FreeRTOS_MPU_ns_led_led_trigger_IBT.log testing success.
+reset board success
+
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_read.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_ins.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 25000164, enter_exit: 15998964
+FreeRTOS_MPU_ns_1_MPU_trigger_IBT.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/MPU_trigger_IBT_baseline.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_1.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_1.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 22499635, enter_exit: 16000249
+FreeRTOS_MPU_ns_1_MPU_trigger_IBT_baseline.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/baseline_rtos.axf loading success.
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/led_trigger_IBT.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854592, enter_exit: 5849638
+FreeRTOS_MPU_ns_led_led_trigger_IBT.log testing success.
+reset board success
+
+delete old E:/SOFTWARE/s.axf.
+../../Example/out/eval/elf_s/led_trigger_IBT_baseline.axf loading success.
+delete old E:/SOFTWARE/ns.axf.
+../../Example/out/eval/Oz/elf_ns/FreeRTOS_MPU_ns_led.axf loading success.
+delete old E:/SOFTWARE/bs.bin.
+../../Example/out/eval/Oz/metadata/FreeRTOS_MPU_ns_led.bin loading success.
+on board success
+
+Monitor Mode Debug Enabled!
+branch table size: 2, IRQ size: 6, Task size: 4, LOOP size: 19, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (SecureTrigger: 5854101, enter_exit: 5849638
+FreeRTOS_MPU_ns_led_led_trigger_IBT_baseline.log testing success.
+reset board success
+
+Original IBT_data: b''
+Original IBT_data: b''
+Original IBT_data: b''
+Original IBT_data: b''
+Original IBT_data: b''
+Inserting IBT entry: b'K\x00z\x0f'
+Original IBT_data: b''
+Inserting IBT entry: b'K\x00z\x0f'
+count of IBT_data: 1
+sorted IBT_data: b'K\x00z\x0f'
+Inserting IBT entry: b'K\x00"\r'
+Original IBT_data: b''
+Inserting IBT entry: b'K\x00"\r'
+count of IBT_data: 1
+sorted IBT_data: b'K\x00"\r'
+Inserting IBT entry: b'K\x00\xbc\n'
+Original IBT_data: b''
+Inserting IBT entry: b'K\x00\xbc\n'
+count of IBT_data: 1
+sorted IBT_data: b'K\x00\xbc\n'
+Inserting IBT entry: b'\xc4\x15\x0c\x10'
+Original IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xc4\x15\x0c\x10'
+count of IBT_data: 21
+sorted IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xe4\x17\x0c\x10'
+Original IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xe4\x17\x0c\x10'
+count of IBT_data: 22
+sorted IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xe4\x17\x0c\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xc4\x15\x12\x10'
+Original IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xe4\x17\x0c\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xc4\x15\x12\x10'
+count of IBT_data: 23
+sorted IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xe4\x17\x0c\x10\xc4\x15\x12\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xc4\x15\x18\x10'
+Original IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xe4\x17\x0c\x10\xc4\x15\x12\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xc4\x15\x18\x10'
+count of IBT_data: 24
+sorted IBT_data: b'\xc4\x06*\x08\xc4\x06.\x08\xc4\x062\x08\xc4\x068\x08\xc4\x06\x00\t\xc4\x06\x0e\t\xc4\x06\x16\t\xc4\x06\x1e\t\xce\x0e\xbe\x0e\x14\x0f\xbe\x0e\xce\x0e\xe0\x0e\xce\x0e\x04\x0f\xce\x0er\x0f\xc4\x15\x0c\x10\xe4\x17\x0c\x10\xc4\x15\x12\x10\xc4\x15\x18\x10\xc4\x06h\x11\xc4\x06n\x11\xc4\x06t\x11>\x13\xb8\x12X\x13\xb8\x12f\x13\xb8\x12\x82\x13\xb8\x12'
+Inserting IBT entry: b'\xb4\x06\xbe\x06'
+Original IBT_data: b''
+Inserting IBT entry: b'\xb4\x06\xbe\x06'
+count of IBT_data: 1
+sorted IBT_data: b'\xb4\x06\xbe\x06'
+Inserting IBT entry: b'\xba\x06\xbe\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06'
+Inserting IBT entry: b'\xba\x06\xbe\x06'
+count of IBT_data: 2
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06'
+Inserting IBT entry: b'\xc6\x06\xbe\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06'
+Inserting IBT entry: b'\xc6\x06\xbe\x06'
+count of IBT_data: 3
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06'
+Inserting IBT entry: b'\xce\x06\xbe\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06'
+Inserting IBT entry: b'\xce\x06\xbe\x06'
+count of IBT_data: 4
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06'
+Inserting IBT entry: b'\xdc\x06\xe6\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06'
+Inserting IBT entry: b'\xdc\x06\xe6\x06'
+count of IBT_data: 5
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06'
+Inserting IBT entry: b'\xe2\x06\xe6\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06'
+Inserting IBT entry: b'\xe2\x06\xe6\x06'
+count of IBT_data: 6
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06\xe2\x06\xe6\x06'
+Inserting IBT entry: b'\xf8\x06\xe6\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06\xe2\x06\xe6\x06'
+Inserting IBT entry: b'\xf8\x06\xe6\x06'
+count of IBT_data: 7
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06\xe2\x06\xe6\x06\xf8\x06\xe6\x06'
+Inserting IBT entry: b'\n\x07\xe6\x06'
+Original IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06\xe2\x06\xe6\x06\xf8\x06\xe6\x06'
+Inserting IBT entry: b'\n\x07\xe6\x06'
+count of IBT_data: 8
+sorted IBT_data: b'\xb4\x06\xbe\x06\xba\x06\xbe\x06\xc6\x06\xbe\x06\xce\x06\xbe\x06\xdc\x06\xe6\x06\xe2\x06\xe6\x06\xf8\x06\xe6\x06\n\x07\xe6\x06'
+Inserting IBT entry: b'X\x06`\x06'
+Original IBT_data: b''
+Inserting IBT entry: b'X\x06`\x06'
+count of IBT_data: 1
+sorted IBT_data: b'X\x06`\x06'
+Inserting IBT entry: b'\\\x06`\x06'
+Original IBT_data: b'X\x06`\x06'
+Inserting IBT entry: b'\\\x06`\x06'
+count of IBT_data: 2
+sorted IBT_data: b'X\x06`\x06\\\x06`\x06'
+Inserting IBT entry: b'h\x06`\x06'
+Original IBT_data: b'X\x06`\x06\\\x06`\x06'
+Inserting IBT entry: b'h\x06`\x06'
+count of IBT_data: 3
+sorted IBT_data: b'X\x06`\x06\\\x06`\x06h\x06`\x06'
+Inserting IBT entry: b'p\x06`\x06'
+Original IBT_data: b'X\x06`\x06\\\x06`\x06h\x06`\x06'
+Inserting IBT entry: b'p\x06`\x06'
+count of IBT_data: 4
+sorted IBT_data: b'X\x06`\x06\\\x06`\x06h\x06`\x06p\x06`\x06'
+Inserting IBT entry: b'2\x076\x07'
+Original IBT_data: b''
+Inserting IBT entry: b'2\x076\x07'
+count of IBT_data: 1
+sorted IBT_data: b'2\x076\x07'
+Inserting IBT entry: b'\x88\x076\x07'
+Original IBT_data: b'2\x076\x07'
+Inserting IBT entry: b'\x88\x076\x07'
+count of IBT_data: 2
+sorted IBT_data: b'2\x076\x07\x88\x076\x07'
+Inserting IBT entry: b'K\x00b\x0e'
+Original IBT_data: b''
+Inserting IBT entry: b'K\x00b\x0e'
+count of IBT_data: 1
+sorted IBT_data: b'K\x00b\x0e'
+Inserting IBT entry: b'K\x00F&'
+Original IBT_data: b'\xf0\x0cz\x07\xf0\x0c\xa6\x07\xf0\x0c\xc0\x07\xf0\x0c>\x08\xf0\x0cP\x08\xf0\x0cj\x08'
+Inserting IBT entry: b'K\x00F&'
+count of IBT_data: 7
+sorted IBT_data: b'\xf0\x0cz\x07\xf0\x0c\xa6\x07\xf0\x0c\xc0\x07\xf0\x0c>\x08\xf0\x0cP\x08\xf0\x0cj\x08K\x00F&'

@@ -1,0 +1,173 @@
+{
+    "0": {
+        "src_name": "SVC_Handler",
+        "dst_name": "vPortSVCHandler_C",
+        "ins": "bx r1",
+        "src_addr": "0x201f14",
+        "dst_addr": "0x201fe0"
+    },
+    "1": {
+        "src_name": "MemManage_Handler",
+        "dst_name": "vHandleMemoryFault",
+        "ins": "bx r1",
+        "src_addr": "0x202252",
+        "dst_addr": "0x2026a8"
+    },
+    "2": {
+        "src_name": "__scatterload_rt2_thumb_only+0x16",
+        "dst_name": "UnresolvableJumpTarget",
+        "ins": "bx r3",
+        "src_addr": "0x200432",
+        "dst_addr": "0x30004b"
+    },
+    "3": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x18c",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201218",
+        "dst_addr": "0x30004f"
+    },
+    "4": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x1e4",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201268",
+        "dst_addr": "0x30004f"
+    },
+    "5": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x194",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201218",
+        "dst_addr": "0x30004f"
+    },
+    "6": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x266",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x2012ea",
+        "dst_addr": "0x30004f"
+    },
+    "7": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x598",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x20161c",
+        "dst_addr": "0x30004f"
+    },
+    "8": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x588",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x20161c",
+        "dst_addr": "0x30004f"
+    },
+    "9": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x582",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x20161c",
+        "dst_addr": "0x30004f"
+    },
+    "10": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x76c",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r2",
+        "src_addr": "0x2017f2",
+        "dst_addr": "0x30004f"
+    },
+    "11": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x68c",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201718",
+        "dst_addr": "0x30004f"
+    },
+    "12": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x6ec",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201770",
+        "dst_addr": "0x30004f"
+    },
+    "13": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x694",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201718",
+        "dst_addr": "0x30004f"
+    },
+    "14": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x87c",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201900",
+        "dst_addr": "0x30004f"
+    },
+    "15": {
+        "type": "icall",
+        "src_name": "xMPUCTRLConst",
+        "dst_name": "SVC_Handler",
+        "ins": "bx r1",
+        "src_addr": "0x201f14",
+        "dst_addr": "0x201f04"
+    },
+    "16": {
+        "src_name": "Region$$Table$$Base",
+        "dst_name": "$Ven$TT$L$$time_measurement_s",
+        "ins": "bx ip",
+        "src_addr": "0x202068",
+        "dst_addr": "0x202060"
+    },
+    "17": {
+        "type": "icall",
+        "src_name": null,
+        "dst_name": "prvTimerTask+0x18c",
+        "ins": "blx r1",
+        "src_addr": "0x201218",
+        "dst_addr": "0x20120c"
+    },
+    "18": {
+        "type": "icall",
+        "src_name": null,
+        "dst_name": "prvTimerTask+0x68c",
+        "ins": "blx r1",
+        "src_addr": "0x201718",
+        "dst_addr": "0x20170c"
+    },
+    "19": {
+        "type": "icall",
+        "src_name": null,
+        "dst_name": "prvTimerTask+0x6ec",
+        "ins": "blx r1",
+        "src_addr": "0x201770",
+        "dst_addr": "0x20176c"
+    },
+    "20": {
+        "type": "icall",
+        "src_name": null,
+        "dst_name": "prvTimerTask+0x76c",
+        "ins": "blx r2",
+        "src_addr": "0x2017f2",
+        "dst_addr": "0x2017ec"
+    },
+    "21": {
+        "src_name": null,
+        "dst_name": null,
+        "ins": "bx r1",
+        "src_addr": "0x201f14",
+        "dst_addr": "0x201ee4"
+    }
+}

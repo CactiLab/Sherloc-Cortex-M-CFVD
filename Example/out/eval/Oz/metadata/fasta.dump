@@ -1,0 +1,284 @@
+
+../../Example/out/eval/Oz/elf_ns/fasta.axf:     file format elf32-littlearm
+
+
+Disassembly of section ER_ROM:
+
+00200000 <__Vectors>:
+  200000:	00 00 40 28 a9 04 20 00 a5 04 20 00 a7 04 20 00     ..@(.. ... ... .
+  200010:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+  20002c:	a5 04 20 00 a5 04 20 00 00 00 00 00 a5 04 20 00     .. ... ....... .
+  20003c:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  20004c:	a5 04 20 00 a5 04 20 00 a5 04 20 00 00 00 00 00     .. ... ... .....
+	...
+  200064:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+  2000c0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000d0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000e0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000f0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200100:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200110:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200120:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200130:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200140:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200150:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200160:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200170:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200180:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200190:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001a0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001b0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001c0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001d0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001e0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001f0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200200:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200210:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200220:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+
+00200400 <__main>:
+  200400:	f000 f802 	bl	200408 <__scatterload_rt2>
+  200404:	f000 f82d 	bl	200462 <__rt_entry>
+
+00200408 <__scatterload_rt2>:
+  200408:	a00a      	add	r0, pc, #40	; (adr r0, 200434 <__scatterload_null+0x1e>)
+  20040a:	e890 0c00 	ldmia.w	r0, {sl, fp}
+  20040e:	4482      	add	sl, r0
+  200410:	4483      	add	fp, r0
+  200412:	f1aa 0701 	sub.w	r7, sl, #1
+
+00200416 <__scatterload_null>:
+  200416:	45da      	cmp	sl, fp
+  200418:	d101      	bne.n	20041e <__scatterload_null+0x8>
+  20041a:	f000 f822 	bl	200462 <__rt_entry>
+  20041e:	f2af 0e09 	subw	lr, pc, #9
+  200422:	e8ba 000f 	ldmia.w	sl!, {r0, r1, r2, r3}
+  200426:	f013 0f01 	tst.w	r3, #1
+  20042a:	bf18      	it	ne
+  20042c:	1afb      	subne	r3, r7, r3
+  20042e:	f043 0301 	orr.w	r3, r3, #1
+  200432:	4718      	bx	r3
+  200434:	000001b0 	.word	0x000001b0
+  200438:	000001c0 	.word	0x000001c0
+
+0020043c <__scatterload_copy>:
+  20043c:	3a10      	subs	r2, #16
+  20043e:	bf24      	itt	cs
+  200440:	c878      	ldmiacs	r0!, {r3, r4, r5, r6}
+  200442:	c178      	stmiacs	r1!, {r3, r4, r5, r6}
+  200444:	d8fa      	bhi.n	20043c <__scatterload_copy>
+  200446:	0752      	lsls	r2, r2, #29
+  200448:	bf24      	itt	cs
+  20044a:	c830      	ldmiacs	r0!, {r4, r5}
+  20044c:	c130      	stmiacs	r1!, {r4, r5}
+  20044e:	bf44      	itt	mi
+  200450:	6804      	ldrmi	r4, [r0, #0]
+  200452:	600c      	strmi	r4, [r1, #0]
+  200454:	4770      	bx	lr
+
+00200456 <__rt_lib_init>:
+  200456:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+
+00200458 <__rt_lib_init_fp_1>:
+  200458:	f000 f8b6 	bl	2005c8 <_fp_init>
+
+0020045c <__rt_lib_init_alloca_1>:
+  20045c:	bd1f      	pop	{r0, r1, r2, r3, r4, pc}
+
+0020045e <__rt_lib_shutdown>:
+  20045e:	b510      	push	{r4, lr}
+
+00200460 <__rt_lib_shutdown_cpp_1>:
+  200460:	bd10      	pop	{r4, pc}
+
+00200462 <__rt_entry>:
+  200462:	f8df d010 	ldr.w	sp, [pc, #16]	; 200474 <__lit__00000000>
+
+00200466 <__rt_entry_li>:
+  200466:	f7ff fff6 	bl	200456 <__rt_lib_init>
+
+0020046a <__rt_entry_main>:
+  20046a:	f000 f849 	bl	200500 <main>
+  20046e:	f000 f809 	bl	200484 <exit>
+	...
+
+00200474 <__lit__00000000>:
+  200474:	0000 2840                                   ..@(
+
+00200478 <__rt_exit>:
+  200478:	b403      	push	{r0, r1}
+
+0020047a <__rt_exit_ls>:
+  20047a:	f7ff fff0 	bl	20045e <__rt_lib_shutdown>
+
+0020047e <__rt_exit_exit>:
+  20047e:	bc03      	pop	{r0, r1}
+  200480:	f000 f80a 	bl	200498 <_sys_exit>
+
+00200484 <exit>:
+  200484:	b510      	push	{r4, lr}
+  200486:	4604      	mov	r4, r0
+  200488:	f3af 8000 	nop.w
+  20048c:	4620      	mov	r0, r4
+  20048e:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  200492:	f7ff bff1 	b.w	200478 <__rt_exit>
+
+00200496 <__use_no_semihosting_swi>:
+  200496:	4770      	bx	lr
+
+00200498 <_sys_exit>:
+  200498:	4901      	ldr	r1, [pc, #4]	; (2004a0 <_sys_exit+0x8>)
+  20049a:	2018      	movs	r0, #24
+  20049c:	beab      	bkpt	0x00ab
+  20049e:	e7fe      	b.n	20049e <_sys_exit+0x6>
+  2004a0:	00020026 	.word	0x00020026
+
+002004a4 <Default_Handler>:
+  2004a4:	e7fe      	b.n	2004a4 <Default_Handler>
+
+002004a6 <HardFault_Handler>:
+  2004a6:	e7fe      	b.n	2004a6 <HardFault_Handler>
+
+002004a8 <Reset_Handler>:
+  2004a8:	4809      	ldr	r0, [pc, #36]	; (2004d0 <__arm_cp.3_0>)
+  2004aa:	f380 8809 	msr	PSP, r0
+  2004ae:	490b      	ldr	r1, [pc, #44]	; (2004dc <__arm_cp.3_3>)
+  2004b0:	4808      	ldr	r0, [pc, #32]	; (2004d4 <__arm_cp.3_1>)
+  2004b2:	f380 880a 	msr	MSPLIM, r0
+  2004b6:	f380 880b 	msr	PSPLIM, r0
+  2004ba:	4807      	ldr	r0, [pc, #28]	; (2004d8 <__arm_cp.3_2>)
+  2004bc:	6001      	str	r1, [r0, #0]
+  2004be:	f8d0 1080 	ldr.w	r1, [r0, #128]	; 0x80
+  2004c2:	f441 0170 	orr.w	r1, r1, #15728640	; 0xf00000
+  2004c6:	f8c0 1080 	str.w	r1, [r0, #128]	; 0x80
+  2004ca:	f7ff ff99 	bl	200400 <__main>
+  2004ce:	bf00      	nop
+
+002004d0 <__arm_cp.3_0>:
+  2004d0:	28400000 	.word	0x28400000
+
+002004d4 <__arm_cp.3_1>:
+  2004d4:	283ffc00 	.word	0x283ffc00
+
+002004d8 <__arm_cp.3_2>:
+  2004d8:	e000ed08 	.word	0xe000ed08
+
+002004dc <__arm_cp.3_3>:
+  2004dc:	00200000 	.word	0x00200000
+
+002004e0 <accumulate_probabilities>:
+  2004e0:	ed9f 0a06 	vldr	s0, [pc, #24]	; 2004fc <accumulate_probabilities+0x1c>
+  2004e4:	b141      	cbz	r1, 2004f8 <accumulate_probabilities+0x18>
+  2004e6:	ed90 1a00 	vldr	s2, [r0]
+  2004ea:	3901      	subs	r1, #1
+  2004ec:	ee30 0a01 	vadd.f32	s0, s0, s2
+  2004f0:	ed80 0a00 	vstr	s0, [r0]
+  2004f4:	3008      	adds	r0, #8
+  2004f6:	e7f5      	b.n	2004e4 <accumulate_probabilities+0x4>
+  2004f8:	4770      	bx	lr
+  2004fa:	bf00      	nop
+  2004fc:	00000000 	.word	0x00000000
+
+00200500 <main>:
+  200500:	b082      	sub	sp, #8
+  200502:	2600      	movs	r6, #0
+  200504:	f44f 3080 	mov.w	r0, #65536	; 0x10000
+  200508:	9601      	str	r6, [sp, #4]
+  20050a:	f000 f853 	bl	2005b4 <__arm_cp.2_1+0x4>
+  20050e:	4c16      	ldr	r4, [pc, #88]	; (200568 <__arm_cp.0_1>)
+  200510:	4d16      	ldr	r5, [pc, #88]	; (20056c <__arm_cp.0_2>)
+  200512:	4f14      	ldr	r7, [pc, #80]	; (200564 <__arm_cp.0_0>)
+  200514:	f04f 0800 	mov.w	r8, #0
+  200518:	f1b8 0f05 	cmp.w	r8, #5
+  20051c:	d021      	beq.n	200562 <main+0x62>
+  20051e:	46b9      	mov	r9, r7
+  200520:	603e      	str	r6, [r7, #0]
+  200522:	f44f 7780 	mov.w	r7, #256	; 0x100
+  200526:	b1a7      	cbz	r7, 200552 <main+0x52>
+  200528:	9801      	ldr	r0, [sp, #4]
+  20052a:	210f      	movs	r1, #15
+  20052c:	4620      	mov	r0, r4
+  20052e:	f7ff ffd7 	bl	2004e0 <accumulate_probabilities>
+  200532:	4628      	mov	r0, r5
+  200534:	2104      	movs	r1, #4
+  200536:	f7ff ffd3 	bl	2004e0 <accumulate_probabilities>
+  20053a:	f640 30b8 	movw	r0, #3000	; 0xbb8
+  20053e:	f000 f817 	bl	200570 <random_fasta>
+  200542:	f241 3088 	movw	r0, #5000	; 0x1388
+  200546:	f000 f813 	bl	200570 <random_fasta>
+  20054a:	9601      	str	r6, [sp, #4]
+  20054c:	3f01      	subs	r7, #1
+  20054e:	9801      	ldr	r0, [sp, #4]
+  200550:	e7e9      	b.n	200526 <main+0x26>
+  200552:	f8d9 0000 	ldr.w	r0, [r9]
+  200556:	464f      	mov	r7, r9
+  200558:	f000 f831 	bl	2005be <__arm_cp.2_1+0xe>
+  20055c:	f108 0801 	add.w	r8, r8, #1
+  200560:	e7da      	b.n	200518 <main+0x18>
+  200562:	e7fe      	b.n	200562 <main+0x62>
+
+00200564 <__arm_cp.0_0>:
+  200564:	e0001004 	.word	0xe0001004
+
+00200568 <__arm_cp.0_1>:
+  200568:	28200000 	.word	0x28200000
+
+0020056c <__arm_cp.0_2>:
+  20056c:	28200078 	.word	0x28200078
+
+00200570 <random_fasta>:
+  200570:	b5f0      	push	{r4, r5, r6, r7, lr}
+  200572:	f8df c038 	ldr.w	ip, [pc, #56]	; 2005ac <__arm_cp.2_0>
+  200576:	f247 3385 	movw	r3, #29573	; 0x7385
+  20057a:	f640 7425 	movw	r4, #3877	; 0xf25
+  20057e:	4d0c      	ldr	r5, [pc, #48]	; (2005b0 <__arm_cp.2_1>)
+  200580:	f8dc 2000 	ldr.w	r2, [ip]
+  200584:	283c      	cmp	r0, #60	; 0x3c
+  200586:	4606      	mov	r6, r0
+  200588:	bf28      	it	cs
+  20058a:	263c      	movcs	r6, #60	; 0x3c
+  20058c:	2700      	movs	r7, #0
+  20058e:	fb02 3204 	mla	r2, r2, r4, r3
+  200592:	3701      	adds	r7, #1
+  200594:	42b7      	cmp	r7, r6
+  200596:	fbb2 f1f5 	udiv	r1, r2, r5
+  20059a:	fb01 2215 	mls	r2, r1, r5, r2
+  20059e:	d3f6      	bcc.n	20058e <random_fasta+0x1e>
+  2005a0:	1b80      	subs	r0, r0, r6
+  2005a2:	bf04      	itt	eq
+  2005a4:	f8cc 2000 	streq.w	r2, [ip]
+  2005a8:	bdf0      	popeq	{r4, r5, r6, r7, pc}
+  2005aa:	e7eb      	b.n	200584 <random_fasta+0x14>
+
+002005ac <__arm_cp.2_0>:
+  2005ac:	28200098 	.word	0x28200098
+
+002005b0 <__arm_cp.2_1>:
+  2005b0:	000222c0 	.word	0x000222c0
+  2005b4:	f64f 6c11 	movw	ip, #65041	; 0xfe11
+  2005b8:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  2005bc:	4760      	bx	ip
+  2005be:	f64f 6c19 	movw	ip, #65049	; 0xfe19
+  2005c2:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  2005c6:	4760      	bx	ip
+
+002005c8 <_fp_init>:
+  2005c8:	eef1 0a10 	vmrs	r0, fpscr
+  2005cc:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  2005d0:	f2c0 31c0 	movt	r1, #960	; 0x3c0
+  2005d4:	ea20 0001 	bic.w	r0, r0, r1
+  2005d8:	f040 7040 	orr.w	r0, r0, #50331648	; 0x3000000
+  2005dc:	eee1 0a10 	vmsr	fpscr, r0
+
+002005e0 <__fplib_config_fpu_vfp>:
+  2005e0:	4770      	bx	lr
+	...
+
+002005e4 <Region$$Table$$Base>:
+  2005e4:	002005f4 	.word	0x002005f4
+  2005e8:	28200000 	.word	0x28200000
+  2005ec:	0000009c 	.word	0x0000009c
+  2005f0:	0020043c 	.word	0x0020043c

@@ -1,0 +1,79 @@
+{
+    "0": {
+        "src_name": "SVC_Handler",
+        "dst_name": "vPortSVCHandler_C",
+        "ins": "bx r1",
+        "src_addr": "0x201534",
+        "dst_addr": "0x201598"
+    },
+    "1": {
+        "src_name": "MemManage_Handler",
+        "dst_name": "vHandleMemoryFault",
+        "ins": "bx r1",
+        "src_addr": "0x20180e",
+        "dst_addr": "0x201ae2"
+    },
+    "2": {
+        "src_name": "__scatterload_rt2_thumb_only+0x16",
+        "dst_name": "UnresolvableJumpTarget",
+        "ins": "bx r3",
+        "src_addr": "0x200432",
+        "dst_addr": "0x30004b"
+    },
+    "3": {
+        "type": "icall",
+        "src_name": "prvReloadTimer+0x16",
+        "dst_name": "prvReloadTimer+0x24",
+        "ins": "blx r1",
+        "src_addr": "0x201196",
+        "dst_addr": "0x20119c"
+    },
+    "4": {
+        "type": "icall",
+        "src_name": "prvReloadTimer+0x16",
+        "dst_name": "prvReloadTimer+0x18",
+        "ins": "blx r1",
+        "src_addr": "0x201196",
+        "dst_addr": "0x201190"
+    },
+    "5": {
+        "type": "icall",
+        "src_name": "prvReloadTimer+0x18",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201196",
+        "dst_addr": "0x30004f"
+    },
+    "6": {
+        "type": "icall",
+        "src_name": "prvProcessExpiredTimer+0x30",
+        "dst_name": "UnresolvableJumpTarget",
+        "ins": "bx r1",
+        "src_addr": "0x201134",
+        "dst_addr": "0x30004b"
+    },
+    "7": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x1b0",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r2",
+        "src_addr": "0x200fd6",
+        "dst_addr": "0x30004f"
+    },
+    "8": {
+        "type": "icall",
+        "src_name": "prvTimerTask+0x1f4",
+        "dst_name": "UnresolvableCallTarget",
+        "ins": "blx r1",
+        "src_addr": "0x201018",
+        "dst_addr": "0x30004f"
+    },
+    "9": {
+        "type": "icall",
+        "src_name": "xMPUCTRLConst",
+        "dst_name": "SVC_Handler",
+        "ins": "bx r1",
+        "src_addr": "0x201534",
+        "dst_addr": "0x201524"
+    }
+}

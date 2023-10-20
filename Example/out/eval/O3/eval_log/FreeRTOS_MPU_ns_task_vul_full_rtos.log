@@ -1,0 +1,7 @@
+
+Monitor Mode Debug Enabled!
+branch table size: 8, IRQ size: 6, Task size: 3, LOOP size: 24, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+EVAL: 5348, enter_exit: 5348, sherloc_detection: 0

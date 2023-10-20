@@ -1,0 +1,885 @@
+
+../../Example/out/eval/O3/elf_ns/nettle_arcfour.axf:     file format elf32-littlearm
+
+
+Disassembly of section ER_ROM:
+
+00200000 <__Vectors>:
+  200000:	00 00 40 28 ad 04 20 00 a5 04 20 00 a9 04 20 00     ..@(.. ... ... .
+  200010:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+  20002c:	a5 04 20 00 a5 04 20 00 00 00 00 00 a5 04 20 00     .. ... ....... .
+  20003c:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  20004c:	a5 04 20 00 a5 04 20 00 a5 04 20 00 00 00 00 00     .. ... ... .....
+	...
+  200064:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+  2000c0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000d0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000e0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2000f0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200100:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200110:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200120:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200130:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200140:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200150:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200160:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200170:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200180:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200190:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001a0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001b0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001c0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001d0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001e0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  2001f0:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200200:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200210:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+  200220:	a5 04 20 00 a5 04 20 00 a5 04 20 00 a5 04 20 00     .. ... ... ... .
+	...
+
+00200400 <__main>:
+  200400:	f000 f802 	bl	200408 <__scatterload_rt2>
+  200404:	f000 f82e 	bl	200464 <__rt_entry>
+
+00200408 <__scatterload_rt2>:
+  200408:	a00a      	add	r0, pc, #40	; (adr r0, 200434 <__scatterload_null+0x1e>)
+  20040a:	e890 0c00 	ldmia.w	r0, {sl, fp}
+  20040e:	4482      	add	sl, r0
+  200410:	4483      	add	fp, r0
+  200412:	f1aa 0701 	sub.w	r7, sl, #1
+
+00200416 <__scatterload_null>:
+  200416:	45da      	cmp	sl, fp
+  200418:	d101      	bne.n	20041e <__scatterload_null+0x8>
+  20041a:	f000 f823 	bl	200464 <__rt_entry>
+  20041e:	f2af 0e09 	subw	lr, pc, #9
+  200422:	e8ba 000f 	ldmia.w	sl!, {r0, r1, r2, r3}
+  200426:	f013 0f01 	tst.w	r3, #1
+  20042a:	bf18      	it	ne
+  20042c:	1afb      	subne	r3, r7, r3
+  20042e:	f043 0301 	orr.w	r3, r3, #1
+  200432:	4718      	bx	r3
+  200434:	000008cc 	.word	0x000008cc
+  200438:	000008dc 	.word	0x000008dc
+
+0020043c <__scatterload_zeroinit>:
+  20043c:	2300      	movs	r3, #0
+  20043e:	2400      	movs	r4, #0
+  200440:	2500      	movs	r5, #0
+  200442:	2600      	movs	r6, #0
+  200444:	3a10      	subs	r2, #16
+  200446:	bf28      	it	cs
+  200448:	c178      	stmiacs	r1!, {r3, r4, r5, r6}
+  20044a:	d8fb      	bhi.n	200444 <__scatterload_zeroinit+0x8>
+  20044c:	0752      	lsls	r2, r2, #29
+  20044e:	bf28      	it	cs
+  200450:	c130      	stmiacs	r1!, {r4, r5}
+  200452:	bf48      	it	mi
+  200454:	600b      	strmi	r3, [r1, #0]
+  200456:	4770      	bx	lr
+
+00200458 <__rt_lib_init>:
+  200458:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+
+0020045a <__rt_lib_init_fp_1>:
+  20045a:	f000 fc34 	bl	200cc6 <_fp_init>
+
+0020045e <__rt_lib_init_alloca_1>:
+  20045e:	bd1f      	pop	{r0, r1, r2, r3, r4, pc}
+
+00200460 <__rt_lib_shutdown>:
+  200460:	b510      	push	{r4, lr}
+
+00200462 <__rt_lib_shutdown_cpp_1>:
+  200462:	bd10      	pop	{r4, pc}
+
+00200464 <__rt_entry>:
+  200464:	f8df d00c 	ldr.w	sp, [pc, #12]	; 200474 <__lit__00000000>
+
+00200468 <__rt_entry_li>:
+  200468:	f7ff fff6 	bl	200458 <__rt_lib_init>
+
+0020046c <__rt_entry_main>:
+  20046c:	f000 fbd0 	bl	200c10 <main>
+  200470:	f000 f808 	bl	200484 <exit>
+
+00200474 <__lit__00000000>:
+  200474:	0000 2840                                   ..@(
+
+00200478 <__rt_exit>:
+  200478:	b403      	push	{r0, r1}
+
+0020047a <__rt_exit_ls>:
+  20047a:	f7ff fff1 	bl	200460 <__rt_lib_shutdown>
+
+0020047e <__rt_exit_exit>:
+  20047e:	bc03      	pop	{r0, r1}
+  200480:	f000 f80a 	bl	200498 <_sys_exit>
+
+00200484 <exit>:
+  200484:	b510      	push	{r4, lr}
+  200486:	4604      	mov	r4, r0
+  200488:	f3af 8000 	nop.w
+  20048c:	4620      	mov	r0, r4
+  20048e:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+  200492:	f7ff bff1 	b.w	200478 <__rt_exit>
+
+00200496 <__use_no_semihosting_swi>:
+  200496:	4770      	bx	lr
+
+00200498 <_sys_exit>:
+  200498:	4901      	ldr	r1, [pc, #4]	; (2004a0 <_sys_exit+0x8>)
+  20049a:	2018      	movs	r0, #24
+  20049c:	beab      	bkpt	0x00ab
+  20049e:	e7fe      	b.n	20049e <_sys_exit+0x6>
+  2004a0:	00020026 	.word	0x00020026
+
+002004a4 <Default_Handler>:
+  2004a4:	e7fe      	b.n	2004a4 <Default_Handler>
+	...
+
+002004a8 <HardFault_Handler>:
+  2004a8:	e7fe      	b.n	2004a8 <HardFault_Handler>
+	...
+
+002004ac <Reset_Handler>:
+  2004ac:	f240 0000 	movw	r0, #0
+  2004b0:	f6c2 0040 	movt	r0, #10304	; 0x2840
+  2004b4:	f380 8809 	msr	PSP, r0
+  2004b8:	f240 0000 	movw	r0, #0
+  2004bc:	f64e 5288 	movw	r2, #60808	; 0xed88
+  2004c0:	f64f 4100 	movw	r1, #64512	; 0xfc00
+  2004c4:	f2c0 0020 	movt	r0, #32
+  2004c8:	f2ce 0200 	movt	r2, #57344	; 0xe000
+  2004cc:	f6c2 013f 	movt	r1, #10303	; 0x283f
+  2004d0:	f381 880a 	msr	MSPLIM, r1
+  2004d4:	f381 880b 	msr	PSPLIM, r1
+  2004d8:	f842 0c80 	str.w	r0, [r2, #-128]
+  2004dc:	6810      	ldr	r0, [r2, #0]
+  2004de:	f440 0070 	orr.w	r0, r0, #15728640	; 0xf00000
+  2004e2:	6010      	str	r0, [r2, #0]
+  2004e4:	f7ff ff8c 	bl	200400 <__main>
+
+002004e8 <benchmark>:
+  2004e8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+  2004ec:	f240 0900 	movw	r9, #0
+  2004f0:	2100      	movs	r1, #0
+  2004f2:	f6c2 0920 	movt	r9, #10272	; 0x2820
+  2004f6:	bf00      	nop
+  2004f8:	eb09 0201 	add.w	r2, r9, r1
+  2004fc:	1c4b      	adds	r3, r1, #1
+  2004fe:	7053      	strb	r3, [r2, #1]
+  200500:	1c8b      	adds	r3, r1, #2
+  200502:	7093      	strb	r3, [r2, #2]
+  200504:	1ccb      	adds	r3, r1, #3
+  200506:	70d3      	strb	r3, [r2, #3]
+  200508:	1d0b      	adds	r3, r1, #4
+  20050a:	7113      	strb	r3, [r2, #4]
+  20050c:	1d4b      	adds	r3, r1, #5
+  20050e:	7153      	strb	r3, [r2, #5]
+  200510:	1d8b      	adds	r3, r1, #6
+  200512:	7193      	strb	r3, [r2, #6]
+  200514:	1dcb      	adds	r3, r1, #7
+  200516:	71d3      	strb	r3, [r2, #7]
+  200518:	f101 0308 	add.w	r3, r1, #8
+  20051c:	7213      	strb	r3, [r2, #8]
+  20051e:	f101 0309 	add.w	r3, r1, #9
+  200522:	7253      	strb	r3, [r2, #9]
+  200524:	f101 030a 	add.w	r3, r1, #10
+  200528:	7293      	strb	r3, [r2, #10]
+  20052a:	f101 030b 	add.w	r3, r1, #11
+  20052e:	72d3      	strb	r3, [r2, #11]
+  200530:	f101 030c 	add.w	r3, r1, #12
+  200534:	7313      	strb	r3, [r2, #12]
+  200536:	f101 030d 	add.w	r3, r1, #13
+  20053a:	7353      	strb	r3, [r2, #13]
+  20053c:	f101 030e 	add.w	r3, r1, #14
+  200540:	7393      	strb	r3, [r2, #14]
+  200542:	f101 030f 	add.w	r3, r1, #15
+  200546:	73d3      	strb	r3, [r2, #15]
+  200548:	f101 0310 	add.w	r3, r1, #16
+  20054c:	7413      	strb	r3, [r2, #16]
+  20054e:	f101 0311 	add.w	r3, r1, #17
+  200552:	7453      	strb	r3, [r2, #17]
+  200554:	f101 0312 	add.w	r3, r1, #18
+  200558:	7493      	strb	r3, [r2, #18]
+  20055a:	f101 0313 	add.w	r3, r1, #19
+  20055e:	74d3      	strb	r3, [r2, #19]
+  200560:	f101 0314 	add.w	r3, r1, #20
+  200564:	7513      	strb	r3, [r2, #20]
+  200566:	f101 0315 	add.w	r3, r1, #21
+  20056a:	7553      	strb	r3, [r2, #21]
+  20056c:	f101 0316 	add.w	r3, r1, #22
+  200570:	7593      	strb	r3, [r2, #22]
+  200572:	f101 0317 	add.w	r3, r1, #23
+  200576:	75d3      	strb	r3, [r2, #23]
+  200578:	f101 0318 	add.w	r3, r1, #24
+  20057c:	7613      	strb	r3, [r2, #24]
+  20057e:	f101 0319 	add.w	r3, r1, #25
+  200582:	7653      	strb	r3, [r2, #25]
+  200584:	f101 031a 	add.w	r3, r1, #26
+  200588:	7693      	strb	r3, [r2, #26]
+  20058a:	f101 031b 	add.w	r3, r1, #27
+  20058e:	76d3      	strb	r3, [r2, #27]
+  200590:	f101 031c 	add.w	r3, r1, #28
+  200594:	7713      	strb	r3, [r2, #28]
+  200596:	f101 031d 	add.w	r3, r1, #29
+  20059a:	7753      	strb	r3, [r2, #29]
+  20059c:	f101 031e 	add.w	r3, r1, #30
+  2005a0:	f809 1001 	strb.w	r1, [r9, r1]
+  2005a4:	7793      	strb	r3, [r2, #30]
+  2005a6:	f101 031f 	add.w	r3, r1, #31
+  2005aa:	3120      	adds	r1, #32
+  2005ac:	f5b1 7f80 	cmp.w	r1, #256	; 0x100
+  2005b0:	77d3      	strb	r3, [r2, #31]
+  2005b2:	d1a1      	bne.n	2004f8 <benchmark+0x10>
+  2005b4:	f640 40f0 	movw	r0, #3312	; 0xcf0
+  2005b8:	2100      	movs	r1, #0
+  2005ba:	2300      	movs	r3, #0
+  2005bc:	f2c0 0020 	movt	r0, #32
+  2005c0:	2600      	movs	r6, #0
+  2005c2:	bf00      	nop
+  2005c4:	f819 4001 	ldrb.w	r4, [r9, r1]
+  2005c8:	5cc5      	ldrb	r5, [r0, r3]
+  2005ca:	4426      	add	r6, r4
+  2005cc:	442e      	add	r6, r5
+  2005ce:	b2f2      	uxtb	r2, r6
+  2005d0:	f819 7002 	ldrb.w	r7, [r9, r2]
+  2005d4:	eb09 0501 	add.w	r5, r9, r1
+  2005d8:	f809 7001 	strb.w	r7, [r9, r1]
+  2005dc:	f809 4002 	strb.w	r4, [r9, r2]
+  2005e0:	1c5a      	adds	r2, r3, #1
+  2005e2:	f002 020f 	and.w	r2, r2, #15
+  2005e6:	786f      	ldrb	r7, [r5, #1]
+  2005e8:	5c82      	ldrb	r2, [r0, r2]
+  2005ea:	443e      	add	r6, r7
+  2005ec:	4432      	add	r2, r6
+  2005ee:	b2d6      	uxtb	r6, r2
+  2005f0:	f819 4006 	ldrb.w	r4, [r9, r6]
+  2005f4:	3108      	adds	r1, #8
+  2005f6:	706c      	strb	r4, [r5, #1]
+  2005f8:	f809 7006 	strb.w	r7, [r9, r6]
+  2005fc:	1c9f      	adds	r7, r3, #2
+  2005fe:	f007 070f 	and.w	r7, r7, #15
+  200602:	78ae      	ldrb	r6, [r5, #2]
+  200604:	5dc7      	ldrb	r7, [r0, r7]
+  200606:	4432      	add	r2, r6
+  200608:	443a      	add	r2, r7
+  20060a:	b2d7      	uxtb	r7, r2
+  20060c:	f819 4007 	ldrb.w	r4, [r9, r7]
+  200610:	f5b1 7f80 	cmp.w	r1, #256	; 0x100
+  200614:	70ac      	strb	r4, [r5, #2]
+  200616:	f809 6007 	strb.w	r6, [r9, r7]
+  20061a:	f103 0703 	add.w	r7, r3, #3
+  20061e:	f007 070f 	and.w	r7, r7, #15
+  200622:	78ee      	ldrb	r6, [r5, #3]
+  200624:	5dc7      	ldrb	r7, [r0, r7]
+  200626:	4432      	add	r2, r6
+  200628:	443a      	add	r2, r7
+  20062a:	b2d7      	uxtb	r7, r2
+  20062c:	f819 4007 	ldrb.w	r4, [r9, r7]
+  200630:	70ec      	strb	r4, [r5, #3]
+  200632:	f809 6007 	strb.w	r6, [r9, r7]
+  200636:	f103 0704 	add.w	r7, r3, #4
+  20063a:	f007 070f 	and.w	r7, r7, #15
+  20063e:	792e      	ldrb	r6, [r5, #4]
+  200640:	5dc7      	ldrb	r7, [r0, r7]
+  200642:	4432      	add	r2, r6
+  200644:	443a      	add	r2, r7
+  200646:	b2d7      	uxtb	r7, r2
+  200648:	f819 4007 	ldrb.w	r4, [r9, r7]
+  20064c:	712c      	strb	r4, [r5, #4]
+  20064e:	f809 6007 	strb.w	r6, [r9, r7]
+  200652:	f103 0705 	add.w	r7, r3, #5
+  200656:	f007 070f 	and.w	r7, r7, #15
+  20065a:	796e      	ldrb	r6, [r5, #5]
+  20065c:	5dc7      	ldrb	r7, [r0, r7]
+  20065e:	4432      	add	r2, r6
+  200660:	443a      	add	r2, r7
+  200662:	b2d7      	uxtb	r7, r2
+  200664:	f819 4007 	ldrb.w	r4, [r9, r7]
+  200668:	716c      	strb	r4, [r5, #5]
+  20066a:	f809 6007 	strb.w	r6, [r9, r7]
+  20066e:	f103 0706 	add.w	r7, r3, #6
+  200672:	f007 070f 	and.w	r7, r7, #15
+  200676:	79ae      	ldrb	r6, [r5, #6]
+  200678:	5dc7      	ldrb	r7, [r0, r7]
+  20067a:	4432      	add	r2, r6
+  20067c:	443a      	add	r2, r7
+  20067e:	b2d7      	uxtb	r7, r2
+  200680:	f819 4007 	ldrb.w	r4, [r9, r7]
+  200684:	71ac      	strb	r4, [r5, #6]
+  200686:	f809 6007 	strb.w	r6, [r9, r7]
+  20068a:	f103 0707 	add.w	r7, r3, #7
+  20068e:	f007 070f 	and.w	r7, r7, #15
+  200692:	79ec      	ldrb	r4, [r5, #7]
+  200694:	5dc7      	ldrb	r7, [r0, r7]
+  200696:	4422      	add	r2, r4
+  200698:	443a      	add	r2, r7
+  20069a:	b2d6      	uxtb	r6, r2
+  20069c:	f819 2006 	ldrb.w	r2, [r9, r6]
+  2006a0:	71ea      	strb	r2, [r5, #7]
+  2006a2:	f103 0208 	add.w	r2, r3, #8
+  2006a6:	f002 030f 	and.w	r3, r2, #15
+  2006aa:	f809 4006 	strb.w	r4, [r9, r6]
+  2006ae:	d189      	bne.n	2005c4 <benchmark+0xdc>
+  2006b0:	f240 1802 	movw	r8, #258	; 0x102
+  2006b4:	2600      	movs	r6, #0
+  2006b6:	f06f 0e0f 	mvn.w	lr, #15
+  2006ba:	f6c2 0820 	movt	r8, #10272	; 0x2820
+  2006be:	f8a9 6100 	strh.w	r6, [r9, #256]	; 0x100
+  2006c2:	bf00      	nop
+  2006c4:	eb09 040e 	add.w	r4, r9, lr
+  2006c8:	7c62      	ldrb	r2, [r4, #17]
+  2006ca:	f640 43e0 	movw	r3, #3296	; 0xce0
+  2006ce:	4416      	add	r6, r2
+  2006d0:	b2f7      	uxtb	r7, r6
+  2006d2:	f819 0007 	ldrb.w	r0, [r9, r7]
+  2006d6:	f2c0 0320 	movt	r3, #32
+  2006da:	7460      	strb	r0, [r4, #17]
+  2006dc:	4410      	add	r0, r2
+  2006de:	eb03 050e 	add.w	r5, r3, lr
+  2006e2:	f809 2007 	strb.w	r2, [r9, r7]
+  2006e6:	b2c0      	uxtb	r0, r0
+  2006e8:	f819 0000 	ldrb.w	r0, [r9, r0]
+  2006ec:	7c2a      	ldrb	r2, [r5, #16]
+  2006ee:	eb08 010e 	add.w	r1, r8, lr
+  2006f2:	4050      	eors	r0, r2
+  2006f4:	7ca2      	ldrb	r2, [r4, #18]
+  2006f6:	7408      	strb	r0, [r1, #16]
+  2006f8:	1990      	adds	r0, r2, r6
+  2006fa:	b2c6      	uxtb	r6, r0
+  2006fc:	f819 c006 	ldrb.w	ip, [r9, r6]
+  200700:	7c6f      	ldrb	r7, [r5, #17]
+  200702:	f884 c012 	strb.w	ip, [r4, #18]
+  200706:	f809 2006 	strb.w	r2, [r9, r6]
+  20070a:	4462      	add	r2, ip
+  20070c:	b2d2      	uxtb	r2, r2
+  20070e:	7ce6      	ldrb	r6, [r4, #19]
+  200710:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200714:	4430      	add	r0, r6
+  200716:	407a      	eors	r2, r7
+  200718:	b2c7      	uxtb	r7, r0
+  20071a:	f819 3007 	ldrb.w	r3, [r9, r7]
+  20071e:	744a      	strb	r2, [r1, #17]
+  200720:	74e3      	strb	r3, [r4, #19]
+  200722:	f809 6007 	strb.w	r6, [r9, r7]
+  200726:	199a      	adds	r2, r3, r6
+  200728:	7d23      	ldrb	r3, [r4, #20]
+  20072a:	b2d2      	uxtb	r2, r2
+  20072c:	4418      	add	r0, r3
+  20072e:	b2c7      	uxtb	r7, r0
+  200730:	f895 a012 	ldrb.w	sl, [r5, #18]
+  200734:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200738:	f819 6007 	ldrb.w	r6, [r9, r7]
+  20073c:	ea82 020a 	eor.w	r2, r2, sl
+  200740:	7526      	strb	r6, [r4, #20]
+  200742:	f809 3007 	strb.w	r3, [r9, r7]
+  200746:	748a      	strb	r2, [r1, #18]
+  200748:	18f2      	adds	r2, r6, r3
+  20074a:	7d63      	ldrb	r3, [r4, #21]
+  20074c:	b2d2      	uxtb	r2, r2
+  20074e:	4418      	add	r0, r3
+  200750:	b2c7      	uxtb	r7, r0
+  200752:	f819 6007 	ldrb.w	r6, [r9, r7]
+  200756:	f895 b013 	ldrb.w	fp, [r5, #19]
+  20075a:	f819 2002 	ldrb.w	r2, [r9, r2]
+  20075e:	7566      	strb	r6, [r4, #21]
+  200760:	f809 3007 	strb.w	r3, [r9, r7]
+  200764:	4433      	add	r3, r6
+  200766:	ea82 020b 	eor.w	r2, r2, fp
+  20076a:	b2db      	uxtb	r3, r3
+  20076c:	7da7      	ldrb	r7, [r4, #22]
+  20076e:	74ca      	strb	r2, [r1, #19]
+  200770:	7d2a      	ldrb	r2, [r5, #20]
+  200772:	f819 3003 	ldrb.w	r3, [r9, r3]
+  200776:	4438      	add	r0, r7
+  200778:	405a      	eors	r2, r3
+  20077a:	b2c3      	uxtb	r3, r0
+  20077c:	f819 6003 	ldrb.w	r6, [r9, r3]
+  200780:	750a      	strb	r2, [r1, #20]
+  200782:	75a6      	strb	r6, [r4, #22]
+  200784:	f809 7003 	strb.w	r7, [r9, r3]
+  200788:	19f3      	adds	r3, r6, r7
+  20078a:	b2db      	uxtb	r3, r3
+  20078c:	7de7      	ldrb	r7, [r4, #23]
+  20078e:	7d6a      	ldrb	r2, [r5, #21]
+  200790:	f819 3003 	ldrb.w	r3, [r9, r3]
+  200794:	4438      	add	r0, r7
+  200796:	405a      	eors	r2, r3
+  200798:	b2c3      	uxtb	r3, r0
+  20079a:	f819 6003 	ldrb.w	r6, [r9, r3]
+  20079e:	754a      	strb	r2, [r1, #21]
+  2007a0:	75e6      	strb	r6, [r4, #23]
+  2007a2:	f809 7003 	strb.w	r7, [r9, r3]
+  2007a6:	19f3      	adds	r3, r6, r7
+  2007a8:	7e27      	ldrb	r7, [r4, #24]
+  2007aa:	b2db      	uxtb	r3, r3
+  2007ac:	183e      	adds	r6, r7, r0
+  2007ae:	b2f0      	uxtb	r0, r6
+  2007b0:	f819 2000 	ldrb.w	r2, [r9, r0]
+  2007b4:	f819 3003 	ldrb.w	r3, [r9, r3]
+  2007b8:	7622      	strb	r2, [r4, #24]
+  2007ba:	443a      	add	r2, r7
+  2007bc:	f809 7000 	strb.w	r7, [r9, r0]
+  2007c0:	b2d2      	uxtb	r2, r2
+  2007c2:	f895 c016 	ldrb.w	ip, [r5, #22]
+  2007c6:	7de8      	ldrb	r0, [r5, #23]
+  2007c8:	f819 2002 	ldrb.w	r2, [r9, r2]
+  2007cc:	ea83 030c 	eor.w	r3, r3, ip
+  2007d0:	4050      	eors	r0, r2
+  2007d2:	f11e 0e08 	adds.w	lr, lr, #8
+  2007d6:	758b      	strb	r3, [r1, #22]
+  2007d8:	75c8      	strb	r0, [r1, #23]
+  2007da:	f47f af73 	bne.w	2006c4 <benchmark+0x1dc>
+  2007de:	2010      	movs	r0, #16
+  2007e0:	2100      	movs	r1, #0
+  2007e2:	f889 0100 	strb.w	r0, [r9, #256]	; 0x100
+  2007e6:	f889 6101 	strb.w	r6, [r9, #257]	; 0x101
+  2007ea:	bf00      	nop
+  2007ec:	eb09 0301 	add.w	r3, r9, r1
+  2007f0:	1c48      	adds	r0, r1, #1
+  2007f2:	7058      	strb	r0, [r3, #1]
+  2007f4:	1c88      	adds	r0, r1, #2
+  2007f6:	7098      	strb	r0, [r3, #2]
+  2007f8:	1cc8      	adds	r0, r1, #3
+  2007fa:	70d8      	strb	r0, [r3, #3]
+  2007fc:	1d08      	adds	r0, r1, #4
+  2007fe:	7118      	strb	r0, [r3, #4]
+  200800:	1d48      	adds	r0, r1, #5
+  200802:	7158      	strb	r0, [r3, #5]
+  200804:	1d88      	adds	r0, r1, #6
+  200806:	7198      	strb	r0, [r3, #6]
+  200808:	1dc8      	adds	r0, r1, #7
+  20080a:	71d8      	strb	r0, [r3, #7]
+  20080c:	f101 0008 	add.w	r0, r1, #8
+  200810:	7218      	strb	r0, [r3, #8]
+  200812:	f101 0009 	add.w	r0, r1, #9
+  200816:	7258      	strb	r0, [r3, #9]
+  200818:	f101 000a 	add.w	r0, r1, #10
+  20081c:	7298      	strb	r0, [r3, #10]
+  20081e:	f101 000b 	add.w	r0, r1, #11
+  200822:	72d8      	strb	r0, [r3, #11]
+  200824:	f101 000c 	add.w	r0, r1, #12
+  200828:	7318      	strb	r0, [r3, #12]
+  20082a:	f101 000d 	add.w	r0, r1, #13
+  20082e:	7358      	strb	r0, [r3, #13]
+  200830:	f101 000e 	add.w	r0, r1, #14
+  200834:	7398      	strb	r0, [r3, #14]
+  200836:	f101 000f 	add.w	r0, r1, #15
+  20083a:	73d8      	strb	r0, [r3, #15]
+  20083c:	f101 0010 	add.w	r0, r1, #16
+  200840:	7418      	strb	r0, [r3, #16]
+  200842:	f101 0011 	add.w	r0, r1, #17
+  200846:	7458      	strb	r0, [r3, #17]
+  200848:	f101 0012 	add.w	r0, r1, #18
+  20084c:	7498      	strb	r0, [r3, #18]
+  20084e:	f101 0013 	add.w	r0, r1, #19
+  200852:	74d8      	strb	r0, [r3, #19]
+  200854:	f101 0014 	add.w	r0, r1, #20
+  200858:	7518      	strb	r0, [r3, #20]
+  20085a:	f101 0015 	add.w	r0, r1, #21
+  20085e:	7558      	strb	r0, [r3, #21]
+  200860:	f101 0016 	add.w	r0, r1, #22
+  200864:	7598      	strb	r0, [r3, #22]
+  200866:	f101 0017 	add.w	r0, r1, #23
+  20086a:	75d8      	strb	r0, [r3, #23]
+  20086c:	f101 0018 	add.w	r0, r1, #24
+  200870:	7618      	strb	r0, [r3, #24]
+  200872:	f101 0019 	add.w	r0, r1, #25
+  200876:	7658      	strb	r0, [r3, #25]
+  200878:	f101 001a 	add.w	r0, r1, #26
+  20087c:	7698      	strb	r0, [r3, #26]
+  20087e:	f101 001b 	add.w	r0, r1, #27
+  200882:	76d8      	strb	r0, [r3, #27]
+  200884:	f101 001c 	add.w	r0, r1, #28
+  200888:	7718      	strb	r0, [r3, #28]
+  20088a:	f101 001d 	add.w	r0, r1, #29
+  20088e:	7758      	strb	r0, [r3, #29]
+  200890:	f101 001e 	add.w	r0, r1, #30
+  200894:	f809 1001 	strb.w	r1, [r9, r1]
+  200898:	7798      	strb	r0, [r3, #30]
+  20089a:	f101 001f 	add.w	r0, r1, #31
+  20089e:	3120      	adds	r1, #32
+  2008a0:	f5b1 7f80 	cmp.w	r1, #256	; 0x100
+  2008a4:	77d8      	strb	r0, [r3, #31]
+  2008a6:	d1a1      	bne.n	2007ec <benchmark+0x304>
+  2008a8:	f640 44f0 	movw	r4, #3312	; 0xcf0
+  2008ac:	2100      	movs	r1, #0
+  2008ae:	2300      	movs	r3, #0
+  2008b0:	2600      	movs	r6, #0
+  2008b2:	f2c0 0420 	movt	r4, #32
+  2008b6:	bf00      	nop
+  2008b8:	f819 0001 	ldrb.w	r0, [r9, r1]
+  2008bc:	5ce2      	ldrb	r2, [r4, r3]
+  2008be:	1837      	adds	r7, r6, r0
+  2008c0:	443a      	add	r2, r7
+  2008c2:	b2d7      	uxtb	r7, r2
+  2008c4:	f819 6007 	ldrb.w	r6, [r9, r7]
+  2008c8:	eb09 0501 	add.w	r5, r9, r1
+  2008cc:	f809 6001 	strb.w	r6, [r9, r1]
+  2008d0:	f809 0007 	strb.w	r0, [r9, r7]
+  2008d4:	1c58      	adds	r0, r3, #1
+  2008d6:	f000 000f 	and.w	r0, r0, #15
+  2008da:	786f      	ldrb	r7, [r5, #1]
+  2008dc:	5c20      	ldrb	r0, [r4, r0]
+  2008de:	443a      	add	r2, r7
+  2008e0:	4410      	add	r0, r2
+  2008e2:	b2c2      	uxtb	r2, r0
+  2008e4:	f819 6002 	ldrb.w	r6, [r9, r2]
+  2008e8:	3108      	adds	r1, #8
+  2008ea:	706e      	strb	r6, [r5, #1]
+  2008ec:	f809 7002 	strb.w	r7, [r9, r2]
+  2008f0:	1c9a      	adds	r2, r3, #2
+  2008f2:	f002 020f 	and.w	r2, r2, #15
+  2008f6:	78af      	ldrb	r7, [r5, #2]
+  2008f8:	5ca2      	ldrb	r2, [r4, r2]
+  2008fa:	4438      	add	r0, r7
+  2008fc:	4410      	add	r0, r2
+  2008fe:	b2c2      	uxtb	r2, r0
+  200900:	f819 6002 	ldrb.w	r6, [r9, r2]
+  200904:	f5b1 7f80 	cmp.w	r1, #256	; 0x100
+  200908:	70ae      	strb	r6, [r5, #2]
+  20090a:	f809 7002 	strb.w	r7, [r9, r2]
+  20090e:	f103 0203 	add.w	r2, r3, #3
+  200912:	f002 020f 	and.w	r2, r2, #15
+  200916:	78ef      	ldrb	r7, [r5, #3]
+  200918:	5ca2      	ldrb	r2, [r4, r2]
+  20091a:	4438      	add	r0, r7
+  20091c:	4410      	add	r0, r2
+  20091e:	b2c2      	uxtb	r2, r0
+  200920:	f819 6002 	ldrb.w	r6, [r9, r2]
+  200924:	70ee      	strb	r6, [r5, #3]
+  200926:	f809 7002 	strb.w	r7, [r9, r2]
+  20092a:	f103 0204 	add.w	r2, r3, #4
+  20092e:	f002 020f 	and.w	r2, r2, #15
+  200932:	792f      	ldrb	r7, [r5, #4]
+  200934:	5ca2      	ldrb	r2, [r4, r2]
+  200936:	4438      	add	r0, r7
+  200938:	4410      	add	r0, r2
+  20093a:	b2c2      	uxtb	r2, r0
+  20093c:	f819 6002 	ldrb.w	r6, [r9, r2]
+  200940:	712e      	strb	r6, [r5, #4]
+  200942:	f809 7002 	strb.w	r7, [r9, r2]
+  200946:	f103 0205 	add.w	r2, r3, #5
+  20094a:	f002 020f 	and.w	r2, r2, #15
+  20094e:	796f      	ldrb	r7, [r5, #5]
+  200950:	5ca2      	ldrb	r2, [r4, r2]
+  200952:	4438      	add	r0, r7
+  200954:	4410      	add	r0, r2
+  200956:	b2c2      	uxtb	r2, r0
+  200958:	f819 6002 	ldrb.w	r6, [r9, r2]
+  20095c:	716e      	strb	r6, [r5, #5]
+  20095e:	f809 7002 	strb.w	r7, [r9, r2]
+  200962:	f103 0206 	add.w	r2, r3, #6
+  200966:	f002 020f 	and.w	r2, r2, #15
+  20096a:	79af      	ldrb	r7, [r5, #6]
+  20096c:	5ca2      	ldrb	r2, [r4, r2]
+  20096e:	4438      	add	r0, r7
+  200970:	4410      	add	r0, r2
+  200972:	b2c2      	uxtb	r2, r0
+  200974:	f819 6002 	ldrb.w	r6, [r9, r2]
+  200978:	71ae      	strb	r6, [r5, #6]
+  20097a:	f809 7002 	strb.w	r7, [r9, r2]
+  20097e:	f103 0207 	add.w	r2, r3, #7
+  200982:	f002 020f 	and.w	r2, r2, #15
+  200986:	79ef      	ldrb	r7, [r5, #7]
+  200988:	5ca2      	ldrb	r2, [r4, r2]
+  20098a:	4438      	add	r0, r7
+  20098c:	4410      	add	r0, r2
+  20098e:	b2c6      	uxtb	r6, r0
+  200990:	f819 0006 	ldrb.w	r0, [r9, r6]
+  200994:	71e8      	strb	r0, [r5, #7]
+  200996:	f103 0008 	add.w	r0, r3, #8
+  20099a:	f000 030f 	and.w	r3, r0, #15
+  20099e:	f809 7006 	strb.w	r7, [r9, r6]
+  2009a2:	d189      	bne.n	2008b8 <benchmark+0x3d0>
+  2009a4:	f899 0001 	ldrb.w	r0, [r9, #1]
+  2009a8:	f898 2000 	ldrb.w	r2, [r8]
+  2009ac:	f819 1000 	ldrb.w	r1, [r9, r0]
+  2009b0:	f898 3001 	ldrb.w	r3, [r8, #1]
+  2009b4:	f889 1001 	strb.w	r1, [r9, #1]
+  2009b8:	f809 0000 	strb.w	r0, [r9, r0]
+  2009bc:	4401      	add	r1, r0
+  2009be:	b2c9      	uxtb	r1, r1
+  2009c0:	f899 7002 	ldrb.w	r7, [r9, #2]
+  2009c4:	f819 1001 	ldrb.w	r1, [r9, r1]
+  2009c8:	4438      	add	r0, r7
+  2009ca:	4051      	eors	r1, r2
+  2009cc:	b2c2      	uxtb	r2, r0
+  2009ce:	f819 6002 	ldrb.w	r6, [r9, r2]
+  2009d2:	f888 1000 	strb.w	r1, [r8]
+  2009d6:	f889 6002 	strb.w	r6, [r9, #2]
+  2009da:	f809 7002 	strb.w	r7, [r9, r2]
+  2009de:	19f1      	adds	r1, r6, r7
+  2009e0:	b2c9      	uxtb	r1, r1
+  2009e2:	f899 2003 	ldrb.w	r2, [r9, #3]
+  2009e6:	f819 1001 	ldrb.w	r1, [r9, r1]
+  2009ea:	4410      	add	r0, r2
+  2009ec:	4059      	eors	r1, r3
+  2009ee:	b2c3      	uxtb	r3, r0
+  2009f0:	f819 7003 	ldrb.w	r7, [r9, r3]
+  2009f4:	f888 1001 	strb.w	r1, [r8, #1]
+  2009f8:	f889 7003 	strb.w	r7, [r9, #3]
+  2009fc:	f809 2003 	strb.w	r2, [r9, r3]
+  200a00:	443a      	add	r2, r7
+  200a02:	b2d2      	uxtb	r2, r2
+  200a04:	f899 3004 	ldrb.w	r3, [r9, #4]
+  200a08:	f898 1002 	ldrb.w	r1, [r8, #2]
+  200a0c:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200a10:	4418      	add	r0, r3
+  200a12:	4051      	eors	r1, r2
+  200a14:	b2c2      	uxtb	r2, r0
+  200a16:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200a1a:	f888 1002 	strb.w	r1, [r8, #2]
+  200a1e:	f889 7004 	strb.w	r7, [r9, #4]
+  200a22:	f809 3002 	strb.w	r3, [r9, r2]
+  200a26:	18fa      	adds	r2, r7, r3
+  200a28:	b2d2      	uxtb	r2, r2
+  200a2a:	f899 3005 	ldrb.w	r3, [r9, #5]
+  200a2e:	f898 1003 	ldrb.w	r1, [r8, #3]
+  200a32:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200a36:	4418      	add	r0, r3
+  200a38:	4051      	eors	r1, r2
+  200a3a:	b2c2      	uxtb	r2, r0
+  200a3c:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200a40:	f888 1003 	strb.w	r1, [r8, #3]
+  200a44:	f889 7005 	strb.w	r7, [r9, #5]
+  200a48:	f809 3002 	strb.w	r3, [r9, r2]
+  200a4c:	18fa      	adds	r2, r7, r3
+  200a4e:	b2d2      	uxtb	r2, r2
+  200a50:	f899 3006 	ldrb.w	r3, [r9, #6]
+  200a54:	f898 1004 	ldrb.w	r1, [r8, #4]
+  200a58:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200a5c:	4418      	add	r0, r3
+  200a5e:	4051      	eors	r1, r2
+  200a60:	b2c2      	uxtb	r2, r0
+  200a62:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200a66:	f888 1004 	strb.w	r1, [r8, #4]
+  200a6a:	f889 7006 	strb.w	r7, [r9, #6]
+  200a6e:	f809 3002 	strb.w	r3, [r9, r2]
+  200a72:	18fa      	adds	r2, r7, r3
+  200a74:	b2d2      	uxtb	r2, r2
+  200a76:	f899 3007 	ldrb.w	r3, [r9, #7]
+  200a7a:	f898 1005 	ldrb.w	r1, [r8, #5]
+  200a7e:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200a82:	4418      	add	r0, r3
+  200a84:	4051      	eors	r1, r2
+  200a86:	b2c2      	uxtb	r2, r0
+  200a88:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200a8c:	f888 1005 	strb.w	r1, [r8, #5]
+  200a90:	f889 7007 	strb.w	r7, [r9, #7]
+  200a94:	f809 3002 	strb.w	r3, [r9, r2]
+  200a98:	18fa      	adds	r2, r7, r3
+  200a9a:	b2d2      	uxtb	r2, r2
+  200a9c:	f899 3008 	ldrb.w	r3, [r9, #8]
+  200aa0:	f898 1006 	ldrb.w	r1, [r8, #6]
+  200aa4:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200aa8:	4418      	add	r0, r3
+  200aaa:	4051      	eors	r1, r2
+  200aac:	b2c2      	uxtb	r2, r0
+  200aae:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200ab2:	f888 1006 	strb.w	r1, [r8, #6]
+  200ab6:	f889 7008 	strb.w	r7, [r9, #8]
+  200aba:	f809 3002 	strb.w	r3, [r9, r2]
+  200abe:	18fa      	adds	r2, r7, r3
+  200ac0:	b2d2      	uxtb	r2, r2
+  200ac2:	f899 3009 	ldrb.w	r3, [r9, #9]
+  200ac6:	f898 1007 	ldrb.w	r1, [r8, #7]
+  200aca:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200ace:	4418      	add	r0, r3
+  200ad0:	4051      	eors	r1, r2
+  200ad2:	b2c2      	uxtb	r2, r0
+  200ad4:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200ad8:	f888 1007 	strb.w	r1, [r8, #7]
+  200adc:	f889 7009 	strb.w	r7, [r9, #9]
+  200ae0:	f809 3002 	strb.w	r3, [r9, r2]
+  200ae4:	18fa      	adds	r2, r7, r3
+  200ae6:	b2d2      	uxtb	r2, r2
+  200ae8:	f899 300a 	ldrb.w	r3, [r9, #10]
+  200aec:	f898 1008 	ldrb.w	r1, [r8, #8]
+  200af0:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200af4:	4418      	add	r0, r3
+  200af6:	4051      	eors	r1, r2
+  200af8:	b2c2      	uxtb	r2, r0
+  200afa:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200afe:	f888 1008 	strb.w	r1, [r8, #8]
+  200b02:	f889 700a 	strb.w	r7, [r9, #10]
+  200b06:	f809 3002 	strb.w	r3, [r9, r2]
+  200b0a:	18fa      	adds	r2, r7, r3
+  200b0c:	b2d2      	uxtb	r2, r2
+  200b0e:	f899 300b 	ldrb.w	r3, [r9, #11]
+  200b12:	f898 1009 	ldrb.w	r1, [r8, #9]
+  200b16:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200b1a:	4418      	add	r0, r3
+  200b1c:	4051      	eors	r1, r2
+  200b1e:	b2c2      	uxtb	r2, r0
+  200b20:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200b24:	f888 1009 	strb.w	r1, [r8, #9]
+  200b28:	f889 700b 	strb.w	r7, [r9, #11]
+  200b2c:	f809 3002 	strb.w	r3, [r9, r2]
+  200b30:	18fa      	adds	r2, r7, r3
+  200b32:	b2d2      	uxtb	r2, r2
+  200b34:	f899 300c 	ldrb.w	r3, [r9, #12]
+  200b38:	f898 100a 	ldrb.w	r1, [r8, #10]
+  200b3c:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200b40:	4418      	add	r0, r3
+  200b42:	4051      	eors	r1, r2
+  200b44:	b2c2      	uxtb	r2, r0
+  200b46:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200b4a:	f888 100a 	strb.w	r1, [r8, #10]
+  200b4e:	f889 700c 	strb.w	r7, [r9, #12]
+  200b52:	f809 3002 	strb.w	r3, [r9, r2]
+  200b56:	18fa      	adds	r2, r7, r3
+  200b58:	b2d2      	uxtb	r2, r2
+  200b5a:	f899 300d 	ldrb.w	r3, [r9, #13]
+  200b5e:	f898 100b 	ldrb.w	r1, [r8, #11]
+  200b62:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200b66:	4418      	add	r0, r3
+  200b68:	4051      	eors	r1, r2
+  200b6a:	b2c2      	uxtb	r2, r0
+  200b6c:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200b70:	f888 100b 	strb.w	r1, [r8, #11]
+  200b74:	f889 700d 	strb.w	r7, [r9, #13]
+  200b78:	f809 3002 	strb.w	r3, [r9, r2]
+  200b7c:	18fa      	adds	r2, r7, r3
+  200b7e:	b2d2      	uxtb	r2, r2
+  200b80:	f899 300e 	ldrb.w	r3, [r9, #14]
+  200b84:	f898 100c 	ldrb.w	r1, [r8, #12]
+  200b88:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200b8c:	4418      	add	r0, r3
+  200b8e:	4051      	eors	r1, r2
+  200b90:	b2c2      	uxtb	r2, r0
+  200b92:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200b96:	f888 100c 	strb.w	r1, [r8, #12]
+  200b9a:	f889 700e 	strb.w	r7, [r9, #14]
+  200b9e:	f809 3002 	strb.w	r3, [r9, r2]
+  200ba2:	18fa      	adds	r2, r7, r3
+  200ba4:	b2d2      	uxtb	r2, r2
+  200ba6:	f899 300f 	ldrb.w	r3, [r9, #15]
+  200baa:	f898 100d 	ldrb.w	r1, [r8, #13]
+  200bae:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200bb2:	4418      	add	r0, r3
+  200bb4:	4051      	eors	r1, r2
+  200bb6:	b2c2      	uxtb	r2, r0
+  200bb8:	f819 7002 	ldrb.w	r7, [r9, r2]
+  200bbc:	f888 100d 	strb.w	r1, [r8, #13]
+  200bc0:	f889 700f 	strb.w	r7, [r9, #15]
+  200bc4:	f809 3002 	strb.w	r3, [r9, r2]
+  200bc8:	18fa      	adds	r2, r7, r3
+  200bca:	f899 3010 	ldrb.w	r3, [r9, #16]
+  200bce:	b2d2      	uxtb	r2, r2
+  200bd0:	4418      	add	r0, r3
+  200bd2:	b2c7      	uxtb	r7, r0
+  200bd4:	f819 6007 	ldrb.w	r6, [r9, r7]
+  200bd8:	f898 100e 	ldrb.w	r1, [r8, #14]
+  200bdc:	f819 2002 	ldrb.w	r2, [r9, r2]
+  200be0:	f889 6010 	strb.w	r6, [r9, #16]
+  200be4:	f809 3007 	strb.w	r3, [r9, r7]
+  200be8:	4433      	add	r3, r6
+  200bea:	b2db      	uxtb	r3, r3
+  200bec:	4051      	eors	r1, r2
+  200bee:	f898 200f 	ldrb.w	r2, [r8, #15]
+  200bf2:	f819 3003 	ldrb.w	r3, [r9, r3]
+  200bf6:	f888 100e 	strb.w	r1, [r8, #14]
+  200bfa:	ea83 0102 	eor.w	r1, r3, r2
+  200bfe:	f888 100f 	strb.w	r1, [r8, #15]
+  200c02:	2110      	movs	r1, #16
+  200c04:	f889 1100 	strb.w	r1, [r9, #256]	; 0x100
+  200c08:	f889 0101 	strb.w	r0, [r9, #257]	; 0x101
+  200c0c:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+00200c10 <main>:
+  200c10:	b082      	sub	sp, #8
+  200c12:	2500      	movs	r5, #0
+  200c14:	f241 0404 	movw	r4, #4100	; 0x1004
+  200c18:	f44f 3080 	mov.w	r0, #65536	; 0x10000
+  200c1c:	f2ce 0400 	movt	r4, #57344	; 0xe000
+  200c20:	9501      	str	r5, [sp, #4]
+  200c22:	f000 f846 	bl	200cb2 <main+0xa2>
+  200c26:	f44f 7680 	mov.w	r6, #256	; 0x100
+  200c2a:	6025      	str	r5, [r4, #0]
+  200c2c:	9801      	ldr	r0, [sp, #4]
+  200c2e:	f7ff fc5b 	bl	2004e8 <benchmark>
+  200c32:	9501      	str	r5, [sp, #4]
+  200c34:	9801      	ldr	r0, [sp, #4]
+  200c36:	3e01      	subs	r6, #1
+  200c38:	d1f8      	bne.n	200c2c <main+0x1c>
+  200c3a:	6820      	ldr	r0, [r4, #0]
+  200c3c:	f000 f83e 	bl	200cbc <main+0xac>
+  200c40:	2500      	movs	r5, #0
+  200c42:	f44f 7680 	mov.w	r6, #256	; 0x100
+  200c46:	6025      	str	r5, [r4, #0]
+  200c48:	9801      	ldr	r0, [sp, #4]
+  200c4a:	f7ff fc4d 	bl	2004e8 <benchmark>
+  200c4e:	9501      	str	r5, [sp, #4]
+  200c50:	9801      	ldr	r0, [sp, #4]
+  200c52:	3e01      	subs	r6, #1
+  200c54:	d1f8      	bne.n	200c48 <main+0x38>
+  200c56:	6820      	ldr	r0, [r4, #0]
+  200c58:	f000 f830 	bl	200cbc <main+0xac>
+  200c5c:	2500      	movs	r5, #0
+  200c5e:	f44f 7680 	mov.w	r6, #256	; 0x100
+  200c62:	6025      	str	r5, [r4, #0]
+  200c64:	9801      	ldr	r0, [sp, #4]
+  200c66:	f7ff fc3f 	bl	2004e8 <benchmark>
+  200c6a:	9501      	str	r5, [sp, #4]
+  200c6c:	9801      	ldr	r0, [sp, #4]
+  200c6e:	3e01      	subs	r6, #1
+  200c70:	d1f8      	bne.n	200c64 <main+0x54>
+  200c72:	6820      	ldr	r0, [r4, #0]
+  200c74:	f000 f822 	bl	200cbc <main+0xac>
+  200c78:	2500      	movs	r5, #0
+  200c7a:	f44f 7680 	mov.w	r6, #256	; 0x100
+  200c7e:	6025      	str	r5, [r4, #0]
+  200c80:	9801      	ldr	r0, [sp, #4]
+  200c82:	f7ff fc31 	bl	2004e8 <benchmark>
+  200c86:	9501      	str	r5, [sp, #4]
+  200c88:	9801      	ldr	r0, [sp, #4]
+  200c8a:	3e01      	subs	r6, #1
+  200c8c:	d1f8      	bne.n	200c80 <main+0x70>
+  200c8e:	6820      	ldr	r0, [r4, #0]
+  200c90:	f000 f814 	bl	200cbc <main+0xac>
+  200c94:	2500      	movs	r5, #0
+  200c96:	f44f 7680 	mov.w	r6, #256	; 0x100
+  200c9a:	6025      	str	r5, [r4, #0]
+  200c9c:	9801      	ldr	r0, [sp, #4]
+  200c9e:	f7ff fc23 	bl	2004e8 <benchmark>
+  200ca2:	9501      	str	r5, [sp, #4]
+  200ca4:	9801      	ldr	r0, [sp, #4]
+  200ca6:	3e01      	subs	r6, #1
+  200ca8:	d1f8      	bne.n	200c9c <main+0x8c>
+  200caa:	6820      	ldr	r0, [r4, #0]
+  200cac:	f000 f806 	bl	200cbc <main+0xac>
+  200cb0:	e7fe      	b.n	200cb0 <main+0xa0>
+  200cb2:	f64f 6c11 	movw	ip, #65041	; 0xfe11
+  200cb6:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  200cba:	4760      	bx	ip
+  200cbc:	f64f 6c19 	movw	ip, #65049	; 0xfe19
+  200cc0:	f2c1 0c1f 	movt	ip, #4127	; 0x101f
+  200cc4:	4760      	bx	ip
+
+00200cc6 <_fp_init>:
+  200cc6:	eef1 0a10 	vmrs	r0, fpscr
+  200cca:	f64f 71ff 	movw	r1, #65535	; 0xffff
+  200cce:	f2c0 31c0 	movt	r1, #960	; 0x3c0
+  200cd2:	ea20 0001 	bic.w	r0, r0, r1
+  200cd6:	f040 7040 	orr.w	r0, r0, #50331648	; 0x3000000
+  200cda:	eee1 0a10 	vmsr	fpscr, r0
+
+00200cde <__fplib_config_fpu_vfp>:
+  200cde:	4770      	bx	lr
+
+00200ce0 <data>:
+  200ce0:	0100 0302 0504 0706 0908 0b0a 0d0c 0f0e     ................
+
+00200cf0 <key>:
+  200cf0:	0e0f 0c0d 0a0b 0809 0607 0405 0203 0001     ................
+
+00200d00 <Region$$Table$$Base>:
+  200d00:	00200d10 	.word	0x00200d10
+  200d04:	28200000 	.word	0x28200000
+  200d08:	00000114 	.word	0x00000114
+  200d0c:	0020043c 	.word	0x0020043c
