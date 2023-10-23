@@ -1,0 +1,70 @@
+Monitor Mode Debug Enabled!
+branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Hello World (Secure)
+EVAL: 26476886, enter_exit: 11785059, sherloc_detection: 14691827
+EVAL: 26493499, enter_exit: 11785133, sherloc_detection: 14708366
+EVAL: 26493303, enter_exit: 11785135, sherloc_detection: 14708168
+EVAL: 26493466, enter_exit: 11785133, sherloc_detection: 14708333
+EVAL: 26476662, enter_exit: 11785062, sherloc_detection: 14691600
+F
+
+Monitor Mode Debug Enabled!
+branch table size: 4, IRQ size: 6, Task size: 0, LOOP size: 4, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (secure)
+EVAL: 173604084, enter_exit: 77863659, sherloc_detection: 95740425&
+Hello World (Secure)
+
+Monitor Mode Debug Enabled!
+branch table size: 11, IRQ size: 6, Task size: 4, LOOP size: 24, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+EVAL: 10504233, enter_exit: 873838, sherloc_detection: 9630395&
+Monitor Mode Debug Enabled!
+branch table size: 3, IRQ size: 6, Task size: 4, LOOP size: 24, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+Start MTB tracing.
+Hello World (Secure)
+Trigger: 3977354, enter_exit: 3972225
+&Trigger: 4007474, enter_exit: 3997500
+&Trigger: 4016280, enter_exit: 3997503
+&Trigger: 3990400, enter_exit: 3972228
+&Trigger: 4012910, enter_exit: 3997497
+
+Monitor Mode Debug Enabled!
+branch table size: 1, IRQ size: 6, Task size: 4, LOOP size: 24, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+You ha[0]!!! illegal indirect call: 0x1f542020
+Check stack. top: 1.
+0x00201e5c
+0x002025c8
+Check task list. num: 0.
+Hello World (Secure)
+
+Monitor Mode Debug Enabled!
+branch table size: 9, IRQ size: 6, Task size: 4, LOOP size: 24, tag_size: 0
+
+----Load branch table done.---
+----Binary search enabled.---
+[0] Wrong IRQ exit: 0x00201f00, 0xffffffbc, 0xffffffbd, 0x0020264c
+Check stack. top: 0.
+0x00202588
+Check task list. num: 6.
+0x00201e3c
+0x0020160a
+0x002026a8
+0x0020264a
+0x00202676
+0x002026a8
+ 

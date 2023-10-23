@@ -4,3 +4,4 @@ angr
 pathlib
 bitarray
 pyserial
+numpy
