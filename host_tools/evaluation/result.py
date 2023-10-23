@@ -514,7 +514,7 @@ class FreeRTOSTriggerResult(object):
         df_mpu_trigger = pd.read_csv(mpu_trigger_result_file)
         df_trigger = pd.read_csv(trigger_file)
         # get the row that the name is 'FreeRTOS_MPU_ns_1'
-        df_trigger = df_trigger.append(
+        df_trigger = df_trigger._append(
             df_mpu_trigger[df_mpu_trigger['name'] == 'FreeRTOS_MPU_ns_1'])
         # insert this column to the first csv
         df_trigger.to_csv(trigger_file, index=False)

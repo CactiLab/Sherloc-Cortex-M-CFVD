@@ -5,3 +5,6 @@ pathlib
 bitarray
 pyserial
 numpy
+pandas
+scipy
+tabulate
