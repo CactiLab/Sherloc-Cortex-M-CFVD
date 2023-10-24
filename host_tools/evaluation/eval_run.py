@@ -156,8 +156,8 @@ class EvaluationRunnerForBlinky(object):
         print(f'evaluate sub-steps costs {time.time() - start}')
 
     def blinky_eval_run_all(self):
-        self.blinky_prepare_run()
-        self.blinky_emu_run()
+        # self.blinky_prepare_run()
+        # self.blinky_emu_run()
         self.blinky_eval_run()
         print('finish blinky evaluation, hardware reset the board...')
         BoardOperation('hw', out_eval_log, '', '', self.hw_reset_port,
@@ -222,8 +222,8 @@ class EvaluationRunnerForFreeRTOS(object):
         print(f'evaluate sub-steps costs {time.time() - start}')
 
     def FreeRTOS_eval_run_all(self):
-        self.FreeRTOS_prepare_run()
-        self.FreeRTOS_emu_run()
+        # self.FreeRTOS_prepare_run()
+        # self.FreeRTOS_emu_run()
         self.FreeRTOS_eval_run()
         print('finish FreeRTOS evaluation, hardware reset the board...')
         BoardOperation('hw', out_eval_log, '', '', self.hw_reset_port,
@@ -293,8 +293,8 @@ class EvaluationRunnerForLEDTrigger(object):
     def trigger_eval_run_all(self):
         # need to careful about whether the bin file has been updated or not.
         # check the create_metadata_by_name_run() function in eval.py file
-        self.trigger_prepare_run()
-        self.trigger_emu_run()
+        # self.trigger_prepare_run()
+        # self.trigger_emu_run()
         self.trigger_eval_run()
         print('finish led trigger evaluation, hardware reset the board...')
         BoardOperation('hw', out_eval_log, '', '', self.hw_reset_port,
@@ -471,10 +471,9 @@ if __name__ == '__main__':
         check_and_create_file(out_eval_log)
 
         # start to run evaluation on beebs
-        # EvaluationRunnerForBEEBs(uart_port, hw_reset_port, sw_reset_port).beebs_eval_run_all()
-        # EvaluationRunnerForBlinky(opt_level, uart_port, hw_reset_port, sw_reset_port).blinky_eval_run_all()
-        # EvaluationRunnerForFreeRTOS(opt_level, uart_port, hw_reset_port, sw_reset_port).FreeRTOS_eval_run_all()
-        # EvaluationRunnerForLEDTrigger(opt_level, uart_port, hw_reset_port, sw_reset_port).trigger_eval_run_all()
+        EvaluationRunnerForBEEBs(uart_port, hw_reset_port, sw_reset_port).beebs_eval_run_all()
+        EvaluationRunnerForBlinky(opt_level, uart_port, hw_reset_port, sw_reset_port).blinky_eval_run_all()
+        EvaluationRunnerForFreeRTOS(opt_level, uart_port, hw_reset_port, sw_reset_port).FreeRTOS_eval_run_all()
+        EvaluationRunnerForLEDTrigger(opt_level, uart_port, hw_reset_port, sw_reset_port).trigger_eval_run_all()
         # EvaluationRunnerForVulfooBOF(opt_level, uart_port, hw_reset_port, sw_reset_port).vulfoo_eval_run_all()
-        EvaluationRunnerForVulfooTask(
-            opt_level, uart_port, hw_reset_port, sw_reset_port).task_vulfoo_eval_run_all()
+        # EvaluationRunnerForVulfooTask(opt_level, uart_port, hw_reset_port, sw_reset_port).task_vulfoo_eval_run_all()
