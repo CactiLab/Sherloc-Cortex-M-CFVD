@@ -11,8 +11,12 @@ volatile uint32_t t_ibt_query = 0, t_ibt_query_start = 0, t_ibt_query_end = 0;
 static int IRQ_count = 0, NESTED_IRQ_count = 0, PendSV_count = 0, test_count = 0;
 uint32_t task_flag = 0; // a flag to show if it is an idirect call, 0: direct, 1: bx/blx, 2: pop, 3: pc changes
                         // if it is an PendSV entry, push special value 0xDEADBEEF
-uint32_t sherloc_detection = 0, buffer_read = 0, crs_creation = 0, ins_identification = 0;
+uint32_t sherloc_detection = 0, sherloc_hit = 0, buffer_read = 0, crs_creation = 0, ins_identification = 0;
 uint32_t sherloc_read, sherloc_enter, sherloc_exit, sherloc_detection_start, sherloc_detection_end, buffer_read_start, buffer_read_end, ins_check_start, ins_check_end, crs_start, crs_end;
+
+#if defined(EVAL_RT)
+uint32_t ic_count = 0, ib_count = 0, dc_count = 0, db_count = 0, ret_count = 0, irq_count = 0;
+#endif
 
 static void task_stack_init()
 {
@@ -65,12 +69,24 @@ int32_t time_measurement_s(uint32_t time)
     printf("EVAL: %u, enter_exit: %u", time + sherloc_detection, time);
 
 #if defined(EVAL_READ)
-    printf(", sherloc_read: %u, sherloc_read_garbage: %u", sherloc_detection, sherloc_read);
+    printf(", sherloc_read: %u, sherloc_read_garbage: %u\r\n", sherloc_detection, sherloc_read);
+    sherloc_detection = sherloc_read = 0;
+
+#elif defined(EVAL_READ_NEW)
+    printf(", sherloc_read_new: %u, sherloc_read_garbage: %u\r\n", sherloc_detection, sherloc_read);
     sherloc_detection = sherloc_read = 0;
 
 #elif defined(EVAL_INS_IDENTIFY)
-    printf(", sherloc_ins_identification: %u, ins_identification_garbage: %u", sherloc_detection, ins_identification);
+    printf(", sherloc_ins_identification: %u, ins_identification_garbage: %u\r\n", sherloc_detection, ins_identification);
     sherloc_detection = ins_identification = 0;
+
+#elif defined(EVAL_HIT)
+    printf(", sherloc_hit_cycles: %u, sherloc_hit: %u\r\n", sherloc_detection, sherloc_hit);
+    sherloc_detection = sherloc_hit = 0;
+
+#elif defined(EVAL_RT)
+    printf(", ins_rt: %u, ic_count: %u, ib_count: %u, dc_count: %u, db_count: %u, ret_count: %u, irq_count: %u\r\n", sherloc_detection, ic_count, ib_count - ic_count, dc_count, db_count, ret_count, irq_count);
+    sherloc_detection = ic_count = ib_count = dc_count = db_count = ret_count = irq_count = 0;
 
 #elif defined(IBT_BASELINE_NO_IRQ) || defined(IBT_NO_IRQ) || defined(IBT_BASELINE_IRQ) || defined(IBT_IRQ)
     printf(", ibt_check: %u, ins_identification_garbage: %u\r\n", sherloc_detection, ins_identification);
@@ -140,7 +156,7 @@ int LoadBranchTable()
     pstBt->TASK_entry = (uint32_t *)&TB + IBT_OFFSET + pstBt->IBT_size + pstBt->IRQ_size;
     pstBt->LOOP_entry = (uint32_t *)&TB + IBT_OFFSET + pstBt->IBT_size + pstBt->IRQ_size + pstBt->TASK_size * 2;
 
-#ifdef PRINT_IBT
+#ifdef SHOW_RECORD
     printf("PendSV_entry: 0x%08x\r\n", pstBt->PendSV);
     for (int i = 0; i < pstBt->IBT_size; i++)
     {
@@ -248,7 +264,7 @@ ALWAYS_INLINE int check_IRQ_in(uint32_t src_addr, uint32_t dst_addr)
         }
 
 #ifdef LOG_IRQ
-        printf("[%ld] non-secure IRQ in: (0x%08lx, 0x%08lx)\r\n", task_flag, src_addr, dst_addr);
+        printf("[%ld] non-secure IRQ in: (0x%08x, 0x%08x)\r\n", task_flag, src_addr, dst_addr);
         STACK_check_all(&STACK[task_flag]);
         // TASK_check_all(&TASK_LIST);
 #endif // LOG_IRQ
@@ -350,16 +366,22 @@ ALWAYS_INLINE int check_IRQ_out(uint32_t src_addr, uint32_t dst_addr, int idx)
     uint32_t top = STACK[task_flag].top;
     // if it is a normal IRQ out after existing Debug monitor handler
 #ifdef LOG_IRQ
-    printf("check if it is a normal IRQ out: 0x%08lx, 0x%08lx, top: 0x%08lx\r\n", src_addr, dst_addr, top);
+    if (mtb_buff[idx - 2] & ~(1 << 0) < CODE_NS)
+    {
+        printf("check if it is a normal IRQ out: 0x%08lx, 0x%08lx, top: 0x%08lx\r\n", src_addr, dst_addr, top);
+    }
 #endif // LOG_IRQ
 
     if (dst_addr == top)
     {
         STACK_pop(&STACK[task_flag]);
 #ifdef LOG_IRQ
-        printf("[%ld] IRQ out: (0x%08lx, 0x%08lx), ( 0x%08lx, 0x%08lx).\r\n", task_flag, mtb_buff[idx - 2] & ~(1 << 0), mtb_buff[idx - 1] & ~(1 << 0), src_addr, dst_addr);
-        STACK_check_all(&STACK[task_flag]);
-        TASK_check_all(&TASK_LIST);
+        if (mtb_buff[idx - 2] & ~(1 << 0) < CODE_NS)
+        {
+            printf("[%ld] IRQ out: (0x%08lx, 0x%08lx), ( 0x%08lx, 0x%08lx).\r\n", task_flag, mtb_buff[idx - 2] & ~(1 << 0), mtb_buff[idx - 1] & ~(1 << 0), src_addr, dst_addr);
+            STACK_check_all(&STACK[task_flag]);
+            TASK_check_all(&TASK_LIST);
+        }
 #endif // LOG_IRQ
         return IRQ_OUT;
     }
@@ -473,16 +495,20 @@ ALWAYS_INLINE int check_IRQ_out_forward_edge(uint32_t src_addr, uint32_t dst_add
     uint32_t top = STACK[task_flag].top;
     // if it is a normal IRQ out after existing Debug monitor handler
 #ifdef LOG_IRQ
-    printf("check if it is a normal IRQ out: 0x%08lx, 0x%08lx, top: 0x%08lx\r\n", src_addr, dst_addr, top);
+    if (mtb_buff[idx - 2] & ~(1 << 0) < CODE_NS)
+        printf("check if it is a normal IRQ out: 0x%08lx, 0x%08lx, top: 0x%08lx\r\n", src_addr, dst_addr, top);
 #endif // LOG_IRQ
 
     if (dst_addr == top)
     {
         STACK_pop(&STACK[task_flag]);
 #ifdef LOG_IRQ
-        printf("[%ld] IRQ out: (0x%08lx, 0x%08lx), ( 0x%08lx, 0x%08lx).\r\n", task_flag, mtb_buff[idx - 2] & ~(1 << 0), mtb_buff[idx - 1] & ~(1 << 0), src_addr, dst_addr);
-        STACK_check_all(&STACK[task_flag]);
-        TASK_check_all(&TASK_LIST);
+        if (mtb_buff[idx - 2] & ~(1 << 0) < CODE_NS)
+        {        
+            printf("[%ld] IRQ out: (0x%08lx, 0x%08lx), ( 0x%08lx, 0x%08lx).\r\n", task_flag, mtb_buff[idx - 2] & ~(1 << 0), mtb_buff[idx - 1] & ~(1 << 0), src_addr, dst_addr);
+            STACK_check_all(&STACK[task_flag]);
+            TASK_check_all(&TASK_LIST);
+        }
 #endif // LOG_IRQ
         return IRQ_OUT;
     }
@@ -516,7 +542,7 @@ ALWAYS_INLINE int check_IRQ_out_forward_edge(uint32_t src_addr, uint32_t dst_add
             printf("[PendSV] task list is full!\r\n");
             return -1;
         }
-        
+
 #ifdef LOG_IRQ
         printf("[%ld] Nested PendSV in: (0x%08lx, 0x%08lx), (0x%08lx, 0x%08lx)\r\n", task_flag, mtb_buff[idx - 2] & ~(1 << 0), mtb_buff[idx - 1] & ~(1 << 0), src_addr, dst_addr);
         STACK_check_all(&STACK[task_flag]);
@@ -730,6 +756,232 @@ void cfi_validation()
     for (int idx = 0; idx < record_count / 4; idx += 2)
     {
         sherloc_read++;
+    }
+}
+
+#elif defined(EVAL_READ_NEW)
+void cfi_validation()
+{
+    uint32_t record_count = MTB->POSITION;
+    uint32_t src_addr, dst_addr;
+    MTB->POSITION = 0;
+
+    for (int idx = 0; idx < record_count / 4; idx += 2)
+    {
+        src_addr = mtb_buff[idx] & LAST_BIT_CLEAR;
+        dst_addr = mtb_buff[idx + 1] & LAST_BIT_CLEAR;
+        sherloc_read += src_addr + dst_addr;
+    }
+}
+
+#elif defined(EVAL_HIT)
+void cfi_validation()
+{
+    uint32_t record_count = MTB->POSITION;
+    uint32_t src_addr, dst_addr;
+    MTB->POSITION = 0;
+
+    for (int idx = 0; idx < record_count / 4; idx += 2)
+    {
+        sherloc_read++;
+        sherloc_hit++;
+    }
+}
+
+#elif defined(EVAL_RT)
+
+void cfi_validation()
+{
+    uint32_t record_count = MTB->POSITION;
+    uint32_t src_addr, dst_addr;
+    MTB->POSITION = 0;
+
+    for (int idx = 0; idx < record_count / 4; idx += 2)
+    {
+        // check non-secure branches, code region: [0x00200000~0x00400000]
+        src_addr = mtb_buff[idx];
+        dst_addr = mtb_buff[idx + 1] & LAST_BIT_CLEAR;
+
+        if (src_addr < CODE_NS)
+        {
+            if (dst_addr < CODE_NS)
+            {
+                // if defined IRQ_ENABLE, filter return, those are other the dst should equal to the top of the stack
+                if (dst_addr == STACK[task_flag].top)
+                {
+                    STACK_pop(&STACK[task_flag]);
+                    ret_count += 1;
+#ifdef LOG_RET
+                    printf("[%u]--match return: (0x%08x, 0x%08x).\r\n", task_flag, src_addr, dst_addr);
+                    STACK_check_all(&STACK[task_flag]);
+                    printf("[%u]new stack top: 0x%08x\r\n", task_flag, STACK[task_flag].top);
+#endif // LOG_RET
+
+                    continue;
+                }
+                if (src_addr & 0x1)
+                {
+
+                    if (check_IRQ_in(src_addr, dst_addr) > -1)
+                    {
+                        irq_count += 1;
+                        continue;
+                    }
+#ifdef LOG_IRQ
+                    else
+                    {
+                         printf("[%u]--no IRQ found: (0x%08x, 0x%08x).\r\n", task_flag, src_addr, dst_addr);
+                    }
+#endif
+                }
+
+                // read bytes one by one to get the mc of instruction
+                uint8_t *src_ins = (uint32_t *)src_addr;
+                // filter direct branch (B: {d0000~e7ff}):
+                if (src_ins[1] >= 0xd0 && src_ins[1] <= 0xe7)
+                {
+                    db_count += 1;
+                    continue;
+                }
+                // filter CBNZ, CBZ {b100~bbff}
+                else if (src_ins[1] >= 0xb1 && src_ins[1] <= 0xbb)
+                {
+                    db_count += 1;
+                    continue;
+                }
+                // filter direct call (BL) and special direct branch with size of 4 bytes (conditional B: {f000 8000~f7ff bfff})
+                else if ((src_ins[1] >= 0xf0) && (src_ins[1] <= 0xf7))
+                {
+                    if (src_ins[3] < 0xd0)
+                    {
+                        db_count += 1;
+                        continue;
+                    }
+
+#ifdef LOG_RET
+                    printf("[%u]direct call: 0x%08x, 0x%08x ", task_flag, src_addr, dst_addr);
+                    printf("++next: 0x%08x.\r\n", src_addr + 4);
+#endif // LOG_RET
+
+                    // bl
+                    dc_count += 1;
+                    if (STACK_push(&STACK[task_flag], src_addr + 4) < 0)
+                    {
+                        printf("[%u]stack is full! top: %d\r\n", task_flag, STACK[task_flag].top_pos);
+                        STACK_check_all(&STACK[task_flag]);
+                        dummy_handler();
+                    }
+                    continue;
+                }
+                // filter bx/blx
+                else if (src_ins[1] == 0x47)
+                {
+                    ib_count += 1;
+                    // filter out bx lr at the very beginning
+                    // the record is an indirect call/branch, check the IBT
+                    // bx/blx Rx
+                    if ((src_ins[0] != 0x70) && (IBT_QUERY(src_addr, dst_addr) < 0))
+                    {
+                        printf("[%d]!!! illegal indirect call: 0x%08x\r\n", task_flag, CONCACT_UINT32(src_addr, dst_addr));
+                        STACK_check_all(&STACK[task_flag]);
+                        TASK_check_all(&TASK_LIST);
+                        dummy_handler();
+                    }
+
+                    // blx Rx, store the address of next instruction
+                    if (src_ins[0] > 0x7f)
+                    {
+                        ic_count += 1;
+
+#ifdef LOG_RET
+                        printf("[%u]indirect call: 0x%08x --", task_flag, (uint32_t)src_ins);
+                        printf("++next: 0x%08x.\r\n", src_addr + 2);
+#endif // LOG_RET
+
+                        if (STACK_push(&STACK[task_flag], src_addr + 2) < 0)
+                        {
+                            printf("[%u]stack is full! top: %d\r\n", task_flag, STACK[task_flag].top_pos);
+                            STACK_check_all(&STACK[task_flag]);
+                            dummy_handler();
+                        }
+                        continue;
+                    }
+                    continue;
+                }
+
+#ifdef RTOS
+                // it maybe a return from kernel functions, check the sorted task list
+                // if the target address is another task
+                else if (TASK_check(&TASK_LIST, dst_addr) > -1)
+                {
+
+#ifdef MULTI_STACK
+                    TASK_ID(dst_addr);
+#endif
+
+#ifdef LOG_IRQ
+                    printf("[%ld] return from kernel functions: (0x%08lx, 0x%08lx), (0x%08lx, 0x%08lx).\r\n", task_flag, mtb_buff[idx - 2] & ~(1 << 0), mtb_buff[idx - 1] & ~(1 << 0), src_addr, dst_addr);
+                    // STACK_check_all(&STACK[task_flag]);
+                    TASK_check_all(&TASK_LIST);
+#endif // LOG_IRQ
+                    ret_count += 1;
+
+                    continue;
+                }
+#endif // RTOS
+       // other records, check the IBT
+                if (IBT_QUERY(src_addr, dst_addr) < 0)
+                {
+
+#ifdef LOG_ERROR
+                    printf("[%d]!!! illegal transfer: 0x%08x\r\n", task_flag, CONCACT_UINT32(src_addr, dst_addr));
+                    STACK_check_all(&STACK[task_flag]);
+                    TASK_check_all(&TASK_LIST);
+#endif // LOG_ERROR
+
+                    dummy_handler();
+                }
+                ib_count += 1;
+                continue;
+            }
+
+            // secure debugmon_handler in
+            else if ((dst_addr > CODE_S) && (dst_addr < 0x10004000))
+            {
+                if (STACK_push(&STACK[task_flag], src_addr & LAST_BIT_CLEAR) < 0)
+                {
+                    printf("[%u]Secure_IRQ stack is full! top: %d\r\n", task_flag, STACK[task_flag].top_pos);
+                    STACK_check_all(&STACK[task_flag]);
+                    dummy_handler();
+                }
+
+#ifdef LOG_IRQ_S
+                printf("[%ld] Secure in: 0x%08lx, 0x%08lx\r\n", task_flag, src_addr, dst_addr);
+                STACK_check_all(&STACK[task_flag]);
+#endif // LOG_IRQ
+
+                continue;
+            }
+            continue;
+        }
+        // Check IRQ out
+        else if ((src_addr > IRQ_EXIT) && (dst_addr < CODE_NS))
+        {
+            if (check_IRQ_out(src_addr, dst_addr, idx) == -1)
+            {
+
+#ifdef LOG_ERROR
+                printf("[%u] Wrong IRQ exit: 0x%08x, 0x%08x, 0x%08x, 0x%08x\r\n", task_flag, mtb_buff[idx - 2] & LAST_BIT_CLEAR, mtb_buff[idx - 1] & LAST_BIT_CLEAR, src_addr, dst_addr);
+                STACK_check_all(&STACK[task_flag]);
+                TASK_check_all(&TASK_LIST);
+#endif // LOG_ERROR
+
+                dummy_handler();
+            }
+            continue;
+        }
+
+        // src_addr > S, the record is from the Secure state, we consider it is trusted
     }
 }
 
@@ -1986,7 +2238,7 @@ void cfi_validation()
                 // if the target address is another task
                 else if (TASK_check(&TASK_LIST, dst_addr) > -1)
                 {
-                    
+
 #ifdef MULTI_STACK
                     TASK_ID(dst_addr);
 #endif
@@ -2164,7 +2416,7 @@ int cfi_validation_trigger(uint32_t start_pos, uint32_t end_pos)
                 }
 #endif // RTOS
 
-       // other records, check the IBT
+                // other records, check the IBT
                 ins_identification++;
                 continue;
             }
@@ -2676,5 +2928,4 @@ void cfi_test_s()
     config_dwt();
     MTB->POSITION = 0;
 #endif // TRIGGER
-
 }

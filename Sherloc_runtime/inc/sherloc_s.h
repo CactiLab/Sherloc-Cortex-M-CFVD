@@ -28,16 +28,18 @@
 // #define TRIGGER_IBT
 // #define TRIGGER_IBT_BASELINE
 
-//#define DEBUG_MON
+// enable it for sherloc validation
+#define DEBUG_MON
+#define MTB_ENABLE
 
 #ifndef TRIGGER
-//#define TEST_CFI
-//#define WATERMARK // If you want to check the MTB buffer in the non-secure state, comment this, or the trace will stop
-//#define WATERMARK_VALUE 0xFC2
+#define TEST_CFI
+#define WATERMARK // If you want to check the MTB buffer in the non-secure state, comment this, or the trace will stop
+#define WATERMARK_VALUE 0xFC2
 #endif // TRIGGER
 // if target program has interrupts, it is impossible to only detect backward edge without handling interrupts. Since the source address of the interrupt is unknown, which can be a call. If it is not handled by IRQ checking, this address will be considered as a true call and update the call return stack.
 // #define LOG_RET    	// print out the calculated return address and whether the return match or not
-//#define LOG_IRQ // print out IRQ in and out
+// #define LOG_IRQ // print out IRQ in and out
 
 /*----------------------------------------------------------------------------
   Eval
@@ -45,11 +47,15 @@
 #define USE_SYSTICK_NS // this is for systick disabling and enabling
 #ifdef TEST_CFI
 
-#define RTOS
+//enable it when compiling for RTOS
+// #define RTOS
 
 // always on when do the sub step evaluation
-// #define EVAL_INS_IDENTIFY
+#define EVAL_INS_IDENTIFY
 // #define EVAL_READ
+// #define EVAL_HIT
+// #define EVAL_RT // check runtime instruction percentage
+// #define EVAL_READ_NEW
 
 // #define SS_NO_IRQ
 // #define EMU_NO_IRQ
@@ -57,7 +63,7 @@
 // #define SS_IRQ
 // #define EMU_IRQ
 // #define FULL_IRQ
-#define FULL_EMU
+// #define FULL_EMU
 
 // #define IBT_BASELINE_NO_IRQ
 // #define IBT_NO_IRQ
@@ -113,9 +119,8 @@ PS: when first use this register, run three instructions, then the following onl
 #define LOG_ERROR // print out precise illegal branches errors
 
 #define DEBUG_LEVEL
-#define SHOW_RECORD
+// #define SHOW_RECORD
 // #define SHOW_BT
-// #define MTB_ENABLE
 
 #define BINARY_SEARCH
 
