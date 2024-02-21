@@ -78,8 +78,26 @@ def read_file(file_name):
     if os.path.exists(file_name):
         with open(file_name, "r") as file:
             lines = file.readlines()
+        # if the first line is empty, skip it
+        if lines[0] == '\n':
+            lines.pop(0)  # Skip the first line
 
-        lines.pop(0)  # Skip the first line
+        first_line = lines[0]
+        # the lof file may have extra content that needs to be filtered
+        if "Monitor" in first_line:
+            """
+            Monitor Mode Debug Enabled!
+            branch table size: 0, IRQ size: 3, Task size: 0, LOOP size: 4, tag_size: 0
+
+            ----Load branch table done.---
+            ----Binary search enabled.---
+            """
+            lines = lines[5:]
+        if "MTB" in lines[0]:
+            lines = lines[1:]
+        with open(file_name, "w") as file:
+            file.writelines(lines)
+        # exit(0)
 
         averages = {}
         count = 0
@@ -107,6 +125,8 @@ def read_file(file_name):
 def calculate_overhead(baseline, result_dict):
     overhead = {}
     for key in result_dict:
+        if "hit" in key:
+            continue
         overhead[key] = round((result_dict[key]/baseline)*100, 2)
     return overhead
 
@@ -124,9 +144,8 @@ class BEEBsResult(object):
         elf_path = work_path + opt_level + '/elf_ns/'
         metadata_path = work_path + opt_level + '/metadata/'
 
-        # "matmult_int", "stb_perlin",
-        BEEBS_name_list = ['bubblesort', 'crc32', 'dijkstra', 'edn', 'fasta', 'frac', 'levenshtein', 'nbody', 'ndes', 'nettle_aes', 'picojpeg', 'qrduino',
-                           'rijndael', 'sglib_arraybinsearch', 'sglib_dllist', 'sglib_hashtable', 'sglib_listsort', 'sglib_queue', 'sglib_rbtree', 'st', 'whetstone']
+        # "matmult_int", "stb_perlin", "sglib_rbtree"
+        BEEBS_name_list = ['bubblesort', 'crc32', 'dijkstra', 'edn', 'fasta', 'frac', 'levenshtein', 'nbody', 'ndes', 'nettle_aes', 'picojpeg', 'qrduino', 'rijndael', 'sglib_arraybinsearch', 'sglib_dllist', 'sglib_hashtable', 'sglib_listinsertsort', 'sglib_listsort', 'sglib_queue', 'st', 'whetstone']
 
         df_beebs = pd.read_csv(result_beebs)
 
@@ -137,13 +156,18 @@ class BEEBsResult(object):
             eval_ibt_checking = log_path + beebs_name + '_ibt_no_systick.log'
             eval_full_file = log_path + beebs_name + '_full_no_irq.log'
             eval_read_file = log_path + beebs_name + '_sherloc_read.log'
+            eval_read_new_file = log_path + beebs_name + '_read_new_beebs.log'
             eval_ins_file = log_path + beebs_name + '_ins.log'
+            eval_hit_file = log_path + beebs_name + '_hit_beebs.log'
+            eval_rt_file = log_path + beebs_name + '_rt_beebs.log'
             elf_name = elf_path + beebs_name + '.axf'
             proj_metadata_file = metadata_path + beebs_name + '.bin'
 
-            baseline_dict = read_oneline(baseline_file)
+            baseline_dict = read_file(baseline_file)
             full_dict = read_oneline(eval_full_file)
-            read_dict = read_oneline(eval_read_file)
+            read_dict = read_file(eval_read_new_file)
+            hit_dict = read_file(eval_hit_file)
+            rt_dict = read_file(eval_rt_file)
             ins_dict = read_oneline(eval_ins_file)
             ibt_baseline = read_oneline(eval_ibt_baseline)
             ibt_checking = read_oneline(eval_ibt_checking)
@@ -154,7 +178,8 @@ class BEEBsResult(object):
             result_dict = {}
             result_dict['SHERLOC'] = full_dict['EVAL'] - baseline
             result_dict['enter_exit'] = full_dict['enter_exit'] - baseline
-            result_dict['read'] = read_dict['sherloc_read']
+            result_dict['sherloc_hit'] = hit_dict['sherloc_hit']
+            result_dict['read'] = read_dict['sherloc_read_new']
             result_dict['ins_identification'] = ins_dict['sherloc_ins_identification'] - \
                 result_dict['read']
             result_dict['forward'] = ibt_checking['ibt_check'] - \
@@ -163,6 +188,7 @@ class BEEBsResult(object):
             result_dict['ss'] = sherloc_detection - result_dict['read'] - \
                 result_dict['forward'] - result_dict['ins_identification']
 
+            print("rt_dict: ", rt_dict)
             print("result_dict: ", result_dict)
 
             eval_overhead = calculate_overhead(baseline, result_dict)
@@ -179,6 +205,7 @@ class BEEBsResult(object):
             df_beebs.loc[df_beebs['name'] == beebs_name, "baseline"] = baseline
             df_beebs.loc[df_beebs['name'] == beebs_name,
                          "SHERLOC"] = result_dict['SHERLOC']
+            df_beebs.loc[df_beebs['name'] == beebs_name, "hit"] = hit_dict['sherloc_hit']
             for item in eval_overhead:
                 df_beebs.loc[df_beebs['name'] == beebs_name,
                              'overhead_'+item] = eval_overhead[item]
@@ -188,7 +215,7 @@ class BEEBsResult(object):
         df_beebs.loc[df_beebs['name'] == 'mean', "opt_level"] = opt_level
 
         integer_column = ['elf_size', 'icall', 'ibranch', 'dbranch',
-                          'dcall', 'ret', 'irq', 'baseline', 'SHERLOC', 'baseline']
+                          'dcall', 'ret', 'irq', 'baseline', 'SHERLOC', 'baseline', 'hit']
 
         for column in df_beebs.columns:
             if column == 'name' or column == 'opt_level':
@@ -261,18 +288,22 @@ class BlinkyResult(object):
             working_log_path = log_path + blinky_instance
             baseline_file = f'{working_log_path}_baseline_blinky.log'
             eval_full_file = f'{working_log_path}_full_blinky.log'
-            eval_read_file = f'{working_log_path}_sherloc_read_systick.log'
+            eval_read_file = f'{working_log_path}_read_new_systick.log'
             eval_ins_file = f'{working_log_path}_ins_systick.log'
+            eval_hit_file = f'{working_log_path}_hit_systick.log'
+            eval_rt_file = f'{working_log_path}_rt_blinky.log'
+
             eval_ibt_baseline = f'{working_log_path}_ibt_baseline_systick.log'
             eval_ibt = f'{working_log_path}_ibt_systick.log'
             elf_name = elf_path + blinky_instance + '.axf'
             proj_metadata_file = metadata_path + blinky_instance + '.bin'
 
-            baseline_dict = read_file(baseline_file)
-
+            baseline_dict = read_first_line(baseline_file)
             full_dict = read_first_line(eval_full_file)
-            read_dict = read_first_line(eval_read_file)
+            read_dict = read_file(eval_read_file)
             ins_dict = read_file(eval_ins_file)
+            hit_dict = read_file(eval_hit_file)
+            rt_dict = read_file(eval_rt_file)
 
             ibt_baseline_dict = read_first_line(eval_ibt_baseline)
             ibt_dict = read_first_line(eval_ibt)
@@ -283,7 +314,8 @@ class BlinkyResult(object):
             result_dict = {}
             result_dict['SHERLOC'] = full_dict['EVAL'] - baseline
             result_dict['enter_exit'] = full_dict['enter_exit'] - baseline
-            result_dict['read'] = read_dict['sherloc_read']
+            result_dict['hit'] = hit_dict['sherloc_hit']
+            result_dict['read'] = read_dict['sherloc_read_new']
             result_dict['ins_identification'] = ins_dict['sherloc_ins_identification'] - \
                 result_dict['read']
             result_dict['forward'] = ibt_dict['ibt_check'] - \
@@ -292,6 +324,7 @@ class BlinkyResult(object):
                 result_dict['forward'] - \
                 result_dict['ins_identification']
 
+            print("rt_dict: ", rt_dict)
             print(f'result_dict: {result_dict}')
 
             eval_overhead = calculate_overhead(baseline, result_dict)
@@ -392,26 +425,28 @@ class FreeRTOSResult(object):
             working_log_path = log_path + freertos_instance
             baseline_file = f'{working_log_path}_baseline_rtos.log'
             eval_full_file = f'{working_log_path}_full_rtos.log'
-            eval_read_file = f'{working_log_path}_read_rtos.log'
+            eval_read_file = f'{working_log_path}_read_new_rtos.log'
             eval_ins_file = f'{working_log_path}_ins_rtos.log'
             eval_ibt_baseline_freertos = f'{working_log_path}_ibt_freertos_baseline.log'
             eval_ibt_freertos = f'{working_log_path}_ibt_freertos.log'
+            eval_rt_file = f'{working_log_path}_rt_rtos.log'
             elf_name = elf_path + freertos_instance + '.axf'
             proj_metadata_file = metadata_path + freertos_instance + '.bin'
 
-            baseline_dict = read_first_line(baseline_file)
-            full_dict = read_first_line(eval_full_file)
-            read_dict = read_first_line(eval_read_file)
-            ins_dict = read_first_line(eval_ins_file)
-            ibt_baseline_dict = read_first_line(eval_ibt_baseline_freertos)
-            ibt_freertos_dict = read_first_line(eval_ibt_freertos)
+            baseline_dict = read_file(baseline_file)
+            full_dict = read_file(eval_full_file)
+            read_dict = read_file(eval_read_file)
+            ins_dict = read_file(eval_ins_file)
+            rt_dict = read_file(eval_rt_file)
+            ibt_baseline_dict = read_file(eval_ibt_baseline_freertos)
+            ibt_freertos_dict = read_file(eval_ibt_freertos)
 
             # enter [backward_edge|forward_edge|ins_identification|sherloc_read] exit
             baseline = baseline_dict['NONE']
             result_dict = {}
             result_dict['SHERLOC'] = full_dict['EVAL'] - baseline
             result_dict['enter_exit'] = full_dict['enter_exit'] - baseline
-            result_dict['read'] = read_dict['sherloc_read']
+            result_dict['read'] = read_dict['sherloc_read_new']
             result_dict['ins_identification'] = ins_dict['sherloc_ins_identification'] - \
                 result_dict['read']
             result_dict['forward'] = ibt_freertos_dict['ibt_check'] - \
@@ -420,6 +455,7 @@ class FreeRTOSResult(object):
                 result_dict['read'] - result_dict['ins_identification'] - \
                 result_dict['forward']
 
+            print("rt_dict: ", rt_dict)
             print("result_dict: ", result_dict)
 
             eval_overhead = calculate_overhead(baseline, result_dict)
@@ -554,6 +590,7 @@ class FreeRTOSTriggerResult(object):
             proj_metadata_file = metadata_path + freertos_instance + '.bin'
 
             baseline_dict = read_first_line(baseline_file)
+            print("baseline_dict: ", baseline_dict)
 
             trigger_result_dict = read_first_line(eval_trigger_result_file)
             trigger_read_dict = read_first_line(trigger_read_file)
